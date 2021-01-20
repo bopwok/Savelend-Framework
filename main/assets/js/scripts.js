@@ -321,3 +321,25 @@ Math.easeOutElastic = function (t, b, c, d) {
 function resetFocusTabsStyle() {
   window.dispatchEvent(new CustomEvent('initFocusTabs'));
 };
+const copyToClipboard = str => {
+  const el = document.createElement('textarea');
+  el.value = str;
+  el.setAttribute('readonly', '');
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+};
+var tabtn = document.querySelectorAll('.toggle-active') // Using a class instead, see note below.
+
+
+tabtn.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        button.classList.toggle('active');
+
+        e.preventDefault();
+        return false;
+    });
+});

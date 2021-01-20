@@ -10,6 +10,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var purgecss = require('gulp-purgecss');
+var svgSprite = require('gulp-svg-sprite');
 
 // js file paths
 var utilJsPath = 'main/assets/js'; // util.js path - you may need to update this if including the framework as external node module
@@ -20,12 +21,45 @@ var scriptsJsPath = 'main/assets/js'; //folder for final scripts.js/scripts.min.
 var cssFolder = 'main/assets/css'; // folder for final style.css/style-custom-prop-fallbac.css files
 var scssFilesPath = 'main/assets/css/**/*.scss'; // scss files to watch
 
+var iconsFolder = 'main/assets/icons'; 
+var iconFilesPath = 'main/assets/icons/**/*.svg';
+
+var svgIconsConfig = {
+    shape: {
+      dimension: { // Set maximum dimensions
+        maxWidth: 30,
+        maxHeight: 30
+      },
+      spacing: { // Add padding
+        padding: 1
+      }
+    },
+  mode: {
+      inline: true,
+    symbol: {
+        dest: '.',
+        prefix: 'icon--%s',
+        burst: false,
+        sprite: 'all.svg'
+      } // Activate the «symbol» mode
+    }
+  };
+
 function reload(done) {
   browserSync.reload();
   done();
 } 
 
 /* Gulp watch task */
+gulp.task('icons', function() {
+  return gulp.src(iconFilesPath)
+  .pipe(svgSprite(svgIconsConfig))
+  .pipe(gulp.dest(iconsFolder))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
+});
+
 // This task is used to convert the scss to css and compress it. No fallback for IE is created  
 gulp.task('sass', function() {
   return gulp.src(scssFilesPath)
@@ -78,9 +112,10 @@ gulp.task('browserSync', gulp.series(function (done) {
   done();
 }));
 
-gulp.task('watch', gulp.series(['browserSync', 'sass', 'scripts'], function () {
+gulp.task('watch', gulp.series(['browserSync', 'sass', 'scripts', 'icons'], function () {
   gulp.watch('main/*.html', gulp.series(reload));
   gulp.watch('main/assets/css/**/*.scss', gulp.series(['sass']));
+  gulp.watch('main/assets/icons/**/*.svg', gulp.series(['icons']));
   gulp.watch(componentsJsPath, gulp.series(['scripts']));
 }));
 

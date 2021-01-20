@@ -6,6 +6,12 @@
 
 :root, [data-theme="default"] {
   // main
+  @include defineColorHSL(--color-progressive, 329, 59%, 18%);
+  @include defineColorHSL(--color-progressive-4, 329, 30%, 60%);
+
+  @include defineColorHSL(--color-challenger, 28, 79%, 62%);
+
+
   @include defineColorHSL(--color-primary-darker, 220, 90%, 42%);
   @include defineColorHSL(--color-primary-dark, 220, 90%, 49%);
   @include defineColorHSL(--color-primary, 220, 90%, 56%);
