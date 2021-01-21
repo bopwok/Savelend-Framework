@@ -12,6 +12,11 @@ Descr: Mobile navigation bottom bar
     left: 0;
     width: 100%;
     background: var(--color-progressive);
+
+    box-shadow: 0 -1.2px 1.9px -1px rgba(0, 0, 0, 0.014),
+    0 -3.3px 5.3px -1px rgba(0, 0, 0, 0.038),
+    0 -8.5px 12.7px -1px rgba(0, 0, 0, 0.085),
+    0 -30px 42px -1px rgba(0, 0, 0, 0.15);
 }
 
 .bottom-navbar-item {
@@ -54,7 +59,7 @@ Descr: Mobile navigation bottom bar
 
     &.active {
         &::after {
-            height: var(--space-xxs);
+            height: var(--space-xxxs);
         }
 
         .bottom-navbar-item--icon {
