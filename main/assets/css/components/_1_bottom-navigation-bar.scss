@@ -25,7 +25,7 @@ Descr: Mobile navigation bottom bar
     color: var(--color-progressive-4);
     text-decoration: none;
 
-    transition: color ease 0.2s;
+    transition: color ease 0.2s, background ease 0.2s;
 
     &::after {
         content: "";
@@ -34,14 +34,18 @@ Descr: Mobile navigation bottom bar
         left: 0;
         width: 100%;
         height: 0;
-        background: var(--color-challenger);
+        background: var(--color-restless);
 
         transition: height ease 0.2s;
     }
 
     &:hover, &.active {
-        color: var(--color-challenger);
-        fill: var(--color-challenger);
+        color: var(--color-restless);
+        fill: var(--color-restless);
+    }
+
+    &:hover {
+        background: var(--color-progressive-1);
     }
 
     &.active {
@@ -50,7 +54,7 @@ Descr: Mobile navigation bottom bar
         }
 
         .bottom-navbar-item--icon {
-            fill: var(--color-challenger);
+            fill: var(--color-restless);
         }
     }
 

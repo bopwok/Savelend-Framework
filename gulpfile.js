@@ -134,17 +134,18 @@ var assetsFolder = 'dist/assets/';
 
 gulp.task('dist', async function(){
   // remove unused classes from the style.css file with PurgeCSS and copy it to the dist folder
-  await purgeCSS();
+  //await purgeCSS();
   // minify the scripts.js file and copy it to the dist folder
-  await minifyJs();
+  //await minifyJs();
   // copy the style-fallback (IE support) to the dist folder
   await moveCSS();
   // copy any additional js files to the dist folder
-  await moveJS();
+  //await moveJS();
   // copy all the assets inside main/assets/img folder to the dist folder
   await moveAssets();
+  await moveIcons();
   // copy all html files inside main folder to the dist folder 
-  await moveContent();
+  //await moveContent();
   console.log('Distribution task completed!')
 });
 
@@ -178,7 +179,7 @@ function minifyJs() {
 
 function moveCSS() {
   return new Promise(function(resolve, reject) {
-    var stream = gulp.src(cssFolder+'/style-fallback.css', { allowEmpty: true })
+    var stream = gulp.src(cssFolder+'/*.css', { allowEmpty: true })
     .pipe(gulp.dest(assetsFolder+'css'));
     
     stream.on('finish', function() {
@@ -202,6 +203,17 @@ function moveAssets() {
   return new Promise(function(resolve, reject) {
     var stream = gulp.src(['main/assets/img/**'], { allowEmpty: true })
     .pipe(gulp.dest(assetsFolder+'img'));
+    
+    stream.on('finish', function() {
+      resolve();
+    });
+  });
+};
+
+function moveIcons() {
+  return new Promise(function(resolve, reject) {
+    var stream = gulp.src(['main/assets/icons/all.svg'], { allowEmpty: true })
+    .pipe(gulp.dest(assetsFolder+'icons'));
     
     stream.on('finish', function() {
       resolve();
