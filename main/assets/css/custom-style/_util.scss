@@ -17,3 +17,21 @@
 //     }
 //   }
 // }
+
+.fixed {
+    position:fixed;
+
+    &.fixed--bottom {
+        bottom: 0;
+        left: 0;
+    }
+
+    &.fixed--top {
+        top: 0;
+        left: 0;
+    }
+}
+
+.previewbox .fixed {
+    position: absolute;
+}

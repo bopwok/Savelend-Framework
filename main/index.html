@@ -22,84 +22,16 @@
 
 <body>
   <div class="container max-width-sm padding-y-lg">
-    <h1>Bottom navigation bar</h1>
+    <div class="text-component">
+      <h1>Bottom navigation bar</h1>
+      <p>Primarily to be used on mobile devices for our logged in areas to provide users with a quick and accessible navigation to the primary views</p>
 
-    <h2>HTML</h2>
-    <div class="code-wrapper">
-      <pre><code class="language-html">
-    &lt;nav class="bottom-navbar flex"&gt;
-      &lt;!-- Active State --&gt;
-      &lt;a href="#" class="bottom-navbar-item active"&gt;
-        &lt;svg class="icon bottom-bnavar-item--icon"&gt;&lt;use xlink:href="assets/icons/all.svg#icon-eye " /&gt;&lt;/svg&gt;
-        &lt;span class="bottom-navbar-item--text">{ITEMLABEL}&lt;/a&gt;
-      &lt;/a&gt;
-
-      &lt;!-- Inactive State --&gt;
-      &lt;a href="#" class="bottom-navbar-item"&gt;
-        &lt;svg class="icon bottom-navbar-item--icon"&gt;&lt;use xlink:href="path/to/all.svg#{ICONNAME} " /&gt;&lt;/svg&gt;
-        &lt;span class="bottom-navbar-item--text">{ITEMLABEL}&lt;/a&gt;
-      &lt;/a&gt;
-
-      …
-    &lt;/nav&gt;
-  </code></pre>
+      <h2>Preview</h2>
     </div>
-
-    <h2>CSS</h2>
-    <div class="code-wrapper">
-      <pre><code class="language-css">
-        /* -------------------------------- 
-
-        File#: _1_bottom-navigation-bar
-        Title: Bottom Navigation Bar
-        Descr: Mobile navigation bottom bar
-
-        -------------------------------- */
-
-        .bottom-navbar {
-            background: var(--color-progressive);
-        }
-
-        .bottom-navbar-item {
-            flex: 1;
-        
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        
-            padding: var(--space-sm) 0;
-        
-            color: var(--color-progressive-4);
-            text-decoration: none;
-        
-            transition: color ease 0.2s;
-        
-            &:hover {
-                color: var(--color-challenger);
-            }
-          
-            &.active {
-                color: var(--color-challenger);
-                border-bottom: var(--space-xxxs) solid var(--color-challenger);
-            }
-        }
-
-        .bottom-navbar-item--icon {
-        
-        }
-
-        .bottom-navbar-item--text {
-        
-        }
-      </code></pre>
-    </div>
-
-    <h2>Preview</h2>
 
     <div class="previewbox" style="position:relative; min-height: 250px; background: #FFF; border: 1px solid #383841;">
-     
-      <nav class="bottom-navbar flex">
+
+      <nav class="bottom-navbar flex fixed fixed--bottom">
         <a href="#" class="bottom-navbar-item active toggle-active">
           <svg class="icon bottom-navbar-item--icon">
             <use xlink:href="assets/icons/all.svg#icon--eye" /></svg>
@@ -127,6 +59,121 @@
 
     </div>
 
+    <h2>HTML</h2>
+
+    <div class="code-wrapper">
+      <pre><code class="language-html">
+    &lt;nav class=&quot;bottom-navbar flex&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;bottom-navbar-item active toggle-active&quot;&gt;
+        &lt;svg class=&quot;icon bottom-navbar-item--icon&quot;&gt;
+          &lt;use xlink:href=&quot;assets/icons/all.svg#icon--eye&quot; /&gt;&lt;/svg&gt;
+        &lt;span class=&quot;bottom-navbar-item--text&quot;&gt;&Ouml;versikt&lt;/a&gt;
+      &lt;/a&gt;
+
+      &lt;a href=&quot;#&quot; class=&quot;bottom-navbar-item toggle-active&quot;&gt;
+        &lt;svg class=&quot;icon bottom-navbar-item--icon&quot;&gt;
+          &lt;use xlink:href=&quot;assets/icons/all.svg#icon--piggybank&quot; /&gt;&lt;/svg&gt;
+        &lt;span class=&quot;bottom-navbar-item--text&quot;&gt;Innehav&lt;/a&gt;
+      &lt;/a&gt;
+
+      &lt;a href=&quot;#&quot; class=&quot;bottom-navbar-item toggle-active&quot;&gt;
+        &lt;svg class=&quot;icon bottom-navbar-item--icon&quot;&gt;
+          &lt;use xlink:href=&quot;assets/icons/all.svg#icon--eye&quot; /&gt;&lt;/svg&gt;
+        &lt;span class=&quot;bottom-navbar-item--text&quot;&gt;Investera&lt;/a&gt;
+      &lt;/a&gt;
+
+      &lt;a href=&quot;#&quot; class=&quot;bottom-navbar-item toggle-active&quot;&gt;
+        &lt;svg class=&quot;icon bottom-navbar-item--icon&quot;&gt;
+          &lt;use xlink:href=&quot;assets/icons/all.svg#icon--piggybank&quot; /&gt;&lt;/svg&gt;
+        &lt;span class=&quot;bottom-navbar-item--text&quot;&gt;&Ouml;verf&ouml;ringar&lt;/a&gt;
+      &lt;/a&gt;
+    &lt;/nav&gt;
+  </code></pre>
+    </div>
+
+    <h2>CSS</h2>
+    <div class="code-wrapper">
+      <pre><code class="language-css">
+        /* -------------------------------- 
+
+File#: _1_bottom-navigation-bar
+Title: Bottom Navigation Bar
+Descr: Mobile navigation bottom bar
+
+-------------------------------- */
+
+.bottom-navbar {
+    position:fixed;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    background: var(--color-progressive);
+
+    box-shadow: 0 -1.2px 1.9px -1px rgba(0, 0, 0, 0.014),
+    0 -3.3px 5.3px -1px rgba(0, 0, 0, 0.038),
+    0 -8.5px 12.7px -1px rgba(0, 0, 0, 0.085),
+    0 -30px 42px -1px rgba(0, 0, 0, 0.15);
+}
+
+.bottom-navbar-item {
+    position: relative;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--space-sm) 0;
+
+    color: var(--color-progressive-4);
+    text-decoration: none;
+
+    transition: color ease 0.2s, background ease 0.2s;
+
+    &amp;::after {
+        content: &quot;&quot;;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: var(--color-restless);
+
+        transition: height ease 0.2s;
+    }
+
+    &amp;:hover, &amp;.active {
+        color: var(--color-restless);
+        fill: var(--color-restless);
+    }
+
+    &amp;:hover {
+        background: var(--color-progressive-1);
+    }
+
+    &amp;.active {
+        &amp;::after {
+            height: var(--space-xxxs);
+        }
+
+        .bottom-navbar-item--icon {
+            fill: var(--color-restless);
+        }
+    }
+
+    .bottom-navbar-item--icon {
+        width: 2em;
+        height: 2em;
+    }
+
+    .bottom-navbar-item--text {
+
+    }
+}
+      </code></pre>
+    </div>
   </div>
 
   <script src="assets/js/scripts.js"></script>

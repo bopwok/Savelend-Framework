@@ -13,7 +13,7 @@
   --text-scale-ratio: 1.2; // multiplier used to generate the type scale values 👇
   
   // line-height
-  --body-line-height: 1.4;
+  --body-line-height: 1.625;
   --heading-line-height: 1.2;
   
   // capital letters - used in combo with the lhCrop mixin
@@ -21,6 +21,8 @@
 
   // unit - don't modify unless you want to change the typography unit (e.g., from Em to Rem units)
   --text-unit: 1em; // if not Em units → --text-unit: var(--text-base-size);
+
+  --text-spacing: 0.02em;
 }
 
 :root, * {
@@ -44,8 +46,11 @@
   }
 }
 
+
 h1, h2, h3, h4 {
   font-weight: 700;
+
+  letter-spacing: var(--text-spacing);
 }
 
 // --------------------------------
