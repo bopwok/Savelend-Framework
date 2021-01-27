@@ -22,7 +22,7 @@ var cssFolder = 'main/assets/css'; // folder for final style.css/style-custom-pr
 var scssFilesPath = 'main/assets/css/**/*.scss'; // scss files to watch
 
 var iconsFolder = 'main/assets/icons'; 
-var iconFilesPath = 'main/assets/icons/**/*.svg';
+var iconFilesPath = 'main/assets/icons/icon/*.svg';
 
 var svgIconsConfig = {
     shape: {
@@ -212,7 +212,7 @@ function moveAssets() {
 
 function moveIcons() {
   return new Promise(function(resolve, reject) {
-    var stream = gulp.src(['main/assets/icons/all.svg'], { allowEmpty: true })
+    var stream = gulp.src(['main/assets/icons/remix.svg'], { allowEmpty: true })
     .pipe(gulp.dest(assetsFolder+'icons'));
     
     stream.on('finish', function() {

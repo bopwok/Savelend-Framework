@@ -33,34 +33,16 @@ Descr: Mobile navigation bottom bar
 
     transition: color ease 0.2s, background ease 0.2s;
 
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background: var(--color-restless);
-
-        transition: height ease 0.2s;
-    }
-
-    &:hover, &.active {
-        color: var(--color-restless);
-        fill: var(--color-restless);
-    }
-
     &:hover {
         background: var(--color-progressive-1);
     }
 
     &.active {
-        &::after {
-            height: var(--space-xxxs);
-        }
+        color: var(--color-progressive);
+        background: var(--color-restless);
 
         .bottom-navbar-item--icon {
-            fill: var(--color-restless);
+            fill: var(--color-progressive);
         }
     }
 
