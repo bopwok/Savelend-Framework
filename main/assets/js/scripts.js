@@ -332,16 +332,16 @@ const copyToClipboard = str => {
   document.execCommand('copy');
   document.body.removeChild(el);
 };
-var tabtn = document.querySelectorAll('.toggle-active') // Using a class instead, see note below.
+var tabtn = document.querySelectorAll('.bottom-navbar-item') // Using a class instead, see note below.
 
 
 tabtn.forEach((button) => {
     button.addEventListener('click', (e) => {
         for (var item of tabtn) {
-            item.classList.remove('active');
+            item.removeAttribute('data-state');
         }
         
-        button.classList.toggle('active');
+        button.setAttribute('data-state', 'active');
 
         e.preventDefault();
         return false;

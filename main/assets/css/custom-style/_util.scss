@@ -32,6 +32,19 @@
     }
 }
 
+.previewbox {
+    position:relative;
+    min-height: 250px;
+    background: linear-gradient(180deg, #EBE9E0 0%, #E1DED0 69.79%);
+    border: 1px solid #383841;
+
+    &.preview-mobile {
+        width: 375px;
+        height: 812px;
+        margin: 0 auto;
+    }
+}
+
 .previewbox .fixed {
     position: absolute;
 }

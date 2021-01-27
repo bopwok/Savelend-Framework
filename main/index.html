@@ -29,28 +29,28 @@
       <h2>Preview</h2>
     </div>
 
-    <div class="previewbox" style="position:relative; min-height: 250px; background: #FFF; border: 1px solid #383841;">
+    <div class="previewbox preview-mobile">
 
       <nav class="bottom-navbar flex fixed fixed--bottom">
-        <a href="#" class="bottom-navbar-item active toggle-active">
+        <a href="#" class="bottom-navbar-item" data-state="active">
           <svg class="icon bottom-navbar-item--icon">
             <use xlink:href="assets/icons/remix.svg#ri-eye-line" /></svg>
           <span class="bottom-navbar-item--text">Översikt</a>
         </a>
 
-        <a href="#" class="bottom-navbar-item toggle-active">
+        <a href="#" class="bottom-navbar-item">
           <svg class="icon bottom-navbar-item--icon">
             <use xlink:href="assets/icons/remix.svg#ri-hand-coin-line" /></svg>
           <span class="bottom-navbar-item--text">Innehav</a>
         </a>
 
-        <a href="#" class="bottom-navbar-item toggle-active">
+        <a href="#" class="bottom-navbar-item">
           <svg class="icon bottom-navbar-item--icon">
             <use xlink:href="assets/icons/remix.svg#ri-funds-line" /></svg>
           <span class="bottom-navbar-item--text">Investera</a>
         </a>
 
-        <a href="#" class="bottom-navbar-item toggle-active">
+        <a href="#" class="bottom-navbar-item">
           <svg class="icon bottom-navbar-item--icon">
             <use xlink:href="assets/icons/remix.svg#ri-arrow-left-right-line" /></svg>
           <span class="bottom-navbar-item--text">Överföringar</a>
@@ -63,38 +63,38 @@
 
     <div class="code-wrapper">
       <pre><code class="language-html">
-    &lt;nav class=&quot;bottom-navbar flex&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;bottom-navbar-item active toggle-active&quot;&gt;
+&lt;nav class=&quot;bottom-navbar flex fixed fixed--bottom&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;bottom-navbar-item&quot; data-state=&quot;active&quot;&gt;
         &lt;svg class=&quot;icon bottom-navbar-item--icon&quot;&gt;
-          &lt;use xlink:href=&quot;assets/icons/all.svg#icon--eye&quot; /&gt;&lt;/svg&gt;
+            &lt;use xlink:href=&quot;assets/icons/remix.svg#ri-eye-line&quot; /&gt;&lt;/svg&gt;
         &lt;span class=&quot;bottom-navbar-item--text&quot;&gt;&Ouml;versikt&lt;/a&gt;
-      &lt;/a&gt;
+    &lt;/a&gt;
 
-      &lt;a href=&quot;#&quot; class=&quot;bottom-navbar-item toggle-active&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;bottom-navbar-item&quot;&gt;
         &lt;svg class=&quot;icon bottom-navbar-item--icon&quot;&gt;
-          &lt;use xlink:href=&quot;assets/icons/all.svg#icon--piggybank&quot; /&gt;&lt;/svg&gt;
+            &lt;use xlink:href=&quot;assets/icons/remix.svg#ri-hand-coin-line&quot; /&gt;&lt;/svg&gt;
         &lt;span class=&quot;bottom-navbar-item--text&quot;&gt;Innehav&lt;/a&gt;
-      &lt;/a&gt;
+    &lt;/a&gt;
 
-      &lt;a href=&quot;#&quot; class=&quot;bottom-navbar-item toggle-active&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;bottom-navbar-item&quot;&gt;
         &lt;svg class=&quot;icon bottom-navbar-item--icon&quot;&gt;
-          &lt;use xlink:href=&quot;assets/icons/all.svg#icon--eye&quot; /&gt;&lt;/svg&gt;
+            &lt;use xlink:href=&quot;assets/icons/remix.svg#ri-funds-line&quot; /&gt;&lt;/svg&gt;
         &lt;span class=&quot;bottom-navbar-item--text&quot;&gt;Investera&lt;/a&gt;
-      &lt;/a&gt;
+    &lt;/a&gt;
 
-      &lt;a href=&quot;#&quot; class=&quot;bottom-navbar-item toggle-active&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;bottom-navbar-item&quot;&gt;
         &lt;svg class=&quot;icon bottom-navbar-item--icon&quot;&gt;
-          &lt;use xlink:href=&quot;assets/icons/all.svg#icon--piggybank&quot; /&gt;&lt;/svg&gt;
+            &lt;use xlink:href=&quot;assets/icons/remix.svg#ri-arrow-left-right-line&quot; /&gt;&lt;/svg&gt;
         &lt;span class=&quot;bottom-navbar-item--text&quot;&gt;&Ouml;verf&ouml;ringar&lt;/a&gt;
-      &lt;/a&gt;
-    &lt;/nav&gt;
+    &lt;/a&gt;
+&lt;/nav&gt;
   </code></pre>
     </div>
 
     <h2>CSS</h2>
     <div class="code-wrapper">
       <pre><code class="language-css">
-        /* -------------------------------- 
+/* -------------------------------- 
 
 File#: _1_bottom-navigation-bar
 Title: Bottom Navigation Bar
@@ -103,9 +103,6 @@ Descr: Mobile navigation bottom bar
 -------------------------------- */
 
 .bottom-navbar {
-    position:fixed;
-    bottom:0;
-    left: 0;
     width: 100%;
     background: var(--color-progressive);
 
@@ -132,34 +129,16 @@ Descr: Mobile navigation bottom bar
 
     transition: color ease 0.2s, background ease 0.2s;
 
-    &amp;::after {
-        content: &quot;&quot;;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background: var(--color-restless);
-
-        transition: height ease 0.2s;
-    }
-
-    &amp;:hover, &amp;.active {
-        color: var(--color-restless);
-        fill: var(--color-restless);
-    }
-
-    &amp;:hover {
+    &:hover {
         background: var(--color-progressive-1);
     }
 
-    &amp;.active {
-        &amp;::after {
-            height: var(--space-xxxs);
-        }
+    &[data-state=active] {
+        color: var(--color-progressive);
+        background: var(--color-restless);
 
         .bottom-navbar-item--icon {
-            fill: var(--color-restless);
+            fill: var(--color-progressive);
         }
     }
 
@@ -169,7 +148,7 @@ Descr: Mobile navigation bottom bar
     }
 
     .bottom-navbar-item--text {
-
+        letter-spacing: var(--text-spacing);
     }
 }
       </code></pre>

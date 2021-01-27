@@ -10,7 +10,7 @@
 
   // font size
   --text-base-size: 1em; // body font-size
-  --text-scale-ratio: 1.2; // multiplier used to generate the type scale values 👇
+  --text-scale-ratio: 1.25; // multiplier used to generate the type scale values 👇
   
   // line-height
   --body-line-height: 1.625;
@@ -40,8 +40,8 @@
 @supports(--css: variables) {
   @include breakpoint(md) {
     :root {
-      --text-base-size: 1.25em;
-      --text-scale-ratio: 1.25;
+     // --text-base-size: 1.25em;
+     // --text-scale-ratio: 1.25;
     }
   }
 }

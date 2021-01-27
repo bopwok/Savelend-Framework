@@ -26,7 +26,7 @@ Descr: Mobile navigation bottom bar
     align-items: center;
     justify-content: center;
 
-    padding: var(--space-sm) 0;
+    padding: var(--space-xs) 0;
 
     color: var(--color-progressive-4);
     text-decoration: none;
@@ -37,7 +37,7 @@ Descr: Mobile navigation bottom bar
         background: var(--color-progressive-1);
     }
 
-    &.active {
+    &[data-state=active] {
         color: var(--color-progressive);
         background: var(--color-restless);
 
@@ -49,9 +49,12 @@ Descr: Mobile navigation bottom bar
     .bottom-navbar-item--icon {
         width: 2em;
         height: 2em;
+
+        margin-bottom: var(--space-xxxxs);
     }
 
     .bottom-navbar-item--text {
+        font-size: var(--text-sm);
         letter-spacing: var(--text-spacing);
     }
 }
