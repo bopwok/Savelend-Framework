@@ -18,8 +18,13 @@
 //   }
 // }
 
+.body-bg {
+    background: linear-gradient(180deg, #EBE9E0 0%, #E1DED0 69.79%);
+    background-attachment: fixed;
+}
+
 .fixed {
-    position:fixed;
+    position: fixed;
 
     &.fixed--bottom {
         bottom: 0;
@@ -33,9 +38,9 @@
 }
 
 .previewbox {
-    position:relative;
+    position: relative;
     min-height: 250px;
-    background: linear-gradient(180deg, #EBE9E0 0%, #E1DED0 69.79%);
+
     border: 1px solid #383841;
 
     &.preview-mobile {
