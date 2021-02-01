@@ -1,0 +1,33 @@
+/* -------------------------------- 
+
+File#: _2_actions
+Title: Recommended actions
+Descr: User recommended actions
+
+-------------------------------- */
+
+.actions {
+    background: var(--color-challenger);
+    padding: var(--space-xs);
+    padding-left: var(--space-sm);
+
+    border-radius: var(--radius-lg);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: background ease 0.2s;
+
+    cursor: pointer;
+
+    &:hover {
+        background: var(--color-challenger-1);
+    }
+
+    .actions-text {
+        color: var(--color-offwhite);
+        letter-spacing: 0.02em;
+        font-weight: 700;
+    }
+}
