@@ -27,7 +27,7 @@
 @supports(--css: variables) {
   @include breakpoint(md) {
     :root {
-      --space-unit:  1.25em;
+      //--space-unit:  1.25em;
     }
   }
 }

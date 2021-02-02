@@ -18,7 +18,7 @@
     // store the max height of the element
     this.maxHeight = false;
     // store drop menu layout 
-    this.layout = false;
+    this.layout = 'mobile';
     // vertical gap - desktop layout
     this.verticalGap = parseInt(getComputedStyle(this.element).getPropertyValue('--drop-menu-gap-y')) || 4;
     // store autocomplete search results

@@ -23,6 +23,12 @@
     background-attachment: fixed;
 }
 
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .fixed {
     position: fixed;
 
@@ -40,6 +46,7 @@
 .previewbox {
     position: relative;
     min-height: 250px;
+    overflow: hidden;
 
     border: 1px solid #383841;
 
