@@ -5,9 +5,9 @@
 // --------------------------------
 
 // 👇 uncomment to modify default spacing scale
-// :root {
-//   --space-unit:  1em;
-// }
+:root {
+  --space-unit:  1rem;
+}
 
 // :root, * {
 //   --space-xxxxs: calc(0.125 * var(--space-unit)); 
@@ -28,6 +28,7 @@
   @include breakpoint(md) {
     :root {
       //--space-unit:  1.25em;
+      --space-unit:  1rem;
     }
   }
 }

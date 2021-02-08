@@ -17,6 +17,10 @@
 //     }
 //   }
 // }
+.color-progressive { color: alpha(var(--color-progressive), var(--color-o, 1)); }
+.color-progressive-4 { color: alpha(var(--color-progressive-4), var(--color-o, 1)); }
+
+.color-challenger { color: alpha(var(--color-challenger), var(--color-o, 1)); }
 
 .body-bg {
     background: linear-gradient(180deg, #EBE9E0 0%, #E1DED0 69.79%);
@@ -46,7 +50,7 @@
 .previewbox {
     position: relative;
     min-height: 250px;
-    overflow: hidden;
+    overflow: scroll;
 
     border: 1px solid #383841;
 

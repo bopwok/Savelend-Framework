@@ -96,7 +96,18 @@
   --color-contrast-medium: var(--color-smart-3);
   --color-contrast-high: var(--color-smart-1);
   --color-contrast-higher: var(--color-charcoal);
+
+  // gradients
+  @include defineColorHSL(--gradient-progressive-stop-1, 329, 50%, 28%);
+  @include defineColorHSL(--gradient-progressive-stop-2, 329, 59%, 18%);
 }
+
+// background gradient
+.bg-gradient-progressive { background-image: radial-gradient(var(--gradient-progressive-stop-1), var(--gradient-progressive-stop-2)); }
+.bg-gradient-progressive-top { background-image: linear-gradient(0deg, var(--gradient-progressive-stop-1), var(--gradient-progressive-stop-2)); }
+.bg-gradient-progressive-right { background-image: linear-gradient(45deg, var(--gradient-progressive-stop-1), var(--gradient-progressive-stop-2)); }
+.bg-gradient-progressive-bottom { background-image: linear-gradient(180deg, var(--gradient-progressive-stop-1), var(--gradient-progressive-stop-2)); }
+.bg-gradient-progressive-left { background-image: linear-gradient(270deg, var(--gradient-progressive-stop-1), var(--gradient-progressive-stop-2)); }
 
 // --------------------------------
 
