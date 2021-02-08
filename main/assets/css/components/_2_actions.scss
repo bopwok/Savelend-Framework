@@ -19,6 +19,10 @@ Descr: User recommended actions
 
     transition: background ease 0.2s;
 
+    & + * {
+        margin-top: var(--space-lg);
+    }
+
     cursor: pointer;
 
     &:hover {

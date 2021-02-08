@@ -10,10 +10,6 @@ Descr: Used to display data
     border-radius: var(--radius-lg);
     overflow: hidden;
 
-    & + * {
-        margin-top: var(--space-lg);
-    }
-
 
     .card__header {
         padding-top: var(--space-sm);
@@ -73,6 +69,16 @@ Descr: Used to display data
             color: var(--color-progressive-4);
 
             cursor: pointer;
+
+            transition: color ease 0.2s;
+
+            &:hover {
+                color: var(--color-offwhite);
+            }
+
+            &:active {
+                color: var(--color-restless);
+            }
 
             &:after {
                 content: "";
