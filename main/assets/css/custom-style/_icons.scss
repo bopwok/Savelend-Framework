@@ -14,4 +14,7 @@
 .icon {
   // 👇 include the font-family declaration here if you are using an icon font
   // font-family: 'fontName';
+    position: relative;
+    top:-1px;
+    vertical-align: middle;
 }
