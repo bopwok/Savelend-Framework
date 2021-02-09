@@ -1,0 +1,50 @@
+/* -------------------------------- 
+
+File#: _2_tabbed-bar
+Title: Tabbed navigation bar
+Descr: Used for submenus, scrollable is needed
+
+-------------------------------- */
+
+.tabbed-bar {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.tabbed-bar__nav-items {
+    display: flex;
+    flex-wrap: nowrap;
+
+    .tabbed-bar__nav-item {
+        flex:1;
+        display: block;
+        padding: var(--space-sm) var(--space-sm) var(--space-xs);
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 0;
+
+            background: var(--color-restless);
+            width: 100%;
+
+            transition: height ease 0.2s, color ease 0.2s;
+        }
+
+        &.active {
+            cursor: default;
+
+            &:after {
+                height: var(--space-xxxxs);
+            }
+        }
+    }
+}

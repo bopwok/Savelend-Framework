@@ -10,10 +10,26 @@ Descr: Mobile navigation bottom bar
     width: 100%;
     background: var(--color-progressive);
 
+    display: flex;
+
     box-shadow: 0 -1.2px 1.9px -1px rgba(0, 0, 0, 0.014),
     0 -3.3px 5.3px -1px rgba(0, 0, 0, 0.038),
     0 -8.5px 12.7px -1px rgba(0, 0, 0, 0.085),
     0 -30px 42px -1px rgba(0, 0, 0, 0.15);
+
+    position: fixed;
+    z-index: var(--zindex-fixed-element);
+    bottom: 0;
+    left: 0;
+
+    @media screen and (min-width: 1024px) {
+        position: relative;
+
+        flex-direction: column;
+        justify-content: flex-start;
+
+        box-shadow: none;
+    }
 }
 
 .bottom-navbar-item {
@@ -56,5 +72,17 @@ Descr: Mobile navigation bottom bar
     .bottom-navbar-item--text {
         font-size: var(--text-sm);
         letter-spacing: var(--text-spacing);
+
+        @media screen and (min-width: 1024px) {
+            margin-left: var(--space-sm);
+            font-size: var(--text-md);
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        flex: 0;
+        padding: var(--space-md) var(--space-lg);
+        justify-content: flex-start;
     }
 }
