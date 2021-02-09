@@ -53,7 +53,8 @@ Descr: Mobile navigation bottom bar
         background: var(--color-progressive-1);
     }
 
-    &[data-state=active] {
+    &[data-state=active],
+    &.active {
         color: var(--color-progressive);
         background: var(--color-restless);
 
