@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <script>
     document.getElementsByTagName("html")[0].className += " js";
   </script>
@@ -79,7 +80,7 @@
                     <svg class="icon icon--xxs margin-left-xxs" viewBox="0 0 12 12">
                       <path
                         d="M10.745,5.564l-8-4.5A.5.5,0,0,0,2,1.5v9a.5.5,0,0,0,.248.432.5.5,0,0,0,.5,0l8-4.5a.5.5,0,0,0,0-.872Z" />
-                      </svg>
+                    </svg>
                   </button>
 
                   <ul class="drop-menu__list js-drop-menu__list">
@@ -88,7 +89,7 @@
                         <svg class="icon icon--xxs flip-x margin-right-xxs" viewBox="0 0 12 12">
                           <path
                             d="M10.745,5.564l-8-4.5A.5.5,0,0,0,2,1.5v9a.5.5,0,0,0,.248.432.5.5,0,0,0,.5,0l8-4.5a.5.5,0,0,0,0-.872Z" />
-                          </svg>
+                        </svg>
                         <span class="margin-right-auto">Back</span>
                       </button>
                     </li>
@@ -116,150 +117,260 @@
 
       <nav class="tabbed-bar">
         <div class="tabbed-bar__nav-items">
-          <a href="#" class="tabbed-bar__nav-item" @click="activetab = 'kapital'" :class="{ 'active': activetab === 'kapital' }">Kapital</a>
-          <a href="#" class="tabbed-bar__nav-item" @click="activetab = 'krediter'" :class="{ 'active': activetab === 'krediter' }">Krediter</a>
-          <a href="#" class="tabbed-bar__nav-item" @click="activetab = 'transaktioner'" :class="{ 'active': activetab === 'transaktioner' }">Transaktioner</a>
+          <a href="#" class="tabbed-bar__nav-item" @click="activetab = 'kapital'"
+            :class="{ 'active': activetab === 'kapital' }">Kapital</a>
+          <a href="#" class="tabbed-bar__nav-item" @click="activetab = 'krediter'"
+            :class="{ 'active': activetab === 'krediter' }">Krediter</a>
+          <a href="#" class="tabbed-bar__nav-item" @click="activetab = 'transaktioner'"
+            :class="{ 'active': activetab === 'transaktioner' }">Transaktioner</a>
         </div>
       </nav>
 
       <div class="container">
-      <div class="actions shadow-md">
-        <span class="actions-text">Rekommenderade handlingar</span>
-        <div class="notification">1</div>
-      </div>
-
-      <div class="grid gap-md">
-
-        <div class="card col-12@sm col-6@md col-4@lg">
-          <header class="card__header bg-gradient-progressive-right">
-            <div class="card__header-inner">
-              <h2 class="card__title">Mitt kapital</h2>
-              <div class="card__data-display card__data-display--restless">
-                99 999 999,99 kr
-              </div>
-            </div>
-          </header>
-          <div class="card__content">
-            <table class="card__data-table width-100%">
-              <tbody>
-                <tr>
-                  <td>Intjänad ränta</td>
-                  <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                </tr>
-                <tr>
-                  <td>Avgifter</td>
-                  <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                </tr>
-                <tr>
-                  <td>Intjänad ränta</td>
-                  <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                </tr>
-                <tr>
-                  <td>Avgifter</td>
-                  <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="actions shadow-md">
+          <span class="actions-text">Rekommenderade handlingar</span>
+          <div class="notification">1</div>
         </div>
 
-        <div class="card col-12@sm col-6@md col-4@lg" x-data="{ tab: 'kredittyper' }">
-          <header class="card__header card__header--flush bg-gradient-progressive-right">
-            <div class="card__header-inner">
-              <h2 class="card__title">Kreditfördelning</h2>
-            </div>
+        <div class="grid gap-md">
 
-            <div class="card__tabs">
-              <button class="reset card__tab-btn" :class="{ 'active': tab === 'kredittyper' }"
-                @click="tab = 'kredittyper'">Kredittyper</button>
-              <button class="reset card__tab-btn" :class="{ 'active': tab === 'originators' }"
-                @click="tab = 'originators'">Originators</button>
+          <div class="card col-12@sm col-6@md col-4@lg">
+            <header class="card__header bg-gradient-progressive-right">
+              <div class="card__header-inner">
+                <h2 class="card__title">Mitt kapital</h2>
+                <div class="card__data-display card__data-display--restless">
+                  99 999 999,99 kr
+                </div>
+              </div>
+            </header>
+            <div class="card__content">
+              <table class="card__data-table width-100%">
+                <tbody>
+                  <tr>
+                    <td>Intjänad ränta</td>
+                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Avgifter</td>
+                    <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Intjänad ränta</td>
+                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Avgifter</td>
+                    <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </header>
-          <div class="card__content card__content--tabbed">
-            <table x-show="tab === 'kredittyper'" class="card__content-tab card__data-table width-100%">
-              <tbody>
-                <tr>
-                  <td>Intjänad ränta</td>
-                  <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                </tr>
-                <tr>
-                  <td>Avgifter</td>
-                  <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                </tr>
-                <tr>
-                  <td>Intjänad ränta</td>
-                  <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <table x-show="tab === 'originators'" class="card__content-tab card__data-table width-100%">
-              <tbody>
-                <tr>
-                  <td>Originator 1</td>
-                  <td class="text-right font-semibold color-progressive text-md">99 %</td>
-                </tr>
-                <tr>
-                  <td>Originator 2</td>
-                  <td class="text-right font-semibold color-progressive text-md">99 %</td>
-                </tr>
-                <tr>
-                  <td>Originator 3</td>
-                  <td class="text-right font-semibold color-progressive text-md">99 %</td>
-                </tr>
-                <tr>
-                  <td>Originator 4</td>
-                  <td class="text-right font-semibold color-progressive text-md">99 %</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
-        </div>
 
-        <div class="card col-12@sm col-6@md col-4@lg">
-          <header class="card__header bg-gradient-progressive-right">
-            <div class="card__header-inner">
-              <div class="card__filters">
-                <div class="card__filter"><svg class="icon">
-                    <use xlink:href="assets/icons/remix.svg#ri-filter-2-fill" /></svg> <span
-                    class="card__filter-active-text">Fem filter aktiva</span></div>
-                <button class="reset card__sort">
-                  <span class="sr-only">Sortera</span><svg class="icon">
-                    <use xlink:href="assets/icons/remix.svg#ri-sort-desc" /></svg>
-                </button>
+          <div class="card col-12@sm col-6@md col-4@lg" x-data="{ tab: 'kredittyper' }">
+            <header class="card__header card__header--flush bg-gradient-progressive-right">
+              <div class="card__header-inner">
+                <h2 class="card__title">Kreditfördelning</h2>
               </div>
-              <h2 class="card__title">Mitt kapital</h2>
-              <div class="card__data-display card__data-display--restless">
-                99 999 999,99 kr
+
+              <div class="card__tabs">
+                <button class="reset card__tab-btn" :class="{ 'active': tab === 'kredittyper' }"
+                  @click="tab = 'kredittyper'">Kredittyper</button>
+                <button class="reset card__tab-btn" :class="{ 'active': tab === 'originators' }"
+                  @click="tab = 'originators'">Originators</button>
               </div>
+            </header>
+            <div class="card__content card__content--tabbed">
+              <table x-show="tab === 'kredittyper'" class="card__content-tab card__data-table width-100%">
+                <tbody>
+                  <tr>
+                    <td>Intjänad ränta</td>
+                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Avgifter</td>
+                    <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Intjänad ränta</td>
+                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table x-show="tab === 'originators'" class="card__content-tab card__data-table width-100%">
+                <tbody>
+                  <tr>
+                    <td>Originator 1</td>
+                    <td class="text-right font-semibold color-progressive text-md">99 %</td>
+                  </tr>
+                  <tr>
+                    <td>Originator 2</td>
+                    <td class="text-right font-semibold color-progressive text-md">99 %</td>
+                  </tr>
+                  <tr>
+                    <td>Originator 3</td>
+                    <td class="text-right font-semibold color-progressive text-md">99 %</td>
+                  </tr>
+                  <tr>
+                    <td>Originator 4</td>
+                    <td class="text-right font-semibold color-progressive text-md">99 %</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </header>
-          <div class="card__content">
-            <table class="card__data-table width-100%">
-              <tbody>
-                <tr>
-                  <td>Intjänad ränta</td>
-                  <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                </tr>
-                <tr>
-                  <td>Avgifter</td>
-                  <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                </tr>
-                <tr>
-                  <td>Intjänad ränta</td>
-                  <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                </tr>
-                <tr>
-                  <td>Avgifter</td>
-                  <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                </tr>
-              </tbody>
-            </table>
+          </div>
+
+          <div class="card col-12@sm col-6@md col-4@lg">
+            <header class="card__header bg-gradient-progressive-right">
+              <div class="card__header-inner">
+                <div class="card__filters">
+                  <div class="card__filter" aria-controls="filters"><svg class="icon">
+                      <use xlink:href="assets/icons/remix.svg#ri-filter-2-fill" /></svg> <span
+                      class="card__filter-active-text"><span id="numFilters">Inga</span> filter aktiva</span></div>
+                  <button class="reset card__sort">
+                    <span class="sr-only">Sortera</span><svg class="icon">
+                      <use xlink:href="assets/icons/remix.svg#ri-sort-desc" /></svg>
+                  </button>
+                </div>
+                <h2 class="card__title">Mitt kapital</h2>
+                <div class="card__data-display card__data-display--restless">
+                  99 999 999,99 kr
+                </div>
+              </div>
+            </header>
+            <div class="card__content">
+              <table class="card__data-table width-100%">
+                <tbody>
+                  <tr>
+                    <td>Intjänad ränta</td>
+                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Avgifter</td>
+                    <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Intjänad ränta</td>
+                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Avgifter</td>
+                    <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="filters">
+      <div class="bottom-sheet_overlay" aria-controls="filters"></div>
+      <div class="bottom-sheet">
+        <div class="bottom-sheet_header" aria-controls="filters">
+          <h3 class="bottom-sheet_header_label">
+            Hantera filter
+          </h3>
+
+          <svg class="icon">
+            <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
+        </div>
+
+        <div class="bottom-sheet_content">
+          <ul class="bottom-sheet_filters-list">
+            <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, selected: 'Filtervärde 1'}">
+              <div class="bottom-sheet_filters-list_item_filter">
+                <input type="checkbox" name="listitem1" id="listitem1"
+                  class="checkbox bottom-sheet_filters-list_check" />
+
+                <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
+
+                <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
+                  <span x-text="selected">Filtervärde 1</span>
+                  <svg class="icon" :class="{ 'flip-y': expanded }">
+                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
+                </div>
+              </div>
+              <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
+                <li>
+                  <div class="bottom-sheet_filters-list_item_filter">
+                    <input type="radio" name="listitem1" id="listitem1-1"
+                      class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked/>
+
+                    <label for="listitem1-1" class="bottom-sheet_filters-list_name" >Filtervärde 1</label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="bottom-sheet_filters-list_item_filter">
+                    <input type="radio" name="listitem1" id="listitem1-2"
+                      class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2"/>
+
+                    <label for="listitem1-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="bottom-sheet_filters-list_item_filter">
+                <input type="checkbox" name="listitem2" id="listitem2"
+                  class="checkbox bottom-sheet_filters-list_check" />
+
+                <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
+              </div>
+            </li>
+            <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, 'selected': 'Filtervärde 1'}">
+              <div class="bottom-sheet_filters-list_item_filter">
+                <input type="checkbox" name="listitem1" id="listitem1"
+                  class="checkbox bottom-sheet_filters-list_check" />
+
+                <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
+
+                <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
+                  <span x-text="selected">Filtervärde 1</span>
+                  <svg class="icon" :class="{ 'flip-y': expanded }">
+                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
+                </div>
+              </div>
+              <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
+                <li>
+                  <div class="bottom-sheet_filters-list_item_filter">
+                    <input type="radio" name="listitem2" id="listitem2-1"
+                      class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked/>
+
+                    <label for="listitem2-1" class="bottom-sheet_filters-list_name" >Filtervärde 1</label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="bottom-sheet_filters-list_item_filter">
+                    <input type="radio" name="listitem2" id="listitem2-2"
+                      class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2"/>
+
+                    <label for="listitem2-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li x-data="{editable: false}">
+              <div class="bottom-sheet_filters-list_item_filter">
+                <input type="checkbox" name="listitem2" id="listitem2"
+                  class="checkbox bottom-sheet_filters-list_check" />
+
+                <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
+
+                <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--editable" @click="editable = true; $refs.input.focus()">
+                  <input type="tel" value="99999" x-bind:disabled="editable == false" x-on:change="editable = false" x-ref="input"/> kr
+                  <svg class="icon" @click="editable = !editable; $refs.input.focus()">
+                    <use xlink:href="assets/icons/remix.svg#ri-edit-line" /></svg>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <script src="assets/js/scripts.js"></script>

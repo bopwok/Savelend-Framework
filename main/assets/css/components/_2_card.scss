@@ -74,6 +74,8 @@ Descr: Used to display data
 
             transition: color ease 0.2s;
 
+            outline: 0;
+
             &:hover {
                 color: var(--color-offwhite);
             }
@@ -125,6 +127,10 @@ Descr: Used to display data
             .card__filter-active-text {
                 display: inline-block;
                 margin-left: var(--space-xs);
+            }
+
+            &.control--active {
+                color: var(--color-restless);
             }
         }
         .card__sort {
