@@ -17,8 +17,22 @@
 //     }
 //   }
 // }
+.table { display: table; }
+
 .color-progressive {
     color: alpha(var(--color-progressive), var(--color-o, 1));
+}
+
+.color-progressive-1 {
+    color: alpha(var(--color-progressive-1), var(--color-o, 1));
+}
+
+.color-progressive-2 {
+    color: alpha(var(--color-progressive-2), var(--color-o, 1));
+}
+
+.color-progressive-3 {
+    color: alpha(var(--color-progressive-3), var(--color-o, 1));
 }
 
 .color-progressive-4 {

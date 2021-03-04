@@ -221,6 +221,68 @@
             </div>
           </div>
 
+          <div class="card col-12@sm col-6@md col-4@lg" x-data="{ tab: 'innehav', selected: [] }">
+            <header class="card__header card__header--flush bg-gradient-progressive-right">
+              <div class="card__header-inner">
+                <div class="card__filters">
+                  <div class="card__filter" aria-controls="filters"><svg class="icon">
+                      <use xlink:href="assets/icons/remix.svg#ri-filter-2-fill" /></svg> <span
+                      class="card__filter-active-text"><span id="numFilters">Inga</span> filter aktiva</span></div>
+                  <button class="reset card__sort">
+                    <span class="sr-only">Sortera</span><svg class="icon">
+                      <use xlink:href="assets/icons/remix.svg#ri-sort-desc" /></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card__tabs">
+                <button class="reset card__tab-btn" :class="{ 'active': tab === 'innehav' }"
+                  @click="tab = 'innehav'; selected = []">Innehav</button>
+                <button class="reset card__tab-btn" :class="{ 'active': tab === 'sale' }"
+                  @click="tab = 'sale'; selected = []">Till försäljning</button>
+              </div>
+            </header>
+            <div class="card__content card__content--tabbed">
+              <table x-show="tab === 'innehav'" class="card__content-tab card__data-table width-100%">
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit1"
+                      class="checkbox" x-model="selected" value="1" /><label for="Konsumentkredit1" class="">Konsumentkredit</label></td>
+                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit2"
+                      class="checkbox" x-model="selected" value="2" /><label for="Konsumentkredit2" class="">Konsumentkredit</label></td>
+                    <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit3"
+                      class="checkbox" x-model="selected" value="3" /><label for="Konsumentkredit3" class="">Konsumentkredit</label></td>
+                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                  </tr>
+                  <tr class="locked">
+                    <td><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit4"
+                      class="checkbox" x-model="selected" value="4" /><label for="Konsumentkredit4" class="">Konsumentkredit</label></td>
+                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit5"
+                      class="checkbox" x-model="selected" value="5" /><label for="Konsumentkredit5" class="">Konsumentkredit</label></td>
+                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div x-show="tab === 'sale'" class="card__content-tab card__html width-100%">
+                <h4 class="text-center color-progressive margin-bottom-md">Du har inga krediter till försäljning</h4>
+                <p class="text-center color-progressive-2 margin-bottom-lg">Så här gör du för att sälja krediter. Text text text. Text text text. Text text text. Text text text. Text text text. Text text text.</p>
+                <a href="#" class="btn btn--accent table margin-auto">Läs mer</a>
+              </div>
+            </div>
+
+            <button x-show="selected.length > 0" class="btn btn--accent btn--floating shadow-md"><span>Sälj valda krediter</span> <div class="notification" x-text="selected.length">0</div></button>
+          </div>
+
           <div class="card col-12@sm col-6@md col-4@lg">
             <header class="card__header bg-gradient-progressive-right">
               <div class="card__header-inner">
