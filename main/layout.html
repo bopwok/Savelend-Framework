@@ -167,6 +167,11 @@
             </div>
           </div>
 
+          <div class="btn-group">
+            <button class="btn btn--accent">Sätt in pengar</button>
+            <button class="btn btn--accent">Månadsspar</button>
+          </div>
+
           <div class="card col-12@sm col-6@md col-4@lg" x-data="{ tab: 'kredittyper' }">
             <header class="card__header card__header--flush bg-gradient-progressive-right">
               <div class="card__header-inner">
@@ -294,6 +299,44 @@
                     <span class="sr-only">Sortera</span><svg class="icon">
                       <use xlink:href="assets/icons/remix.svg#ri-sort-desc" /></svg>
                   </button>
+                </div>
+                <h2 class="card__title">Mitt kapital</h2>
+                <div class="card__data-display card__data-display--restless">
+                  99 999 999,99 kr
+                </div>
+              </div>
+            </header>
+            <div class="card__content">
+              <table class="card__data-table width-100%">
+                <tbody>
+                  <tr>
+                    <td>Intjänad ränta</td>
+                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Avgifter</td>
+                    <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Intjänad ränta</td>
+                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                  </tr>
+                  <tr>
+                    <td>Avgifter</td>
+                    <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card col-12@sm col-6@md col-4@lg">
+            <header class="card__header bg-gradient-progressive-right">
+              <div class="card__header-inner">
+                <div class="card__filters">
+                  <div class="card__filter" aria-controls="filters"><svg class="icon">
+                      <use xlink:href="assets/icons/remix.svg#ri-calendar-2-line" /></svg> <span
+                      class="card__filter-active-text">1 Jan 2021 – 31 jan 2021</span></div>
                 </div>
                 <h2 class="card__title">Mitt kapital</h2>
                 <div class="card__data-display card__data-display--restless">

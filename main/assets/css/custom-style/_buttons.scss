@@ -92,6 +92,24 @@
   font-size: 1.4em;
 }
 
+.btn-group {
+  display: flex;
+  justify-content: stretch;
+
+  .btn {
+    flex: 1;
+  }
+
+  .btn:first-child {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0
+  }
+  .btn:last-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0
+  }
+}
+
 .btn--floating {
   position: fixed;
   left: var(--space-lg);
