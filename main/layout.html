@@ -117,7 +117,7 @@
 
       <nav class="tabbed-bar">
         <div class="tabbed-bar__nav-items">
-          <a href="#" class="tabbed-bar__nav-item" @click="activetab = 'kapital'"
+          <a href="#" class="tabbed-bar__nav-item active" @click="activetab = 'kapital'"
             :class="{ 'active': activetab === 'kapital' }">Kapital</a>
           <a href="#" class="tabbed-bar__nav-item" @click="activetab = 'krediter'"
             :class="{ 'active': activetab === 'krediter' }">Krediter</a>
@@ -222,6 +222,8 @@
           </div>
 
           <div class="card col-12@sm col-6@md col-4@lg" x-data="{ tab: 'innehav', selected: [] }">
+            <button x-show="selected.length > 0" class="btn btn--accent btn--floating shadow-xl"><span>Sälj valda krediter</span> <div class="notification text-sm" x-text="selected.length">0</div></button>
+
             <header class="card__header card__header--flush bg-gradient-progressive-right">
               <div class="card__header-inner">
                 <div class="card__filters">
@@ -279,8 +281,6 @@
                 <a href="#" class="btn btn--accent table margin-auto">Läs mer</a>
               </div>
             </div>
-
-            <button x-show="selected.length > 0" class="btn btn--accent btn--floating shadow-md"><span>Sälj valda krediter</span> <div class="notification" x-text="selected.length">0</div></button>
           </div>
 
           <div class="card col-12@sm col-6@md col-4@lg">
