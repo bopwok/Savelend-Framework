@@ -181,6 +181,10 @@ Descr: Used to display data
             }
         }
 
+        .card__data-table__item--clickable {
+            cursor: pointer;
+        }
+
         tr {
             border-bottom: 1px solid var(--color-offwhite);
 

@@ -253,7 +253,7 @@
               <div x-show="tab === 'innehav'" class="card__content-tab card__data-table width-100%">
                 <div class="card__data-table__row card__data-table__row--bordered">
                   <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit1" class="checkbox" x-model="selected" value="1" /><label for="Konsumentkredit1"></label></div>
-                  <div class="card__data-table__row card__data-table__item" aria-controls="filters">
+                  <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
                     Konsumentkredit
                     <span class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</span>
                   </div>
@@ -261,7 +261,7 @@
 
                 <div class="card__data-table__row card__data-table__row--bordered">
                   <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit2" class="checkbox" x-model="selected" value="2" /><label for="Konsumentkredit2"></label></div>
-                  <div class="card__data-table__row card__data-table__item" aria-controls="filters">
+                  <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
                     Konsumentkredit
                     <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
                   </div>
@@ -269,7 +269,7 @@
 
                 <div class="card__data-table__row card__data-table__row--bordered">
                   <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit3" class="checkbox" x-model="selected" value="3" /><label for="Konsumentkredit3"></label></div>
-                  <div class="card__data-table__row card__data-table__item" aria-controls="filters">
+                  <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
                     Konsumentkredit
                     <span class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</span>
                   </div>
@@ -277,7 +277,7 @@
 
                 <div class="card__data-table__row card__data-table__row--bordered">
                   <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit4" class="checkbox" x-model="selected" value="4" /><label for="Konsumentkredit4"></label></div>
-                  <div class="card__data-table__row card__data-table__item" aria-controls="filters">
+                  <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
                     Konsumentkredit
                     <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
                   </div>
@@ -285,7 +285,7 @@
 
                 <div class="card__data-table__row card__data-table__row--bordered">
                   <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit5" class="checkbox" x-model="selected" value="5" /><label for="Konsumentkredit5"></label></div>
-                  <div class="card__data-table__row card__data-table__item" aria-controls="filters">
+                  <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
                     Konsumentkredit
                     <span class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</span>
                   </div>
@@ -293,7 +293,7 @@
 
                 <div class="card__data-table__row card__data-table__row--bordered">
                   <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit6" class="checkbox" x-model="selected" value="6" /><label for="Konsumentkredit6"></label></div>
-                  <div class="card__data-table__row card__data-table__item" aria-controls="filters">
+                  <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
                     Konsumentkredit
                     <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
                   </div>
@@ -494,6 +494,151 @@
               </div>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="credit">
+      <div class="bottom-sheet_overlay" aria-controls="credit"></div>
+      <div class="bottom-sheet">
+        <div class="bottom-sheet_header" aria-controls="credit">
+          <h3 class="bottom-sheet_header_label">
+            Konsumentkredit
+          </h3>
+
+          <svg class="icon">
+            <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
+        </div>
+
+        <div class="bottom-sheet_content">
+          <table class="bottom-sheet_table">
+            <tr>
+              <td>Kredittyp:</td>
+              <td>Konsumentkredit</td>
+            </tr>
+
+            <tr>
+              <td>Originator:</td>
+              <td>SBL Finans</td>
+            </tr>
+
+            <tr>
+              <td>Kredit-ID:</td>
+              <td>abc123-abc123-abc123</td>
+            </tr>
+
+            <tr>
+              <td>BRA:</td>
+              <td>1,23 %</td>
+            </tr>
+
+            <tr>
+              <td>Investeringsdatum:</td>
+              <td>1 Jan 2021</td>
+            </tr>
+
+            <tr>
+              <td>Etc…</td>
+            </tr>
+          </table>
+
+          <table class="bottom-sheet_table bottom-sheet_table--dark">
+            <tr class="position-sticky top-0">
+              <th class="color-progressive text-left">Datum</th>
+              <th class="color-progressive text-right">Belopp</th>
+              <th class="color-progressive text-right">Varav ränta</th>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>25 jan 2021</td>
+              <td class="text-right">99 999 999,99 kr</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

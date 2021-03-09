@@ -67,7 +67,7 @@
 .bottom-sheet_content {
     overflow: auto;
     height: min-content;
-    max-height: 80vh;
+    max-height: 70vh;
     margin-bottom: 2rem;
 }
 
@@ -145,3 +145,32 @@
     }
 }
 
+
+.bottom-sheet_table {
+    width: 100%;
+
+    tr {
+        border-bottom: 1px solid var(--color-offwhite);
+
+        &:last-child {
+            border: 0;
+        }
+    }
+    th {
+        font-weight: 600;
+    }
+    td,th {
+        padding: var(--space-md) var(--space-md);
+    }
+}
+
+.bottom-sheet_table--dark {
+    th {
+        background-color: var(--color-offwhite-1);
+        border-bottom: 4px solid var(--color-offwhite);
+    }
+
+    td {
+        background-color: var(--color-offwhite-2);
+    }
+}
