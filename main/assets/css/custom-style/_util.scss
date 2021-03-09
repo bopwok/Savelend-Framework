@@ -43,6 +43,10 @@
     color: alpha(var(--color-challenger), var(--color-o, 1));
 }
 
+.width-min {
+    width: min-content;
+}
+
 .body-bg {
     background: linear-gradient(180deg, #EBE9E0 0%, #E1DED0 69.79%);
     background-attachment: fixed;

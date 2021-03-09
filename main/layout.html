@@ -250,35 +250,55 @@
               </div>
             </header>
             <div class="card__content card__content--tabbed">
-              <table x-show="tab === 'innehav'" class="card__content-tab card__data-table width-100%">
-                <tbody>
-                  <tr>
-                    <td><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit1"
-                      class="checkbox" x-model="selected" value="1" /><label for="Konsumentkredit1" class="">Konsumentkredit</label></td>
-                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit2"
-                      class="checkbox" x-model="selected" value="2" /><label for="Konsumentkredit2" class="">Konsumentkredit</label></td>
-                    <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit3"
-                      class="checkbox" x-model="selected" value="3" /><label for="Konsumentkredit3" class="">Konsumentkredit</label></td>
-                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                  </tr>
-                  <tr class="locked">
-                    <td><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit4"
-                      class="checkbox" x-model="selected" value="4" /><label for="Konsumentkredit4" class="">Konsumentkredit</label></td>
-                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit5"
-                      class="checkbox" x-model="selected" value="5" /><label for="Konsumentkredit5" class="">Konsumentkredit</label></td>
-                    <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div x-show="tab === 'innehav'" class="card__content-tab card__data-table width-100%">
+                <div class="card__data-table__row card__data-table__row--bordered">
+                  <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit1" class="checkbox" x-model="selected" value="1" /><label for="Konsumentkredit1"></label></div>
+                  <div class="card__data-table__row card__data-table__item" aria-controls="filters">
+                    Konsumentkredit
+                    <span class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</span>
+                  </div>
+                </div>
+
+                <div class="card__data-table__row card__data-table__row--bordered">
+                  <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit2" class="checkbox" x-model="selected" value="2" /><label for="Konsumentkredit2"></label></div>
+                  <div class="card__data-table__row card__data-table__item" aria-controls="filters">
+                    Konsumentkredit
+                    <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
+                  </div>
+                </div>
+
+                <div class="card__data-table__row card__data-table__row--bordered">
+                  <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit3" class="checkbox" x-model="selected" value="3" /><label for="Konsumentkredit3"></label></div>
+                  <div class="card__data-table__row card__data-table__item" aria-controls="filters">
+                    Konsumentkredit
+                    <span class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</span>
+                  </div>
+                </div>
+
+                <div class="card__data-table__row card__data-table__row--bordered">
+                  <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit4" class="checkbox" x-model="selected" value="4" /><label for="Konsumentkredit4"></label></div>
+                  <div class="card__data-table__row card__data-table__item" aria-controls="filters">
+                    Konsumentkredit
+                    <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
+                  </div>
+                </div>
+
+                <div class="card__data-table__row card__data-table__row--bordered">
+                  <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit5" class="checkbox" x-model="selected" value="5" /><label for="Konsumentkredit5"></label></div>
+                  <div class="card__data-table__row card__data-table__item" aria-controls="filters">
+                    Konsumentkredit
+                    <span class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</span>
+                  </div>
+                </div>
+
+                <div class="card__data-table__row card__data-table__row--bordered">
+                  <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit6" class="checkbox" x-model="selected" value="6" /><label for="Konsumentkredit6"></label></div>
+                  <div class="card__data-table__row card__data-table__item" aria-controls="filters">
+                    Konsumentkredit
+                    <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
+                  </div>
+                </div>
+              </div>
 
               <div x-show="tab === 'sale'" class="card__content-tab card__html width-100%">
                 <h4 class="text-center color-progressive margin-bottom-md">Du har inga krediter till försäljning</h4>

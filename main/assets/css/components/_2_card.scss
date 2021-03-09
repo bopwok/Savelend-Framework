@@ -154,6 +154,33 @@ Descr: Used to display data
     }
 
     .card__data-table {
+        .card__data-table__row {
+            display: flex;
+            justify-content: space-between;
+            flex: 1;
+            align-items: center;
+        }
+
+        .card__data-table__row--bordered {
+            border-bottom: 1px solid var(--color-offwhite);
+
+            &:last-child {
+                border: 0;
+            }
+        }
+
+        .card__data-table__item {
+            padding: var(--space-md) var(--space-md);
+
+            &:first-child {
+                padding-right: 0;
+            }
+
+            &:last-child {
+                padding-left: 0;
+            }
+        }
+
         tr {
             border-bottom: 1px solid var(--color-offwhite);
 
