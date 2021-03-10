@@ -11,7 +11,8 @@
   --btn-font-size: 1em; // font size
 }
 
-.btn { // style affecting all buttons
+.btn {
+  // style affecting all buttons
   line-height: 1.2;
   box-shadow: var(--shadow-xs);
   -webkit-font-smoothing: antialiased;
@@ -19,7 +20,7 @@
   transition: .2s;
   font-size: var(--text-md);
   font-weight: 600;
-  
+
   &:hover {
     cursor: pointer;
     box-shadow: var(--shadow-sm);
@@ -34,7 +35,7 @@
     transform: translateY(2px);
   }
 
-  & > :last-child:not(:first-child) {
+  &> :last-child:not(:first-child) {
     margin-left: var(--space-sm);
   }
 }
@@ -73,7 +74,7 @@
 
 // feedback
 .btn--disabled,
-.btn[disabled], 
+.btn[disabled],
 .btn[readonly] {
   opacity: 0.6;
   cursor: not-allowed;
@@ -104,6 +105,7 @@
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
   }
+
   .btn:last-child {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
@@ -128,8 +130,11 @@
     bottom: calc(65px);
     height: 45px;
     width: 100%;
-    background: rgba(0,0,0,0.3);
-  } 
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.btn--static\@md {
 
   @include breakpoint(md) {
     position: static;

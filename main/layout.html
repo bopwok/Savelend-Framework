@@ -227,7 +227,7 @@
           </div>
 
           <div class="card col-12@sm col-6@md col-4@lg" x-data="{ tab: 'innehav', selected: [] }">
-            <button x-show="selected.length > 0" class="btn btn--accent btn--floating shadow-xl"><span>Sälj valda krediter</span> <div class="notification text-sm" x-text="selected.length">0</div></button>
+            <button x-show="selected.length > 0" class="btn btn--accent btn--floating btn--static@md shadow-xl" aria-controls="sale"><span>Sälj valda krediter</span> <div class="notification text-sm" x-text="selected.length">0</div></button>
 
             <header class="card__header card__header--flush bg-gradient-progressive-right">
               <div class="card__header-inner">
@@ -639,6 +639,110 @@
               <td class="text-right">99 999 999,99 kr</td>
             </tr>
           </table>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="sale">
+      <div class="bottom-sheet_overlay" aria-controls="sale"></div>
+      <div class="bottom-sheet">
+        <div class="bottom-sheet_header" aria-controls="sale">
+          <h3 class="bottom-sheet_header_label">
+            Sälj valda krediter (2)
+          </h3>
+
+          <svg class="icon">
+            <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
+        </div>
+
+        <div class="bottom-sheet_content padding-bottom-xxl">
+          <p class="padding-md">Genom att klicka på “Lägg ut till försäljning” kommer dina valda krediter att läggas ut till andrahandsmarknaden.</p>
+          
+          <table class="bottom-sheet_table">
+            <tr>
+              <td>Krediter som ska säljas:</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Krediternas värde:</td>
+              <td>18 kr</td>
+            </tr>
+            <tr>
+              <td>Avgifter (5 %):</td>
+              <td>0,9 kr</td>
+            </tr>
+            <tr>
+              <td>Till dig vid försäljning:</td>
+              <td>17,1 kr</td>
+            </tr>
+          </table>
+
+          <table class="bottom-sheet_table bottom-sheet_table--dark">
+            <tr class="position-sticky top-0">
+              <th class="color-progressive text-left">Kredittyp</th>
+              <th class="color-progressive text-right">Värde</th>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+            <tr>
+              <td>Konsumentkredit</td>
+              <td class="text-right">99 999 999,99 kr</td>
+            </tr>
+          </table>
+
+          <button class="btn btn--accent btn--floating shadow-xl" aria-controls="sale"><span>Lägg ut till försäljning</span></button>
+
         </div>
       </div>
     </div>
