@@ -9,7 +9,7 @@ Descr: Used for submenus, scrollable is needed
 .tabbed-bar {
     position: sticky;
     top: 0;
-    z-index: var(--zindex-overlay);
+    z-index: var(--zindex-header);
     background: var(--color-offwhite-1);
     width: 100%;
     overflow-x: scroll;

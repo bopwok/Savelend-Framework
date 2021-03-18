@@ -24,7 +24,7 @@ Usage: codyhouse.co/license
     left: 0;
     width: 100%;
     min-height: 100%;
-    z-index: var(--zindex-fixed-element);
+    z-index: var(--zindex-overlay);
 
     pointer-events: none;
     overflow: auto;
