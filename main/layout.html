@@ -302,7 +302,7 @@
                     <div class="card col-12@sm col-6@md col-4@lg">
                         <header class="card__header bg-gradient-progressive-right">
                             <div class="card__header-inner">
-                                <h2 class="card__title">Form elements</h2>
+                                <h2 class="card__title card__title--large">Form elements</h2>
                             </div>
                         </header>
                         <div class="card__content">
@@ -334,10 +334,10 @@
                                 <div class="form-input margin-bottom-sm">
                                     <label class="form-label" for="input-name">This is a telephone field</label>
                                     <input class="form-control width-100%" type="tel" name="input-name" id="input-name" required>
-                                    
+
                                     <p class="form-help">Also good for number inputs on mobile (this is a help text btw)</p>
                                 </div>
-                                
+
                                 <div class="form-input margin-bottom-sm">
                                     <label class="form-label" for="input-name">This is a select field</label>
                                     <div class="select">
@@ -404,6 +404,125 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+
+                    <div class="card col-12@sm col-6@md col-4@lg">
+                        <header class="card__header bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <h2 class="card__title card__title--large">Expandable list card</h2>
+                            </div>
+                        </header>
+                        <div class="card__content">
+                            <div class="expandable-list">
+                                <div class="expandable-list__item" :class="{'expandable-list__item--expanded': expanded}" x-data="{expanded:false}">
+                                    <div class="expandable-list__parent" @click="expanded = !expanded">
+                                        Has sub list
+
+                                        <div>
+                                            <svg class="icon ri-xl margin-right-md" :class="{ 'flip-y': expanded }">
+                                                <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
+
+                                            <div class="switch">
+                                                <input class="switch__input switch__input--partial" type="checkbox" id="switch-checkbox-1">
+                                                <label class="switch__label" for="switch-checkbox-1" aria-hidden="true">Option label</label>
+                                                <div class="switch__marker" aria-hidden="true"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="expandable-list expandable-list--sub">
+                                        <div class="expandable-list__item" :class="{'expandable-list__item--expanded': expanded}" x-data="{expanded:false}">
+                                            <div class="expandable-list__parent" @click="expanded = !expanded">
+                                                Has sub content
+
+                                                <svg class="icon" :class="{ 'flip-y': expanded }">
+                                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
+
+                                                <div class="switch">
+                                                    <input class="switch__input" type="checkbox" id="switch-checkbox-3">
+                                                    <label class="switch__label" for="switch-checkbox-3" aria-hidden="true">Option label</label>
+                                                    <div class="switch__marker" aria-hidden="true"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="expandable-list__content">
+                                                <div class="tag-list margin-bottom-md">
+                                                    <div class="tag-list__item">Kredittyp</div>
+                                                    <div class="tag-list__item">Kredittyp</div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-se" class="tag-list__item tag-list__item--flag" viewBox="0 0 512 512">
+                                                        <path fill="#066aa7" d="M0 0h512v512H0z" />
+                                                        <path fill="#fecc00" d="M0 204.8h512v102.4H0z" />
+                                                        <path fill="#fecc00" d="M134 0h102.4v512H134z" />
+                                                    </svg>
+                                                </div>
+
+                                                <table class="width-100%">
+                                                    <tr>
+                                                        <td class="padding-bottom-sm">Målavkastning</td>
+                                                        <td class="padding-bottom-sm font-bold text-right">9 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="padding-bottom-sm">Målavkastning</td>
+                                                        <td class="padding-bottom-sm font-bold text-right">9 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="padding-bottom-sm">Målavkastning</td>
+                                                        <td class="padding-bottom-sm font-bold text-right">9 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="padding-bottom-sm">Målavkastning</td>
+                                                        <td class="padding-bottom-sm font-bold text-right">9 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="padding-bottom-sm">Målavkastning</td>
+                                                        <td class="padding-bottom-sm font-bold text-right">9 %</td>
+                                                    </tr>
+                                                </table>
+
+                                                <div class="slider slider--horiz js-slider">
+                                                    <div class="slider__range">
+                                                        <label class="sr-only" for="sliderValue">Slider value</label>
+                                                        <input class="slider__input" type="range" id="sliderValue" name="sliderValue" min="0" max="100" step="1" value="0">
+                                                    </div>
+
+                                                    <div class="text-right" aria-hidden="true">
+                                                        <span class="slider__value"><span class="js-slider__value">0</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="expandable-list__item" :class="{'expandable-list__item--expanded': expanded}" x-data="{expanded:false}">
+                                    <div class="expandable-list__parent" @click="expanded = !expanded">
+                                        Has sub content
+
+                                        <svg class="icon" :class="{ 'flip-y': expanded }">
+                                            <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
+                                    </div>
+
+                                    <div class="expandable-list__content">
+                                        This is sub content
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-12@sm col-6@md col-4@lg">
+                        <header class="card__header bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <h2 class="card__title card__title--large">SmartInvest</h2>
+                            </div>
+                        </header>
+                        <div class="card__content">
+                            <ul class="expandable-list">
+                                <li class="expandable-list__item">
+
+                                </li>
+                            </ul>
                         </div>
                     </div>
 

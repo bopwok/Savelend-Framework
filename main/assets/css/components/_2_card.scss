@@ -41,6 +41,10 @@ Descr: Used to display data
         color: var(--color-offwhite);
         font-weight: 400;
 
+        &.card__title--large {
+            font-size: var(--text-md);
+        }
+
         & + .card__data-display {
             margin-top: var(--space-xxs);
         }
@@ -146,7 +150,7 @@ Descr: Used to display data
     .card__content {
         border-bottom-left-radius: var(--radius-lg);
         border-bottom-right-radius: var(--radius-lg);
-        background: var(--color-offwhite-2);
+        background: var(--color-offwhite-3);
     }
 
     .card__html {

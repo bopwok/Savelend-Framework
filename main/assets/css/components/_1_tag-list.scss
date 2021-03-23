@@ -1,0 +1,27 @@
+.tag-list {
+    display: flex;
+    align-items: center;
+
+    .tag-list__item {
+        margin-right: var(--space-xs);
+
+        padding: var(--space-xxxs) var(--space-sm);
+
+        background: var(--color-offwhite);
+        border-radius: var(--radius-full);
+        font-size: var(--text-sm);
+        color: var(--color-progressive);
+        letter-spacing: 0.025em;
+
+        &.tag-list__item--flag {
+            padding: 0;
+            border-radius: var(--radius-full);
+            height: var(--space-md);
+            width: var(--space-md);
+        }
+
+        &:last-item {
+            margin-right: 0;
+        }
+    }
+}
