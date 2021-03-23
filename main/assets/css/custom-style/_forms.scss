@@ -5,17 +5,49 @@
 // --------------------------------
 
 :root {
-  --form-control-padding-y: var(--space-xxs); // padding top/bottom
-  --form-control-padding-x: var(--space-xs); // padding left/right
-  --form-control-radius: 0.25em; // border radius
+  --form-control-padding-y: var(--space-xs); // padding top/bottom
+  --form-control-padding-x: var(--space-sm); // padding left/right
+  --form-control-radius: 0; // border radius
   --form-control-font-size: 1em; // font size
 }
 
+.form-input {
+  position: relative;
+
+  .form-label {
+    position: absolute;
+    top: calc(var(--form-control-padding-y)/1.5);
+    left: calc(var(--form-control-padding-x));
+    z-index: 1;
+  }
+
+  .form-control {
+    padding-top: calc(var(--form-control-padding-y)*3.5);
+
+    & + .form-help {
+      margin-top: var(--space-xxs);
+      margin-bottom: var(--space-md);
+    }
+  }
+
+  &:focus-within {
+    .form-label {
+      color: var(--color-restless);
+    }
+  }
+}
+
+.form-help { 
+  font-size: var(--text-sm);
+  padding: 0 calc(var(--form-control-padding-x)/1.5);
+}
+
 .form-control { // basic form element style
-  line-height: 1.2;
-  background-color: var(--color-bg);
-  border: 2px solid var(--color-contrast-low);
+  line-height: 1;
+  background-color: var(--color-offwhite-4);
+  border-bottom: 2px solid var(--color-smart-6);
   transition: .2s;
+  padding: var(--form-control-padding-y) var(--form-control-padding-x);
 
   &::placeholder {
     opacity: 1;
@@ -24,7 +56,7 @@
 
   &:focus {
     outline: none;
-    border-color: var(--color-primary);
+    border-color: var(--color-restless);
     box-shadow: 0 0 0 2px alpha(var(--color-primary), 0.2);
   }
 }
@@ -32,9 +64,8 @@
 .form-control--error,
 .form-control[aria-invalid="true"] {
   border-color: var(--color-error);
-
   &:focus {
-    box-shadow: 0 0 0 2px alpha(var(--color-error), 0.2);
+    box-shadow: 0 0 0 2px alpha(var(--color-error), 0.8);
   }
 }
 
@@ -44,8 +75,16 @@
   cursor: not-allowed;
 }
 
+.form-control--disabled,
+.form-control[disabled] {
+  background: transparent;
+}
+
 .form-legend {}
-.form-label {}
+.form-label {
+  font-size: var(--text-sm);
+  color: var(--color-smart-3);
+}
 
 // --------------------------------
 
