@@ -48,7 +48,8 @@
 }
 
 .body-bg {
-    background: linear-gradient(180deg, #EBE9E0 0%, #E1DED0 69.79%);
+    //background: linear-gradient(180deg, var(--color-offwhite-2) 0%, var(--color-offwhite-1) 69.79%);
+    background: var(--color-offwhite-1);
     background-attachment: fixed;
 }
 

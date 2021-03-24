@@ -159,6 +159,48 @@
                         </div>
                     </div>
 
+                    <div class="expandable-block col-12@sm col-6@md col-4@lg">
+                        <div class="expandable-block__item" :class="{'expandable-block__item--expanded': expanded}" x-data="{expanded: false}">
+                            <header class="expandable-block__intro" @click="expanded=!expanded">
+                                Text om hur man kan kontakta kundtjänst samt om vad.
+
+                                <svg class="icon expandable-block__icon" aria-hidden="true" viewBox="0 0 20 20">
+                                    <g stroke-width="4" stroke="currentColor">
+                                        <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="18,4 10,12 2,4 "></polyline>
+                                    </g>
+                                </svg>
+                            </header>
+                            <section class="expandable-block__content">
+                                Information om öppettider, telefonnummer och och e-post etc. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="expandable-block col-12@sm col-6@md col-4@lg">
+                        <div class="expandable-block__item expandable-block__item--light" :class="{'expandable-block__item--expanded': expanded}" x-data="{expanded: false}">
+                            <header class="expandable-block__intro" @click="expanded=!expanded">
+                                Text om hur man kan kontakta kundtjänst samt om vad.
+
+                                <svg class="icon expandable-block__icon" aria-hidden="true" viewBox="0 0 20 20">
+                                  <g stroke-width="4" stroke="currentColor">
+                                      <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="18,4 10,12 2,4 "></polyline>
+                                  </g>
+                              </svg>
+                            </header>
+                            <section class="expandable-block__content">
+                                Information om öppettider, telefonnummer och och e-post etc. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                            </section>
+                        </div>
+
+                        <div class="expandable-block__item expandable-block__item--light">
+                            <section class="expandable-block__content">
+                                Information om öppettider, telefonnummer och och e-post etc. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                            </section>
+                        </div>
+                    </div>
+
+
+
                     <div class="btn-group">
                         <button class="btn btn--accent">Sätt in pengar</button>
                         <button class="btn btn--accent">Månadsspar</button>
