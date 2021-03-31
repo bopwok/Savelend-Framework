@@ -1,13 +1,13 @@
 .bottom-sheet_wrapper {
     &.bottom-sheet--is-visible {
         .bottom-sheet_overlay {
-            transform: translateY(0);
+            transform: translateX(0);
             background: rgba(0, 0, 0, 0.3);
         }
 
         .bottom-sheet {
-            padding-bottom: 2rem;
-            transform: translateY(4rem);
+            //padding-bottom: 2rem;
+            transform: translateX(0);
 
             box-shadow: 0 -1.2px 1.9px -1px rgba(0, 0, 0, 0.014),
                 0 -3.3px 5.3px -1px rgba(0, 0, 0, 0.038),
@@ -18,7 +18,7 @@
 }
 
 .bottom-sheet_overlay {
-    transform: translateY(100%);
+    transform: translateX(100%);
     background: rgba(0, 0, 0, 0);
     position: fixed;
     width: 100%;
@@ -34,14 +34,15 @@
     background: var(--color-offwhite-3);
     position: fixed;
     width: 100%;
-    max-width: var(--max-width-xl);
+    height: 100%;
+    max-width: var(--max-width-sm);
     bottom: 0;
-    left: 0;
+    //left: 0;
     right: 0;
-    margin: 0 auto;
+    //margin: 0 auto;
     z-index: var(--zindex-overlay);
-    transform: translateY(100%);
-    transition: transform var(--ease-out-back) 0.5s;
+    transform: translateX(100%);
+    transition: transform var(--ease-out) 0.3s;
 
     border-top-left-radius: var(--radius-lg);
     border-top-right-radius: var(--radius-lg);
