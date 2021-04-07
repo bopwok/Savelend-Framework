@@ -44,6 +44,7 @@ Usage: codyhouse.co/license
     pointer-events: none;
   
     &:checked + .switch__label {
+      box-shadow: 0 0 0 0px transparent;
       background-color: var(--color-restless);
     }
 
@@ -53,12 +54,14 @@ Usage: codyhouse.co/license
     }
   
     &:checked + .switch__label + .switch__marker {
+      background-color: var(--color-offwhite);
       left: calc(100% - var(--switch-height) + var(--switch-padding));
     }
 
     &.switch__input--partial:checked + .switch__label + .switch__marker {
       background-color: var(--color-restless);
     }
+    
   
     &:focus + .switch__label,
     &:active + .switch__label {
@@ -76,7 +79,9 @@ Usage: codyhouse.co/license
     height: 100%;
     color: transparent;
     user-select: none;
-    background-color: var(--color-challenger);
+    box-shadow: 0 0 0 2px var(--color-challenger);
+    background-color: transparent;
+    //background-color: var(--color-challenger);
     border-radius: inherit;
     z-index: 1;
     transition: var(--switch-animation-duration);
@@ -85,7 +90,7 @@ Usage: codyhouse.co/license
   
   .switch__marker {
     position: relative;
-    background-color: var(--color-white);
+    background-color: var(--color-challenger);
     width: calc(var(--switch-height) - var(--switch-padding) * 2);
     height: calc(var(--switch-height) - var(--switch-padding) * 2);
     border-radius: 50%;

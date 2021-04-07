@@ -20,6 +20,7 @@
   transition: .2s;
   font-size: var(--text-md);
   font-weight: 600;
+  white-space: inherit;
 
   &:hover {
     cursor: pointer;
@@ -33,10 +34,6 @@
 
   &:active {
     transform: translateY(2px);
-  }
-
-  &> :last-child:not(:first-child) {
-    margin-left: var(--space-sm);
   }
 }
 
@@ -99,6 +96,10 @@
 
   .btn {
     flex: 1;
+
+    &> :last-child:not(:first-child) {
+      margin-left: var(--space-sm);
+    }
   }
 
   .btn:first-child {

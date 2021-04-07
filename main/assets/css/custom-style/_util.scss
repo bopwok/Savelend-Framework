@@ -43,6 +43,20 @@
     color: alpha(var(--color-challenger), var(--color-o, 1));
 }
 
+.fill-progressive { fill: var(--color-progressive); }
+.fill-challenger { fill: var(--color-challenger); }
+.fill-smart { fill: var(--color-smart); }
+.fill-offwhite { fill: var(--color-offwhite); }
+
+.logo-neg {
+    .fill-progressive { fill: var(--color-offwhite); }
+    .fill-challenger { fill: var(--color-challenger); }
+    .fill-smart { fill: var(--color-offwhite); }
+    .fill-offwhite { fill: var(--color-offwhite); }
+}
+
+
+
 .width-min {
     width: min-content;
 }

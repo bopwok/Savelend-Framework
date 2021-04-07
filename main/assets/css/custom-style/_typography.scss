@@ -14,7 +14,7 @@
   
   // line-height
   --body-line-height: 1.625;
-  --heading-line-height: 1.2;
+  --heading-line-height: 1.1;
   
   // capital letters - used in combo with the lhCrop mixin
   --font-primary-capital-letter: 1;
@@ -51,6 +51,8 @@ h1, h2, h3, h4 {
   font-weight: 600;
 
   letter-spacing: var(--text-spacing);
+
+  hyphens: auto;
 }
 
 // --------------------------------
@@ -62,6 +64,10 @@ h1, h2, h3, h4 {
 // link style
 a, .link {}
 
+strong {
+  font-weight: 600;
+}
+
 mark {
   background-color: alpha(var(--color-accent), 0.2);
   color: inherit;
@@ -70,6 +76,10 @@ mark {
 .text-component {
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
+
+  p {
+    margin-bottom: var(--space-md);
+  }
 
   blockquote {
     padding-left: 1em;

@@ -1,0 +1,30 @@
+.hubspot-textblock {
+    display: grid;
+    margin: 0 auto;
+    max-width: var(--max-width-lg);
+
+    align-items: center;
+
+    overflow-wrap: break-word;
+
+    @include breakpoint(md) {
+        grid-gap: var(--space-lg);
+        grid-template-columns: 50% 50%;
+    }
+}
+
+.hubspot-textblock__image {}
+
+.hubspot-textblock__inner {
+    padding: var(--space-lg) var(--space-lg) var(--space-xxl);
+
+    @include breakpoint(md) {
+        padding: 0;
+    }
+}
+
+.hubspot-textblock__title {}
+
+.hubspot-textblock__text {}
+
+.hubspot-textblock__cta {}

@@ -1,0 +1,58 @@
+.hubspot-global-stats {
+    padding: var(--space-xxl) var(--space-lg);
+
+    background: var(--color-challenger);
+    color: var(--color-offwhite);
+
+    pointer-events: none;
+    & a { text-decoration:none; color:inherit; }
+}
+
+.hubspot-global-stats__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+}
+
+.hubspot-global-stats__item {
+    flex: 0 1 100%;
+    margin-bottom: var(--space-xl);
+    text-align: center;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(sm) {
+        flex: 0 1 50%;
+    }
+
+    @include breakpoint(md) {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
+
+.hubspot-global-stats__icon {
+
+}
+
+.hubspot-global-stats__title {
+    color: var(--color-offwhite);
+    font-size: var(--text-xxl);
+}
+
+.hubspot-global-stats__text {
+    color: var(--color-progressive);
+    font-size: var(--text-md);
+    font-weight: 600;
+    letter-spacing: var(--text-spacing);
+    em {
+        font-size: var(--text-sm);
+        //color: var(--color-progressive);
+        opacity: 0.6;
+        font-weight: 300;
+    }
+}

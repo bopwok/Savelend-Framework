@@ -1,0 +1,23 @@
+.container-fluid {
+    margin: 0 auto;
+}
+
+.row-flud-wrapper {
+    //display: flex;
+}
+
+.row-fluid {
+    width: 100%;
+    //display: grid;
+
+    //padding: var(--space-md);
+
+    .span12 {
+        //flex: 0 1 100%;
+
+    }
+
+    p {
+        //margin-bottom: var(--space-sm);
+    }
+}
