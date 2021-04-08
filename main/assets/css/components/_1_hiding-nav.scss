@@ -22,6 +22,7 @@ Usage: codyhouse.co/license
   .hide-nav--has-bg {
     color: var(--color-progressive) !important;
     background-color: var(--color-offwhite);
+    box-shadow: var(--shadow-sm);
 
     .f-header__logo {
       --logo-progressive:  var(--color-progressive);
