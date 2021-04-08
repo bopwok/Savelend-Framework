@@ -1,4 +1,5 @@
 .hubspot-textblock {
+    padding: var(--space-xxl) var(--space-lg);
     display: grid;
     margin: 0 auto;
     max-width: var(--max-width-lg);
@@ -23,7 +24,9 @@
     }
 }
 
-.hubspot-textblock__title {}
+.hubspot-textblock__title {
+    margin-bottom: var(--space-lg);
+}
 
 .hubspot-textblock__text {}
 

@@ -19,6 +19,10 @@
 // }
 .table { display: table; }
 
+.bg-progressive {
+    background-color: var(--color-progressive);
+}
+
 .color-progressive {
     color: alpha(var(--color-progressive), var(--color-o, 1));
 }
@@ -43,6 +47,10 @@
     color: alpha(var(--color-challenger), var(--color-o, 1));
 }
 
+.color-offwhite {
+    color: alpha(var(--color-offwhite), var(--color-o, 1));
+}
+
 .fill-progressive { fill: var(--color-progressive); }
 .fill-challenger { fill: var(--color-challenger); }
 .fill-smart { fill: var(--color-smart); }
@@ -53,6 +61,11 @@
     .fill-challenger { fill: var(--color-challenger); }
     .fill-smart { fill: var(--color-offwhite); }
     .fill-offwhite { fill: var(--color-offwhite); }
+}
+
+
+.margin-right-25\% {
+    margin-right: 25%;
 }
 
 

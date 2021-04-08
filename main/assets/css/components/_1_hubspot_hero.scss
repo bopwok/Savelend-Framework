@@ -2,16 +2,32 @@
     background: var(--color-progressive);
     color: var(--color-offwhite);
 
-    padding: var(--space-xl) var(--space-lg) var(--space-xxl);
+    padding: var(--space-xxxl) var(--space-lg) var(--space-xxl);
 
     @include breakpoint(md) {
-        padding-top: var(--space-xxl);
+        padding-top: var(--space-xxxl);
     }
-
     display: flex;
     align-items: center;
+}
 
+.hubspot-hero--large {
     min-height: 100vh;
+}
+
+.hubspot-hero__wrapper {
+    flex: 1;
+    display: grid;
+    align-items: center;
+
+    grid-template-columns: 100%;
+
+    max-width: var(--max-width-md);
+    margin: 0 auto;
+
+    @include breakpoint(md) {
+        grid-template-columns: 60% 40%;
+    }
 }
 
 .hubspot-hero__inner {

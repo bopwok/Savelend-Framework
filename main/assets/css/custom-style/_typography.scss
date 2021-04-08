@@ -55,6 +55,22 @@ h1, h2, h3, h4 {
   hyphens: auto;
 }
 
+h1 {
+  position: relative;
+  display: table;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: var(--space-xl);
+    height: var(--space-xxs);
+    bottom: calc(var(--space-md) * -1);
+    left: calc(var(--space-md) * -1);
+
+    background: var(--color-challenger);
+  }
+}
+
 // --------------------------------
 
 // (END) Global editor code
@@ -75,7 +91,12 @@ mark {
 
 .text-component {
   --line-height-multiplier: 1;
-  --text-vspace-multiplier: 1;
+  --text-vspace-multiplier: 1.25;
+
+  h1, h2, h3, h4 {
+    line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
+    margin-bottom: calc(var(--space-unit) * 1.25 * var(--text-vspace-multiplier, 1));
+  }
 
   p {
     margin-bottom: var(--space-md);
