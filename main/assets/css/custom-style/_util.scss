@@ -23,6 +23,30 @@
     background-color: var(--color-progressive);
 }
 
+.bg-challenger {
+    background-color: var(--color-challenger);
+}
+
+.bg-genuine {
+    background-color: var(--color-genuine);
+}
+
+.bg-restless {
+    background-color: var(--color-restless);
+}
+
+.bg-inclusive {
+    background-color: var(--color-inclusive);
+}
+
+.bg-smart {
+    background-color: var(--color-smart);
+}
+
+.bg-charcoal {
+    background-color: var(--color-charcoal);
+}
+
 .color-progressive {
     color: alpha(var(--color-progressive), var(--color-o, 1));
 }

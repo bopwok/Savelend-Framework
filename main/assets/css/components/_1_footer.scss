@@ -12,22 +12,41 @@ Usage: codyhouse.co/license
     z-index: 1;
     background: var(--color-challenger);
     color: var(--color-offwhite);
-    font-size: var(--text-lg);
-    padding: var(--space-xxl);
-  }
-  
-  .footer-v6__link {
-    color: var(--color-contrast-medium);
+    font-size: var(--text-base-size);
+    padding: var(--space-xxl) var(--space-md);
+}
+
+.footer-v6__link {
+    color: var(--color-offwhite);
     text-decoration: none;
     transition: color .2s;
-  
-    &:hover {
-      color: var(--color-primary);
-      text-decoration: underline;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        background: alpha(var(--color-restless), 1);
+        content: "";
+        width: 0;
+        height: calc(100% + var(--space-xs));
+        position: absolute;
+        bottom: calc((var(--space-xs) / 2) * -1);
+        left: calc((var(--space-md) / 2) * -1);
+        z-index: -1;
+
+        transition: width 0.3s ease;
     }
-  }
-  
-  .footer-v6__link-icon {
+
+    &:hover {
+        color: var(--color-progressive);
+        //text-decoration: underline;
+
+        &:after {
+            width: calc(100% + var(--space-md));
+        }
+    }
+}
+
+.footer-v6__link-icon {
     display: inline-flex;
     width: 30px;
     height: 30px;
@@ -35,14 +54,14 @@ Usage: codyhouse.co/license
     background-color: alpha(var(--color-contrast-higher), 0.1);
     border-radius: 50%;
     transition: .2s;
-  
+
     .icon {
-      font-size: 16px; // icon size
-      margin: auto;
+        font-size: 16px; // icon size
+        margin: auto;
     }
-  
+
     .footer-v6__link:hover & {
-      background-color: alpha(var(--color-contrast-higher), 1);
-      color: var(--color-bg);
+        background-color: alpha(var(--color-contrast-higher), 1);
+        color: var(--color-bg);
     }
-  }
+}
