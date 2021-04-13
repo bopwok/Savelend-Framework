@@ -2,11 +2,8 @@
     background: var(--color-progressive);
     color: var(--color-offwhite);
 
-    padding: var(--space-xxxl) var(--space-lg) var(--space-xxl);
+    padding: var(--space-xxxxl) var(--space-lg) var(--space-xxxl);
 
-    @include breakpoint(md) {
-        padding-top: var(--space-xxxl);
-    }
     display: flex;
     align-items: center;
 }

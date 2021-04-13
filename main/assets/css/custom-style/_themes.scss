@@ -1,0 +1,53 @@
+:root {
+    --bg-color: transaprent;
+    --text-color: var(--color-smart-1);
+    --header-color: var(--color-progressive);
+    --btn-color: var(--color-challenger);
+}
+
+.theme-default {
+    .hubspot-scrollcards__card {
+        --card-bg: var(--color-progressive);
+        --card-header-color: var(--color-challenger);
+        --card-text-color: var(--color-offwhite);
+    }
+}
+
+.theme-progressive {
+    --bg-color: var(--color-progressive);
+    --text-color: var(--color-offwhite);
+    --header-color: var(--color-challenger);
+}
+
+.theme-challenger {
+    --bg-color: var(--color-challenger);
+    --text-color: var(--color-offwhite);
+    --header-color: var(--color-progressive);
+    --btn-color: var(--color-progressive);
+}
+
+.theme-restless {
+    --bg-color: var(--color-restless);
+    --text-color: var(--color-charcoal);
+    --header-color: var(--color-charcoal);
+    --btn-color: var(--color-progressive);
+}
+
+.theme-genuine {
+    --bg-color: var(--color-genuine-1);
+    --text-color: var(--color-offwhite);
+    --header-color: var(--color-restless-1);
+}
+
+[class*="theme-"] {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    h1,h2,h3,h4 {
+        color: var(--header-color);
+    }
+
+    .btn {
+        background-color: var(--btn-color);
+    }
+}

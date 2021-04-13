@@ -47,6 +47,22 @@
     background-color: var(--color-charcoal);
 }
 
+.bg-offwhite {
+    background-color: var(--color-offwhite);
+}
+
+.bg-offwhite-1 {
+    background-color: var(--color-offwhite-1);
+}
+
+.bg-offwhite-2 {
+    background-color: var(--color-offwhite-2);
+}
+
+.bg-offwhite-3 {
+    background-color: var(--color-offwhite-3);
+}
+
 .color-progressive {
     color: alpha(var(--color-progressive), var(--color-o, 1));
 }
@@ -73,6 +89,10 @@
 
 .color-offwhite {
     color: alpha(var(--color-offwhite), var(--color-o, 1));
+}
+
+.color-restless {
+    color: alpha(var(--color-restless), var(--color-o, 1));
 }
 
 .fill-progressive { fill: var(--color-progressive); }

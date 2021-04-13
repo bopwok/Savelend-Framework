@@ -1,0 +1,14 @@
+.hubspot-scrollcards__card {
+    --card-bg: var(--color-offwhite);
+    --card-header-color: var(--color-progressive);
+    --card-text-color: var(--color-smart-1);
+
+    box-shadow: var(--shadow-xl);
+    background-color: var(--card-bg);
+    color: var(--card-text-color);
+    border-radius: var(--radius-md);
+
+    h3 {
+        color: var(--card-header-color);
+    }
+}

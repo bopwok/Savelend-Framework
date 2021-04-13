@@ -24,7 +24,7 @@ Usage: codyhouse.co/license
     --chart-y-indicator-stroke-width: 1px;
   
     // chart color
-    --chart-data-color: var(--color-primary);
+    --chart-data-color: var(--color-offwhite);
   
     // area chart opacity
     --chart-data-fill-opacity: 0.2;
@@ -47,7 +47,7 @@ Usage: codyhouse.co/license
     left: 0;
   
     text {
-      fill: var(--color-contrast-high); // axis/axis label color
+      fill: var(--color-genuine-4); // axis/axis label color
     }
   }
   
@@ -78,33 +78,33 @@ Usage: codyhouse.co/license
   
   // legend 
   .chart__axis-legend {
-    font-size: var(--text-xs);
+    font-size: var(--text-xxs);
     user-select: none;
   }
   
   // label
   .chart__axis-label {
-    font-size: var(--text-xs);
+    font-size: var(--text-xxs);
     pointer-events: none;
   }
   
   // axis
   .chart__axis {
     pointer-events: none;
-    stroke: var(--color-contrast-low);
+    stroke: var(--color-primary);
     stroke-width: var(--chart-axis-stroke-width);
   }
   
   .chart__tick { // label indicators
     stroke-width: var(--chart-axis-stroke-width);
-    stroke: var(--color-contrast-low);
+    stroke: var(--color-genuine-4);
   }
   
   // chart horizontal guides
   .chart__guides {
     fill: transparent;
     stroke-width: var(--chart-guides-stroke-width);
-    stroke: var(--color-contrast-lower);
+    stroke: var(--color-genuine-4);
   }
   
   // --------------------------------
