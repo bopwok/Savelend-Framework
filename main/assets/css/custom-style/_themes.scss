@@ -39,11 +39,24 @@
     --header-color: var(--color-restless-1);
 }
 
+.theme-rainbow {
+    .hubspot-scrollcards__card {
+        &:nth-child(1) {
+            --card-bg: var(--color-progressive);
+            --card-header-color: var(--color-challenger);
+            --card-text-color: var(--color-offwhite);
+        }
+    }
+}
+
 [class*="theme-"] {
     background-color: var(--bg-color);
     color: var(--text-color);
 
-    h1,h2,h3,h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
         color: var(--header-color);
     }
 
