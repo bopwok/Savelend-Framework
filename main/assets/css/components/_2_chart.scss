@@ -33,7 +33,36 @@ Usage: codyhouse.co/license
     --chart-legend-bullet-size: 10px; // height and width of legend dot indicator
   }
   
-  .chart {}
+  .chart {
+    padding: var(--space-md);
+    background-color: var(--color-offwhite);
+    border-radius: var(--radius-md);
+  }
+
+  // chart colors
+  .chart__set--1 {
+    --chart-data-color: var(--color-progressive);
+  }
+
+  .chart__set--2 {
+    --chart-data-color: var(--color-challenger);
+  }
+
+  .chart__set--3 {
+    --chart-data-color: var(--color-restless);
+  }
+
+  .chart__set--4 {
+    --chart-data-color: var(--color-inclusive);
+  }
+
+  .chart__set--5 {
+    --chart-data-color: var(--color-genuine);
+  }
+
+  .chart__set--6 {
+    --chart-data-color: var(--color-charcoal);
+  }
   
   .chart__area {
     position: relative;
@@ -47,18 +76,21 @@ Usage: codyhouse.co/license
     left: 0;
   
     text {
-      fill: var(--color-genuine-4); // axis/axis label color
+      fill: var(--color-smart-2); // axis/axis label color
     }
   }
   
   // tooltip
   .chart__tooltip {
     position: absolute;
-    font-size: var(--text-xs);
-    background-color: var(--color-contrast-lower);
+    font-size: var(--text-sm);
+    background-color: var(--color-offwhite);
+    box-shadow: var(--shadow-lg);
     padding: var(--space-sm);
     pointer-events: none;
     white-space: nowrap;
+    border-radius: var(--radius-md);
+    color: var(--color-smart-1);
   }
   
   // legend bullets
@@ -97,14 +129,14 @@ Usage: codyhouse.co/license
   
   .chart__tick { // label indicators
     stroke-width: var(--chart-axis-stroke-width);
-    stroke: var(--color-genuine-4);
+    stroke: var(--color-smart-4);
   }
   
   // chart horizontal guides
   .chart__guides {
     fill: transparent;
     stroke-width: var(--chart-guides-stroke-width);
-    stroke: var(--color-genuine-4);
+    stroke: var(--color-smart-4);
   }
   
   // --------------------------------

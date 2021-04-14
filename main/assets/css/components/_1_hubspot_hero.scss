@@ -2,7 +2,11 @@
     background: var(--color-progressive);
     color: var(--color-offwhite);
 
-    padding: var(--space-xxxxl) var(--space-lg) var(--space-xxxl);
+    padding: var(--space-xxxl) var(--space-lg) var(--space-xxxl);
+
+    @include breakpoint(md) {
+        padding: var(--space-xxxxl) var(--space-lg) var(--space-xxxl);
+    }
 
     display: flex;
     align-items: center;
@@ -60,40 +64,6 @@
 .hubspot-hero__usp {
     margin-bottom: var(--space-xl);
     //padding-left: var(--space-xl);
-    
-
-    .hubspot-hero__usp-item {
-        position: relative;
-        display: flex;
-        align-items: flex-start;
-
-        @include breakpoint(xs) {
-            padding: var(--space-xs) 0;
-        }
-
-        /*&:before {
-            content: "";
-            position: absolute;
-            top: calc((2.4 * 1 - var(--space-lg)) / 2);
-            left: calc(var(--space-xl)*-1);
-            width: var(--space-lg);
-            height: var(--space-lg);
-            background: var(--color-challenger);
-            border-radius: var(--space-xxl);
-        }*/
-
-        .hubspot-hero__usp-item__icon {
-            flex: 0 0 var(--space-lg);
-            position: relative;
-            top: calc((var(--text-md) * 1.3 - 28px) / 2);
-            margin-right: var(--space-sm);
-        }
-
-        .hubspot-hero__usp-item__title {
-            font-size: var(--text-md);
-            margin-bottom: var(--space-xxs);
-        }
-    }
 }
 
 .hubspot-hero__cta {

@@ -9,7 +9,7 @@ Usage: codyhouse.co/license
 
 :root {
     // general
-    --accordion-border-width: 1px;
+    --accordion-border-width: 0px;
     --accordion-border-color: var(--color-contrast-low);
     // icon
     --accordion-icon-size: 1em;
@@ -22,9 +22,15 @@ Usage: codyhouse.co/license
     border-style: solid;
     border-color: var(--accordion-border-color);
     border-bottom-width: var(--accordion-border-width);
+
+    margin-bottom: var(--space-md);
   
     &:first-child {
       border-top-width: var(--accordion-border-width);
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
   }
   
@@ -35,6 +41,13 @@ Usage: codyhouse.co/license
     justify-content: space-between;
     text-align: left;
     cursor: pointer;
+
+    background-color: var(--color-progressive);
+    color: var(--color-offwhite);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+
+    transition: background-color ease 0.2s;
   
     .icon {
       font-size: var(--accordion-icon-size);
@@ -87,6 +100,8 @@ Usage: codyhouse.co/license
   }
   
   .accordion__item--is-open > .accordion__header {
+      background-color: var(--color-challenger);
+
     > .accordion__icon-arrow .icon__group { // animated arrow icon
       > *:first-child {
         transform: translateY(-3px) rotate(-90deg);

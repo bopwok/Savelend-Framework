@@ -69,8 +69,12 @@ p {
         margin: 0 auto;
     }
 
-    ul {
-        text-align: left;
+    .text-component {
+        ul {
+            text-align: left;
+            display: table;
+            margin: auto;
+        }
     }
 
 }
@@ -89,6 +93,12 @@ h4 {
     hyphens: auto;
 
     color: var(--color-progressive);
+}
+
+.sub-title {
+    font-size: 0.85em;
+    display: block;
+    font-weight: 400;
 }
 
 h1,

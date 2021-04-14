@@ -239,8 +239,8 @@ Usage: codyhouse.co/license
     .f-header__dropdown {
         position: absolute;
         top: 100%;
-        width: 250px;
-        left: calc(50% - 125px);
+        width: 300px;
+        left: calc(50% - 150px);
         padding: var(--space-xxxs) 0;
         background-color: var(--color-bg);
         border-radius: var(--radius-md);
@@ -261,7 +261,7 @@ Usage: codyhouse.co/license
 
     .f-header__dropdown-link {
         color: var(--color-contrast-high);
-        padding: var(--space-xs) var(--space-sm);
+        padding: var(--space-sm) var(--space-lg);
 
         &:hover {
             background-color: var(--color-offwhite-1);
