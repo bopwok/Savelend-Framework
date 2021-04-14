@@ -26,7 +26,8 @@ Usage: codyhouse.co/license
 
 .f-header--expanded {
     color: var(--color-progressive);
-    height: calc(var(--f-header-height) / 2);
+
+    --f-header-height: 80px;
 
     // class added when navigation is visible - small devices only
     .f-header__logo {
