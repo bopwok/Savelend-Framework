@@ -20,20 +20,20 @@ Usage: codyhouse.co/license
   }
   
   .hide-nav--has-bg {
-    color: var(--color-progressive) !important;
-    background-color: var(--color-offwhite);
+    //@extend: var(--color-progressive) !important;
+    background-color: var(--color-progressive);
     box-shadow: var(--shadow-sm);
 
-    .f-header__logo {
+    /*.f-header__logo {
       --logo-progressive:  var(--color-progressive);
       --logo-challenger:  var(--color-challenger);
       --logo-smart:  var(--color-smart);
       --logo-offwhite:  var(--color-offwhite);
-    }
-
+    }*/
+/*
     .f-header__link {
       color: var(--color-progressive);
-  }
+  }*/
   }
   
   .hide-nav--off-canvas { // main header is off-canvas
