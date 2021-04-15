@@ -265,11 +265,16 @@ Usage: codyhouse.co/license
     }
 
     .f-header__dropdown-link {
-        color: var(--color-contrast-high);
+        color: var(--color-offwhite);
         padding: var(--space-sm) var(--space-lg);
 
         &:hover {
-            background-color: var(--color-offwhite-1);
+            background-color: var(--color-progressive-1);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0;
         }
     }
 }
