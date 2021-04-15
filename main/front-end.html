@@ -390,50 +390,48 @@
         <!-- MODULE SCROLL CARDS  -->
         <section class="hubspot-scrollcards padding-y-xxl padding-x-lg {{module.theme}}">
             <div class="max-width-lg margin-auto text-center">
-                {% if module.image.src %}
+                <!--{% if module.image.src %}
                 <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" width="{{ module.image.width }}" height="{{ module.image.height }}">
-                {% endif %}
+                {% endif %}-->
 
-                {% if module.title %}
                 <h2 class="margin-bottom-md">
-                    {{ module.title }}
-                    {% if module.sub_title %}
-                    <span class="sub-title">{{ module.sub_title }}</span>
-                    {% endif %}
+                    Detta block visar kort
+                    <span class="sub-title">Detta är en underrubrik</span>
                 </h2>
-                {% endif %}
-                {% if module.text %}
-                <div class="text-component margin-bottom-lg"> {{ module.text }}</div>
-                {% endif %}
 
-                {% if module.usp_list %}
-                {% if module.usp_style == "card" %}
+                <div class="text-component margin-bottom-lg">
+                    <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+                </div>
+
                 <ul class="grid gap-lg margin-bottom-lg">
-                    {% for item in module.usp_list %}
-                    {% set cta_href = item.cta_link.url.href %}
-                    <li class="hubspot-scrollcards__card col-12 {{ module.usp_columns }} padding-md rounded-md margin-bottom-md text-center flex flex-column justify-start">
-                        {%if item.usp_icon.src %}
+                    <li class="hubspot-scrollcards__card col-12 grid-cols-4 padding-md rounded-md margin-bottom-md text-center flex flex-column justify-start">
                         <img src="{{ item.usp_icon.src }}" alt="{{ item.usp_icon.alt }}" width="auto" height="84px" class="margin-bottom-md">
-                        {% endif %}
-                        {%if item.title %}
                         <h3 class="margin-bottom-sm">
-                            {{ item.title }}
-                            {% if item.sub_title %}
-                            <span class="sub-title">{{ item.sub_title }}</span>
-                            {% endif %}
+                            Korttitel
+                            <span class="sub-title">Kortunderrubrik</span>
                         </h3>
-                        {% endif %}
-                        {%if item.content %}
-                        <div class="text-component margin-bottom-lg">{{ item.content }}</div>
-                        {% endif %}
-                        {%if item.cta_text %}
-                        <a href="{{ cta_href }}" class="btn btn--accent self-end">{{ item.cta_text }}</a>
-                        {% endif %}
+                        <div class="text-component margin-bottom-lg">
+                            <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+                        </div>
+                        <a href="#" class="btn btn--accent self-end">Klicka på mig!</a>
                     </li>
-                    {% endfor %}
                 </ul>
-                {% endif %}
+            </div>
+        </section>
+        <section class="hubspot-scrollcards padding-y-xxl padding-x-lg {{module.theme}}">
+            <div class="max-width-lg margin-auto text-center">
+                <!--{% if module.image.src %}
+                <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" width="{{ module.image.width }}" height="{{ module.image.height }}">
+                {% endif %}-->
 
+                <h2 class="margin-bottom-md">
+                    Detta block visar lista
+                    <span class="sub-title">Detta är en underrubrik</span>
+                </h2>
+
+                <div class="text-component margin-bottom-lg">
+                    <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+                </div>
                 {% if module.usp_style == "usp" %}
                 <ul class="margin-bottom-lg text-left table margin-auto">
                     {% for item in module.usp_list %}
