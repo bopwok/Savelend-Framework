@@ -119,7 +119,7 @@ Usage: codyhouse.co/license
 
 .f-header__item {
     flex-shrink: 0;
-    border-bottom: 1px solid var(--color-contrast-lower);
+    //border-bottom: 1px solid var(--color-contrast-lower);
 }
 
 .f-header__dropdown-icon {
@@ -131,7 +131,7 @@ Usage: codyhouse.co/license
     display: block;
     display: flex;
     align-items: center; // align icon with text
-    color: var(--color-contrast-high);
+    color: var(--color-offwhite);
     text-decoration: none;
     padding: var(--space-xs) 0;
 
@@ -140,6 +140,11 @@ Usage: codyhouse.co/license
     &:hover,
     &[aria-current="page"] {
         color: var(--color-challenger);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0;
     }
 
     .icon {
@@ -265,16 +270,11 @@ Usage: codyhouse.co/license
     }
 
     .f-header__dropdown-link {
-        color: var(--color-offwhite);
+        color: var(--color-contrast-high);
         padding: var(--space-sm) var(--space-lg);
 
         &:hover {
-            background-color: var(--color-progressive-1);
-        }
-
-        &:focus {
-            outline: none;
-            box-shadow: 0;
+            background-color: var(--color-offwhite-1);
         }
     }
 }
