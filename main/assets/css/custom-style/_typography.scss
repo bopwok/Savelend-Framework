@@ -178,8 +178,8 @@ mark {
 .standing-out-section {
     padding: var(--space-sm);
     border-radius: var(--radius-md);
-    border-color: var(--color-offwhite) solid 1px;
-    background-color: var(--color-offwhite-1);
+    border: var(--color-offwhite) solid 1px;
+    background-color: var(--color-offwhite-2);
     
 
     .standing-out-section__row {

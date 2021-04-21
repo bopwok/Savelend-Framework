@@ -64,15 +64,15 @@ Descr: Displays some data in a modal popup
         height: var(--space-xxxl);
 		
 		&.modal__icon--success {
-			color: var(--color-inclusive-1);
+			color: var(--color-success);
 		}
 
 		&.modal__icon--info {
-			color: var(--color-challenger);
+			color: var(--color-warning);
 		}
 
 		&.modal__icon--error {
-			color: var(--color-progressive);
+			color: var(--color-error);
 		}
 	}
 
