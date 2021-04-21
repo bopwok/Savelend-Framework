@@ -646,7 +646,7 @@
   
     function modifyAxisLabel(labels, fnModifier) {
       for(var i = 0; i < labels.length; i++) {
-        labels[i] = fnModifier(labels[i]);
+        labels[i] = fnModifier(labels[i], i);
       }
   
       return labels;

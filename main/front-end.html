@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>DEMO Elements SaveLend Front-End</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="description" content="">
+    <script>
+        document.getElementsByTagName("html")[0].className += " js";
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!--
+  templateType: global_partial
+  label: Website header
+-->
+
+    <header class="f-header js-f-header hide-nav hide-nav--fixed js-hide-nav js-hide-nav--main" data-nav-target-class="f-header--expanded">
+        <div class="f-header__mobile-content container max-width-lg">
+            <a href="https://savelend.se" class="f-header__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1392.97 281.81">
+                    <g id="SaveLendLogo" class="logo-neg">
+                        <g id="SaveLendSymbol">
+                            <path id="symbolbg" fill="var(--logo-offwhite)" d="M130,0A130,130,0,1,0,260,130,130,130,0,0,0,130,0Z" />
+                            <path id="symbol" fill="var(--logo-challenger)" d="M130,0A130,130,0,1,0,260,130,130,130,0,0,0,130,0ZM71.86,163.07,70,161.21a43.59,43.59,0,0,1,0-61.55L113.75,55.9h-8.7a2.47,2.47,0,0,1-1.75-4.22l6.63-6.63a2.48,2.48,0,0,1,1.75-.73H133a2.48,2.48,0,0,1,2.47,2.48V68.06a2.47,2.47,0,0,1-.72,1.75l-6.64,6.63a2.47,2.47,0,0,1-4.22-1.75V66L80.08,109.75a29.28,29.28,0,0,0,0,41.37L81.94,153a29.29,29.29,0,0,0,41.38,0l29.91-29.91a7.13,7.13,0,0,1,10.08,10.09L133.4,163.07A43.56,43.56,0,0,1,71.86,163.07ZM190,159.76,145.66,204.1h9.16a2.47,2.47,0,0,1,1.75,4.22L149.93,215a2.44,2.44,0,0,1-1.75.73H126.92a2.47,2.47,0,0,1-2.47-2.48v-4.87a2.94,2.94,0,0,1,0-.42v-16a2.47,2.47,0,0,1,.72-1.75l6.63-6.63a2.48,2.48,0,0,1,4.23,1.75v8.25l43.89-43.89a29.28,29.28,0,0,0,0-41.37l-1.86-1.87a29.31,29.31,0,0,0-41.38,0l-29.91,29.92a7.13,7.13,0,1,1-10.08-10.09L126.6,96.35a43.56,43.56,0,0,1,61.54,0L190,98.21A43.59,43.59,0,0,1,190,159.76Z" />
+                        </g>
+                        <g id="MarketPlatform">
+                            <path fill="var(--logo-smart)" d="M854.66,232.75v38.56h-5.23V232.75Z" />
+                            <path fill="var(--logo-smart)" d="M868.64,271.31h-5V240.93H868l.25,2.95h.18a17.42,17.42,0,0,1,5.14-2.7,19.32,19.32,0,0,1,6-.86q5,0,7.65,2.52c1.74,1.68,2.62,4.16,2.62,7.44v21h-5V250.89a5.67,5.67,0,0,0-1.72-4.55q-1.72-1.47-5.29-1.47a15.45,15.45,0,0,0-4.52.7,21.55,21.55,0,0,0-4.58,2.06Z" />
+                            <path fill="var(--logo-smart)" d="M918.2,240.93h5.54l-11.69,30.38h-5.78l-11.68-30.38h5.59l9,25.77Z" />
+                            <path fill="var(--logo-smart)" d="M951.6,265.41v4.24a17.94,17.94,0,0,1-4.71,1.51,30.89,30.89,0,0,1-6.3.64q-7.14,0-10.21-3.69t-3.08-12.17q0-8.17,3.2-11.9t10.21-3.72q6.52,0,9.35,2.92c1.88,1.95,2.83,5.19,2.83,9.75,0,.82,0,1.57-.06,2.27s-.13,1.54-.25,2.52H932.41q.06,5,2.06,7.2t6.92,2.15a32.78,32.78,0,0,0,5.53-.49A22.58,22.58,0,0,0,951.6,265.41Zm-3.33-13.1c0-2.71-.63-4.62-1.78-5.75s-3.07-1.69-5.78-1.69c-3,0-5.18.64-6.43,1.93s-1.87,3.56-1.87,6.8h15.8c0-.08,0-.28,0-.58S948.27,252.47,948.27,252.31Z" />
+                            <path fill="var(--logo-smart)" d="M971,244.87c-2.63,0-4.44.3-5.44.92s-1.51,1.87-1.51,3.75a3.18,3.18,0,0,0,.71,2.25,3.75,3.75,0,0,0,2.24,1l7.81,1.17q3.69.56,5.17,2.31c1,1.16,1.47,3,1.47,5.5q0,5.3-2.52,7.66c-1.68,1.58-4.47,2.36-8.36,2.36a55.1,55.1,0,0,1-6.52-.36,29.07,29.07,0,0,1-5-1v-4.73a31.06,31.06,0,0,0,4.83,1,41.73,41.73,0,0,0,5.87.4q3.81,0,5.23-1.11t1.41-3.93a3.7,3.7,0,0,0-.8-2.62,5,5,0,0,0-2.89-1.13l-7.81-1.17a6.54,6.54,0,0,1-4.4-2.28,8.8,8.8,0,0,1-1.5-5.35c0-3.2,1-5.53,2.86-7s4.84-2.21,8.82-2.21c1.64,0,3.13,0,4.46.12a41.94,41.94,0,0,1,4.21.49v4.49c-1.06-.16-2.31-.3-3.75-.4S972.67,244.87,971,244.87Z" />
+                            <path fill="var(--logo-smart)" d="M1006.41,266.58v4.24a11.69,11.69,0,0,1-2.68.71,20.37,20.37,0,0,1-3.22.27q-5.53,0-7.91-2.46c-1.58-1.64-2.37-4.46-2.37-8.48V245.24h-4.55v-4.31h4.62l.8-7.38h4.18v7.38h10.82v4.31H995.28v15.43c0,2.5.46,4.21,1.38,5.11s2.55,1.35,4.89,1.35a20.83,20.83,0,0,0,2.55-.18C1005.07,266.82,1005.83,266.7,1006.41,266.58Z" />
+                            <path fill="var(--logo-smart)" d="M1017.6,271.31h-5V240.93h4.61l.25,2.34h.18a26.44,26.44,0,0,1,4.92-2.25,14.53,14.53,0,0,1,4.43-.7,11,11,0,0,1,4.43.8,6.42,6.42,0,0,1,2.89,2.39h.18a21.56,21.56,0,0,1,5.2-2.36,18.63,18.63,0,0,1,5.5-.83c2.91,0,5.12.76,6.61,2.3s2.25,3.81,2.25,6.8v21.89h-5V250a5,5,0,0,0-1.42-3.9,6.63,6.63,0,0,0-4.49-1.26,13.65,13.65,0,0,0-3.63.52,19.47,19.47,0,0,0-3.81,1.51,8.6,8.6,0,0,1,.15,1.23q0,.62,0,1.29v21.89h-5V250a5,5,0,0,0-1.41-3.9,6.65,6.65,0,0,0-4.49-1.26,11.16,11.16,0,0,0-3.26.52,22.38,22.38,0,0,0-4,1.75Z" />
+                            <path fill="var(--logo-smart)" d="M1085.5,265.41v4.24a17.94,17.94,0,0,1-4.71,1.51,30.89,30.89,0,0,1-6.3.64q-7.14,0-10.21-3.69t-3.08-12.17q0-8.17,3.2-11.9t10.21-3.72q6.53,0,9.35,2.92c1.88,1.95,2.83,5.19,2.83,9.75,0,.82,0,1.57-.06,2.27s-.13,1.54-.25,2.52h-20.17q.06,5,2.06,7.2t6.92,2.15a32.78,32.78,0,0,0,5.53-.49A22.58,22.58,0,0,0,1085.5,265.41Zm-3.32-13.1c0-2.71-.64-4.62-1.79-5.75s-3.07-1.69-5.78-1.69c-3,0-5.18.64-6.43,1.93s-1.87,3.56-1.87,6.8h15.8c0-.08,0-.28,0-.58S1082.18,252.47,1082.18,252.31Z" />
+                            <path fill="var(--logo-smart)" d="M1099.12,271.31h-5V240.93h4.37l.25,2.95h.18a17.29,17.29,0,0,1,5.14-2.7,19.3,19.3,0,0,1,6-.86c3.36,0,5.92.84,7.66,2.52s2.61,4.16,2.61,7.44v21h-5V250.89a5.67,5.67,0,0,0-1.72-4.55q-1.73-1.47-5.29-1.47a15.4,15.4,0,0,0-4.52.7,21.33,21.33,0,0,0-4.58,2.06Z" />
+                            <path fill="var(--logo-smart)" d="M1146.85,266.58v4.24a11.69,11.69,0,0,1-2.68.71,20.49,20.49,0,0,1-3.23.27q-5.54,0-7.9-2.46c-1.58-1.64-2.37-4.46-2.37-8.48V245.24h-4.55v-4.31h4.61l.8-7.38h4.19v7.38h10.82v4.31h-10.82v15.43c0,2.5.46,4.21,1.38,5.11s2.55,1.35,4.89,1.35a20.83,20.83,0,0,0,2.55-.18C1145.5,266.82,1146.27,266.7,1146.85,266.58Z" />
+                            <path fill="var(--logo-smart)" d="M1171.75,258.83v12.48h-5.22V232.75h13.1q8.17,0,11.71,2.95t3.54,9.66q0,6.82-3.69,10.15t-11.38,3.32Zm17.84-13.47q0-4.25-2.31-6.06t-7.65-1.81h-7.88v16.73h7.88q5.34,0,7.65-2.1T1189.59,245.36Z" />
+                            <path fill="var(--logo-smart)" d="M1206.56,230.41v40.9h-5v-40.9Z" />
+                            <path fill="var(--logo-smart)" d="M1222.2,271.8c-3.12,0-5.4-.74-6.86-2.24s-2.18-3.86-2.18-7.1.88-5.61,2.64-7,4.76-2.06,9-2.06c1.4,0,2.77.06,4.12.18a34.72,34.72,0,0,1,3.82.55v-3q0-3.37-1.73-4.86c-1.14-1-3-1.47-5.53-1.47q-2.84,0-5,.21a35.84,35.84,0,0,0-4.31.71v-4.37a34.86,34.86,0,0,1,5-.86c1.7-.16,3.63-.24,5.81-.24q5.48,0,8.11,2.55t2.65,7.9v20.54h-4.61l-.25-2.83h-.12a14.4,14.4,0,0,1-4.77,2.4A19,19,0,0,1,1222.2,271.8Zm3.14-14.26c-2.79,0-4.73.33-5.82,1a3.92,3.92,0,0,0-1.62,3.6,5,5,0,0,0,1.35,3.9c.9.8,2.38,1.2,4.43,1.2a17.57,17.57,0,0,0,4.92-.73,14.51,14.51,0,0,0,4.12-1.85v-6.52c-1.36-.2-2.62-.36-3.79-.46S1226.57,257.54,1225.34,257.54Z" />
+                            <path fill="var(--logo-smart)" d="M1264.3,266.58v4.24a11.69,11.69,0,0,1-2.68.71,20.49,20.49,0,0,1-3.23.27q-5.54,0-7.9-2.46c-1.58-1.64-2.37-4.46-2.37-8.48V245.24h-4.55v-4.31h4.61l.8-7.38h4.19v7.38H1264v4.31h-10.82v15.43c0,2.5.46,4.21,1.38,5.11s2.55,1.35,4.89,1.35A20.83,20.83,0,0,0,1262,267C1263,266.82,1263.72,266.7,1264.3,266.58Z" />
+                            <path fill="var(--logo-smart)" d="M1273.56,245.24H1269v-4.31h4.55v-.74c0-3.52.86-6.14,2.58-7.84s4.37-2.55,7.93-2.55c.91,0,1.81,0,2.71.12a24.94,24.94,0,0,1,2.52.37v4.31a11.38,11.38,0,0,0-2-.28q-1.26-.09-2.49-.09-3.49,0-4.86,1.26c-.9.84-1.35,2.37-1.35,4.58v.86h9.78v4.31h-9.78v26.07h-5Z" />
+                            <path fill="var(--logo-smart)" d="M1321.12,256.06q0,8.61-3.17,12.18t-10.86,3.56q-7.93,0-11-3.44t-3.08-12.3q0-8.67,3.17-12.21t10.91-3.53q7.94,0,11,3.44T1321.12,256.06Zm-23.07-.06q0,6.76,1.79,8.95c1.19,1.45,3.6,2.18,7.25,2.18s5.91-.77,7.14-2.31,1.84-4.47,1.84-8.82q0-6.76-1.75-8.95t-7.23-2.18q-5.34,0-7.19,2.27T1298.05,256Z" />
+                            <path fill="var(--logo-smart)" d="M1333.58,271.31h-5V240.93h4.61l.25,2.58h.25a21.55,21.55,0,0,1,4.79-2.12,16.75,16.75,0,0,1,4.74-.7h1.32a1.72,1.72,0,0,1,.52.06v4.86a4.25,4.25,0,0,0-1.07-.16c-.43,0-1.1,0-2,0a18.54,18.54,0,0,0-4.34.52,17,17,0,0,0-4,1.57Z" />
+                            <path fill="var(--logo-smart)" d="M1356.35,271.31h-5V240.93h4.61l.24,2.34h.19a25.87,25.87,0,0,1,4.92-2.25,14.48,14.48,0,0,1,4.43-.7,10.94,10.94,0,0,1,4.42.8,6.45,6.45,0,0,1,2.9,2.39h.18a21.56,21.56,0,0,1,5.2-2.36,18.63,18.63,0,0,1,5.5-.83c2.91,0,5.11.76,6.61,2.3s2.25,3.81,2.25,6.8v21.89h-5V250a5,5,0,0,0-1.41-3.9,6.63,6.63,0,0,0-4.49-1.26,13.65,13.65,0,0,0-3.63.52,19.47,19.47,0,0,0-3.81,1.51,8.6,8.6,0,0,1,.15,1.23q0,.62,0,1.29v21.89h-5V250a4.94,4.94,0,0,0-1.42-3.9,6.6,6.6,0,0,0-4.48-1.26,11.11,11.11,0,0,0-3.26.52,22.07,22.07,0,0,0-4,1.75Z" />
+                        </g>
+                        <g id="SaveLend">
+                            <path fill="var(--logo-progressive)" d="M438.63,63.62A92.3,92.3,0,0,0,402.41,56c-12.24,0-28.05,5.36-28.05,24.74,0,30.86,78,17.85,78,77.53,0,39-30.86,53.81-66.82,53.81-19.38,0-28.05-2.55-45.65-6.89L343.25,173c12.24,6.63,26.27,11,40.29,11,13.52,0,31.62-6.88,31.62-23,0-33.92-78-19.89-78-78.8,0-39.78,30.86-54.32,62.22-54.32,15.3,0,29.59,2,42.59,6.37Z" />
+                            <path fill="var(--logo-progressive)" d="M482.52,84.53a117.54,117.54,0,0,1,45.65-9.94c40,0,56.61,16.57,56.61,55.34v16.83c0,13.26.26,23.21.51,32.9.26,9.94.77,19.12,1.53,29.33H556.73c-1.27-6.89-1.27-15.56-1.53-19.64h-.51c-7.91,14.54-25,22.7-40.55,22.7-23.21,0-45.9-14-45.9-39,0-19.64,9.43-31.12,22.44-37.49s29.84-7.65,44.12-7.65h18.87c0-21.17-9.44-28.31-29.58-28.31-14.54,0-29.08,5.61-40.55,14.28Zm40,102.52a29,29,0,0,0,24-11.73c5.61-7.39,7.14-16.83,7.14-27H538.88c-15.3,0-38,2.55-38,22.7C500.88,182.21,510.32,187.05,522.56,187.05Z" />
+                            <path fill="var(--logo-progressive)" d="M592.74,77.65h36.72l32.65,95.63h.51l31.62-95.63h34.17L680,209H641.45Z" />
+                            <path fill="var(--logo-progressive)" d="M845.24,201.59c-12.5,6.89-26.78,10.46-45.14,10.46-43.35,0-68.6-25-68.6-68.1,0-38,20.14-69.36,61-69.36,48.71,0,62.48,33.41,62.48,79.31H764.14c1.53,21.17,16.32,33.15,37.49,33.15,16.58,0,30.86-6.12,43.61-13.26Zm-23-71.15c-1-16.58-8.67-30.86-27.8-30.86s-28.82,13.26-30.35,30.86Z" />
+                            <path fill="var(--logo-progressive)" d="M873.6,30.94l34.11-11v161h57.73l19,28.06H873.6Z" />
+                            <path fill="var(--logo-progressive)" d="M1096.27,201.59c-12.5,6.89-26.78,10.46-45.14,10.46-43.36,0-68.6-25-68.6-68.1,0-38,20.14-69.36,61-69.36,48.71,0,62.48,33.41,62.48,79.31h-90.79c1.53,21.17,16.32,33.15,37.49,33.15,16.57,0,30.85-6.12,43.61-13.26Zm-23-71.15c-1-16.58-8.67-30.86-27.79-30.86s-28.82,13.26-30.35,30.86Z" />
+                            <path fill="var(--logo-progressive)" d="M1124.63,77.65H1157V95.5h.51c10.71-15,25.25-20.91,43.1-20.91,31.11,0,44.63,21.93,44.63,51.51V209h-34.18V138.85c0-16.06-.25-37.74-22.18-37.74-24.74,0-30.1,26.78-30.1,43.61V209h-34.17Z" />
+                            <path fill="var(--logo-progressive)" d="M1359.82,194.19h-.51c-10.2,12.76-24.23,17.86-40.29,17.86-40.3,0-55.09-33.16-55.09-69.12,0-36.21,14.79-68.34,55.09-68.34,17.08,0,29.07,5.86,39.27,18.36h.51V20L1393,31V209h-33.15Zm-31.37-8.67c22.7,0,30.1-24,30.1-42.59,0-18.36-8.68-41.82-30.61-41.82-22.18,0-28.31,24.23-28.31,41.82C1299.63,161,1306,185.52,1328.45,185.52Z" />
+                        </g>
+                </svg>
+            </a>
+
+            <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus" aria-label="Toggle menu">
+                <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="f-header__nav" role="navigation">
+            <div class="f-header__nav-grid justify-between@md container max-width-lg">
+                <div class="f-header__nav-logo-wrapper flex-grow flex-basis-0">
+                    <a href="https://savelend.se" class="f-header__logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1392.97 281.81">
+                            <g id="SaveLendLogo" class="logo-neg">
+                                <g id="SaveLendSymbol">
+                                    <path id="symbolbg" fill="var(--logo-offwhite)" d="M130,0A130,130,0,1,0,260,130,130,130,0,0,0,130,0Z" />
+                                    <path id="symbol" fill="var(--logo-challenger)" d="M130,0A130,130,0,1,0,260,130,130,130,0,0,0,130,0ZM71.86,163.07,70,161.21a43.59,43.59,0,0,1,0-61.55L113.75,55.9h-8.7a2.47,2.47,0,0,1-1.75-4.22l6.63-6.63a2.48,2.48,0,0,1,1.75-.73H133a2.48,2.48,0,0,1,2.47,2.48V68.06a2.47,2.47,0,0,1-.72,1.75l-6.64,6.63a2.47,2.47,0,0,1-4.22-1.75V66L80.08,109.75a29.28,29.28,0,0,0,0,41.37L81.94,153a29.29,29.29,0,0,0,41.38,0l29.91-29.91a7.13,7.13,0,0,1,10.08,10.09L133.4,163.07A43.56,43.56,0,0,1,71.86,163.07ZM190,159.76,145.66,204.1h9.16a2.47,2.47,0,0,1,1.75,4.22L149.93,215a2.44,2.44,0,0,1-1.75.73H126.92a2.47,2.47,0,0,1-2.47-2.48v-4.87a2.94,2.94,0,0,1,0-.42v-16a2.47,2.47,0,0,1,.72-1.75l6.63-6.63a2.48,2.48,0,0,1,4.23,1.75v8.25l43.89-43.89a29.28,29.28,0,0,0,0-41.37l-1.86-1.87a29.31,29.31,0,0,0-41.38,0l-29.91,29.92a7.13,7.13,0,1,1-10.08-10.09L126.6,96.35a43.56,43.56,0,0,1,61.54,0L190,98.21A43.59,43.59,0,0,1,190,159.76Z" />
+                                </g>
+                                <g id="MarketPlatform">
+                                    <path fill="var(--logo-smart)" d="M854.66,232.75v38.56h-5.23V232.75Z" />
+                                    <path fill="var(--logo-smart)" d="M868.64,271.31h-5V240.93H868l.25,2.95h.18a17.42,17.42,0,0,1,5.14-2.7,19.32,19.32,0,0,1,6-.86q5,0,7.65,2.52c1.74,1.68,2.62,4.16,2.62,7.44v21h-5V250.89a5.67,5.67,0,0,0-1.72-4.55q-1.72-1.47-5.29-1.47a15.45,15.45,0,0,0-4.52.7,21.55,21.55,0,0,0-4.58,2.06Z" />
+                                    <path fill="var(--logo-smart)" d="M918.2,240.93h5.54l-11.69,30.38h-5.78l-11.68-30.38h5.59l9,25.77Z" />
+                                    <path fill="var(--logo-smart)" d="M951.6,265.41v4.24a17.94,17.94,0,0,1-4.71,1.51,30.89,30.89,0,0,1-6.3.64q-7.14,0-10.21-3.69t-3.08-12.17q0-8.17,3.2-11.9t10.21-3.72q6.52,0,9.35,2.92c1.88,1.95,2.83,5.19,2.83,9.75,0,.82,0,1.57-.06,2.27s-.13,1.54-.25,2.52H932.41q.06,5,2.06,7.2t6.92,2.15a32.78,32.78,0,0,0,5.53-.49A22.58,22.58,0,0,0,951.6,265.41Zm-3.33-13.1c0-2.71-.63-4.62-1.78-5.75s-3.07-1.69-5.78-1.69c-3,0-5.18.64-6.43,1.93s-1.87,3.56-1.87,6.8h15.8c0-.08,0-.28,0-.58S948.27,252.47,948.27,252.31Z" />
+                                    <path fill="var(--logo-smart)" d="M971,244.87c-2.63,0-4.44.3-5.44.92s-1.51,1.87-1.51,3.75a3.18,3.18,0,0,0,.71,2.25,3.75,3.75,0,0,0,2.24,1l7.81,1.17q3.69.56,5.17,2.31c1,1.16,1.47,3,1.47,5.5q0,5.3-2.52,7.66c-1.68,1.58-4.47,2.36-8.36,2.36a55.1,55.1,0,0,1-6.52-.36,29.07,29.07,0,0,1-5-1v-4.73a31.06,31.06,0,0,0,4.83,1,41.73,41.73,0,0,0,5.87.4q3.81,0,5.23-1.11t1.41-3.93a3.7,3.7,0,0,0-.8-2.62,5,5,0,0,0-2.89-1.13l-7.81-1.17a6.54,6.54,0,0,1-4.4-2.28,8.8,8.8,0,0,1-1.5-5.35c0-3.2,1-5.53,2.86-7s4.84-2.21,8.82-2.21c1.64,0,3.13,0,4.46.12a41.94,41.94,0,0,1,4.21.49v4.49c-1.06-.16-2.31-.3-3.75-.4S972.67,244.87,971,244.87Z" />
+                                    <path fill="var(--logo-smart)" d="M1006.41,266.58v4.24a11.69,11.69,0,0,1-2.68.71,20.37,20.37,0,0,1-3.22.27q-5.53,0-7.91-2.46c-1.58-1.64-2.37-4.46-2.37-8.48V245.24h-4.55v-4.31h4.62l.8-7.38h4.18v7.38h10.82v4.31H995.28v15.43c0,2.5.46,4.21,1.38,5.11s2.55,1.35,4.89,1.35a20.83,20.83,0,0,0,2.55-.18C1005.07,266.82,1005.83,266.7,1006.41,266.58Z" />
+                                    <path fill="var(--logo-smart)" d="M1017.6,271.31h-5V240.93h4.61l.25,2.34h.18a26.44,26.44,0,0,1,4.92-2.25,14.53,14.53,0,0,1,4.43-.7,11,11,0,0,1,4.43.8,6.42,6.42,0,0,1,2.89,2.39h.18a21.56,21.56,0,0,1,5.2-2.36,18.63,18.63,0,0,1,5.5-.83c2.91,0,5.12.76,6.61,2.3s2.25,3.81,2.25,6.8v21.89h-5V250a5,5,0,0,0-1.42-3.9,6.63,6.63,0,0,0-4.49-1.26,13.65,13.65,0,0,0-3.63.52,19.47,19.47,0,0,0-3.81,1.51,8.6,8.6,0,0,1,.15,1.23q0,.62,0,1.29v21.89h-5V250a5,5,0,0,0-1.41-3.9,6.65,6.65,0,0,0-4.49-1.26,11.16,11.16,0,0,0-3.26.52,22.38,22.38,0,0,0-4,1.75Z" />
+                                    <path fill="var(--logo-smart)" d="M1085.5,265.41v4.24a17.94,17.94,0,0,1-4.71,1.51,30.89,30.89,0,0,1-6.3.64q-7.14,0-10.21-3.69t-3.08-12.17q0-8.17,3.2-11.9t10.21-3.72q6.53,0,9.35,2.92c1.88,1.95,2.83,5.19,2.83,9.75,0,.82,0,1.57-.06,2.27s-.13,1.54-.25,2.52h-20.17q.06,5,2.06,7.2t6.92,2.15a32.78,32.78,0,0,0,5.53-.49A22.58,22.58,0,0,0,1085.5,265.41Zm-3.32-13.1c0-2.71-.64-4.62-1.79-5.75s-3.07-1.69-5.78-1.69c-3,0-5.18.64-6.43,1.93s-1.87,3.56-1.87,6.8h15.8c0-.08,0-.28,0-.58S1082.18,252.47,1082.18,252.31Z" />
+                                    <path fill="var(--logo-smart)" d="M1099.12,271.31h-5V240.93h4.37l.25,2.95h.18a17.29,17.29,0,0,1,5.14-2.7,19.3,19.3,0,0,1,6-.86c3.36,0,5.92.84,7.66,2.52s2.61,4.16,2.61,7.44v21h-5V250.89a5.67,5.67,0,0,0-1.72-4.55q-1.73-1.47-5.29-1.47a15.4,15.4,0,0,0-4.52.7,21.33,21.33,0,0,0-4.58,2.06Z" />
+                                    <path fill="var(--logo-smart)" d="M1146.85,266.58v4.24a11.69,11.69,0,0,1-2.68.71,20.49,20.49,0,0,1-3.23.27q-5.54,0-7.9-2.46c-1.58-1.64-2.37-4.46-2.37-8.48V245.24h-4.55v-4.31h4.61l.8-7.38h4.19v7.38h10.82v4.31h-10.82v15.43c0,2.5.46,4.21,1.38,5.11s2.55,1.35,4.89,1.35a20.83,20.83,0,0,0,2.55-.18C1145.5,266.82,1146.27,266.7,1146.85,266.58Z" />
+                                    <path fill="var(--logo-smart)" d="M1171.75,258.83v12.48h-5.22V232.75h13.1q8.17,0,11.71,2.95t3.54,9.66q0,6.82-3.69,10.15t-11.38,3.32Zm17.84-13.47q0-4.25-2.31-6.06t-7.65-1.81h-7.88v16.73h7.88q5.34,0,7.65-2.1T1189.59,245.36Z" />
+                                    <path fill="var(--logo-smart)" d="M1206.56,230.41v40.9h-5v-40.9Z" />
+                                    <path fill="var(--logo-smart)" d="M1222.2,271.8c-3.12,0-5.4-.74-6.86-2.24s-2.18-3.86-2.18-7.1.88-5.61,2.64-7,4.76-2.06,9-2.06c1.4,0,2.77.06,4.12.18a34.72,34.72,0,0,1,3.82.55v-3q0-3.37-1.73-4.86c-1.14-1-3-1.47-5.53-1.47q-2.84,0-5,.21a35.84,35.84,0,0,0-4.31.71v-4.37a34.86,34.86,0,0,1,5-.86c1.7-.16,3.63-.24,5.81-.24q5.48,0,8.11,2.55t2.65,7.9v20.54h-4.61l-.25-2.83h-.12a14.4,14.4,0,0,1-4.77,2.4A19,19,0,0,1,1222.2,271.8Zm3.14-14.26c-2.79,0-4.73.33-5.82,1a3.92,3.92,0,0,0-1.62,3.6,5,5,0,0,0,1.35,3.9c.9.8,2.38,1.2,4.43,1.2a17.57,17.57,0,0,0,4.92-.73,14.51,14.51,0,0,0,4.12-1.85v-6.52c-1.36-.2-2.62-.36-3.79-.46S1226.57,257.54,1225.34,257.54Z" />
+                                    <path fill="var(--logo-smart)" d="M1264.3,266.58v4.24a11.69,11.69,0,0,1-2.68.71,20.49,20.49,0,0,1-3.23.27q-5.54,0-7.9-2.46c-1.58-1.64-2.37-4.46-2.37-8.48V245.24h-4.55v-4.31h4.61l.8-7.38h4.19v7.38H1264v4.31h-10.82v15.43c0,2.5.46,4.21,1.38,5.11s2.55,1.35,4.89,1.35A20.83,20.83,0,0,0,1262,267C1263,266.82,1263.72,266.7,1264.3,266.58Z" />
+                                    <path fill="var(--logo-smart)" d="M1273.56,245.24H1269v-4.31h4.55v-.74c0-3.52.86-6.14,2.58-7.84s4.37-2.55,7.93-2.55c.91,0,1.81,0,2.71.12a24.94,24.94,0,0,1,2.52.37v4.31a11.38,11.38,0,0,0-2-.28q-1.26-.09-2.49-.09-3.49,0-4.86,1.26c-.9.84-1.35,2.37-1.35,4.58v.86h9.78v4.31h-9.78v26.07h-5Z" />
+                                    <path fill="var(--logo-smart)" d="M1321.12,256.06q0,8.61-3.17,12.18t-10.86,3.56q-7.93,0-11-3.44t-3.08-12.3q0-8.67,3.17-12.21t10.91-3.53q7.94,0,11,3.44T1321.12,256.06Zm-23.07-.06q0,6.76,1.79,8.95c1.19,1.45,3.6,2.18,7.25,2.18s5.91-.77,7.14-2.31,1.84-4.47,1.84-8.82q0-6.76-1.75-8.95t-7.23-2.18q-5.34,0-7.19,2.27T1298.05,256Z" />
+                                    <path fill="var(--logo-smart)" d="M1333.58,271.31h-5V240.93h4.61l.25,2.58h.25a21.55,21.55,0,0,1,4.79-2.12,16.75,16.75,0,0,1,4.74-.7h1.32a1.72,1.72,0,0,1,.52.06v4.86a4.25,4.25,0,0,0-1.07-.16c-.43,0-1.1,0-2,0a18.54,18.54,0,0,0-4.34.52,17,17,0,0,0-4,1.57Z" />
+                                    <path fill="var(--logo-smart)" d="M1356.35,271.31h-5V240.93h4.61l.24,2.34h.19a25.87,25.87,0,0,1,4.92-2.25,14.48,14.48,0,0,1,4.43-.7,10.94,10.94,0,0,1,4.42.8,6.45,6.45,0,0,1,2.9,2.39h.18a21.56,21.56,0,0,1,5.2-2.36,18.63,18.63,0,0,1,5.5-.83c2.91,0,5.11.76,6.61,2.3s2.25,3.81,2.25,6.8v21.89h-5V250a5,5,0,0,0-1.41-3.9,6.63,6.63,0,0,0-4.49-1.26,13.65,13.65,0,0,0-3.63.52,19.47,19.47,0,0,0-3.81,1.51,8.6,8.6,0,0,1,.15,1.23q0,.62,0,1.29v21.89h-5V250a4.94,4.94,0,0,0-1.42-3.9,6.6,6.6,0,0,0-4.48-1.26,11.11,11.11,0,0,0-3.26.52,22.07,22.07,0,0,0-4,1.75Z" />
+                                </g>
+                                <g id="SaveLend">
+                                    <path fill="var(--logo-progressive)" d="M438.63,63.62A92.3,92.3,0,0,0,402.41,56c-12.24,0-28.05,5.36-28.05,24.74,0,30.86,78,17.85,78,77.53,0,39-30.86,53.81-66.82,53.81-19.38,0-28.05-2.55-45.65-6.89L343.25,173c12.24,6.63,26.27,11,40.29,11,13.52,0,31.62-6.88,31.62-23,0-33.92-78-19.89-78-78.8,0-39.78,30.86-54.32,62.22-54.32,15.3,0,29.59,2,42.59,6.37Z" />
+                                    <path fill="var(--logo-progressive)" d="M482.52,84.53a117.54,117.54,0,0,1,45.65-9.94c40,0,56.61,16.57,56.61,55.34v16.83c0,13.26.26,23.21.51,32.9.26,9.94.77,19.12,1.53,29.33H556.73c-1.27-6.89-1.27-15.56-1.53-19.64h-.51c-7.91,14.54-25,22.7-40.55,22.7-23.21,0-45.9-14-45.9-39,0-19.64,9.43-31.12,22.44-37.49s29.84-7.65,44.12-7.65h18.87c0-21.17-9.44-28.31-29.58-28.31-14.54,0-29.08,5.61-40.55,14.28Zm40,102.52a29,29,0,0,0,24-11.73c5.61-7.39,7.14-16.83,7.14-27H538.88c-15.3,0-38,2.55-38,22.7C500.88,182.21,510.32,187.05,522.56,187.05Z" />
+                                    <path fill="var(--logo-progressive)" d="M592.74,77.65h36.72l32.65,95.63h.51l31.62-95.63h34.17L680,209H641.45Z" />
+                                    <path fill="var(--logo-progressive)" d="M845.24,201.59c-12.5,6.89-26.78,10.46-45.14,10.46-43.35,0-68.6-25-68.6-68.1,0-38,20.14-69.36,61-69.36,48.71,0,62.48,33.41,62.48,79.31H764.14c1.53,21.17,16.32,33.15,37.49,33.15,16.58,0,30.86-6.12,43.61-13.26Zm-23-71.15c-1-16.58-8.67-30.86-27.8-30.86s-28.82,13.26-30.35,30.86Z" />
+                                    <path fill="var(--logo-progressive)" d="M873.6,30.94l34.11-11v161h57.73l19,28.06H873.6Z" />
+                                    <path fill="var(--logo-progressive)" d="M1096.27,201.59c-12.5,6.89-26.78,10.46-45.14,10.46-43.36,0-68.6-25-68.6-68.1,0-38,20.14-69.36,61-69.36,48.71,0,62.48,33.41,62.48,79.31h-90.79c1.53,21.17,16.32,33.15,37.49,33.15,16.57,0,30.85-6.12,43.61-13.26Zm-23-71.15c-1-16.58-8.67-30.86-27.79-30.86s-28.82,13.26-30.35,30.86Z" />
+                                    <path fill="var(--logo-progressive)" d="M1124.63,77.65H1157V95.5h.51c10.71-15,25.25-20.91,43.1-20.91,31.11,0,44.63,21.93,44.63,51.51V209h-34.18V138.85c0-16.06-.25-37.74-22.18-37.74-24.74,0-30.1,26.78-30.1,43.61V209h-34.17Z" />
+                                    <path fill="var(--logo-progressive)" d="M1359.82,194.19h-.51c-10.2,12.76-24.23,17.86-40.29,17.86-40.3,0-55.09-33.16-55.09-69.12,0-36.21,14.79-68.34,55.09-68.34,17.08,0,29.07,5.86,39.27,18.36h.51V20L1393,31V209h-33.15Zm-31.37-8.67c22.7,0,30.1-24,30.1-42.59,0-18.36-8.68-41.82-30.61-41.82-22.18,0-28.31,24.23-28.31,41.82C1299.63,161,1306,185.52,1328.45,185.52Z" />
+                                </g>
+                        </svg>
+                    </a>
+                </div>
+
+                <ul class="f-header__list flex-grow flex-basis-0 justify-center@md">
+                    <li class="f-header__item"><a href="#0" class="f-header__link">About</a></li>
+                    <li class="f-header__item"><a href="#0" class="f-header__link">
+                            <span>Solutions</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 f-header__dropdown-icon icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="
+                                  M4,12
+                                  L12,19
+                                  L20,12
+                                " />
+                            </svg>
+                        </a>
+
+                        <ul class="f-header__dropdown">
+                            <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item One</a></li>
+                            <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item Two</a></li>
+                            <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item Three</a></li>
+                            <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item Four</a></li>
+                            <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item Five</a></li>
+                        </ul>
+                    </li>
+                    <li class="f-header__item"><a href="#0" class="f-header__link" aria-current="page">Resources</a></li>
+                    <li class="f-header__item"><a href="#0" class="f-header__link">Pricing</a></li>
+                    <li class="f-header__item"><a href="#0" class="f-header__link">Contact</a></li>
+                </ul>
+
+                <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
+                    <li class="f-header__item"><a href="https://invest.savelend.se?utm_source=savelend&utm_medium=homepage&utm_content=menu" class="f-header__link">Logga in</a></li>
+                    <li class="f-header__item"><a href="https://invest.savelend.se?register=true?utm_source=savelend&utm_medium=homepage&utm_content=menu" class="f-header__btn btn btn--accent">Börja investera</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+    <div class="body-wrapper">
+
+        <!-- MODULE HERO  -->
+        <div class="hubspot-hero position-relative hubspot-hero--large">
+            <div class="hubspot-hero__wrapper">
+                <div class="hubspot-hero__inner position-relative z-index-2">
+                    <h1 class="hubspot-hero__title">Investeringar i krediter, tillgängliga för alla!</h1>
+                    <div class="hubspot-hero__preamble">
+                        <p>Bredda din portfölj genom att investera i krediter och kom ett steg närmare ekonomisk frihet. Med hjälp av vår plattform sprider du automatiskt dina risker och får en stabil avkastning med regelbundna återbetalningar!</p>
+
+                        <p><strong>Kom igång på 5 minuter!</strong></p>
+                    </div>
+
+                    <ul class="hubspot-hero__usp">
+                        <li class="hubspot-usp-item">
+                            <svg width="28" height="26" viewBox="0 0 28 26" class="hubspot-usp-item__icon margin-right-sm" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="14" r="12" class="fill-challenger" />
+                                <path d="M24.3906 3.9375L12.0625 16.2656L7.5625 11.7188C7.32812 11.5312 6.95312 11.5312 6.76562 11.7188L5.40625 13.0781C5.21875 13.2656 5.21875 13.6406 5.40625 13.875L11.6875 20.1094C11.9219 20.3438 12.25 20.3438 12.4844 20.1094L26.5469 6.04688C26.7344 5.85938 26.7344 5.48438 26.5469 5.25L25.1875 3.9375C25 3.70312 24.625 3.70312 24.3906 3.9375Z" class="fill-offwhite" />
+                            </svg>
+
+                            <div>
+                                <p class="hubspot-usp-item__title">13,82 % ränta på investerat kapital per år i genomsnitt sedan 2014</p>
+                                <div class="hubspot-usp-item__text">Detta är en liten text om punkten ovanför</div>
+                            </div>
+                        </li>
+                        <li class="hubspot-usp-item">
+                            <svg width="28" height="26" viewBox="0 0 28 26" class="hubspot-usp-item__icon margin-right-sm" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="14" r="12" class="fill-challenger" />
+                                <path d="M24.3906 3.9375L12.0625 16.2656L7.5625 11.7188C7.32812 11.5312 6.95312 11.5312 6.76562 11.7188L5.40625 13.0781C5.21875 13.2656 5.21875 13.6406 5.40625 13.875L11.6875 20.1094C11.9219 20.3438 12.25 20.3438 12.4844 20.1094L26.5469 6.04688C26.7344 5.85938 26.7344 5.48438 26.5469 5.25L25.1875 3.9375C25 3.70312 24.625 3.70312 24.3906 3.9375Z" class="fill-offwhite" />
+                            </svg>
+
+                            <div>
+                                <p class="hubspot-usp-item__title">Investera automatiskt eller skräddarsy din strategi</p>
+                                <div class="hubspot-usp-item__text">Detta är en liten text om punkten ovanför</div>
+                            </div>
+                        </li>
+                        <li class="hubspot-usp-item">
+                            <svg width="28" height="26" viewBox="0 0 28 26" class="hubspot-usp-item__icon margin-right-sm" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="14" r="12" class="fill-challenger" />
+                                <path d="M24.3906 3.9375L12.0625 16.2656L7.5625 11.7188C7.32812 11.5312 6.95312 11.5312 6.76562 11.7188L5.40625 13.0781C5.21875 13.2656 5.21875 13.6406 5.40625 13.875L11.6875 20.1094C11.9219 20.3438 12.25 20.3438 12.4844 20.1094L26.5469 6.04688C26.7344 5.85938 26.7344 5.48438 26.5469 5.25L25.1875 3.9375C25 3.70312 24.625 3.70312 24.3906 3.9375Z" class="fill-offwhite" />
+                            </svg>
+
+                            <div>
+                                <p class="hubspot-usp-item__title">Välj månadssparande eller engångsinsättning</p>
+                                <div class="hubspot-usp-item__text">Detta är en liten text om punkten ovanför</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="btn btn--accent btn--lg shadow-xl hubspot-hero__cta">Klicka på mig!</a>
+                </div>
+            </div>
+
+            <figure class="hubspot-hero-video-bg__video" aria-hidden="true">
+                <img src="" alt="Video Preview">
+                <video autoplay loop muted playsInline src="https://f.hubspotusercontent10.net/hubfs/8851960/SaveLendBlob.mp4"></video>
+            </figure>
+        </div>
+        <!-- END MODULE HERO -->
+
+
+
+        <!-- MODULE STATIC STATD  -->
+        <div class="hubspot-global-stats">
+            <ul class="hubspot-global-stats__list">
+                <li class="hubspot-global-stats__item">
+                    <h3 class="hubspot-global-stats__title">100 000 + st</h3>
+                    <div class="hubspot-global-stats__text">Förmedlade krediter</div>
+                </li>
+
+                <li class="hubspot-global-stats__item">
+                    <h3 class="hubspot-global-stats__title">312 000 000 + kr</h3>
+                    <div class="hubspot-global-stats__text">Kapital på plattformen</div>
+                </li>
+
+                <li class="hubspot-global-stats__item">
+                    <h3 class="hubspot-global-stats__title">9 000 + st</h3>
+                    <div class="hubspot-global-stats__text">Investerare</div>
+                </li>
+
+                <li class="hubspot-global-stats__item">
+                    <h3 class="hubspot-global-stats__title">10,80 %</h3>
+                    <div class="hubspot-global-stats__text">Avkastning på investerat kapital<br><em>(Apr 20 - Mar 21)</em></div>
+                </li>
+            </ul>
+        </div>
+        <!-- END MODULE STATIC STATS -->
+
+
+        <!-- MODULE RETURN CALCULATOR  -->
+        <div class="hubspot-return-calc theme-genuine">
+            <div class="hubspot-return-calc__inner">
+                <h2 class="hubspot-return-calc__title">
+                    Statisk graf om avkstningen
+                </h2>
+                <div class="hubspot-return-calc__text text-component text-center">
+                    <p>SaveLends förväntade avkastning är 7-9 % per år efter kreditförluster och avgifter, men sedan 2014 har vi i genomsnitt levererat 13,82 % ränta per år till våra investerare.</p>
+                </div>
+
+                <div class="chart chart--line" id="multi-line-chart">
+                    <div class="chart__area js-chart__area">
+                        <!-- chart will be created here using JavaScript-->
+                    </div>
+
+                    <div class="margin-top-lg">
+                        <ul class="flex flex-wrap flex-center gap-md" aria-hidden="true">
+                            <li class="flex items-center">
+                                <span class="chart__bullet bg-progressive margin-right-xxs"></span>
+                                <span class="text-sm color-progressive">SaveLends historiska avkastning på investerat kapital</span>
+                            </li>
+
+                            <li class="flex items-center">
+                                <span class="chart__bullet bg-challenger margin-right-xxs"></span>
+                                <span class="text-sm color-progressive">Spiltan Räntefond Sveriges historiska avkastning</span>
+                            </li>
+
+                            <li class="flex items-center">
+                                <span class="chart__bullet bg-restless margin-right-xxs"></span>
+                                <span class="text-sm color-progressive">OMX Stockholm 30s historiska avkastning</span>
+                            </li>
+
+                            <li class="flex items-center">
+                                <span class="chart__bullet bg-inclusive margin-right-xxs"></span>
+                                <span class="text-sm color-progressive">Typiskt sparkonto med 0.5 % årsavkastning</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MODULE RETURN CALCULATOR -->
+
+
+
+
+        <!-- MODULE GENERIC TEXTBLOCK  -->
+        <!-- STYLE 1 -->
+        <section class="position-relative z-index-1 padding-y-xxl@md bg-contrast-lower">
+            <div class="margin-auto max-width-adaptive-lg position-relative">
+                <div class="grid padding-x-md@md padding-x-0@md">
+                    <figure class="position-absolute@md z-index-1 top-0 right-0 height-100% col-10@md">
+                        <img class="block width-100% height-100% object-cover" src="https://savelend.se/hubfs/rod-long-eWc6BKWduMQ-unsplash.jpg" alt="{{ module.image.alt }}">
+                    </figure>
+
+                    <div class="position-relative z-index-2 col-6@md col-5@lg">
+                        <div class="theme-progressive padding-md padding-lg@md shadow-xl line-height-md margin-y-xxl">
+                            <h2 class="margin-bottom-md">
+                                Textblock style 1
+                                <span class="sub-title">Detta är en underrubrik</span>
+                            </h2>
+                            <div class="hubspot-textblock__text text-component">
+                                <p>SaveLend är en investeringsplattform där privatpersoner och företag kan investera i peer-to-peer-lån (även kallat p2p eller peer-2-peer). Det innebär att dina investeringar finansierar krediter till privatpersoner och företag, samt att du får avkastning i form av utbetald ränta.</p>
+
+                                <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+
+                                <p><a href="#" class="hubspot-textblock__cta btn btn--accent">Klicka på mig</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END STYLE 1 -->
+
+        <!-- STYLE 2 -->
+        <section class="feature-v3 theme-challenger feature-v3--media-outset@md feature-v3--invert@md">
+            <div class="container max-width-adaptive-lg">
+                <div class="feature-v3__grid grid gap-lg items-center">
+
+                    <div class="col-6@md">
+                        <div class="padding-y-xl padding-y-xxxxl@md">
+                            <div>
+                                <h2 class="margin-bottom-md">
+                                    Textblock style 2
+                                    <span class="sub-title">Detta är en underrubrik</span>
+                                </h2>
+                                <div class="text-component">
+                                    <p>SaveLend är en investeringsplattform där privatpersoner och företag kan investera i peer-to-peer-lån (även kallat p2p eller peer-2-peer). Det innebär att dina investeringar finansierar krediter till privatpersoner och företag, samt att du får avkastning i form av utbetald ränta.</p>
+
+                                    <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+                                </div>
+                            </div>
+
+                            <div class="margin-top-sm">
+                                <div class="flex flex-wrap gap-sm items-center">
+                                    <p><a href="#" class="hubspot-textblock__cta btn btn--accent">Klicka på mig</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6@md">
+                        <div class="feature-v3__media">
+                            <img src="https://savelend.se/hubfs/rod-long-eWc6BKWduMQ-unsplash.jpg" alt="{{ module.image.alt }}" width="{{ module.image.width }}" height="auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END STYLE 2 -->
+
+        <!-- STYLE 3 -->
+        <section class="feature-v3 feature-v3--media-outset@md">
+            <div class="container max-width-adaptive-lg">
+                <div class="feature-v3__grid grid gap-lg items-center">
+                    <div class="col-6@md">
+                        <div class="padding-y-xl padding-y-xxxxl@md">
+
+                            <div>
+                                <h2 class="margin-bottom-md">
+                                    Textblock style 3
+                                    <span class="sub-title">Detta är en underrubrik</span>
+                                </h2>
+                                <div class="text-component">
+                                    <p>SaveLend är en investeringsplattform där privatpersoner och företag kan investera i peer-to-peer-lån (även kallat p2p eller peer-2-peer). Det innebär att dina investeringar finansierar krediter till privatpersoner och företag, samt att du får avkastning i form av utbetald ränta.</p>
+
+                                    <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+                                </div>
+                            </div>
+
+                            <div class="margin-top-sm">
+                                <div class="flex flex-wrap gap-sm items-center">
+                                    <p><a href="#" class="hubspot-textblock__cta btn btn--accent">Klicka på mig</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6@md">
+                        <div class="feature-v3__media">
+                            <img src="https://savelend.se/hubfs/rod-long-eWc6BKWduMQ-unsplash.jpg" alt="{{ module.image.alt }}" width="{{ module.image.width }}" height="auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END STYLE 3 -->
+        <!-- MODULE GENERIC TEXTBLOCK  -->
+
+
+
+        <!-- MODULE SCROLL CARDS  -->
+        <section class="hubspot-scrollcards padding-y-xxl padding-x-lg theme-default">
+            <div class="max-width-lg margin-auto text-center">
+                <!--{% if module.image.src %}
+                <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" width="{{ module.image.width }}" height="{{ module.image.height }}">
+                {% endif %}-->
+
+                <h2 class="margin-bottom-md">
+                    Detta block visar kort
+                    <span class="sub-title">Detta är en underrubrik</span>
+                </h2>
+
+                <div class="text-component margin-bottom-lg">
+                    <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+                </div>
+
+                <ul class="grid gap-lg margin-bottom-lg">
+                    <li class="hubspot-scrollcards__card col-12 col-3@md padding-md rounded-md margin-bottom-md text-center flex flex-column justify-start">
+                        <img src="{{ item.usp_icon.src }}" alt="{{ item.usp_icon.alt }}" width="auto" height="84px" class="margin-bottom-md">
+                        <h3 class="margin-bottom-sm">
+                            Korttitel
+                            <span class="sub-title">Kortunderrubrik</span>
+                        </h3>
+                        <div class="text-component margin-bottom-lg">
+                            <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+                        </div>
+                        <a href="#" class="btn btn--accent self-end">Klicka på mig!</a>
+                    </li>
+                    <li class="hubspot-scrollcards__card col-12 col-3@md padding-md rounded-md margin-bottom-md text-center flex flex-column justify-start">
+                        <img src="{{ item.usp_icon.src }}" alt="{{ item.usp_icon.alt }}" width="auto" height="84px" class="margin-bottom-md">
+                        <h3 class="margin-bottom-sm">
+                            Korttitel
+                            <span class="sub-title">Kortunderrubrik</span>
+                        </h3>
+                        <div class="text-component margin-bottom-lg">
+                            <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+                        </div>
+                        <a href="#" class="btn btn--accent self-end">Klicka på mig!</a>
+                    </li>
+                    <li class="hubspot-scrollcards__card col-12 col-3@md padding-md rounded-md margin-bottom-md text-center flex flex-column justify-start">
+                        <img src="{{ item.usp_icon.src }}" alt="{{ item.usp_icon.alt }}" width="auto" height="84px" class="margin-bottom-md">
+                        <h3 class="margin-bottom-sm">
+                            Korttitel
+                            <span class="sub-title">Kortunderrubrik</span>
+                        </h3>
+                        <div class="text-component margin-bottom-lg">
+                            <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+                        </div>
+                        <a href="#" class="btn btn--accent self-end">Klicka på mig!</a>
+                    </li>
+                    <li class="hubspot-scrollcards__card col-12 col-3@md padding-md rounded-md margin-bottom-md text-center flex flex-column justify-start">
+                        <img src="{{ item.usp_icon.src }}" alt="{{ item.usp_icon.alt }}" width="auto" height="84px" class="margin-bottom-md">
+                        <h3 class="margin-bottom-sm">
+                            Korttitel
+                            <span class="sub-title">Kortunderrubrik</span>
+                        </h3>
+                        <div class="text-component margin-bottom-lg">
+                            <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+                        </div>
+                        <a href="#" class="btn btn--accent self-end">Klicka på mig!</a>
+                    </li>
+                </ul>
+
+                <a href="#" class="btn btn--accent">Klicka på mig!</a>
+            </div>
+        </section>
+
+        <section class="hubspot-scrollcards padding-y-xxl padding-x-lg theme-progressive">
+            <div class="max-width-lg margin-auto text-center">
+                <!--{% if module.image.src %}
+                <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" width="{{ module.image.width }}" height="{{ module.image.height }}">
+                {% endif %}-->
+
+                <h2 class="margin-bottom-md">
+                    Detta block visar lista
+                    <span class="sub-title">Detta är en underrubrik</span>
+                </h2>
+
+                <div class="text-component margin-bottom-lg">
+                    <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+                </div>
+                <ul class="margin-bottom-lg text-left table margin-auto">
+                    <li class="padding-y-sm hubspot-usp-item">
+                        <svg width="28" height="26" viewBox="0 0 28 26" class="hubspot-usp-item__icon margin-right-sm" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="14" r="12" class="fill-challenger" />
+                            <path d="M24.3906 3.9375L12.0625 16.2656L7.5625 11.7188C7.32812 11.5312 6.95312 11.5312 6.76562 11.7188L5.40625 13.0781C5.21875 13.2656 5.21875 13.6406 5.40625 13.875L11.6875 20.1094C11.9219 20.3438 12.25 20.3438 12.4844 20.1094L26.5469 6.04688C26.7344 5.85938 26.7344 5.48438 26.5469 5.25L25.1875 3.9375C25 3.70312 24.625 3.70312 24.3906 3.9375Z" class="fill-offwhite" />
+                        </svg>
+
+                        <div>
+                            <span class="text-md margin-bottom-sm hubspot-usp-item__title">
+                                Listrubrik
+                                <span class="sub-title">Listunderrubrik</span>
+                            </span>
+                            <div class="text-component">Kanske lite text som knyter till punkten ovanför</div>
+                        </div>
+                    </li>
+
+                    <li class="padding-y-sm hubspot-usp-item">
+                        <svg width="28" height="26" viewBox="0 0 28 26" class="hubspot-usp-item__icon margin-right-sm" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="14" r="12" class="fill-challenger" />
+                            <path d="M24.3906 3.9375L12.0625 16.2656L7.5625 11.7188C7.32812 11.5312 6.95312 11.5312 6.76562 11.7188L5.40625 13.0781C5.21875 13.2656 5.21875 13.6406 5.40625 13.875L11.6875 20.1094C11.9219 20.3438 12.25 20.3438 12.4844 20.1094L26.5469 6.04688C26.7344 5.85938 26.7344 5.48438 26.5469 5.25L25.1875 3.9375C25 3.70312 24.625 3.70312 24.3906 3.9375Z" class="fill-offwhite" />
+                        </svg>
+
+                        <div>
+                            <span class="text-md margin-bottom-sm hubspot-usp-item__title">
+                                Listrubrik
+                                <span class="sub-title">Listunderrubrik</span>
+                            </span>
+                            <div class="text-component">Kanske lite text som knyter till punkten ovanför</div>
+                        </div>
+                    </li>
+
+                    <li class="padding-y-sm hubspot-usp-item">
+                        <svg width="28" height="26" viewBox="0 0 28 26" class="hubspot-usp-item__icon margin-right-sm" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="14" r="12" class="fill-challenger" />
+                            <path d="M24.3906 3.9375L12.0625 16.2656L7.5625 11.7188C7.32812 11.5312 6.95312 11.5312 6.76562 11.7188L5.40625 13.0781C5.21875 13.2656 5.21875 13.6406 5.40625 13.875L11.6875 20.1094C11.9219 20.3438 12.25 20.3438 12.4844 20.1094L26.5469 6.04688C26.7344 5.85938 26.7344 5.48438 26.5469 5.25L25.1875 3.9375C25 3.70312 24.625 3.70312 24.3906 3.9375Z" class="fill-offwhite" />
+                        </svg>
+
+                        <div>
+                            <span class="text-md margin-bottom-sm hubspot-usp-item__title">
+                                Listrubrik
+                                <span class="sub-title">Listunderrubrik</span>
+                            </span>
+                            <div class="text-component">Kanske lite text som knyter till punkten ovanför</div>
+                        </div>
+                    </li>
+
+                    <li class="padding-y-sm hubspot-usp-item">
+                        <svg width="28" height="26" viewBox="0 0 28 26" class="hubspot-usp-item__icon margin-right-sm" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="14" r="12" class="fill-challenger" />
+                            <path d="M24.3906 3.9375L12.0625 16.2656L7.5625 11.7188C7.32812 11.5312 6.95312 11.5312 6.76562 11.7188L5.40625 13.0781C5.21875 13.2656 5.21875 13.6406 5.40625 13.875L11.6875 20.1094C11.9219 20.3438 12.25 20.3438 12.4844 20.1094L26.5469 6.04688C26.7344 5.85938 26.7344 5.48438 26.5469 5.25L25.1875 3.9375C25 3.70312 24.625 3.70312 24.3906 3.9375Z" class="fill-offwhite" />
+                        </svg>
+
+                        <div>
+                            <span class="text-md margin-bottom-sm hubspot-usp-item__title">
+                                Listrubrik
+                                <span class="sub-title">Listunderrubrik</span>
+                            </span>
+                            <div class="text-component">Kanske lite text som knyter till punkten ovanför</div>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="#" class="btn btn--accent">Klicka på mig!</a>
+            </div>
+        </section>
+
+        <section class="hubspot-scrollcards padding-y-xxl padding-x-lg theme-challenger">
+            <div class="max-width-lg margin-auto text-center">
+                <!--{% if module.image.src %}
+                <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" width="{{ module.image.width }}" height="{{ module.image.height }}">
+                {% endif %}-->
+
+                <h2 class="margin-bottom-md">
+                    Detta block visar en nummerlista
+                    <span class="sub-title">Detta är en underrubrik</span>
+                </h2>
+
+                <div class="text-component margin-bottom-lg">
+                    <p>SaveLend lanserades 2014 för att erbjuda allmänheten möjligheten att göra som storbankerna: tjäna pengar genom att investera i krediter. Det är en investeringsform som tidigare endast var tillgänglig för ett fåtal, men nu genom så kallade peer-2-peer-lån är tillgänglig för alla.</p>
+                </div>
+
+                <ol class="margin-bottom-lg text-left table margin-auto">
+                    <li class="padding-y-sm hubspot-usp-item">
+                        <svg width="28" height="28" viewBox="0 0 28 28" class="hubspot-usp-item__icon margin-right-sm" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="14" cy="14" r="14" class="fill-challenger" />
+                            <text class="fill-offwhite" x="50%" y="16" dominant-baseline="middle" text-anchor="middle">1</text>
+                        </svg>
+
+
+                        <div>
+                            <span class="text-md margin-bottom-sm hubspot-usp-item__title">
+                                Listrubrik
+                                <span class="sub-title">Listunderrubrik</span>
+                            </span>
+                            <div class="text-component">Kanske lite text som knyter till punkten ovanför</div>
+                        </div>
+                    </li>
+
+                    <li class="padding-y-sm hubspot-usp-item">
+                        <svg width="28" height="28" viewBox="0 0 28 28" class="hubspot-usp-item__icon margin-right-sm" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="14" cy="14" r="14" class="fill-challenger" />
+                            <text class="fill-offwhite" x="50%" y="16" dominant-baseline="middle" text-anchor="middle">2</text>
+                        </svg>
+
+
+                        <div>
+                            <span class="text-md margin-bottom-sm hubspot-usp-item__title">
+                                Listrubrik
+                                <span class="sub-title">Listunderrubrik</span>
+                            </span>
+                            <div class="text-component">Kanske lite text som knyter till punkten ovanför</div>
+                        </div>
+                    </li>
+
+                    <li class="padding-y-sm hubspot-usp-item">
+                        <svg width="28" height="28" viewBox="0 0 28 28" class="hubspot-usp-item__icon margin-right-sm" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="14" cy="14" r="14" class="fill-challenger" />
+                            <text class="fill-offwhite" x="50%" y="16" dominant-baseline="middle" text-anchor="middle">3</text>
+                        </svg>
+
+
+                        <div>
+                            <span class="text-md margin-bottom-sm hubspot-usp-item__title">
+                                Listrubrik
+                                <span class="sub-title">Listunderrubrik</span>
+                            </span>
+                            <div class="text-component">Kanske lite text som knyter till punkten ovanför</div>
+                        </div>
+                    </li>
+
+                    <li class="padding-y-sm hubspot-usp-item">
+                        <svg width="28" height="28" viewBox="0 0 28 28" class="hubspot-usp-item__icon margin-right-sm" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="14" cy="14" r="14" class="fill-challenger" />
+                            <text class="fill-offwhite" x="50%" y="16" dominant-baseline="middle" text-anchor="middle">4</text>
+                        </svg>
+
+
+                        <div>
+                            <span class="text-md margin-bottom-sm hubspot-usp-item__title">
+                                Listrubrik
+                                <span class="sub-title">Listunderrubrik</span>
+                            </span>
+                            <div class="text-component">Kanske lite text som knyter till punkten ovanför</div>
+                        </div>
+                    </li>
+                </ol>
+
+                <a href="#" class="btn btn--accent">Klicka på mig!</a>
+            </div>
+        </section>
+        <!-- END MODULE SCROLL CARDS  -->
+
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+
+    <!-- SCRIPTS RETURN CALCULATOR  -->
+    <script>
+        var multiLine = document.getElementById('multi-line-chart');
+        if (multiLine) {
+            new Chart({
+                element: multiLine,
+                type: 'line',
+                xAxis: {
+                    line: true,
+                    ticks: true,
+                    labels: ['01/2014', '02/2014', '03/2014', '04/2014', '05/2014', '06/2014', '07/2014', '08/2014', '09/2014', '10/2014', '11/2014', '12/2014', '01/2015', '02/2015', '03/2015', '04/2015', '05/2015', '06/2015', '07/2015', '08/2015', '09/2015', '10/2015', '11/2015', '12/2015', '01/2016', '02/2016', '03/2016', '04/2016', '05/2016', '06/2016', '07/2016', '08/2016', '09/2016', '10/2016', '11/2016', '12/2016', '01/2017', '02/2017', '03/2017', '04/2017', '05/2017', '06/2017', '07/2017', '08/2017', '09/2017', '10/2017', '11/2017', '12/2017', '01/2018', '02/2018', '03/2018', '04/2018', '05/2018', '06/2018', '07/2018', '08/2018', '09/2018', '10/2018', '11/2018', '12/2018', '01/2019', '02/2019', '03/2019', '04/2019', '05/2019', '06/2019', '07/2019', '08/2019', '09/2019', '10/2019', '11/2019', '12/2019', '01/2020', '02/2020', '03/2020', '04/2020', '05/2020', '06/2020', '07/2020', '08/2020', '09/2020', '10/2020', '11/2020', '12/2020'],
+                    labelModifier: function(value, index) {
+                        if (!(index % 6 === 0)) {
+                            return '';
+                        } else {
+                            return value;
+                        }
+                    }
+                },
+                yAxis: {
+                    labels: true,
+                    labelModifier: function(value) {
+                        return value + ' %';
+                    }
+                },
+                datasets: [{
+                    data: [0.00, 0.00, 1.44, 2.59, 3.28, 4.96, 7.07, 8.77, 10.68, 12.58, 14.48, 15.36, 17.31, 18.80, 20.77, 22.30, 23.55, 25.04, 26.44, 27.57, 28.80, 30.17, 31.31, 32.48, 33.70, 35.04, 36.35, 37.77, 39.13, 40.78, 42.21, 43.79, 38.63, 40.45, 42.17, 43.75, 45.47, 46.75, 48.49, 49.81, 51.39, 53.06, 54.25, 55.56, 56.78, 58.00, 59.34, 60.42, 61.79, 63.01, 64.28, 65.84, 67.18, 68.51, 69.88, 71.39, 72.43, 73.75, 74.85, 75.83, 77.01, 77.97, 78.62, 79.37, 79.42, 80.84, 81.44, 81.94, 82.93, 84.64, 85.47, 86.00, 86.92, 87.72, 88.31, 89.07, 89.79, 91.22, 91.84, 92.88, 94.22, 95.00, 95.93, 96.69]
+                }, {
+                    data: [0.00, 0.29, 0.50, 0.68, 0.86, 1.11, 1.31, 1.39, 1.58, 1.55, 1.60, 1.58, 1.94, 2.26, 2.55, 2.92, 3.01, 3.08, 3.11, 3.18, 2.81, 3.02, 2.95, 2.75, 2.65, 2.69, 2.88, 3.39, 3.60, 3.76, 4.02, 4.42, 4.68, 4.87, 5.02, 5.13, 5.36, 5.57, 5.75, 5.88, 6.07, 6.19, 6.30, 6.43, 6.56, 6.67, 6.70, 6.72, 6.88, 6.95, 7.02, 7.14, 7.24, 7.28, 7.33, 7.43, 7.47, 7.49, 7.36, 7.18, 7.32, 7.51, 7.68, 7.97, 8.10, 8.26, 8.46, 8.59, 8.73, 8.82, 8.95, 9.06, 9.27, 9.29, 5.49, 6.57, 7.79, 9.30, 9.94, 10.65, 10.86, 10.86, 11.15, 11.45, ]
+                }, {
+                    data: [0.00, 4.96, 4.58, 4.61, 7.37, 5.57, 5.79, 6.45, 7.46, 8.17, 11.60, 11.82, 19.27, 26.73, 25.35, 22.97, 24.01, 17.73, 22.53, 15.44, 9.83, 15.64, 18.10, 12.29, 6.03, 7.23, 6.73, 6.36, 7.01, 3.66, 8.42, 10.69, 12.17, 12.67, 15.08, 17.51, 18.80, 20.98, 22.09, 24.57, 25.31, 23.08, 19.69, 19.60, 25.48, 27.55, 23.87, 21.81, 22.84, 22.22, 19.19, 21.49, 20.17, 20.75, 24.39, 27.02, 27.27, 19.81, 18.27, 11.28, 18.85, 22.63, 21.41, 29.31, 19.42, 26.84, 25.44, 24.02, 28.50, 33.72, 33.52, 35.92, 36.57, 30.15, 18.98, 25.42, 28.71, 30.83, 33.41, 36.87, 40.44, 34.33, 45.97, 43.74]
+                }, {
+                    data: [0.04, 0.08, 0.13, 0.17, 0.21, 0.25, 0.29, 0.33, 0.38, 0.42, 0.46, 0.50, 0.54, 0.58, 0.63, 0.67, 0.71, 0.75, 0.79, 0.83, 0.88, 0.92, 0.96, 1.00, 1.04, 1.08, 1.13, 1.17, 1.21, 1.25, 1.29, 1.33, 1.38, 1.42, 1.46, 1.50, 1.54, 1.58, 1.63, 1.67, 1.71, 1.75, 1.79, 1.83, 1.88, 1.92, 1.96, 2.00, 2.04, 2.08, 2.13, 2.17, 2.21, 2.25, 2.29, 2.33, 2.38, 2.42, 2.46, 2.50, 2.54, 2.58, 2.63, 2.67, 2.71, 2.75, 2.79, 2.83, 2.88, 2.92, 2.96, 3.00, 3.04, 3.08, 3.13, 3.17, 3.21, 3.25, 3.29, 3.33, 3.38, 3.42, 3.46, 3.50]
+                }],
+                tooltip: {
+                    enabled: true,
+                    position: 'top',
+                    customHTML: function(index, chartOptions, datasetIndex) {
+                        var html = ''; //'<p class="margin-bottom-xxs">Total ' + chartOptions.xAxis.labels[index] + '</p>';
+                        html = html + '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-progressive margin-right-xxs"></span> SaveLend investerat kapital: ' + chartOptions.datasets[0].data[index] + ' %</p>';
+                        html = html + '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-challenger margin-right-xxs"></span> Spiltan: ' + chartOptions.datasets[1].data[index] + ' %</p>';
+                        html = html + '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-restless margin-right-xxs"></span> OMX: ' + chartOptions.datasets[2].data[index] + ' %</p>';
+                        html = html + '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-inclusive margin-right-xxs"></span> Sparkonto:' + chartOptions.datasets[3].data[index] + ' %</p>';
+                        return html;
+                    }
+                },
+                animate: true
+            });
+        }
+    </script>
+    <!-- END SCRIPTS RETURN CALCULATOR -->
+
+
+
+</body>
+
+</html>

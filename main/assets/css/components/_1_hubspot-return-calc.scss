@@ -1,5 +1,13 @@
 .hubspot-return-calc {
-    padding: var(--space-xxl) var(--space-lg);
+    padding: var(--space-xxxl) var(--space-md);
+
+    text-align: center;
+
+    color: var(--color-offwhite);
+
+    @include breakpoint(md) {
+        padding: var(--space-xxxl) var(--space-lg);
+    }
 }
 
 .hubspot-return-calc__inner {
@@ -8,7 +16,7 @@
 }
 
 .hubspot-return-calc__title {
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
 .hubspot-return-calc__text {

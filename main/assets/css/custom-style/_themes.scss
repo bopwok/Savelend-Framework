@@ -1,0 +1,92 @@
+:root {
+    --bg-color: transaprent;
+    --text-color: var(--color-smart-1);
+    --header-color: var(--color-progressive);
+    --btn-color: var(--color-challenger);
+}
+
+.theme-default {
+    .hubspot-scrollcards__card {
+        --card-bg: var(--color-progressive);
+        --card-header-color: var(--color-challenger);
+        --card-text-color: var(--color-offwhite);
+    }
+}
+
+.theme-progressive {
+    --bg-color: var(--color-progressive);
+    --text-color: var(--color-offwhite);
+    --header-color: var(--color-challenger);
+}
+
+.theme-challenger {
+    --bg-color: var(--color-challenger);
+    --text-color: var(--color-offwhite);
+    --header-color: var(--color-progressive);
+    --btn-color: var(--color-progressive);
+}
+
+.theme-restless {
+    --bg-color: var(--color-restless);
+    --text-color: var(--color-charcoal);
+    --header-color: var(--color-charcoal);
+    --btn-color: var(--color-progressive);
+}
+
+.theme-genuine {
+    --bg-color: var(--color-genuine);
+    --text-color: var(--color-offwhite);
+    --header-color: var(--color-restless-1);
+}
+
+.theme-rainbow {
+    .hubspot-scrollcards__card {
+        position: relative;
+
+        &:nth-child(1) {
+            --card-bg: var(--color-progressive);
+            --card-header-color: var(--color-challenger);
+            --card-text-color: var(--color-offwhite);
+        }
+
+        &:nth-child(2) {
+            --card-bg: var(--color-challenger);
+            --card-header-color: var(--color-progressive);
+            --card-text-color: var(--color-offwhite);
+
+            top: var(--space-md);
+        }
+
+        &:nth-child(3) {
+            --card-bg: var(--color-restless);
+            --card-header-color: var(--color-charcoal);
+            --card-text-color: var(--color-charcoal);
+
+            top: var(--space-xl);
+        }
+
+        &:nth-child(4) {
+            --card-bg: var(--color-genuine);
+            --card-header-color: var(--color-restless-1);
+            --card-text-color: var(--color-offwhite);
+
+            top: var(--space-xxl);
+        }
+    }
+}
+
+[class*="theme-"] {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: var(--header-color);
+    }
+
+    .btn {
+        background-color: var(--btn-color);
+    }
+}

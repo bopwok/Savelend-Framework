@@ -12,19 +12,21 @@ Usage: codyhouse.co/license
     top: 0;
     will-change: transform;
     transition: transform 0.3s, background-color 0.3s;
-  }
-  
-  .hide-nav--fixed {
+}
+
+.hide-nav--fixed {
     position: fixed !important;
     background-color: transparent;
-  }
-  
-  .hide-nav--has-bg {
-    color: var(--color-progressive) !important;
-    background-color: var(--color-offwhite);
-    box-shadow: var(--shadow-sm);
+}
 
-    .f-header__logo {
+.hide-nav--has-bg {
+    //color: var(--color-progressive) !important;
+    background-color: var(--color-progressive);
+    box-shadow: var(--shadow-sm);
+    
+    --f-header-height: 80px;
+    
+    /*.f-header__logo {
       --logo-progressive:  var(--color-progressive);
       --logo-challenger:  var(--color-challenger);
       --logo-smart:  var(--color-smart);
@@ -33,9 +35,10 @@ Usage: codyhouse.co/license
 
     .f-header__link {
       color: var(--color-progressive);
-  }
-  }
-  
-  .hide-nav--off-canvas { // main header is off-canvas
+  }*/
+}
+
+.hide-nav--off-canvas {
+    // main header is off-canvas
     // add off-canvas custom style (if any)
-  }
+}
