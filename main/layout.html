@@ -123,6 +123,10 @@
                     <span class="actions-text">Rekommenderade handlingar</span>
                     <div class="notification">1</div>
                 </div>
+                <div class="btn-group">
+                        <button class="btn btn--accent" aria-controls="ok-modal">ok modal</button>
+                        <button class="btn btn--accent">info modal</button>
+                    </div>
 
                 <div class="grid gap-md">
 
@@ -198,6 +202,8 @@
                             </section>
                         </div>
                     </div>
+
+
 
 
 
@@ -607,6 +613,21 @@
                 </div>
             </div>
         </div>
+        <div class="js-modal modal-wrapper" id='ok-modal'>
+            <div class="modal">
+                    <svg class="icon modal__icon modal__icon--success" :class="{ 'flip-y': expanded }">
+                                        <use xlink:href="assets/icons/remix.svg#ri-check-line" /></svg>
+                <h2>Header lorem ipmusm</h2>
+                <div class="modal__content">
+                    <p>Some text lorem ipmusm</p>
+                </div>
+                <div class="modal__actions">
+                    <a class="btn btn--accent table margin-auto" aria-controls="ok-modal">Ok</a>
+                </div>  
+            </div>
+            <div class="modal__overlay" aria-controls="ok-modal"></div>
+        </div>
+                    
 
         <div class="bottom-sheet_wrapper js-bottomsheet" id="filters">
             <div class="bottom-sheet_overlay" aria-controls="filters"></div>
