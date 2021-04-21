@@ -66,6 +66,14 @@ Descr: Displays some data in a modal popup
 		&.modal__icon--success {
 			color: var(--color-inclusive-1);
 		}
+
+		&.modal__icon--info {
+			color: var(--color-challenger);
+		}
+
+		&.modal__icon--error {
+			color: var(--color-progressive);
+		}
 	}
 
 	.modal__content,

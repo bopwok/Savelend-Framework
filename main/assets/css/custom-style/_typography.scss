@@ -174,3 +174,16 @@ mark {
     --body-line-height: 1.58; // set body line-height
     --text-vspace-multiplier: 1.2; // increase vertical spacing
 }
+
+.standing-out-section {
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    border-color: var(--color-offwhite) solid 1px;
+    background-color: var(--color-offwhite-1);
+    
+
+    .standing-out-section__row {
+        display: flex;
+        justify-content: space-between;
+    }
+}
