@@ -15,8 +15,14 @@ Descr: Used to display data
             display: none;
         }
 
-        .card__header-collapse-icon {
+        .card__header-action-icon {
             transform: scaleY(-1);
+        }
+    }
+
+    &.card--simple {
+        .card__header {
+            border-radius: var(--radius-lg);
         }
     }
 
@@ -41,17 +47,40 @@ Descr: Used to display data
             }
         }
 
-        .card__header-collapse-icon {
+        .card__header-action-icon {
             position: absolute;
             right: 0;
             bottom: 0;
             margin: var(--space-xs);
             cursor: pointer;
 
+            &.card__header-action-icon--restless {
+                color: var(--color-restless);
+            }
+    
+            &.card__header-action-icon--genuine {
+                color: var(--color-genuine-3);
+            }
+    
+            &.card__header-action-icon--challenger {
+                color: var(--color-challenger);
+            }
+
+            &.card__header-action-icon--inactive {
+                cursor: default;
+            }
+
             .icon {
-                height: var(--text-xl);
-                width: var(--text-xl);
-                color: var(--color-offwhite);
+                height: var(--text-lg);
+                width: var(--text-lg);
+            }
+
+            &.card__header-action-icon--collapsible {
+                .icon {
+                    height: var(--text-xl);
+                    width: var(--text-xl);
+                    color: var(--color-offwhite);
+                }
             }
         }
         
@@ -83,9 +112,17 @@ Descr: Used to display data
         &.card__data-display--restless {
             color: var(--color-restless);
         }
+
+        &.card__data-display--genuine {
+            color: var(--color-genuine-3);
+        }
+
+        &.card__data-display--challenger {
+            color: var(--color-challenger);
+        }
     }
 
-    &.card-collapsable {
+    &.card-collapsible {
         .card__data-display {
             padding-right: var(--text-md);
         }

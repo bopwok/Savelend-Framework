@@ -1173,7 +1173,7 @@ tabtn.forEach((button) => {
     });
 });
 (function () {
-    var CardCollapsable = function (elem) {
+    var CardCollapsible = function (elem) {
         this.element = elem;
         this.elementId = this.element.getAttribute('id');
         this.trigger = document.querySelectorAll('[aria-controls="' + this.elementId + '"]');
@@ -1223,17 +1223,17 @@ tabtn.forEach((button) => {
         }
     };
 
-    window.CardCollapsable = CardCollapsable;
+    window.CardCollapsible = CardCollapsible;
 
     //initialize the Popover objects
-    var cards = document.getElementsByClassName('card-collapsable');
+    var cards = document.getElementsByClassName('card-collapsible');
     // generic focusable elements string selector
 
     if (cards.length > 0) {
-        var cardCollapsableArray = [];
+        var cardCollapsibleArray = [];
         for (var i = 0; i < cards.length; i++) {
             (function (i) {
-                cardCollapsableArray.push(new CardCollapsable(cards[i]));
+                cardCollapsibleArray.push(new CardCollapsible(cards[i]));
             })(i);
         }
     }
