@@ -10,12 +10,22 @@ Descr: Used to display data
     border-radius: var(--radius-lg);
     overflow: hidden;
 
+    &.card--collapsed {
+        .card__content {
+            display: none;
+        }
+
+        .card__header-collapse-icon {
+            transform: scaleY(-1);
+        }
+    }
 
     .card__header {
         border-top-left-radius: var(--radius-lg);
         border-top-right-radius: var(--radius-lg);
         padding-top: var(--space-sm);
         padding-bottom: var(--space-sm);
+        position: relative;
 
         &.card__header--flush {
             padding-bottom: 0;
@@ -28,6 +38,20 @@ Descr: Used to display data
     
             & + .card__tabs {
                 margin-top: var(--space-xxxs);
+            }
+        }
+
+        .card__header-collapse-icon {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin: var(--space-xs);
+            cursor: pointer;
+
+            .icon {
+                height: var(--text-xl);
+                width: var(--text-xl);
+                color: var(--color-offwhite);
             }
         }
         
@@ -58,6 +82,12 @@ Descr: Used to display data
 
         &.card__data-display--restless {
             color: var(--color-restless);
+        }
+    }
+
+    &.card-collapsable {
+        .card__data-display {
+            padding-right: var(--text-md);
         }
     }
 
