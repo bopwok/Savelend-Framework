@@ -28,6 +28,20 @@
       margin-top: var(--space-xxs);
       margin-bottom: var(--space-md);
     }
+
+    .form-control__action-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: calc(var(--form-control-padding-y)*2) var(--form-control-padding-y) 0 0;
+      cursor: pointer;
+
+      .icon {
+        color: var(--btn-color);
+        height: 1.4em;
+        width: 1.4em;
+      }
+    }
   }
 
   &:focus-within {
