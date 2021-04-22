@@ -313,10 +313,14 @@
                         <div class="card__content card__content--tabbed">
                             <div x-show="tab === 'innehav'" class="card__content-tab card__data-table width-100%">
                                 <div class="card__data-table__row card__data-table__row--bordered">
-                                    <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit1" class="checkbox" x-model="selected" value="1" /><label for="Konsumentkredit1"></label></div>
-                                    <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
+                                    <div class="card__data-table__item">
+                                    <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-lock-line" /></svg>
+                                            <label for="Konsumentkredit1"></label></div>
+                                    <div class="card__data-table__row card__data-table__item card__data-table__item--disabled">
                                         Konsumentkredit
-                                        <span class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</span>
+                                        <span class="card__data-table__item-undertext">Something</span>
+                                        <span class="text-right font-semibold color-progressive text-md">1 999 999,00 kr</span>
                                     </div>
                                 </div>
 

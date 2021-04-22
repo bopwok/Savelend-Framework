@@ -163,6 +163,7 @@ Descr: Used to display data
             justify-content: space-between;
             flex: 1;
             align-items: center;
+            position: relative;
         }
 
         .card__data-table__row--bordered {
@@ -183,10 +184,27 @@ Descr: Used to display data
             &:last-child {
                 padding-left: 0;
             }
+
+            .icon {
+                margin-right: var(--space-xs);
+            }
         }
 
         .card__data-table__item--clickable {
             cursor: pointer;
+        }
+
+        .card__data-table__item--disabled {
+            * { 
+                color: var(--color-smart-2);
+            }
+        }
+
+        .card__data-table__item-undertext {
+            position: absolute;
+            font-size: var(--text-xs);
+            top: calc(2 * var(--space-md));
+            left: 0px;
         }
 
         tr {
