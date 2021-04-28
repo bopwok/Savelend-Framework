@@ -12,8 +12,16 @@
     align-items: center;
 }
 
-.hubspot-hero--large {
+.hubspot-hero--large,
+.hubspot-hero--campaign {
     min-height: 100vh;
+}
+
+.hubspot-hero--campaign {
+    background-image: url('https://savelend.se/hubfs/mattress.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .hubspot-hero__wrapper {
