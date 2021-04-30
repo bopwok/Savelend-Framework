@@ -1,0 +1,32 @@
+/* -------------------------------- 
+
+File#: _1_onboarding
+Title: Data in onboarding viw
+Descr: some special display options in onboarding view
+
+-------------------------------- */
+
+.onboarding-box {
+    padding: var(--space-sm);
+
+    .onboarding-box__header {
+        padding-bottom: var(--space-sm);
+
+        &.onboarding-box__header--caution {
+            
+            .icon {
+                color: var(--color-progressive);
+            }
+        }
+
+        &.onboarding-box__header--complete {
+            .icon {
+                color: var(--color-inclusive);
+            }
+        }
+     }
+
+     .onboarding-box__content {
+        //
+     }
+}

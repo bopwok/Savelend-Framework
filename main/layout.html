@@ -57,7 +57,13 @@
 
             <header class="container title-bar flex-between margin-bottom-xl">
                 <h1 class="title-bar-text">Översikt</h1>
-
+                <div class="title-bar-notification title-bar-notification--active flex-between">
+                    <button class="reset" style="--anim-menu-btn-icon-size: 24px;" >
+                        <svg class="icon">
+                            <use xlink:href="assets/icons/remix.svg#ri-notification-2-line" /></svg>
+                        <div class='notification-bubble' >4</div>
+                    </button>
+                </div>
                 <div class="title-bar-actions flex-between">
                     <button class="reset" style="--anim-menu-btn-icon-size: 24px;" aria-label="Toggle menu" aria-controls="user-profile-menu">
                         <svg class="icon">
@@ -129,9 +135,9 @@
 
                 <div class="grid gap-md">
                         <div class="btn-group col-12@sm col-12@md col-12@lg">
-                            <button class="btn btn--accent" aria-controls="ok-modal">ok modal</button>
-                            <button class="btn btn--accent" aria-controls="info-modal">info modal</button>
-                            <button class="btn btn--accent" aria-controls="error-modal">error modal</button>
+                            <button class="btn btn--challenger" aria-controls="ok-modal">ok modal</button>
+                            <button class="btn btn--challenger" aria-controls="info-modal"><span>info modal</span><div class='notification'>3</div></button>
+                            <button class="btn btn--challenger" aria-controls="error-modal">error modal</button>
                         </div>
 
                     <div class="card col-12@sm col-6@md col-4@lg">
@@ -694,6 +700,54 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+
+                    <div class="card card--ref-a-friend col-12@sm col-6@md col-4@lg">
+                        <div class="card__content card__content--ref-a-friend">
+                            <h2 class="card__title card__title--large card__title--ref-a-friend">Friend header</h2>
+                            <div class="card__content-ref-a-friend-text">fiernd text</div>
+                            <ul class="card__list">
+                                <li>5 000 kr = <span class="color-restless">200 kr</span> something</li>
+                                <li>5 000 kr = <span class="color-restless">200 kr</span> something</li>
+                                <li>5 000 kr = <span class="color-restless">200 kr</span> something</li>
+                            </ul>
+                            <div class="card__text">fiernd text <span class="color-inclusive-3">fiernd text</span> </div>
+                            <div class="card__link-box">https://savelend.se?key=asdasdasdas<svg class="icon card__link-box__icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-file-copy-fill" /></svg></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div>some content</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12@sm col-6@md col-4@lg">
+                        <div class="onboarding-box">
+                            <header class="onboarding-box__header onboarding-box__header--caution">
+                                Identify with tink
+                                    <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" /></svg>
+                                        </div>
+                            </header>
+                            <div class="onboarding-box__content"></div>
+                        </div>
+                        <div class="onboarding-box">
+                            <header class="onboarding-box__header onboarding-box__header--complete">
+                                What's you phone number?
+                                    <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" /></svg>
+                                        </div>
+                            </header>
+                            <div class="onboarding-box__content"></div>
+                        </div>
+                        <div class="onboarding-box">
+                            <header class="onboarding-box__header onboarding-box__header--complete">
+                                What's you phone number?
+                                    <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" /></svg>
+                                        </div>
+                            </header>
+                            <div class="onboarding-box__content"></div>
                         </div>
                     </div>
                 </div>

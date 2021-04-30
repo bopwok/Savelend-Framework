@@ -7,35 +7,61 @@ Descr: Contains page title and holds notifications and user profile
 -------------------------------- */
 
 .title-bar {
-    
-}
-
-.title-bar-text {
-    font-size: var(--text-lg);
-    font-weight: 600;
-
-    color: var(--color-progressive);
-
-    letter-spacing: var(--text-spacing);
-
-    position:relative;
-
-    &:after {
-        content: "";
-        position: absolute;
-        left:0;
-        bottom: -5px;
-
-        transform: translateX(-25%);
-
-        background: var(--color-challenger);
-        width: 1.5rem;
-        height: 0.1875rem;
+    button {
+        cursor: pointer;
     }
 }
 
-.title-bar-actions {
+.title-bar-text {
+	font-size: var(--text-lg);
+	font-weight: 600;
 
+	color: var(--color-progressive);
+
+	letter-spacing: var(--text-spacing);
+
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+
+		transform: translateX(-25%);
+
+		background: var(--color-challenger);
+		width: 1.5rem;
+		height: 0.1875rem;
+	}
+}
+
+.title-bar-actions {
+}
+
+.title-bar-notification {
+	margin-left: auto;
+	margin-right: var(--space-md);
+	position: relative;
+    
+
+    &.title-bar-notification--active {
+        cursor: pointer;
+        color: var(--color-challenger);
+    }
+}
+
+.notification-bubble {
+    position: absolute;
+    background-color: var(--color-challenger);
+    color: var(--color-offwhite);
+    top:0;
+    right: calc( -.5 * var(--text-sm));
+    border-radius: 100%;
+    height: calc( 1.3 * var(--text-sm));
+    width: calc( 1.3 * var(--text-sm));
+    font-size: var(--text-sm);
+    line-height: calc( 1.3 * var(--text-sm));
 }
 
 /*@media (prefers-color-scheme: dark) {

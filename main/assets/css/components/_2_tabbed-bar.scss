@@ -12,7 +12,7 @@ Descr: Used for submenus, scrollable is needed
     z-index: var(--zindex-header);
     background: var(--color-offwhite-1);
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     box-shadow: var(--shadow-sm);
     margin-bottom: var(--space-lg);

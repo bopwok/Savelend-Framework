@@ -26,6 +26,10 @@ Descr: Used to display data
         }
     }
 
+    &.card--ref-a-friend {
+        border-radius: var(--radius-lg);
+    }
+
     .card__header {
         border-top-left-radius: var(--radius-lg);
         border-top-right-radius: var(--radius-lg);
@@ -100,6 +104,36 @@ Descr: Used to display data
 
         & + .card__data-display {
             margin-top: var(--space-xxs);
+        }
+
+        &.card__title--ref-a-friend {
+            color: var(--color-offwhite);
+            margin-bottom: var(--space-sm);
+        }
+    }
+
+    .card__list {
+        margin: var(--space-sm) 0;
+        margin-left: var(--space-md);
+
+        li {
+            font-size: var(--text-md);
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: ' ';
+                height: var(--text-xs);
+                width: var(--text-xs);
+                border-radius: 100%;
+                border: solid 5px var(--color-restless);
+                left: calc(-.75 * var(--text-md));
+                top: calc(.25 * var(--text-md));
+            }
+        }
+
+        .list--restless {
+            color: var(--color-restless);
         }
     }
 
@@ -218,6 +252,43 @@ Descr: Used to display data
         border-bottom-left-radius: var(--radius-lg);
         border-bottom-right-radius: var(--radius-lg);
         background: var(--color-offwhite-3);
+
+        &.card__content--ref-a-friend {
+            background: var(--color-genuine-1);
+            color: var(--color-offwhite);
+            padding: var(--space-md);
+            border-radius: 0;
+        }
+    }
+
+    .card__bottom {
+        background: var(--color-genuine);
+        color: var(--color-offwhite);
+        padding: var(--space-md);
+        border-bottom-left-radius: var(--radius-lg);
+        border-bottom-right-radius: var(--radius-lg);
+    }
+
+    .card__link-box {
+        border-radius: var(--radius-lg);
+        background: var(--color-offwhite);
+        color: var(--color-progressive);
+        padding: var(--space-sm);
+        cursor: pointer;
+        margin: var(--space-sm) 0;
+
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .card__text {
+        &.card__text--inclusive-3 {
+            color: var(--color-inclusive-3);
+        }
     }
 
     .card__html {

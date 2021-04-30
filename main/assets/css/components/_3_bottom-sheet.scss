@@ -13,6 +13,10 @@
                 0 -3.3px 5.3px -1px rgba(0, 0, 0, 0.038),
                 0 -8.5px 12.7px -1px rgba(0, 0, 0, 0.085),
                 0 -30px 42px -1px rgba(0, 0, 0, 0.15);
+
+            @media screen and (min-width: 1024px) {
+                transform: translateY(0);
+            }  
         }
     }
 }
@@ -41,29 +45,41 @@
     right: 0;
     //margin: 0 auto;
     z-index: var(--zindex-overlay);
-    transform: translateX(100%);
+    transform: translateY(100%);
     transition: transform var(--ease-out) 0.3s;
 
     border-top-left-radius: var(--radius-lg);
     border-top-right-radius: var(--radius-lg);
+
+    @media screen and (min-width: 1024px) {
+        transform: translateY(0);
+        transform: translateX(100%);
+    }
 }
 
 .bottom-sheet_header {
     border-top-left-radius: var(--radius-lg);
     border-top-right-radius: var(--radius-lg);
-    background: var(--color-restless);
+    background: var(--color-progressive);
     padding: var(--space-sm) var(--space-md);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    color: var(--color-progressive);
+    cursor: pointer;
+
+    color: var(--color-offwhite);
+
+    .icon {
+        color: var(--color-challenger);
+    }
 }
 
 .bottom-sheet_header_label {
     font-size: var(--text-md);
     font-weight: 400;
+    color: var(--color-offwhite);
 }
 
 .bottom-sheet_content {
@@ -120,6 +136,7 @@
 
     &.bottom-sheet_filters-list_value--expandable,
     &.bottom-sheet_filters-list_value--editable {
+        max-width: 170px;
         cursor: pointer;
 
         .icon {
@@ -138,10 +155,18 @@
         border: 0;
         outline: none;
         border-radius: 0;
+        max-width: 100px;
 
         &:focus {
             border-bottom: 1px solid var(--color-challenger);
             margin-bottom: -1px;
+        }
+    }
+
+    .small-datepicker {
+        max-width: 130px;
+        &:first-child() {
+            margin-right: 30px;
         }
     }
 }

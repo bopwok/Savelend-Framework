@@ -95,6 +95,22 @@
     color: alpha(var(--color-restless), var(--color-o, 1));
 }
 
+.color-inclusive {
+    color: var(--color-inclusive);
+}
+
+.color-inclusive-1 {
+    color: var(--color-inclusive-1);
+}
+
+.color-inclusive-2 {
+    color: var(--color-inclusive-2);
+}
+
+.color-inclusive-3 {
+    color: var(--color-inclusive-3);
+}
+
 .fill-progressive { fill: var(--color-progressive); }
 .fill-challenger { fill: var(--color-challenger); }
 .fill-smart { fill: var(--color-smart); }
