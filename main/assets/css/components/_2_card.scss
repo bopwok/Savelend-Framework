@@ -228,6 +228,7 @@ Descr: Used to display data
             color: var(--color-offwhite);
             flex-grow: 1;
             border-radius: var(--radius-full);
+            cursor: pointer;
 
             .card__filter-active-text {
                 display: inline-block;
@@ -245,6 +246,7 @@ Descr: Used to display data
             color: var(--color-offwhite);
             border-radius: var(--radius-full);
             width: 44px; //Find a more dynamic way!
+            cursor: pointer;
         }
     }
 
