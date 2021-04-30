@@ -7,16 +7,32 @@
 
         .bottom-sheet {
             //padding-bottom: 2rem;
-            transform: translateX(0);
+            //transform: translateY(0);
+            padding-bottom: 2rem;
+            transform: translateY(4rem);
 
             box-shadow: 0 -1.2px 1.9px -1px rgba(0, 0, 0, 0.014),
                 0 -3.3px 5.3px -1px rgba(0, 0, 0, 0.038),
                 0 -8.5px 12.7px -1px rgba(0, 0, 0, 0.085),
                 0 -30px 42px -1px rgba(0, 0, 0, 0.15);
 
-            @media screen and (min-width: 1024px) {
-                transform: translateY(0);
-            }  
+            @include breakpoint(md) {
+                transform: translateY(0) translateX(0);
+            }
+
+            &.bottom-sheet--force-bottom {
+                @include breakpoint(md) {
+                    transform: translateY(4rem) translateX(0);
+                }
+            }
+            
+            &.bottom-sheet--force-side {
+                transform: translateY(0) translateX(0);
+
+                @include breakpoint(md) {
+                    transform: translateY(0) translateX(0);
+                }
+            }
         }
     }
 }
@@ -38,12 +54,12 @@
     background: var(--color-offwhite-3);
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: min-content;
     max-width: var(--max-width-sm);
     bottom: 0;
-    //left: 0;
+    left: 0;
     right: 0;
-    //margin: 0 auto;
+    margin: 0 auto;
     z-index: var(--zindex-overlay);
     transform: translateY(100%);
     transition: transform var(--ease-out) 0.3s;
@@ -51,9 +67,29 @@
     border-top-left-radius: var(--radius-lg);
     border-top-right-radius: var(--radius-lg);
 
-    @media screen and (min-width: 1024px) {
-        transform: translateY(0);
-        transform: translateX(100%);
+    @include breakpoint(md) {
+        height: 100%;
+        left: auto;
+        transform: translateY(0) translateX(100%);
+    }
+}
+
+.bottom-sheet--force-bottom {
+    left: 0;
+    transform: translateY(100%) translateX(0%);
+
+    @include breakpoint(md) {
+        transform: translateY(100%) translateX(0%);
+    }
+}
+
+.bottom-sheet--force-side {
+    left: auto;
+    height: 100%;
+    transform: translateY(0) translateX(100%);
+
+    .bottom-sheet_header {
+        border-top-right-radius: 0;
     }
 }
 
@@ -73,6 +109,10 @@
 
     .icon {
         color: var(--color-challenger);
+    }
+
+    @include breakpoint(md) {
+        border-top-right-radius: 0;
     }
 }
 
