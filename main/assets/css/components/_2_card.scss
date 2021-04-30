@@ -228,6 +228,7 @@ Descr: Used to display data
             color: var(--color-offwhite);
             flex-grow: 1;
             border-radius: var(--radius-full);
+            order: 0;
             cursor: pointer;
 
             .card__filter-active-text {
@@ -238,6 +239,8 @@ Descr: Used to display data
             &.control--active {
                 color: var(--color-restless);
             }
+
+            
         }
         .card__sort {
             margin-left: var(--space-sm);
@@ -247,6 +250,22 @@ Descr: Used to display data
             border-radius: var(--radius-full);
             width: 44px; //Find a more dynamic way!
             cursor: pointer;
+            order: 3;
+        }
+
+        .card__reset-filters {
+            padding: var(--space-sm) var(--space-md);
+            background: var(--color-progressive-2);
+            color: var(--color-offwhite);
+            border-top-right-radius: var(--radius-full);
+            border-bottom-right-radius: var(--radius-full);
+            cursor: pointer;
+            order: 2;
+
+            + .card__filter{ 
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
         }
     }
 
