@@ -25,7 +25,7 @@ Descr: Used for submenus, scrollable is needed
     .tabbed-bar__nav-item {
         flex:1;
         display: block;
-        padding: var(--space-sm) var(--space-sm) var(--space-xs);
+        padding: var(--space-sm) 0 var(--space-xs);
         position: relative;
         text-align: center;
         text-decoration: none;
