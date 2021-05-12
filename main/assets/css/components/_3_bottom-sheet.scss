@@ -125,6 +125,7 @@
 	height: min-content;
 	max-height: 70vh;
 	margin-bottom: 2rem;
+	color: var(--color-progressive);
 
 	@include breakpoint(md) {
 		height: auto;

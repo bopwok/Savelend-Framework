@@ -94,7 +94,7 @@ Descr: Used to display data
     }
 
     .card__title {
-        font-size: var(--text-sm);
+        font-size: var(--text-md);
         color: var(--color-offwhite);
         font-weight: 400;
 
@@ -114,7 +114,7 @@ Descr: Used to display data
 
     .card__list {
         margin: var(--space-sm) 0;
-        margin-left: var(--space-md);
+        margin-left: var(--space-lg);
 
         li {
             font-size: var(--text-md);
@@ -123,12 +123,12 @@ Descr: Used to display data
             &::before {
                 position: absolute;
                 content: ' ';
-                height: var(--text-xs);
-                width: var(--text-xs);
+                height: 10px;
+                width: 10px;
                 border-radius: 100%;
-                border: solid 5px var(--color-restless);
-                left: calc(-.75 * var(--text-md));
-                top: calc(.25 * var(--text-md));
+                border: solid 3px var(--color-restless);
+                left: calc(-1 * var(--text-md));
+                top: calc(.3 * var(--text-md));
             }
         }
 
@@ -314,6 +314,7 @@ Descr: Used to display data
 
     .card__html {
         padding: var(--space-md) var(--space-md);
+        color: var(--color-progressive);
     }
 
     .card__data-table {
