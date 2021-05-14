@@ -44,14 +44,15 @@ Descr: Displays some data in a modal popup
     max-width: var(--max-width-xs);
     width: 100%;
 	bottom: 0;
-	left: 0;
+	left: 50%;
+	top: 50%;
 	right: 0;
 	margin: 0 auto;
 	z-index: var(--zindex-overlay);
 	transform: translateX(100%);
 	transition: transform var(--ease-out) 0.3s;
 	padding: var(--space-xl);
-    transform: translate(100%, 100%);
+    transform: translate(-50%, -300%);
 
 	border-radius: var(--radius-lg);
 

@@ -929,21 +929,21 @@
 
   [class*="border-"] { --border-o: 1; }
 
-  .border { border: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
-  .border-top { border-top: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
-  .border-bottom { border-bottom: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
-  .border-left { border-left: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
-  .border-right { border-right: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
+  .border { border: 1px solid var(--color-contrast-low) }
+  .border-top { border-top: 1px solid var(--color-contrast-low) }
+  .border-bottom { border-bottom: 1px solid var(--color-contrast-low) }
+  .border-left { border-left: 1px solid var(--color-contrast-low) }
+  .border-right { border-right: 1px solid var(--color-contrast-low) }
   .border-2 { border-width: 2px; }
   .border-3 { border-width: 3px; }
   .border-4 { border-width: 4px; }
 
-  .border-bg { border-color: alpha(var(--color-bg), var(--border-o, 1)); }
-  .border-contrast-lower { border-color: alpha(var(--color-contrast-lower), var(--border-o, 1)); }
-  .border-contrast-low { border-color: alpha(var(--color-contrast-low), var(--border-o, 1)); }
-  .border-contrast-medium { border-color: alpha(var(--color-contrast-medium), var(--border-o, 1)); }
-  .border-contrast-high { border-color: alpha(var(--color-contrast-high), var(--border-o, 1)); }
-  .border-contrast-higher { border-color: alpha(var(--color-contrast-higher), var(--border-o, 1)); }
+  .border-bg { border-color: var(--color-bg) }
+  .border-contrast-lower { border-color: var(--color-contrast-lower) }
+  .border-contrast-low { border-color: var(--color-contrast-low) }
+  .border-contrast-medium { border-color: var(--color-contrast-medium)}
+  .border-contrast-high { border-color: var(--color-contrast-high) }
+  .border-contrast-higher { border-color: var(--color-contrast-higher) }
 
   .border-primary-darker { border-color: alpha(var(--color-primary-darker), var(--border-o, 1)); }
   .border-primary-dark { border-color: alpha(var(--color-primary-dark), var(--border-o, 1)); }

@@ -1,0 +1,13 @@
+.info-text-popup {
+    height: 2px;
+    overflow: hidden;
+    display: block;
+    color: var(--color-progressive-4);
+    transition: height .5s, color .5s;
+    list-style: none;
+
+    &.info-text-popup--visible {
+        height: var(--text-md); 
+        color: var(--color-progressive);
+    }
+}

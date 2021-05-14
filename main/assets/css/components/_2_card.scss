@@ -58,6 +58,11 @@ Descr: Used to display data
             margin: var(--space-xs);
             cursor: pointer;
 
+            &.card__header-action-icon--top {
+                top: 0;
+                bottom: auto;
+            }
+
             &.card__header-action-icon--restless {
                 color: var(--color-restless);
             }
@@ -99,7 +104,9 @@ Descr: Used to display data
         font-weight: 400;
 
         &.card__title--large {
-            font-size: var(--text-md);
+            font-size: var(--text-lg);
+            line-height: 1.4;
+            font-weight: 600;
         }
 
         & + .card__data-display {
@@ -113,12 +120,19 @@ Descr: Used to display data
     }
 
     .card__list {
-        margin: var(--space-sm) 0;
-        margin-left: var(--space-lg);
+        margin-left: 20px;
+        transform: translateX(0%);
+
+        @include breakpoint(xm) {
+            margin: var(--space-sm) 0;
+            margin-left: 40%;
+            transform: translateX(-50%);
+        }
 
         li {
             font-size: var(--text-md);
             position: relative;
+            min-width: 200px;
 
             &::before {
                 position: absolute;
@@ -128,7 +142,7 @@ Descr: Used to display data
                 border-radius: 100%;
                 border: solid 3px var(--color-restless);
                 left: calc(-1 * var(--text-md));
-                top: calc(.3 * var(--text-md));
+                top: 8px;
             }
         }
 
@@ -216,10 +230,9 @@ Descr: Used to display data
 
     .card__filters {
         margin-bottom: var(--space-md);
-
+        align-items: stretch;
         display: flex;
         justify-content: space-between;
-        align-items: center;
         margin-top: var(--space-xs);
 
         .card__filter {
@@ -230,10 +243,16 @@ Descr: Used to display data
             border-radius: var(--radius-full);
             order: 0;
             cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             .card__filter-active-text {
                 display: inline-block;
-                margin-left: var(--space-xs);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
             }
 
             &.control--active {
@@ -261,6 +280,8 @@ Descr: Used to display data
             border-bottom-right-radius: var(--radius-full);
             cursor: pointer;
             order: 2;
+            align-items: center;
+            display: flex;
 
             + .card__filter{ 
                 border-top-right-radius: 0;
@@ -307,6 +328,7 @@ Descr: Used to display data
     }
 
     .card__text {
+        line-height: 1.4;
         &.card__text--inclusive-3 {
             color: var(--color-inclusive-3);
         }

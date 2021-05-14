@@ -184,8 +184,9 @@ mark {
 }
 
 .bullet-list {
-	margin: var(--space-lg);
+	margin: var(--space-sm) var(--space-lg);
     margin-right: 0;
+	line-height: 1.4;
 
 	li {
 		font-size: var(--text-md);
@@ -199,7 +200,7 @@ mark {
 			border-radius: 100%;
             background-color: var(--color-progressive);
             left: calc(-1 * var(--text-md));
-            top: calc(.35 * var(--text-md));
+            top: calc(.5 * var(--text-md));
 		}
 	}
 }

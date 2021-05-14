@@ -90,6 +90,14 @@ Usage: codyhouse.co/license
     border-color: var(--color-primary);
     transition: transform .2s;
   }
+
+  .radio.bg-restless:checked + label::before,
+  .checkbox.bg-restless:checked + label::before {
+    background-color: var(--color-restless);
+    box-shadow: none;
+    border-color: var(--color-restless);
+    transition: transform .2s;
+  }
   
   // :active
   .radio:active + label::before,
