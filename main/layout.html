@@ -867,7 +867,10 @@
         <div class="bottom-sheet_overlay" aria-controls="menu"></div>
         <div class="bottom-sheet bottom-sheet--force-side">
             <div class="bottom-sheet_header bottom-sheet_header--large flex items-stretch">
-                <button aria-controls="menu">X</button>
+                <button aria-controls="menu" class="color-challenger bg-transparent border-0 padding-sm">
+                    <svg class="icon icon--md">
+                        <use xlink:href="assets/icons/remix.svg#ri-close-line" /></svg>
+                </button>
 
                 <div class="flex-grow flex justify-between items-center"  aria-controls="menu-item">
                     <div class="bottom-sheet_header_label flex-grow">
@@ -875,8 +878,8 @@
                         <div class="text-center text-sm">Joakim Bergman</div>
                     </div>
 
-                    <svg class="icon">
-                        <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
+                    <svg class="icon icon--sm">
+                        <use xlink:href="assets/icons/remix.svg#ri-arrow-left-right-line" /></svg>
                 </div>
             </div>
 
@@ -884,59 +887,60 @@
                 <div class="bg-offwhite-1 flex flex-column justify-between flex-grow">
                     <ul>
                         <li>
-                            <button aria-controls="menu-item" class="flex items-center justify-between width-100% padding-md bg-offwhite-1 border-0">
+                            <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
                                 About Me
-                                <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-line" /></svg>
+                                <svg class="icon color-challenger">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" /></svg>
                             </button>
                         </li>
                         <li>
-                            <button aria-controls="menu-item" class="flex items-center justify-between width-100% padding-md bg-offwhite-1 border-0">
+                            <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
                                 KYC & Terms
-                                <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-line" /></svg>
+                                <svg class="icon color-challenger">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" /></svg>
                             </button>
                         </li>
                         <li>
-                            <button aria-controls="menu-item" class="flex items-center justify-between width-100% padding-md bg-offwhite-1 border-0">
+                            <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
                                 Bank Accounts
-                                <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-line" /></svg>
+                                <svg class="icon color-challenger">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" /></svg>
                             </button>
                         </li>
                         <li>
-                            <button aria-controls="menu-item" class="flex items-center justify-between width-100% padding-md bg-offwhite-1 border-0">
+                            <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
                                 Messages
-                                <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-line" /></svg>
+                                <svg class="icon color-challenger">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" /></svg>
                             </button>
                         </li>
                         <li>
-                            <button aria-controls="menu-item" class="flex items-center justify-between width-100% padding-md bg-offwhite-1 border-0">
+                            <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
                                 Refer-a-friend
-                                <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-line" /></svg>
+                                <svg class="icon color-challenger">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" /></svg>
                             </button>
                         </li>
                         <li>
-                            <button aria-controls="menu-item" class="flex items-center justify-between width-100% padding-md bg-offwhite-1 border-0">
+                            <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
                                 Support
-                                <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-line" /></svg>
+                                <svg class="icon color-challenger">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" /></svg>
                             </button>
                         </li>
                     </ul>
 
                     <div class="flex justify-between items-center padding-md bg-offwhite-2">
-                        <a href="#logout">Log out</a>
+                        <a href="#logout" class="font-semibold text-lg color-progressive text-decoration-none"><svg class="icon color-progressive-4">
+                            <use xlink:href="assets/icons/remix.svg#ri-logout-box-r-line" /></svg> Log out</a>
 
                         <div class="adv-select js-adv-select">
                             <select name="adv-select" id="adv-select">
-                                <option value="1" data-option-avatar="adv-custom-select-img-1.jpg">SV</option>
-                                <option value="2" data-option-avatar="adv-custom-select-img-2.jpg">EN</option>
+                                <option value="1" data-option-avatar="https://hatscripts.github.io/circle-flags/flags/se.svg">SV</option>
+                                <option value="2" data-option-avatar="https://hatscripts.github.io/circle-flags/flags/gb.svg">EN</option>
                             </select>
                           
-                            <button class="adv-select__control is-hidden js-adv-select__control flex items-center radius-full border-0 bg-offwhite padding-x-md" aria-controls="adv-select-popover-1" aria-haspopup="listbox">
+                            <button class="adv-select__control is-hidden js-adv-select__control flex items-center radius-full border-0 bg-offwhite padding-x-md padding-y-xs" aria-controls="adv-select-popover-1" aria-haspopup="listbox">
                               <span class="js-adv-select__value">
                                 <!-- dynamically updated with the .adv-select-popover__option content -->
                               </span>
@@ -953,7 +957,7 @@
                               <!-- option -->
                               <div class="adv-select-popover__option padding-y-xxs padding-x-md" role="option">
                                 <div class="flex items-center">
-                                  <img class="width-md height-md radius-50% object-cover margin-right-xxs" src="../../../app/assets/img/{option-avatar}" alt="Profile image">
+                                  <img class="width-xs height-xs radius-50% object-cover margin-right-xs" src="{option-avatar}" alt="Language">
                                   <div class="text-truncate">{option-label}</div>
                                   <svg class="adv-select-popover__check icon icon--xs margin-left-auto" viewBox="0 0 16 16"><polyline stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" points="1,9 5,13 15,3" /></svg>
                                 </div>
@@ -970,12 +974,12 @@
         <div class="bottom-sheet_overlay" aria-controls="menu-item"></div>
         <div class="bottom-sheet bottom-sheet--force-side">
             <div class="bottom-sheet_header" aria-controls="menu-item">
+                <svg class="icon">
+                    <use xlink:href="assets/icons/remix.svg#ri-arrow-left-line" /></svg>
+
                 <h3 class="bottom-sheet_header_label">
                     MENU ITEM
                 </h3>
-
-                <svg class="icon">
-                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
             </div>
 
             <div class="bottom-sheet_content">

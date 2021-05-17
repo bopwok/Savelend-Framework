@@ -17,6 +17,18 @@
 //     }
 //   }
 // }
+.border-0 {
+    border: 0;
+}
+
+.border-bottom-only {
+    border-bottom: 1px solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+
 .table { display: table; }
 
 .bg-progressive {
@@ -61,6 +73,50 @@
 
 .bg-offwhite-3 {
     background-color: var(--color-offwhite-3);
+}
+
+.border-progressive {
+    border-color: var(--color-progressive);
+}
+
+.border-challenger {
+    border-color: var(--color-challenger);
+}
+
+.border-genuine {
+    border-color: var(--color-genuine);
+}
+
+.border-restless {
+    border-color: var(--color-restless);
+}
+
+.border-inclusive {
+    border-color: var(--color-inclusive);
+}
+
+.border-smart {
+    border-color: var(--color-smart);
+}
+
+.border-charcoal {
+    border-color: var(--color-charcoal);
+}
+
+.border-offwhite {
+    border-color: var(--color-offwhite);
+}
+
+.border-offwhite-1 {
+    border-color: var(--color-offwhite-1);
+}
+
+.border-offwhite-2 {
+    border-color: var(--color-offwhite-2);
+}
+
+.border-offwhite-3 {
+    border-color: var(--color-offwhite-3);
 }
 
 .color-progressive {
@@ -201,6 +257,3 @@
     margin-top: auto;
 }
 
-.border-0 {
-    border: 0;
-}
