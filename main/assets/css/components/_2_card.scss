@@ -246,6 +246,8 @@ Descr: Used to display data
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            display: flex;
+            align-items: center;
 
             .card__filter-active-text {
                 display: inline-block;
@@ -253,6 +255,7 @@ Descr: Used to display data
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: block;
+                margin-left: var(--space-sm);
             }
 
             &.control--active {
