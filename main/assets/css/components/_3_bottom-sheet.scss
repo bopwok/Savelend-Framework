@@ -91,6 +91,7 @@
 
 	.bottom-sheet_header {
 		border-top-right-radius: 0;
+		border-top-left-radius: 0;
 	}
 
 	.bottom-sheet_content {
@@ -124,6 +125,10 @@
 
 	@include breakpoint(md) {
 		border-top-right-radius: 0;
+	}
+
+	&.bottom-sheet_header--large {
+		padding: var(--space-lg) var(--space-md);
 	}
 }
 
