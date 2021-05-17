@@ -866,13 +866,14 @@
     <div class="bottom-sheet_wrapper js-bottomsheet" id="menu">
         <div class="bottom-sheet_overlay" aria-controls="menu"></div>
         <div class="bottom-sheet bottom-sheet--force-side">
-            <div class="bottom-sheet_header flex items-stretch">
+            <div class="bottom-sheet_header bottom-sheet_header--large flex items-stretch">
                 <button aria-controls="menu">X</button>
 
                 <div class="flex-grow flex justify-between items-center"  aria-controls="menu-item">
-                    <h3 class="bottom-sheet_header_label">
-                        MENU ITEM
-                    </h3>
+                    <div class="bottom-sheet_header_label flex-grow">
+                        <div class="text-center font-semibold color-restless text-lg">My depot 1 (SEK)</div>
+                        <div class="text-center text-sm">Joakim Bergman</div>
+                    </div>
 
                     <svg class="icon">
                         <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
@@ -929,10 +930,36 @@
                     <div class="flex justify-between items-center padding-md bg-offwhite-2">
                         <a href="#logout">Log out</a>
 
-                        <select>
-                            <option>Eng</option>
-                            <option>Swe</option>
-                        </select>
+                        <div class="adv-select js-adv-select">
+                            <select name="adv-select" id="adv-select">
+                                <option value="1" data-option-avatar="adv-custom-select-img-1.jpg">SV</option>
+                                <option value="2" data-option-avatar="adv-custom-select-img-2.jpg">EN</option>
+                            </select>
+                          
+                            <button class="adv-select__control is-hidden js-adv-select__control flex items-center radius-full border-0 bg-offwhite padding-x-md" aria-controls="adv-select-popover-1" aria-haspopup="listbox">
+                              <span class="js-adv-select__value">
+                                <!-- dynamically updated with the .adv-select-popover__option content -->
+                              </span>
+                          
+                              <svg class="icon icon--xxs margin-left-xxs" aria-hidden="true" viewBox="0 0 12 12"><path d="M10.947,3.276A.5.5,0,0,0,10.5,3h-9a.5.5,0,0,0-.4.8l4.5,6a.5.5,0,0,0,.8,0l4.5-6A.5.5,0,0,0,10.947,3.276Z"/></svg>
+                            </button>
+                          </div>
+                          
+                          <div id="adv-select-popover-1" class="adv-select-popover popover bg-offwhite-3 padding-y-xxs radius-md shadow-md is-hidden js-popover js-adv-select-popover js-tab-focus" role="listbox">
+                            <div class="adv-select-popover__optgroup" role="group" describedby="optgroup-label">
+                              <!-- label -->
+                              <div id="optgroup-label" class="adv-select-popover__label text-sm color-contrast-medium padding-y-xs padding-x-md">{optgroup-label}</div>
+                          
+                              <!-- option -->
+                              <div class="adv-select-popover__option padding-y-xxs padding-x-md" role="option">
+                                <div class="flex items-center">
+                                  <img class="width-md height-md radius-50% object-cover margin-right-xxs" src="../../../app/assets/img/{option-avatar}" alt="Profile image">
+                                  <div class="text-truncate">{option-label}</div>
+                                  <svg class="adv-select-popover__check icon icon--xs margin-left-auto" viewBox="0 0 16 16"><polyline stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" points="1,9 5,13 15,3" /></svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                     </div>
                 </div>
             </div>
