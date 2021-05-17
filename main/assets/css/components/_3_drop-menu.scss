@@ -62,13 +62,13 @@ Usage: codyhouse.co/license
 // close btn - mobile only
 .drop-menu__close-btn {
     display: flex;
-    width: 100%;
+    width: auto;
     align-items: center;
     justify-content: center;
     height: var(--drop-menu-item-height);
     text-align: center;
     background-color: var(--color-bg);
-    box-shadow: var(--shadow-md);
+    //box-shadow: var(--shadow-md);
     flex-shrink: 0;
     transition: .3s;
     margin-top: auto;
@@ -76,9 +76,10 @@ Usage: codyhouse.co/license
     position: sticky;
     z-index: 1;
     bottom: 0;
+    border: 0;
 
     &:hover {
-        box-shadow: var(--shadow-sm);
+        //box-shadow: var(--shadow-sm);
     }
 }
 

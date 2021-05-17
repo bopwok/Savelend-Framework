@@ -58,14 +58,14 @@
             <header class="container title-bar flex-between margin-bottom-xl">
                 <h1 class="title-bar-text">Översikt</h1>
                 <div class="title-bar-notification title-bar-notification--active flex-between">
-                    <button class="reset" style="--anim-menu-btn-icon-size: 24px;" >
+                    <button class="reset" style="--anim-menu-btn-icon-size: 24px;">
                         <svg class="icon">
                             <use xlink:href="assets/icons/remix.svg#ri-notification-2-line" /></svg>
-                        <div class='notification-bubble' >4</div>
+                        <div class='notification-bubble'>4</div>
                     </button>
                 </div>
                 <div class="title-bar-actions flex-between">
-                    <button class="reset" style="--anim-menu-btn-icon-size: 24px;" aria-label="Toggle menu" aria-controls="user-profile-menu">
+                    <button class="reset" style="--anim-menu-btn-icon-size: 24px;" aria-label="Toggle menu" aria-controls="menu">
                         <svg class="icon">
                             <use xlink:href="assets/icons/remix.svg#ri-user-3-fill" /></svg>
                     </button>
@@ -73,10 +73,9 @@
                     <div class="drop-menu js-drop-menu" id="user-profile-menu">
 
                         <div class="drop-menu__inner js-drop-menu__inner">
-                            <button class="drop-menu__close-btn  js-drop-menu__close-btn">X</button>
                             <!-- menu -->
                             <ul class="drop-menu__list js-drop-menu__list js-drop-menu__list--main">
-                                <li>
+                                <!--<li>
                                     <button class="reset drop-menu__btn js-drop-menu__btn--sublist-control">
                                         <span>Depånamn 1 (SEK) Joakim Bergman</span>
 
@@ -103,13 +102,24 @@
                                         </li>
                                         <li><a class="drop-menu__link" href="#0">Super Company</a></li>
                                     </ul>
+                                </li>-->
+                                <li>
+                                    <div class="flex items-stretch">
+                                        <button class="drop-menu__close-btn  js-drop-menu__close-btn padding-xs">X</button>
+                                        <button class="padding-xs flex-grow flex justify-between items-center" aria-controls="menu-item">
+                                            My depot 1 (SEK)
+                                            Joakim Bergman
+                                            <svg class="icon icon--xxs" viewBox="0 0 12 12">
+                                                <path d="M10.745,5.564l-8-4.5A.5.5,0,0,0,2,1.5v9a.5.5,0,0,0,.248.432.5.5,0,0,0,.5,0l8-4.5a.5.5,0,0,0,0-.872Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </li>
-
-                                <li><a class="drop-menu__link" href="#0">KYC och villkor</a></li>
-                                <li><a class="drop-menu__link" href="#0">Mina uppgifter</a></li>
-                                <li><a class="drop-menu__link" href="#0">Bankkonton</a></li>
-                                <li><a class="drop-menu__link" href="#0">Besked</a></li>
-                                <li><a class="drop-menu__link" href="#0">Bjud in en vän</a></li>
+                                <li><a class="drop-menu__link" href="#0" aria-controls="menu-item">KYC och villkor</a></li>
+                                <li><a class="drop-menu__link" href="#0" aria-controls="menu-item">Mina uppgifter</a></li>
+                                <li><a class="drop-menu__link" href="#0" aria-controls="menu-item">Bankkonton</a></li>
+                                <li><a class="drop-menu__link" href="#0" aria-controls="menu-item">Besked</a></li>
+                                <li><a class="drop-menu__link" href="#0" aria-controls="menu-item">Bjud in en vän</a></li>
                             </ul>
                         </div>
                     </div>
@@ -131,14 +141,16 @@
                 </div>
 
 
-                
+
 
                 <div class="grid gap-md">
-                        <div class="btn-group col-12@sm col-12@md col-12@lg">
-                            <button class="btn btn--challenger" aria-controls="ok-modal">ok modal</button>
-                            <button class="btn btn--challenger" aria-controls="info-modal"><span>info modal</span><div class='notification'>3</div></button>
-                            <button class="btn btn--challenger" aria-controls="error-modal">error modal</button>
-                        </div>
+                    <div class="btn-group col-12@sm col-12@md col-12@lg">
+                        <button class="btn btn--challenger" aria-controls="ok-modal">ok modal</button>
+                        <button class="btn btn--challenger" aria-controls="info-modal"><span>info modal</span>
+                            <div class='notification'>3</div>
+                        </button>
+                        <button class="btn btn--challenger" aria-controls="error-modal">error modal</button>
+                    </div>
 
                     <div class="card col-12@sm col-6@md col-4@lg">
                         <header class="card__header bg-gradient-progressive-right">
@@ -187,7 +199,7 @@
                             <section class="expandable-block__content">
                                 Information om öppettider, telefonnummer och och e-post etc. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
                             </section>
-                             <section class="expandable-block__content">
+                            <section class="expandable-block__content">
                                 <div class="standing-out-section">
                                     <div class="standing-out-section__row">
                                         <strong>Bank Account:</strong><span class='text-right'>some account</span>
@@ -206,10 +218,10 @@
                                 Text om hur man kan kontakta kundtjänst samt om vad.
 
                                 <svg class="icon expandable-block__icon" aria-hidden="true" viewBox="0 0 20 20">
-                                  <g stroke-width="4" stroke="currentColor">
-                                      <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="18,6 10,14 2,6 "></polyline>
-                                  </g>
-                              </svg>
+                                    <g stroke-width="4" stroke="currentColor">
+                                        <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="18,6 10,14 2,6 "></polyline>
+                                    </g>
+                                </svg>
                             </header>
                             <section class="expandable-block__content">
                                 Information om öppettider, telefonnummer och och e-post etc. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
@@ -234,34 +246,34 @@
                                 <ul class='bullet-list'>
                                     <li>
                                         <span>
-                                        Have an
-                                        <span class='cursor-pointer color-challenger'>
-                                            <strong> approved KYC</strong>
-                                        </span>
+                                            Have an
+                                            <span class='cursor-pointer color-challenger'>
+                                                <strong> approved KYC</strong>
+                                            </span>
                                         </span>
                                     </li>
                                     <li>
                                         <div>
-                                        Approve our
-                                        <strong>
-                                            <span class='cursor-pointer color-challenger'>General terms</span>
-                                        </strong>
+                                            Approve our
+                                            <strong>
+                                                <span class='cursor-pointer color-challenger'>General terms</span>
+                                            </strong>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
-                                        Approve our
-                                        <strong>
-                                            <span class='cursor-pointer color-challenger'>Lender terms</span>
-                                        </strong>
+                                            Approve our
+                                            <strong>
+                                                <span class='cursor-pointer color-challenger'>Lender terms</span>
+                                            </strong>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
-                                        Approve our
-                                        <strong>
-                                            <span class='cursor-pointer color-challenger'>Payment terms</span>
-                                        </strong>
+                                            Approve our
+                                            <strong>
+                                                <span class='cursor-pointer color-challenger'>Payment terms</span>
+                                            </strong>
                                         </div>
                                     </li>
                                 </ul>
@@ -339,14 +351,14 @@
                             <div class="card__header-inner">
                                 <div class="card__filters">
                                     <div class="card__reset-filters">
-                                            <svg class="icon">
+                                        <svg class="icon">
                                             <use xlink:href="assets/icons/remix.svg#ri-delete-bin-5-line" /></svg>
                                     </div>
 
                                     <div class="card__filter" aria-controls="filters"><svg class="icon">
-                                        <use xlink:href="assets/icons/remix.svg#ri-filter-2-fill" /></svg> <span class="card__filter-active-text"><span id="numFilters">Inga</span> filter aktiva</span>
+                                            <use xlink:href="assets/icons/remix.svg#ri-filter-2-fill" /></svg> <span class="card__filter-active-text"><span id="numFilters">Inga</span> filter aktiva</span>
                                     </div>
-                                    
+
                                     <button class="reset card__sort">
                                         <span class="sr-only">Sortera</span><svg class="icon">
                                             <use xlink:href="assets/icons/remix.svg#ri-sort-desc" /></svg>
@@ -363,9 +375,9 @@
                             <div x-show="tab === 'innehav'" class="card__content-tab card__data-table width-100%">
                                 <div class="card__data-table__row card__data-table__row--bordered">
                                     <div class="card__data-table__item">
-                                    <svg class="icon">
+                                        <svg class="icon">
                                             <use xlink:href="assets/icons/remix.svg#ri-lock-line" /></svg>
-                                            <label for="Konsumentkredit1"></label></div>
+                                        <label for="Konsumentkredit1"></label></div>
                                     <div class="card__data-table__row card__data-table__item card__data-table__item--disabled">
                                         Konsumentkredit
                                         <span class="card__data-table__item-undertext">Something</span>
@@ -461,7 +473,7 @@
                                     <label class="form-label" for="input-name">This is an email field</label>
                                     <input class="form-control width-100%" type="email" name="input-name" id="input-name" required>
                                 </div>
-                                
+
                                 <div class="form-input margin-bottom-sm">
                                     <div class="form-label">This is dispay-only field</div>
                                     <div class="form-control width-100%">
@@ -475,8 +487,8 @@
                                     <div class="form-control width-100%">
                                         Some data dispayed
                                         <div class="form-control__action-icon">
-                                        <svg class="icon">
-                                            <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" /></svg>
+                                            <svg class="icon">
+                                                <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" /></svg>
                                         </div>
                                     </div>
                                 </div>
@@ -526,7 +538,8 @@
                                 </div>
                             </div>
                             <div class="card__header-action-icon card__header-action-icon--collapsible" aria-controls='collapse-card'>
-                                <svg class="icon"><use xlink:href="assets/icons/remix.svg#ri-arrow-drop-down-line" /></svg>
+                                <svg class="icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-drop-down-line" /></svg>
                             </div>
                         </header>
                         <div class="card__content">
@@ -680,8 +693,9 @@
                                     Some Data
                                 </div>
                             </div>
-                            <div class="card__header-action-icon card__header-action-icon--restless" >
-                                <svg class="icon icon--restless"><use xlink:href="assets/icons/remix.svg#ri-pencil-fill" /></svg>
+                            <div class="card__header-action-icon card__header-action-icon--restless">
+                                <svg class="icon icon--restless">
+                                    <use xlink:href="assets/icons/remix.svg#ri-pencil-fill" /></svg>
                             </div>
                         </header>
                     </div>
@@ -694,8 +708,9 @@
                                     Some Other Color
                                 </div>
                             </div>
-                            <div class="card__header-action-icon card__header-action-icon--genuine card__header-action-icon--inactive" >
-                                <svg class="icon icon--restless"><use xlink:href="assets/icons/remix.svg#ri-check-line" /></svg>
+                            <div class="card__header-action-icon card__header-action-icon--genuine card__header-action-icon--inactive">
+                                <svg class="icon icon--restless">
+                                    <use xlink:href="assets/icons/remix.svg#ri-check-line" /></svg>
                             </div>
                         </header>
                     </div>
@@ -708,8 +723,9 @@
                                     Different color
                                 </div>
                             </div>
-                            <div class="card__header-action-icon card__header-action-icon--challenger card__header-action-icon--inactive" >
-                                <svg class="icon icon--restless"><use xlink:href="assets/icons/remix.svg#ri-check-line" /></svg>
+                            <div class="card__header-action-icon card__header-action-icon--challenger card__header-action-icon--inactive">
+                                <svg class="icon icon--restless">
+                                    <use xlink:href="assets/icons/remix.svg#ri-check-line" /></svg>
                             </div>
                         </header>
                     </div>
@@ -762,7 +778,7 @@
                             </ul>
                             <div class="card__text">fiernd text <span class="color-inclusive-3">fiernd text</span> </div>
                             <div class="card__link-box">https://savelend.se?key=asdasdasdas<svg class="icon card__link-box__icon">
-                                            <use xlink:href="assets/icons/remix.svg#ri-file-copy-fill" /></svg></div>
+                                    <use xlink:href="assets/icons/remix.svg#ri-file-copy-fill" /></svg></div>
                         </div>
                         <div class="card__bottom">
                             <div>some content</div>
@@ -773,124 +789,196 @@
                         <div class="onboarding-box">
                             <header class="onboarding-box__header onboarding-box__header--caution">
                                 Identify with tink
-                                    <svg class="icon">
-                                            <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" /></svg>
-                                        </div>
-                            </header>
-                            <div class="onboarding-box__content"></div>
+                                <svg class="icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" /></svg>
                         </div>
-                        <div class="onboarding-box">
-                            <header class="onboarding-box__header onboarding-box__header--complete">
-                                What's you phone number?
-                                    <svg class="icon">
-                                            <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" /></svg>
-                                        </div>
-                            </header>
-                            <div class="onboarding-box__content"></div>
-                        </div>
-                        <div class="onboarding-box">
-                            <header class="onboarding-box__header onboarding-box__header--complete">
-                                What's you phone number?
-                                    <svg class="icon">
-                                            <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" /></svg>
-                                        </div>
-                            </header>
-                            <div class="onboarding-box__content"></div>
-                        </div>
+                        </header>
+                        <div class="onboarding-box__content"></div>
                     </div>
+                    <div class="onboarding-box">
+                        <header class="onboarding-box__header onboarding-box__header--complete">
+                            What's you phone number?
+                            <svg class="icon">
+                                <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" /></svg>
+                    </div>
+                    </header>
+                    <div class="onboarding-box__content"></div>
                 </div>
+                <div class="onboarding-box">
+                    <header class="onboarding-box__header onboarding-box__header--complete">
+                        What's you phone number?
+                        <svg class="icon">
+                            <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" /></svg>
+                </div>
+                </header>
+                <div class="onboarding-box__content"></div>
             </div>
         </div>
-        <div class="js-modal modal-wrapper" id='ok-modal'>
-            <div class="modal">
-                    <svg class="icon modal__icon modal__icon--success" :class="{ 'flip-y': expanded }">
-                                        <use xlink:href="assets/icons/remix.svg#ri-check-line" /></svg>
-                <h2>Header lorem ipmusm</h2>
-                <div class="modal__content">
-                    <p>Some text lorem ipmusm</p>
-                </div>
-                <div class="modal__actions">
-                    <a class="btn btn--accent table margin-auto" aria-controls="ok-modal">Ok</a>
-                </div>  
+    </div>
+    </div>
+    </div>
+    <div class="js-modal modal-wrapper" id='ok-modal'>
+        <div class="modal">
+            <svg class="icon modal__icon modal__icon--success" :class="{ 'flip-y': expanded }">
+                <use xlink:href="assets/icons/remix.svg#ri-check-line" /></svg>
+            <h2>Header lorem ipmusm</h2>
+            <div class="modal__content">
+                <p>Some text lorem ipmusm</p>
             </div>
-            <div class="modal__overlay" aria-controls="ok-modal"></div>
+            <div class="modal__actions">
+                <a class="btn btn--accent table margin-auto" aria-controls="ok-modal">Ok</a>
+            </div>
         </div>
+        <div class="modal__overlay" aria-controls="ok-modal"></div>
+    </div>
 
-        <div class="js-modal modal-wrapper" id='info-modal'>
-            <div class="modal">
-                    <svg class="icon modal__icon modal__icon--info" :class="{ 'flip-y': expanded }">
-                                        <use xlink:href="assets/icons/remix.svg#ri-information-line" /></svg>
-                <h2>Header lorem ipmusm</h2>
-                <div class="modal__content">
-                    <p>Some text lorem ipmusm</p>
-                </div>
-                <div class="modal__actions">
-                    <a class="btn btn--accent table margin-auto" aria-controls="info-modal">Ok</a>
-                </div>  
+    <div class="js-modal modal-wrapper" id='info-modal'>
+        <div class="modal">
+            <svg class="icon modal__icon modal__icon--info" :class="{ 'flip-y': expanded }">
+                <use xlink:href="assets/icons/remix.svg#ri-information-line" /></svg>
+            <h2>Header lorem ipmusm</h2>
+            <div class="modal__content">
+                <p>Some text lorem ipmusm</p>
             </div>
-            <div class="modal__overlay" aria-controls="info-modal"></div>
-        </div>
-
-        <div class="js-modal modal-wrapper" id='error-modal'>
-            <div class="modal">
-                    <svg class="icon modal__icon modal__icon--error" :class="{ 'flip-y': expanded }">
-                                        <use xlink:href="assets/icons/remix.svg#ri-close-line" /></svg>
-                <h2>Header lorem ipmusm</h2>
-                <div class="modal__content">
-                    <p>Some text lorem ipmusm</p>
-                </div>
-                <div class="modal__actions">
-                    <a class="btn btn--accent table margin-auto" aria-controls="error-modal">Ok</a>
-                </div>  
+            <div class="modal__actions">
+                <a class="btn btn--accent table margin-auto" aria-controls="info-modal">Ok</a>
             </div>
-            <div class="modal__overlay" aria-controls="error-modal"></div>
         </div>
-                    
+        <div class="modal__overlay" aria-controls="info-modal"></div>
+    </div>
 
-        <div class="bottom-sheet_wrapper js-bottomsheet" id="filters">
-            <div class="bottom-sheet_overlay" aria-controls="filters"></div>
-            <div class="bottom-sheet">
-                <div class="bottom-sheet_header" aria-controls="filters">
+    <div class="js-modal modal-wrapper" id='error-modal'>
+        <div class="modal">
+            <svg class="icon modal__icon modal__icon--error" :class="{ 'flip-y': expanded }">
+                <use xlink:href="assets/icons/remix.svg#ri-close-line" /></svg>
+            <h2>Header lorem ipmusm</h2>
+            <div class="modal__content">
+                <p>Some text lorem ipmusm</p>
+            </div>
+            <div class="modal__actions">
+                <a class="btn btn--accent table margin-auto" aria-controls="error-modal">Ok</a>
+            </div>
+        </div>
+        <div class="modal__overlay" aria-controls="error-modal"></div>
+    </div>
+
+
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="menu">
+        <div class="bottom-sheet_overlay" aria-controls="menu"></div>
+        <div class="bottom-sheet bottom-sheet--force-side">
+            <div class="bottom-sheet_header flex items-stretch">
+                <button aria-controls="menu">X</button>
+
+                <div class="flex-grow flex justify-between items-center"  aria-controls="menu-item">
                     <h3 class="bottom-sheet_header_label">
-                        Hantera filter
+                        MENU ITEM
                     </h3>
 
                     <svg class="icon">
                         <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
                 </div>
+            </div>
 
-                <div class="bottom-sheet_content">
-                    <ul class="bottom-sheet_filters-list">
-                        <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, selected: 'Filtervärde 1'}">
-                            <div class="bottom-sheet_filters-list_item_filter">
-                                <input type="checkbox" name="listitem1" id="listitem1" class="checkbox bottom-sheet_filters-list_check" />
+            <div class="bottom-sheet_content">
+                <div class="bg-offwhite-1 flex flex-column justify-between flex-grow">
+                    <ul>
+                        <li>
+                            <button aria-controls="menu-item" class="flex items-center justify-between width-100% padding-md bg-offwhite-1 border-0">
+                                About Me
+                                <svg class="icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-line" /></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-controls="menu-item" class="flex items-center justify-between width-100% padding-md bg-offwhite-1 border-0">
+                                KYC & Terms
+                                <svg class="icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-line" /></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-controls="menu-item" class="flex items-center justify-between width-100% padding-md bg-offwhite-1 border-0">
+                                Bank Accounts
+                                <svg class="icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-line" /></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-controls="menu-item" class="flex items-center justify-between width-100% padding-md bg-offwhite-1 border-0">
+                                Messages
+                                <svg class="icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-line" /></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-controls="menu-item" class="flex items-center justify-between width-100% padding-md bg-offwhite-1 border-0">
+                                Refer-a-friend
+                                <svg class="icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-line" /></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-controls="menu-item" class="flex items-center justify-between width-100% padding-md bg-offwhite-1 border-0">
+                                Support
+                                <svg class="icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-line" /></svg>
+                            </button>
+                        </li>
+                    </ul>
 
-                                <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
+                    <div class="flex justify-between items-center padding-md bg-offwhite-2">
+                        <a href="#logout">Log out</a>
 
-                                <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
-                                    <span x-text="selected">Filtervärde 1</span>
-                                    <svg class="icon" :class="{ 'flip-y': expanded }">
-                                        <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
-                                </div>
-                            </div>
-                            <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
-                                <li>
+                        <select>
+                            <option>Eng</option>
+                            <option>Swe</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="menu-item">
+        <div class="bottom-sheet_overlay" aria-controls="menu-item"></div>
+        <div class="bottom-sheet bottom-sheet--force-side">
+            <div class="bottom-sheet_header" aria-controls="menu-item">
+                <h3 class="bottom-sheet_header_label">
+                    MENU ITEM
+                </h3>
+
+                <svg class="icon">
+                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
+            </div>
+
+            <div class="bottom-sheet_content">
+                --> LOAD CONTENT HERE <-- </div> </div> </div> <div class="bottom-sheet_wrapper js-bottomsheet" id="filters">
+                    <div class="bottom-sheet_overlay" aria-controls="filters"></div>
+                    <div class="bottom-sheet">
+                        <div class="bottom-sheet_header" aria-controls="filters">
+                            <h3 class="bottom-sheet_header_label">
+                                Hantera filter
+                            </h3>
+
+                            <svg class="icon">
+                                <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
+                        </div>
+
+                        <div class="bottom-sheet_content">
+                            <ul class="bottom-sheet_filters-list">
+                                <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, selected: 'Filtervärde 1'}">
                                     <div class="bottom-sheet_filters-list_item_filter">
-                                        <input type="radio" name="listitem1" id="listitem1-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
+                                        <input type="checkbox" name="listitem1" id="listitem1" class="checkbox bottom-sheet_filters-list_check" />
 
-                                        <label for="listitem1-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
+                                        <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
+
+                                        <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
+                                            <span x-text="selected">Filtervärde 1</span>
+                                            <svg class="icon" :class="{ 'flip-y': expanded }">
+                                                <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
+                                        </div>
                                     </div>
-                                </li>
-
-                                <li>
-                                    <div class="bottom-sheet_filters-list_item_filter">
-                                        <input type="radio" name="listitem1" id="listitem1-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
-
-                                        <label for="listitem1-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
-                                    </div>
-                                </li>
-                                <li class='bottom-sheet_filters-sub-list-with-another-sub-list'>
-                                    <ul class="bottom-sheet_filters-sub-list expanded">
+                                    <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
                                         <li>
                                             <div class="bottom-sheet_filters-list_item_filter">
                                                 <input type="radio" name="listitem1" id="listitem1-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
@@ -906,318 +994,335 @@
                                                 <label for="listitem1-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
                                             </div>
                                         </li>
+                                        <li class='bottom-sheet_filters-sub-list-with-another-sub-list'>
+                                            <ul class="bottom-sheet_filters-sub-list expanded">
+                                                <li>
+                                                    <div class="bottom-sheet_filters-list_item_filter">
+                                                        <input type="radio" name="listitem1" id="listitem1-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
+
+                                                        <label for="listitem1-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="bottom-sheet_filters-list_item_filter">
+                                                        <input type="radio" name="listitem1" id="listitem1-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
+
+                                                        <label for="listitem1-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <div class="bottom-sheet_filters-list_item_filter">
-                                <input type="checkbox" name="listitem2" id="listitem2" class="checkbox bottom-sheet_filters-list_check" />
-
-                                <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
-                            </div>
-                        </li>
-                        <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, 'selected': 'Filtervärde 1'}">
-                            <div class="bottom-sheet_filters-list_item_filter">
-                                <input type="checkbox" name="listitem1" id="listitem1" class="checkbox bottom-sheet_filters-list_check" />
-
-                                <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
-
-                                <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
-                                    <span x-text="selected">Filtervärde 1</span>
-                                    <svg class="icon" :class="{ 'flip-y': expanded }">
-                                        <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
-                                </div>
-                            </div>
-                            <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
                                 <li>
                                     <div class="bottom-sheet_filters-list_item_filter">
-                                        <input type="radio" name="listitem2" id="listitem2-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
+                                        <input type="checkbox" name="listitem2" id="listitem2" class="checkbox bottom-sheet_filters-list_check" />
 
-                                        <label for="listitem2-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
+                                        <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
                                     </div>
                                 </li>
-
-                                <li>
+                                <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, 'selected': 'Filtervärde 1'}">
                                     <div class="bottom-sheet_filters-list_item_filter">
-                                        <input type="radio" name="listitem2" id="listitem2-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
+                                        <input type="checkbox" name="listitem1" id="listitem1" class="checkbox bottom-sheet_filters-list_check" />
 
-                                        <label for="listitem2-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
+                                        <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
+
+                                        <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
+                                            <span x-text="selected">Filtervärde 1</span>
+                                            <svg class="icon" :class="{ 'flip-y': expanded }">
+                                                <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
+                                        </div>
+                                    </div>
+                                    <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
+                                        <li>
+                                            <div class="bottom-sheet_filters-list_item_filter">
+                                                <input type="radio" name="listitem2" id="listitem2-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
+
+                                                <label for="listitem2-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="bottom-sheet_filters-list_item_filter">
+                                                <input type="radio" name="listitem2" id="listitem2-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
+
+                                                <label for="listitem2-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li x-data="{editable: false}">
+                                    <div class="bottom-sheet_filters-list_item_filter">
+                                        <input type="checkbox" name="listitem2" id="listitem2" class="checkbox bottom-sheet_filters-list_check" />
+
+                                        <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
+
+                                        <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--editable" @click="editable = true; $refs.input.focus()">
+                                            <input type="tel" value="99999" x-bind:disabled="editable == false" x-on:change="editable = false" x-ref="input" /> kr
+                                            <svg class="icon" @click="editable = !editable; $refs.input.focus()">
+                                                <use xlink:href="assets/icons/remix.svg#ri-edit-line" /></svg>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
-                        </li>
-                        <li x-data="{editable: false}">
-                            <div class="bottom-sheet_filters-list_item_filter">
-                                <input type="checkbox" name="listitem2" id="listitem2" class="checkbox bottom-sheet_filters-list_check" />
+                        </div>
+                    </div>
+            </div>
 
-                                <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
+            <div class="bottom-sheet_wrapper js-bottomsheet" id="credit">
+                <div class="bottom-sheet_overlay" aria-controls="credit"></div>
+                <div class="bottom-sheet">
+                    <div class="bottom-sheet_header" aria-controls="credit">
+                        <h3 class="bottom-sheet_header_label">
+                            Konsumentkredit
+                        </h3>
 
-                                <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--editable" @click="editable = true; $refs.input.focus()">
-                                    <input type="tel" value="99999" x-bind:disabled="editable == false" x-on:change="editable = false" x-ref="input" /> kr
-                                    <svg class="icon" @click="editable = !editable; $refs.input.focus()">
-                                        <use xlink:href="assets/icons/remix.svg#ri-edit-line" /></svg>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                        <svg class="icon">
+                            <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
+                    </div>
+
+                    <div class="bottom-sheet_content">
+                        <table class="bottom-sheet_table">
+                            <tr>
+                                <td>Kredittyp:</td>
+                                <td>Konsumentkredit</td>
+                            </tr>
+
+                            <tr>
+                                <td>Originator:</td>
+                                <td>SBL Finans</td>
+                            </tr>
+
+                            <tr>
+                                <td>Kredit-ID:</td>
+                                <td>abc123-abc123-abc123</td>
+                            </tr>
+
+                            <tr>
+                                <td>BRA:</td>
+                                <td>1,23 %</td>
+                            </tr>
+
+                            <tr>
+                                <td>Investeringsdatum:</td>
+                                <td>1 Jan 2021</td>
+                            </tr>
+
+                            <tr>
+                                <td>Etc…</td>
+                            </tr>
+                        </table>
+
+                        <table class="bottom-sheet_table bottom-sheet_table--dark">
+                            <tr class="position-sticky top-0">
+                                <th class="color-progressive text-left">Datum</th>
+                                <th class="color-progressive text-right">Belopp</th>
+                                <th class="color-progressive text-right">Varav ränta</th>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>25 jan 2021</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="bottom-sheet_wrapper js-bottomsheet" id="credit">
-            <div class="bottom-sheet_overlay" aria-controls="credit"></div>
-            <div class="bottom-sheet">
-                <div class="bottom-sheet_header" aria-controls="credit">
-                    <h3 class="bottom-sheet_header_label">
-                        Konsumentkredit
-                    </h3>
 
-                    <svg class="icon">
-                        <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
-                </div>
+            <div class="bottom-sheet_wrapper js-bottomsheet" id="sale">
+                <div class="bottom-sheet_overlay" aria-controls="sale"></div>
+                <div class="bottom-sheet">
+                    <div class="bottom-sheet_header" aria-controls="sale">
+                        <h3 class="bottom-sheet_header_label">
+                            Sälj valda krediter (2)
+                        </h3>
 
-                <div class="bottom-sheet_content">
-                    <table class="bottom-sheet_table">
-                        <tr>
-                            <td>Kredittyp:</td>
-                            <td>Konsumentkredit</td>
-                        </tr>
+                        <svg class="icon">
+                            <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
+                    </div>
 
-                        <tr>
-                            <td>Originator:</td>
-                            <td>SBL Finans</td>
-                        </tr>
+                    <div class="bottom-sheet_content padding-bottom-xxl">
+                        <p class="padding-md">Genom att klicka på “Lägg ut till försäljning” kommer dina valda krediter att läggas ut till andrahandsmarknaden.</p>
 
-                        <tr>
-                            <td>Kredit-ID:</td>
-                            <td>abc123-abc123-abc123</td>
-                        </tr>
+                        <table class="bottom-sheet_table">
+                            <tr>
+                                <td>Krediter som ska säljas:</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Krediternas värde:</td>
+                                <td>18 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Avgifter (5 %):</td>
+                                <td>0,9 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Till dig vid försäljning:</td>
+                                <td>17,1 kr</td>
+                            </tr>
+                        </table>
 
-                        <tr>
-                            <td>BRA:</td>
-                            <td>1,23 %</td>
-                        </tr>
+                        <table class="bottom-sheet_table bottom-sheet_table--dark">
+                            <tr class="position-sticky top-0">
+                                <th class="color-progressive text-left">Kredittyp</th>
+                                <th class="color-progressive text-right">Värde</th>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                            <tr>
+                                <td>Konsumentkredit</td>
+                                <td class="text-right">99 999 999,99 kr</td>
+                            </tr>
+                        </table>
 
-                        <tr>
-                            <td>Investeringsdatum:</td>
-                            <td>1 Jan 2021</td>
-                        </tr>
+                        <button class="btn btn--accent btn--floating shadow-xl" aria-controls="sale"><span>Lägg ut till försäljning</span></button>
 
-                        <tr>
-                            <td>Etc…</td>
-                        </tr>
-                    </table>
-
-                    <table class="bottom-sheet_table bottom-sheet_table--dark">
-                        <tr class="position-sticky top-0">
-                            <th class="color-progressive text-left">Datum</th>
-                            <th class="color-progressive text-right">Belopp</th>
-                            <th class="color-progressive text-right">Varav ränta</th>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>25 jan 2021</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                    </table>
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <script src="assets/js/scripts.js"></script>
 
-        <div class="bottom-sheet_wrapper js-bottomsheet" id="sale">
-            <div class="bottom-sheet_overlay" aria-controls="sale"></div>
-            <div class="bottom-sheet">
-                <div class="bottom-sheet_header" aria-controls="sale">
-                    <h3 class="bottom-sheet_header_label">
-                        Sälj valda krediter (2)
-                    </h3>
-
-                    <svg class="icon">
-                        <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
-                </div>
-
-                <div class="bottom-sheet_content padding-bottom-xxl">
-                    <p class="padding-md">Genom att klicka på “Lägg ut till försäljning” kommer dina valda krediter att läggas ut till andrahandsmarknaden.</p>
-
-                    <table class="bottom-sheet_table">
-                        <tr>
-                            <td>Krediter som ska säljas:</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Krediternas värde:</td>
-                            <td>18 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Avgifter (5 %):</td>
-                            <td>0,9 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Till dig vid försäljning:</td>
-                            <td>17,1 kr</td>
-                        </tr>
-                    </table>
-
-                    <table class="bottom-sheet_table bottom-sheet_table--dark">
-                        <tr class="position-sticky top-0">
-                            <th class="color-progressive text-left">Kredittyp</th>
-                            <th class="color-progressive text-right">Värde</th>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                        <tr>
-                            <td>Konsumentkredit</td>
-                            <td class="text-right">99 999 999,99 kr</td>
-                        </tr>
-                    </table>
-
-                    <button class="btn btn--accent btn--floating shadow-xl" aria-controls="sale"><span>Lägg ut till försäljning</span></button>
-
-                </div>
-            </div>
-        </div>
-
-        <script src="assets/js/scripts.js"></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js" integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg==" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A==" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js" integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg==" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A==" crossorigin="anonymous"></script>
 </body>
 
 </html>

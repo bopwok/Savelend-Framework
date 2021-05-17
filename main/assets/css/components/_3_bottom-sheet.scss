@@ -25,6 +25,7 @@
 			}
 
 			&.bottom-sheet--force-side {
+				padding-bottom: 0;
 				transform: translateY(0) translateX(0);
 
 				@include breakpoint(md) {
@@ -82,12 +83,24 @@
 }
 
 .bottom-sheet--force-side {
+	display: flex;
+	flex-direction: column;
 	left: auto;
 	height: 100%;
 	transform: translateY(0) translateX(100%);
 
 	.bottom-sheet_header {
 		border-top-right-radius: 0;
+	}
+
+	.bottom-sheet_content {
+		display: flex;
+		flex: 1;
+		justify-content: space-between;
+		flex-direction: column;
+
+		margin-bottom: 0;
+		max-height: none;
 	}
 }
 
