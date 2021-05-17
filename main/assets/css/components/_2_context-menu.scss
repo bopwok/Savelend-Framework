@@ -1,0 +1,9 @@
+.context-menu {
+    position: absolute;
+    padding: var(--space-sm);
+    background: var(--gradient-progressive-stop-1);
+    border: solid 1px var(--gradient-progressive-stop-2);
+    border-radius: var(--radius-lg);
+    color: var(--color-offwhite);
+    z-index: var(--zindex-popover);
+}
