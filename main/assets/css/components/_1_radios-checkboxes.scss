@@ -98,6 +98,11 @@ Usage: codyhouse.co/license
     border-color: var(--color-restless);
     transition: transform .2s;
   }
+
+  .radio.bg-restless:not(:checked):not(:focus) + label:hover::before,
+  .checkbox.bg-restless:not(:checked):not(:focus) + label:hover::before {
+    border-color: lightness(var(--color-restless), 0.7);
+  }
   
   // :active
   .radio:active + label::before,
@@ -132,6 +137,14 @@ Usage: codyhouse.co/license
   .checkbox:focus + label::before {
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px alpha(var(--color-primary), 0.2);
+  }
+
+  .radio.bg-restless:checked:active + label::before,
+  .checkbox.bg-restless:checked:active + label::before,
+  .radio.bg-restless:focus + label::before,
+  .checkbox.bg-restless:focus + label::before {
+    border-color: var(--color-restless);
+    box-shadow: 0 0 0 3px alpha(var(--color-restless), 0.2);
   }
   
   // --radio--bg, --checkbox--bg -> variation with background color

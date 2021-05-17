@@ -36,7 +36,7 @@
     }
 
     &.expandable-list--sub > .expandable-list__item--expanded > .expandable-list__content {
-        border-bottom: 0;
+        border-bottom: 1px solid var(--color-offwhite);
     }
 
     .expandable-list--sub,

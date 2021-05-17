@@ -22,6 +22,10 @@ Usage: codyhouse.co/license
     width: 100%;
     height: 100%;
     padding-right: calc(var(--select-icon-size) + var(--select-icon-right-margin) + var(--select-text-icon-gap)) !important;
+
+    +.select__icon {
+        color: var(--color-challenger);
+    }
 }
 
 .select__icon {
