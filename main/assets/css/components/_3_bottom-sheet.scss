@@ -1,5 +1,14 @@
 .bottom-sheet_wrapper {
+	opacity: 0;
+	transition: opacity var(--ease-out) 2s;
+	will-change: opacity;
+	position: relative;
+	z-index: var(--zindex-overlay);
+
 	&.bottom-sheet--is-visible {
+		opacity: 1;
+		transition: opacity var(--ease-out) 0s;
+
 		.bottom-sheet_overlay {
 			transform: translateX(0);
 			background: rgba(0, 0, 0, 0.3);
@@ -59,9 +68,11 @@
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	z-index: var(--zindex-overlay);
+	z-index: var(--zindex-top);
+
+	will-change: transform;
 	transform: translateY(100%);
-	transition: transform var(--ease-out) 0.3s;
+	transition: transform var(--ease-out) 0.3s, z-index 0.3s;
 
 	border-top-left-radius: var(--radius-lg);
 	border-top-right-radius: var(--radius-lg);
