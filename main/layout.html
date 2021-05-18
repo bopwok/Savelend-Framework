@@ -867,12 +867,12 @@
         <div class="bottom-sheet_overlay" aria-controls="menu"></div>
         <div class="bottom-sheet bottom-sheet--force-side">
             <div class="bottom-sheet_header bottom-sheet_header--large flex items-stretch">
-                <button aria-controls="menu" class="color-challenger bg-transparent border-0 padding-sm">
+                <button aria-controls="menu" class="color-challenger bg-transparent border-0 padding-none">
                     <svg class="icon icon--md">
                         <use xlink:href="assets/icons/remix.svg#ri-close-line" /></svg>
                 </button>
 
-                <div class="flex-grow flex justify-between items-center" aria-controls="menu-item">
+                <div class="flex-grow flex justify-between items-center" aria-controls="menu-item--depots">
                     <div class="bottom-sheet_header_label flex-grow">
                         <div class="text-center font-semibold color-restless text-lg">My depot 1 (SEK)</div>
                         <div class="text-center text-sm">Joakim Bergman</div>
@@ -972,24 +972,90 @@
         </div>
     </div>
 
-    <div class="bottom-sheet_wrapper js-bottomsheet" id="menu-item">
-        <div class="bottom-sheet_overlay" aria-controls="menu-item"></div>
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="menu-item--depots">
+        <div class="bottom-sheet_overlay" aria-controls="menu-item--depots"></div>
         <div class="bottom-sheet bottom-sheet--force-side">
-            <div class="bottom-sheet_header" aria-controls="menu-item">
-                <svg class="icon">
-                    <use xlink:href="assets/icons/remix.svg#ri-arrow-left-line" /></svg>
+            <div class="bottom-sheet_header bottom-sheet_header--large">
+                <button aria-controls="menu-item--depots" class="color-challenger bg-transparent border-0 padding-none">
+                    <svg class="icon icon--md">
+                        <use xlink:href="assets/icons/remix.svg#ri-arrow-left-s-line" /></svg>
+                </button>
 
-                <h3 class="bottom-sheet_header_label">
-                    MENU ITEM
-                </h3>
+                <div class="flex-grow flex justify-between items-center" aria-controls="menu-item--depots">
+                    <div class="bottom-sheet_header_label flex-grow">
+                        <div class="text-center font-semibold color-restless text-lg">My depots</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="bottom-sheet_content">
-                LOAD CONTENT HERE
+            <div class="bottom-sheet_content bg-offwhite-2">
+                <div class="account-selector">
+                    <div class="account-selector_header account-selector_header--selected">
+                        <svg class="icon icon--sm">
+                            <use xlink:href="assets/icons/remix.svg#ri-user-fill" /></svg>
+                        <div class="account-selector_header-title">Joakim Bergman</div>
+                        <svg class="icon icon--sm">
+                            <use xlink:href="assets/icons/remix.svg#ri-add-fill" /></svg>
+                    </div>
+
+                    <div class="account-selector_content">
+                        <div class="account-selector_content-row">
+                            <svg class="icon icon--md">
+                                <use xlink:href="assets/icons/remix.svg#ri-checkbox-circle-line" /></svg>
+                            <div class="account-selector_content-title">
+                                <div class="text-lg font-semibold">My depot 1</div>
+                                <div>1 000 000,00 SEK</div>
+                            </div>
+                            <svg class="icon icon--sm color-challenger" aria-controls="menu-example">
+                                <use xlink:href="assets/icons/remix.svg#ri-more-2-fill" /></svg>
+                        </div>
+                        <div class="account-selector_content-row">
+                            <svg class="icon icon--md">
+                                <use xlink:href="assets/icons/remix.svg#ri-checkbox-blank-circle-line" /></svg>
+                            <div class="account-selector_content-title">
+                                <div class="text-lg font-semibold">My depot 2</div>
+                                <div>1 000 000,00 SEK</div>
+                            </div>
+                            <svg class="icon icon--sm color-challenger" aria-controls="menu-example">
+                                <use xlink:href="assets/icons/remix.svg#ri-more-2-fill" /></svg>
+                        </div>
+                    </div>
+
+                    <div class="account-selector_header">
+                        <svg class="icon icon--sm">
+                            <use xlink:href="assets/icons/remix.svg#ri-briefcase-line" /></svg>
+                        <div class="account-selector_header-title">Super Company</div>
+                        <svg class="icon icon--sm color-challenger">
+                            <use xlink:href="assets/icons/remix.svg#ri-arrow-left-right-line" /></svg>
+                    </div>
+                </div>
+
+                <menu id="menu-example" class="menu js-menu">
+                <li role="menuitem">
+                    <span class="menu__content js-menu__content">
+                      <svg class="icon menu__icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M10.121.293a1,1,0,0,0-1.414,0L1,8,0,12l4-1,7.707-7.707a1,1,0,0,0,0-1.414Z"></path></svg>
+                      <span>Rename</span>
+                    </span>
+                  </li>
+                
+                  <li role="menuitem">
+                    <span class="menu__content js-menu__content">
+                      <svg class="icon menu__icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M15,4H1C0.4,4,0,4.4,0,5v10c0,0.6,0.4,1,1,1h14c0.6,0,1-0.4,1-1V5C16,4.4,15.6,4,15,4z M14,14H2V6h12V14z"></path><rect x="2" width="12" height="2"></rect></svg>
+                      <span>Transfer money</span>
+                    </span>
+                  </li>
+                
+                  <li role="menuitem">
+                    <span class="menu__content js-menu__content">
+                      <svg class="icon menu__icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M8.354,3.646a.5.5,0,0,0-.708,0L6,5.293,4.354,3.646a.5.5,0,0,0-.708.708L5.293,6,3.646,7.646a.5.5,0,0,0,.708.708L6,6.707,7.646,8.354a.5.5,0,1,0,.708-.708L6.707,6,8.354,4.354A.5.5,0,0,0,8.354,3.646Z"></path><path d="M6,0a6,6,0,1,0,6,6A6.006,6.006,0,0,0,6,0ZM6,10a4,4,0,1,1,4-4A4,4,0,0,1,6,10Z"></path></svg>
+                      <span>Delete</span>
+                    </span>
+                  </li>
+                </menu>
             </div>
         </div>
     </div>
-    
+
     <div class="bottom-sheet_wrapper js-bottomsheet" id="filters">
         <div class="bottom-sheet_overlay" aria-controls="filters"></div>
         <div class="bottom-sheet">

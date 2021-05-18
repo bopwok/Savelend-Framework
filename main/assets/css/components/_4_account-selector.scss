@@ -1,0 +1,35 @@
+.account-selector {
+
+}
+
+.account-selector_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: var(--text-lg);
+    font-weight: 600;
+
+    padding: var(--space-md);
+
+    &.account-selector_header--selected {
+        background: var(--color-restless);
+    }
+}
+
+.account-selector_content {
+    background: var(--color-offwhite-1);
+}
+
+.account-selector_content-row {
+    padding: var(--space-md);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.account-selector_header-title,
+.account-selector_content-title {
+    flex-grow: 1;
+    padding: 0 var(--space-sm);
+}
