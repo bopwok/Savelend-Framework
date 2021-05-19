@@ -55,11 +55,11 @@ Descr: Used to display data
             position: absolute;
             right: 0;
             bottom: 0;
-            margin: var(--space-xs);
+            padding: var(--space-xs);
             cursor: pointer;
 
             &.card__header-action-icon--top {
-                top: 0;
+                top: var(--space-xxs);
                 bottom: auto;
             }
 
