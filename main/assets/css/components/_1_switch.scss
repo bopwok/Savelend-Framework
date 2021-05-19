@@ -46,12 +46,12 @@ Usage: codyhouse.co/license
   
     &:checked + .switch__label {
       box-shadow: 0 0 0 0px transparent;
-      background-color: var(--color-restless);
+      background-color: var(--color-challenger); //restless
     }
 
     &.switch__input--partial:checked + .switch__label {
       background-color: transparent;
-      box-shadow: 0 0 0 2px var(--color-restless);
+      box-shadow: 0 0 0 2px var(--color-challenger); //restless
     }
   
     &:checked + .switch__label + .switch__marker {
@@ -60,7 +60,7 @@ Usage: codyhouse.co/license
     }
 
     &.switch__input--partial:checked + .switch__label + .switch__marker {
-      background-color: var(--color-restless);
+      background-color: var(--color-challenger); //restless
     }
     
   
@@ -71,7 +71,7 @@ Usage: codyhouse.co/license
   
     &:checked:focus + .switch__label,
     &:checked:active + .switch__label {
-      box-shadow: 0 0 0 2px alpha(var(--color-restless), 0.2);
+      box-shadow: 0 0 0 2px alpha(var(--color-challenger), 0.2); //restless
     }
   }
   
@@ -80,7 +80,7 @@ Usage: codyhouse.co/license
     height: 100%;
     color: transparent;
     user-select: none;
-    box-shadow: 0 0 0 2px var(--color-challenger);
+    box-shadow: 0 0 0 2px var(--color-smart-2); //challenger
     background-color: transparent;
     //background-color: var(--color-challenger);
     border-radius: inherit;
@@ -91,7 +91,7 @@ Usage: codyhouse.co/license
   
   .switch__marker {
     position: relative;
-    background-color: var(--color-challenger);
+    background-color: var(--color-smart-2); //challenger
     width: calc(var(--switch-height) - var(--switch-padding) * 2);
     height: calc(var(--switch-height) - var(--switch-padding) * 2);
     border-radius: 50%;

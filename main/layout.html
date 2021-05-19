@@ -867,12 +867,12 @@
         <div class="bottom-sheet_overlay" aria-controls="menu"></div>
         <div class="bottom-sheet bottom-sheet--force-side">
             <div class="bottom-sheet_header bottom-sheet_header--large flex items-stretch">
-                <button aria-controls="menu" class="color-challenger bg-transparent border-0 padding-sm">
+                <button aria-controls="menu" class="color-challenger bg-transparent border-0 padding-none">
                     <svg class="icon icon--md">
                         <use xlink:href="assets/icons/remix.svg#ri-close-line" /></svg>
                 </button>
 
-                <div class="flex-grow flex justify-between items-center"  aria-controls="menu-item">
+                <div class="flex-grow flex justify-between items-center" aria-controls="menu-item--depots">
                     <div class="bottom-sheet_header_label flex-grow">
                         <div class="text-center font-semibold color-restless text-lg">My depot 1 (SEK)</div>
                         <div class="text-center text-sm">Joakim Bergman</div>
@@ -932,428 +932,501 @@
 
                     <div class="flex justify-between items-center padding-md bg-offwhite-2">
                         <a href="#logout" class="font-semibold text-lg color-progressive text-decoration-none"><svg class="icon color-progressive-4">
-                            <use xlink:href="assets/icons/remix.svg#ri-logout-box-r-line" /></svg> Log out</a>
+                                <use xlink:href="assets/icons/remix.svg#ri-logout-box-r-line" /></svg> Log out</a>
 
                         <div class="adv-select js-adv-select">
                             <select name="adv-select" id="adv-select">
                                 <option value="1" data-option-avatar="https://hatscripts.github.io/circle-flags/flags/se.svg">SV</option>
                                 <option value="2" data-option-avatar="https://hatscripts.github.io/circle-flags/flags/gb.svg">EN</option>
                             </select>
-                          
+
                             <button class="adv-select__control is-hidden js-adv-select__control flex items-center radius-full border-0 bg-offwhite padding-x-md padding-y-xs" aria-controls="adv-select-popover-1" aria-haspopup="listbox">
-                              <span class="js-adv-select__value">
-                                <!-- dynamically updated with the .adv-select-popover__option content -->
-                              </span>
-                          
-                              <svg class="icon icon--xxs margin-left-xxs" aria-hidden="true" viewBox="0 0 12 12"><path d="M10.947,3.276A.5.5,0,0,0,10.5,3h-9a.5.5,0,0,0-.4.8l4.5,6a.5.5,0,0,0,.8,0l4.5-6A.5.5,0,0,0,10.947,3.276Z"/></svg>
+                                <span class="js-adv-select__value">
+                                    <!-- dynamically updated with the .adv-select-popover__option content -->
+                                </span>
+
+                                <svg class="icon icon--xxs margin-left-xxs" aria-hidden="true" viewBox="0 0 12 12">
+                                    <path d="M10.947,3.276A.5.5,0,0,0,10.5,3h-9a.5.5,0,0,0-.4.8l4.5,6a.5.5,0,0,0,.8,0l4.5-6A.5.5,0,0,0,10.947,3.276Z" /></svg>
                             </button>
-                          </div>
-                          
-                          <div id="adv-select-popover-1" class="adv-select-popover popover bg-offwhite-3 padding-y-xxs radius-md shadow-md is-hidden js-popover js-adv-select-popover js-tab-focus" role="listbox">
+                        </div>
+
+                        <div id="adv-select-popover-1" class="adv-select-popover popover bg-offwhite-3 padding-y-xxs radius-md shadow-md is-hidden js-popover js-adv-select-popover js-tab-focus" role="listbox">
                             <div class="adv-select-popover__optgroup" role="group" describedby="optgroup-label">
-                              <!-- label -->
-                              <div id="optgroup-label" class="adv-select-popover__label text-sm color-contrast-medium padding-y-xs padding-x-md">{optgroup-label}</div>
-                          
-                              <!-- option -->
-                              <div class="adv-select-popover__option padding-y-xxs padding-x-md" role="option">
-                                <div class="flex items-center">
-                                  <img class="width-xs height-xs radius-50% object-cover margin-right-xs" src="{option-avatar}" alt="Language">
-                                  <div class="text-truncate">{option-label}</div>
-                                  <svg class="adv-select-popover__check icon icon--xs margin-left-auto" viewBox="0 0 16 16"><polyline stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" points="1,9 5,13 15,3" /></svg>
+                                <!-- label -->
+                                <div id="optgroup-label" class="adv-select-popover__label text-sm color-contrast-medium padding-y-xs padding-x-md">{optgroup-label}</div>
+
+                                <!-- option -->
+                                <div class="adv-select-popover__option padding-y-xxs padding-x-md" role="option">
+                                    <div class="flex items-center">
+                                        <img class="width-xs height-xs radius-50% object-cover margin-right-xs" src="{option-avatar}" alt="Language">
+                                        <div class="text-truncate">{option-label}</div>
+                                        <svg class="adv-select-popover__check icon icon--xs margin-left-auto" viewBox="0 0 16 16">
+                                            <polyline stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" points="1,9 5,13 15,3" /></svg>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="bottom-sheet_wrapper js-bottomsheet" id="menu-item">
-        <div class="bottom-sheet_overlay" aria-controls="menu-item"></div>
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="menu-item--depots">
+        <div class="bottom-sheet_overlay" aria-controls="menu-item--depots"></div>
         <div class="bottom-sheet bottom-sheet--force-side">
-            <div class="bottom-sheet_header" aria-controls="menu-item">
-                <svg class="icon">
-                    <use xlink:href="assets/icons/remix.svg#ri-arrow-left-line" /></svg>
+            <div class="bottom-sheet_header bottom-sheet_header--large">
+                <button aria-controls="menu-item--depots" class="color-challenger bg-transparent border-0 padding-none">
+                    <svg class="icon icon--md">
+                        <use xlink:href="assets/icons/remix.svg#ri-arrow-left-s-line" /></svg>
+                </button>
 
+                <div class="flex-grow flex justify-between items-center" aria-controls="menu-item--depots">
+                    <div class="bottom-sheet_header_label flex-grow">
+                        <div class="text-center font-semibold color-restless text-lg">My depots</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-sheet_content bg-offwhite-2">
+                <div class="account-selector">
+                    <div class="account-selector_header account-selector_header--selected">
+                        <svg class="icon icon--sm">
+                            <use xlink:href="assets/icons/remix.svg#ri-user-fill" /></svg>
+                        <div class="account-selector_header-title">Joakim Bergman</div>
+                        <svg class="icon icon--sm">
+                            <use xlink:href="assets/icons/remix.svg#ri-add-fill" /></svg>
+                    </div>
+
+                    <div class="account-selector_content">
+                        <div class="account-selector_content-row">
+                            <svg class="icon icon--md">
+                                <use xlink:href="assets/icons/remix.svg#ri-checkbox-circle-line" /></svg>
+                            <div class="account-selector_content-title">
+                                <div class="text-lg font-semibold">My depot 1</div>
+                                <div>1 000 000,00 SEK</div>
+                            </div>
+                            <svg class="icon icon--sm color-challenger" aria-controls="menu-example">
+                                <use xlink:href="assets/icons/remix.svg#ri-more-2-fill" /></svg>
+                        </div>
+                        <div class="account-selector_content-row">
+                            <svg class="icon icon--md">
+                                <use xlink:href="assets/icons/remix.svg#ri-checkbox-blank-circle-line" /></svg>
+                            <div class="account-selector_content-title">
+                                <div class="text-lg font-semibold">My depot 2</div>
+                                <div>1 000 000,00 SEK</div>
+                            </div>
+                            <svg class="icon icon--sm color-challenger" aria-controls="menu-example">
+                                <use xlink:href="assets/icons/remix.svg#ri-more-2-fill" /></svg>
+                        </div>
+                    </div>
+
+                    <div class="account-selector_header">
+                        <svg class="icon icon--sm">
+                            <use xlink:href="assets/icons/remix.svg#ri-briefcase-line" /></svg>
+                        <div class="account-selector_header-title">Super Company</div>
+                        <svg class="icon icon--sm color-challenger">
+                            <use xlink:href="assets/icons/remix.svg#ri-arrow-left-right-line" /></svg>
+                    </div>
+                </div>
+
+                <menu id="menu-example" class="menu js-menu">
+                <li role="menuitem">
+                    <span class="menu__content js-menu__content">
+                      <svg class="icon menu__icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M10.121.293a1,1,0,0,0-1.414,0L1,8,0,12l4-1,7.707-7.707a1,1,0,0,0,0-1.414Z"></path></svg>
+                      <span>Rename</span>
+                    </span>
+                  </li>
+                
+                  <li role="menuitem">
+                    <span class="menu__content js-menu__content">
+                      <svg class="icon menu__icon" aria-hidden="true" viewBox="0 0 16 16"><path d="M15,4H1C0.4,4,0,4.4,0,5v10c0,0.6,0.4,1,1,1h14c0.6,0,1-0.4,1-1V5C16,4.4,15.6,4,15,4z M14,14H2V6h12V14z"></path><rect x="2" width="12" height="2"></rect></svg>
+                      <span>Transfer money</span>
+                    </span>
+                  </li>
+                
+                  <li role="menuitem">
+                    <span class="menu__content js-menu__content">
+                      <svg class="icon menu__icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M8.354,3.646a.5.5,0,0,0-.708,0L6,5.293,4.354,3.646a.5.5,0,0,0-.708.708L5.293,6,3.646,7.646a.5.5,0,0,0,.708.708L6,6.707,7.646,8.354a.5.5,0,1,0,.708-.708L6.707,6,8.354,4.354A.5.5,0,0,0,8.354,3.646Z"></path><path d="M6,0a6,6,0,1,0,6,6A6.006,6.006,0,0,0,6,0ZM6,10a4,4,0,1,1,4-4A4,4,0,0,1,6,10Z"></path></svg>
+                      <span>Delete</span>
+                    </span>
+                  </li>
+                </menu>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="filters">
+        <div class="bottom-sheet_overlay" aria-controls="filters"></div>
+        <div class="bottom-sheet">
+            <div class="bottom-sheet_header" aria-controls="filters">
                 <h3 class="bottom-sheet_header_label">
-                    MENU ITEM
+                    Hantera filter
                 </h3>
+
+                <svg class="icon">
+                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
             </div>
 
             <div class="bottom-sheet_content">
-                --> LOAD CONTENT HERE <-- </div> </div> </div> <div class="bottom-sheet_wrapper js-bottomsheet" id="filters">
-                    <div class="bottom-sheet_overlay" aria-controls="filters"></div>
-                    <div class="bottom-sheet">
-                        <div class="bottom-sheet_header" aria-controls="filters">
-                            <h3 class="bottom-sheet_header_label">
-                                Hantera filter
-                            </h3>
+                <ul class="bottom-sheet_filters-list">
+                    <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, selected: 'Filtervärde 1'}">
+                        <div class="bottom-sheet_filters-list_item_filter">
+                            <input type="checkbox" name="listitem1" id="listitem1" class="checkbox bottom-sheet_filters-list_check" />
 
-                            <svg class="icon">
-                                <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
+                            <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
+
+                            <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
+                                <span x-text="selected">Filtervärde 1</span>
+                                <svg class="icon" :class="{ 'flip-y': expanded }">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
+                            </div>
                         </div>
+                        <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
+                            <li>
+                                <div class="bottom-sheet_filters-list_item_filter">
+                                    <input type="radio" name="listitem1" id="listitem1-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
 
-                        <div class="bottom-sheet_content">
-                            <ul class="bottom-sheet_filters-list">
-                                <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, selected: 'Filtervärde 1'}">
-                                    <div class="bottom-sheet_filters-list_item_filter">
-                                        <input type="checkbox" name="listitem1" id="listitem1" class="checkbox bottom-sheet_filters-list_check" />
+                                    <label for="listitem1-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
+                                </div>
+                            </li>
 
-                                        <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
+                            <li>
+                                <div class="bottom-sheet_filters-list_item_filter">
+                                    <input type="radio" name="listitem1" id="listitem1-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
 
-                                        <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
-                                            <span x-text="selected">Filtervärde 1</span>
-                                            <svg class="icon" :class="{ 'flip-y': expanded }">
-                                                <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
+                                    <label for="listitem1-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
+                                </div>
+                            </li>
+                            <li class='bottom-sheet_filters-sub-list-with-another-sub-list'>
+                                <ul class="bottom-sheet_filters-sub-list expanded">
+                                    <li>
+                                        <div class="bottom-sheet_filters-list_item_filter">
+                                            <input type="radio" name="listitem1" id="listitem1-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
+
+                                            <label for="listitem1-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
                                         </div>
-                                    </div>
-                                    <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
-                                        <li>
-                                            <div class="bottom-sheet_filters-list_item_filter">
-                                                <input type="radio" name="listitem1" id="listitem1-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
+                                    </li>
 
-                                                <label for="listitem1-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
-                                            </div>
-                                        </li>
+                                    <li>
+                                        <div class="bottom-sheet_filters-list_item_filter">
+                                            <input type="radio" name="listitem1" id="listitem1-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
 
-                                        <li>
-                                            <div class="bottom-sheet_filters-list_item_filter">
-                                                <input type="radio" name="listitem1" id="listitem1-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
-
-                                                <label for="listitem1-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
-                                            </div>
-                                        </li>
-                                        <li class='bottom-sheet_filters-sub-list-with-another-sub-list'>
-                                            <ul class="bottom-sheet_filters-sub-list expanded">
-                                                <li>
-                                                    <div class="bottom-sheet_filters-list_item_filter">
-                                                        <input type="radio" name="listitem1" id="listitem1-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
-
-                                                        <label for="listitem1-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="bottom-sheet_filters-list_item_filter">
-                                                        <input type="radio" name="listitem1" id="listitem1-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
-
-                                                        <label for="listitem1-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <div class="bottom-sheet_filters-list_item_filter">
-                                        <input type="checkbox" name="listitem2" id="listitem2" class="checkbox bottom-sheet_filters-list_check" />
-
-                                        <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
-                                    </div>
-                                </li>
-                                <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, 'selected': 'Filtervärde 1'}">
-                                    <div class="bottom-sheet_filters-list_item_filter">
-                                        <input type="checkbox" name="listitem1" id="listitem1" class="checkbox bottom-sheet_filters-list_check" />
-
-                                        <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
-
-                                        <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
-                                            <span x-text="selected">Filtervärde 1</span>
-                                            <svg class="icon" :class="{ 'flip-y': expanded }">
-                                                <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
+                                            <label for="listitem1-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
                                         </div>
-                                    </div>
-                                    <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
-                                        <li>
-                                            <div class="bottom-sheet_filters-list_item_filter">
-                                                <input type="radio" name="listitem2" id="listitem2-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="bottom-sheet_filters-list_item_filter">
+                            <input type="checkbox" name="listitem2" id="listitem2" class="checkbox bottom-sheet_filters-list_check" />
 
-                                                <label for="listitem2-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="bottom-sheet_filters-list_item_filter">
-                                                <input type="radio" name="listitem2" id="listitem2-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
-
-                                                <label for="listitem2-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li x-data="{editable: false}">
-                                    <div class="bottom-sheet_filters-list_item_filter">
-                                        <input type="checkbox" name="listitem2" id="listitem2" class="checkbox bottom-sheet_filters-list_check" />
-
-                                        <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
-
-                                        <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--editable" @click="editable = true; $refs.input.focus()">
-                                            <input type="tel" value="99999" x-bind:disabled="editable == false" x-on:change="editable = false" x-ref="input" /> kr
-                                            <svg class="icon" @click="editable = !editable; $refs.input.focus()">
-                                                <use xlink:href="assets/icons/remix.svg#ri-edit-line" /></svg>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                            <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
                         </div>
-                    </div>
+                    </li>
+                    <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, 'selected': 'Filtervärde 1'}">
+                        <div class="bottom-sheet_filters-list_item_filter">
+                            <input type="checkbox" name="listitem1" id="listitem1" class="checkbox bottom-sheet_filters-list_check" />
+
+                            <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
+
+                            <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
+                                <span x-text="selected">Filtervärde 1</span>
+                                <svg class="icon" :class="{ 'flip-y': expanded }">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" /></svg>
+                            </div>
+                        </div>
+                        <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
+                            <li>
+                                <div class="bottom-sheet_filters-list_item_filter">
+                                    <input type="radio" name="listitem2" id="listitem2-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
+
+                                    <label for="listitem2-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="bottom-sheet_filters-list_item_filter">
+                                    <input type="radio" name="listitem2" id="listitem2-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
+
+                                    <label for="listitem2-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li x-data="{editable: false}">
+                        <div class="bottom-sheet_filters-list_item_filter">
+                            <input type="checkbox" name="listitem2" id="listitem2" class="checkbox bottom-sheet_filters-list_check" />
+
+                            <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
+
+                            <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--editable" @click="editable = true; $refs.input.focus()">
+                                <input type="tel" value="99999" x-bind:disabled="editable == false" x-on:change="editable = false" x-ref="input" /> kr
+                                <svg class="icon" @click="editable = !editable; $refs.input.focus()">
+                                    <use xlink:href="assets/icons/remix.svg#ri-edit-line" /></svg>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="credit">
+        <div class="bottom-sheet_overlay" aria-controls="credit"></div>
+        <div class="bottom-sheet">
+            <div class="bottom-sheet_header" aria-controls="credit">
+                <h3 class="bottom-sheet_header_label">
+                    Konsumentkredit
+                </h3>
+
+                <svg class="icon">
+                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
             </div>
 
-            <div class="bottom-sheet_wrapper js-bottomsheet" id="credit">
-                <div class="bottom-sheet_overlay" aria-controls="credit"></div>
-                <div class="bottom-sheet">
-                    <div class="bottom-sheet_header" aria-controls="credit">
-                        <h3 class="bottom-sheet_header_label">
-                            Konsumentkredit
-                        </h3>
+            <div class="bottom-sheet_content">
+                <table class="bottom-sheet_table">
+                    <tr>
+                        <td>Kredittyp:</td>
+                        <td>Konsumentkredit</td>
+                    </tr>
 
-                        <svg class="icon">
-                            <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
-                    </div>
+                    <tr>
+                        <td>Originator:</td>
+                        <td>SBL Finans</td>
+                    </tr>
 
-                    <div class="bottom-sheet_content">
-                        <table class="bottom-sheet_table">
-                            <tr>
-                                <td>Kredittyp:</td>
-                                <td>Konsumentkredit</td>
-                            </tr>
+                    <tr>
+                        <td>Kredit-ID:</td>
+                        <td>abc123-abc123-abc123</td>
+                    </tr>
 
-                            <tr>
-                                <td>Originator:</td>
-                                <td>SBL Finans</td>
-                            </tr>
+                    <tr>
+                        <td>BRA:</td>
+                        <td>1,23 %</td>
+                    </tr>
 
-                            <tr>
-                                <td>Kredit-ID:</td>
-                                <td>abc123-abc123-abc123</td>
-                            </tr>
+                    <tr>
+                        <td>Investeringsdatum:</td>
+                        <td>1 Jan 2021</td>
+                    </tr>
 
-                            <tr>
-                                <td>BRA:</td>
-                                <td>1,23 %</td>
-                            </tr>
+                    <tr>
+                        <td>Etc…</td>
+                    </tr>
+                </table>
 
-                            <tr>
-                                <td>Investeringsdatum:</td>
-                                <td>1 Jan 2021</td>
-                            </tr>
+                <table class="bottom-sheet_table bottom-sheet_table--dark">
+                    <tr class="position-sticky top-0">
+                        <th class="color-progressive text-left">Datum</th>
+                        <th class="color-progressive text-right">Belopp</th>
+                        <th class="color-progressive text-right">Varav ränta</th>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 
-                            <tr>
-                                <td>Etc…</td>
-                            </tr>
-                        </table>
 
-                        <table class="bottom-sheet_table bottom-sheet_table--dark">
-                            <tr class="position-sticky top-0">
-                                <th class="color-progressive text-left">Datum</th>
-                                <th class="color-progressive text-right">Belopp</th>
-                                <th class="color-progressive text-right">Varav ränta</th>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>25 jan 2021</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="sale">
+        <div class="bottom-sheet_overlay" aria-controls="sale"></div>
+        <div class="bottom-sheet">
+            <div class="bottom-sheet_header" aria-controls="sale">
+                <h3 class="bottom-sheet_header_label">
+                    Sälj valda krediter (2)
+                </h3>
+
+                <svg class="icon">
+                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
             </div>
 
+            <div class="bottom-sheet_content padding-bottom-xxl">
+                <p class="padding-md">Genom att klicka på “Lägg ut till försäljning” kommer dina valda krediter att läggas ut till andrahandsmarknaden.</p>
 
-            <div class="bottom-sheet_wrapper js-bottomsheet" id="sale">
-                <div class="bottom-sheet_overlay" aria-controls="sale"></div>
-                <div class="bottom-sheet">
-                    <div class="bottom-sheet_header" aria-controls="sale">
-                        <h3 class="bottom-sheet_header_label">
-                            Sälj valda krediter (2)
-                        </h3>
+                <table class="bottom-sheet_table">
+                    <tr>
+                        <td>Krediter som ska säljas:</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Krediternas värde:</td>
+                        <td>18 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Avgifter (5 %):</td>
+                        <td>0,9 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Till dig vid försäljning:</td>
+                        <td>17,1 kr</td>
+                    </tr>
+                </table>
 
-                        <svg class="icon">
-                            <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" /></svg>
-                    </div>
+                <table class="bottom-sheet_table bottom-sheet_table--dark">
+                    <tr class="position-sticky top-0">
+                        <th class="color-progressive text-left">Kredittyp</th>
+                        <th class="color-progressive text-right">Värde</th>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                </table>
 
-                    <div class="bottom-sheet_content padding-bottom-xxl">
-                        <p class="padding-md">Genom att klicka på “Lägg ut till försäljning” kommer dina valda krediter att läggas ut till andrahandsmarknaden.</p>
+                <button class="btn btn--accent btn--floating shadow-xl" aria-controls="sale"><span>Lägg ut till försäljning</span></button>
 
-                        <table class="bottom-sheet_table">
-                            <tr>
-                                <td>Krediter som ska säljas:</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>Krediternas värde:</td>
-                                <td>18 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Avgifter (5 %):</td>
-                                <td>0,9 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Till dig vid försäljning:</td>
-                                <td>17,1 kr</td>
-                            </tr>
-                        </table>
-
-                        <table class="bottom-sheet_table bottom-sheet_table--dark">
-                            <tr class="position-sticky top-0">
-                                <th class="color-progressive text-left">Kredittyp</th>
-                                <th class="color-progressive text-right">Värde</th>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                            <tr>
-                                <td>Konsumentkredit</td>
-                                <td class="text-right">99 999 999,99 kr</td>
-                            </tr>
-                        </table>
-
-                        <button class="btn btn--accent btn--floating shadow-xl" aria-controls="sale"><span>Lägg ut till försäljning</span></button>
-
-                    </div>
-                </div>
             </div>
+        </div>
+    </div>
 
-            <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js" integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg==" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js" integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A==" crossorigin="anonymous"></script>
 </body>
 
 </html>
