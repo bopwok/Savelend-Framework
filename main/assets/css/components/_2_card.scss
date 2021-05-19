@@ -380,10 +380,11 @@ Descr: Used to display data
         }
 
         .card__data-table__item--disabled {
-            * { 
+            *:not(.color-challenger) { 
                 color: var(--color-smart-2);
             }
         }
+
 
         .card__data-table__item-undertext {
             position: absolute;
@@ -400,7 +401,7 @@ Descr: Used to display data
             }
         }
         td {
-            padding: var(--space-md) var(--space-md);
+            padding: var(--space-md) var(--space-sm);
         }
     }
 }
