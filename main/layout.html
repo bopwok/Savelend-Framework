@@ -751,35 +751,39 @@
                         <div>some content</div>
                      </div>
                   </div>
-                  <div class="col-12@sm col-6@md col-4@lg">
-                     <div class="onboarding-box">
-                        <header class="onboarding-box__header onboarding-box__header--caution">
-                           Identify with tink
-                           <svg class="icon">
-                              <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" />
-                           </svg>
-                     </div>
+                    <div class="col-12@sm col-12@md col-10@lg card">
+                   <header class="card__header bg-gradient-progressive-right">
+                        <div class="card__header-inner card__header-inner--desktop-wide">
+                           <div class="card__filters">
+                              <div class="card__filter" aria-controls="filters" aria-expanded="false" aria-haspopup="true">
+                                 <svg class="icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-calendar-2-line"></use>
+                                 </svg>
+                                 <span class="card__filter-active-text">1 Jan 2021 – 31 jan 2021</span>
+                              </div>
+                           </div>
+                           <div class="card__tabs">
+                              <button class="reset card__tab-btn active" :class="{ 'active': tab === 'innehav' }" @click="tab = 'innehav'; selected = []">Innehav</button>
+                              <button class="reset card__tab-btn" :class="{ 'active': tab === 'sale' }" @click="tab = 'sale'; selected = []">Till försäljning</button>
+                           </div>
+                           <div>
+                              <h2 class="card__title">My Assets</h2>
+                              <div class="card__data-display card__data-display--restless">
+                                 22 999 999,99 kr
+                              </div>
+                           </div>
+                        </div>
                      </header>
-                     <div class="onboarding-box__content"></div>
-                  </div>
-                  <div class="onboarding-box">
-                     <header class="onboarding-box__header onboarding-box__header--complete">
-                        What's you phone number?
-                        <svg class="icon">
-                           <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" />
-                        </svg>
-                  </div>
-                  </header>
-                  <div class="onboarding-box__content"></div>
+                   </div>
                </div>
                <div class="onboarding-box">
                   <header class="onboarding-box__header onboarding-box__header--complete">
-                     What's you phone number?
-                     <svg class="icon">
+                        What's you phone number?
+                        <svg class="icon">
                         <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" />
-                     </svg>
+                        </svg>
+                    </header>
                </div>
-               </header>
                <div class="onboarding-box__content"></div>
             </div>
          </div>
