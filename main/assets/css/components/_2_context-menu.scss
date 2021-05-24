@@ -5,5 +5,14 @@
     border: solid 1px var(--gradient-progressive-stop-2);
     border-radius: var(--radius-lg);
     color: var(--color-offwhite);
-    z-index: var(--zindex-popover);
+    z-index: var(--zindex-top);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .2s, opacity .2s;
+
+    &.context-menu--visible {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity .2s;
+    }
 }
