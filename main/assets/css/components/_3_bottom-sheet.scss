@@ -63,7 +63,7 @@
 	position: fixed;
 	width: 100%;
 	height: min-content;
-	max-width: var(--max-width-sm);
+	max-width: var(--max-width-xs);
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -136,6 +136,8 @@
 
 	@include breakpoint(md) {
 		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+		padding: var(--space-lg);
 	}
 
 	&.bottom-sheet_header--large {

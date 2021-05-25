@@ -1,0 +1,49 @@
+/* -------------------------------- 
+
+File#: _2_sell-display
+Title: Sell Display
+Descr: Custom select
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.selected-credits-sheet {
+	position: fixed;
+	bottom: 0;
+	min-width: 60%;
+	background-color: var(--color-progressive);
+	color: var(--color-offwhite);
+	border-top-right-radius: var(--space-sm);
+	border-top-left-radius: var(--space-sm);
+	left: 50%;
+	transform: translate(-50%, 100%);
+	display: flex;
+	flex-direction: row;
+	padding: var(--space-md);
+	padding-bottom: var(--space-sm);
+	justify-content: space-between;
+	align-items: baseline;
+  	transition: transform .5s;
+
+	&.selected-credits-sheet--visible {
+		transform:  translate(-50%, 0);
+	}
+
+	.btn {
+		padding-top: var(--space-xs);
+		padding-bottom: var(--space-xs);
+	}
+
+	.selected-credits-sheet__label {
+		display: flex;
+		align-items: center;
+
+		span {
+			color: var(--color-restless);
+			font-size: var(--text-xl);
+			font-weight: 600;
+			white-space: nowrap;
+			letter-spacing: var(--text-spacing);
+		}
+	}
+}

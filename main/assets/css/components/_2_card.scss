@@ -48,19 +48,29 @@ Descr: Used to display data
 			& + .card__tabs {
 				margin-top: var(--space-xxxs);
 			}
+			&.card__header-inner--desktop-wide {
+				display: flex;
+				flex-direction: column;
 
-			@include breakpoint(md) {
-				&.card__header-inner--desktop-wide {
-					display: flex;
+				.card__tabs {
+					order: 99;
+    				margin: calc(-1 * var(--space-sm)) calc(-1 * var(--space-md));
+					margin-top: var(--space-sm);
+				}
+
+				@include breakpoint(md) {
 					width: 100%;
+					flex-direction: row;
 
 					.card__filters {
 						order: 3;
 						margin-left: auto;
+						margin-top: var(--space-sm);
 					}
 
 					.card__tabs {
 						order: 2;
+						margin: 0;
 						margin-left: var(--space-md);
 						padding-left: var(--space-md);
 						display: flex;
@@ -397,11 +407,19 @@ Descr: Used to display data
 
 	.card__data-table {
 		.card__data-table__row {
-			display: flex;
-			justify-content: space-between;
 			flex: 1;
 			align-items: center;
 			position: relative;
+			justify-content: stretch;
+		}
+
+		.card__data-table__header {
+			color: var(--color-offwhite);
+			background-color: var(--color-progressive);
+			display: none;
+			@include breakpoint(sm) { 
+				display: table-row;
+			}
 		}
 
 		.card__data-table__row--bordered {
@@ -413,10 +431,15 @@ Descr: Used to display data
 		}
 
 		.card__data-table__item {
-			padding: var(--space-md) var(--space-md);
+			padding: var(--space-md) var(--space-sm);
+			position: relative;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 
 			&:first-child {
 				padding-right: 0;
+				width: 16px;
 			}
 
 			&:last-child {
@@ -425,6 +448,15 @@ Descr: Used to display data
 
 			.icon {
 				margin-right: var(--space-xs);
+			}
+
+			&:last-child {
+				text-align: right;
+				padding-right: var(--space-md);
+			}
+
+			&:first-child {
+				padding-left: var(--space-md);
 			}
 		}
 
@@ -442,7 +474,7 @@ Descr: Used to display data
 			position: absolute;
 			font-size: var(--text-xs);
 			top: calc(2 * var(--space-md));
-			left: 0px;
+			left: var(--space-sm);
 		}
 
 		tr {

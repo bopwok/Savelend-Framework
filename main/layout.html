@@ -761,6 +761,12 @@
                                  </svg>
                                  <span class="card__filter-active-text">1 Jan 2021 – 31 jan 2021</span>
                               </div>
+                              <button class="reset card__sort">
+                                 <span class="sr-only">Sortera</span>
+                                 <svg class="icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-sort-desc"></use>
+                                 </svg>
+                              </button>
                            </div>
                            <div class="card__tabs">
                               <button class="reset card__tab-btn active" :class="{ 'active': tab === 'innehav' }" @click="tab = 'innehav'; selected = []">Innehav</button>
@@ -774,6 +780,97 @@
                            </div>
                         </div>
                      </header>
+                     <div class="card__content card__content--tabbed">
+                        <table x-show="tab === 'innehav'" class="card__content-tab card__data-table width-100%">
+                           <tr class="card__data-table__header" >
+                              <td></td>
+                              <td>Asset Class</td>
+                              <td class='display@sm'>Originator</td>
+                              <td class='display@md'>Date</td>
+                              <td class='display@md'>Return</td>
+                              <td class='display@md'>Term</td>
+                              <td>Claim</td>
+                           </tr>
+                           <tr class="card__data-table__row card__data-table__row--bordered">
+                              <td class="card__data-table__item">
+                                 <svg class="icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-lock-line"></use>
+                                 </svg>
+                                 <label for="Konsumentkredit1"></label>
+                              </td>
+                              <td class="card__data-table__item card__data-table__item--disabled">
+                                 Debt collection portfolio
+                                 <span class="card__data-table__item-undertext">Something</span>
+                              </td>
+                              <td class="card__data-table__item display@sm">
+                                 Originator
+                              </td>
+                              <td class="card__data-table__item display@md">
+                                 5 jan 2021
+                              </td>
+                              <td class="card__data-table__item display@md">
+                                 10,00 %
+                              </td>
+                              <td class="card__data-table__item display@md">
+                                 5
+                              </td>
+                              <td class="card__data-table__item" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
+                                 <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
+                              </td>
+                           </tr>
+                           <tr class="card__data-table__row card__data-table__row--bordered">
+                              <td class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit2" class="checkbox" x-model="selected" value="2">
+                                 <label for="Konsumentkredit2"></label>
+                              </td>
+                              <td class="card__data-table__item card__data-table__item--clickable" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
+                                 Debt collection portfolio
+                              </td>
+                              <td class="card__data-table__item display@sm">
+                                 Partner Inkasso
+                              </td>
+                              <td class="card__data-table__item display@md">
+                                 5 jan 2021
+                              </td>
+                              <td class="card__data-table__item display@md">
+                                 10,00 %
+                              </td>
+                              <td class="card__data-table__item display@md">
+                                 5
+                              </td>
+                              <td class="card__data-table__item" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
+                                 <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
+                              </td>
+                           </tr>
+                           <tr class="card__data-table__row card__data-table__row--bordered">
+                              <td class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit2" class="checkbox" x-model="selected" value="2">
+                                 <label for="Konsumentkredit2"></label>
+                              </td>
+                              <td class="card__data-table__item card__data-table__item--clickable" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
+                                 Konsumentkredit
+                              </td>
+                              <td class="card__data-table__item display@sm">
+                                 Originator
+                              </td>
+                              <td class="card__data-table__item display@md">
+                                 5 jan 2021
+                              </td>
+                              <td class="card__data-table__item display@md">
+                                 10,00 %
+                              </td>
+                              <td class="card__data-table__item display@md">
+                                 5
+                              </td>
+                              <td class="card__data-table__item" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
+                                 <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
+                              </td>
+                           </tr>
+                        </table>
+                        <div x-show="tab === 'sale'" class="card__content-tab card__html width-100%" style="display: none;">
+                           <h4 class="text-center color-progressive margin-bottom-md">Du har inga krediter till försäljning</h4>
+                           <p class="text-center color-progressive-2 margin-bottom-lg">Så här gör du för att sälja krediter. Text text text. Text text text. Text text text. Text text text. Text text text. Text text text.</p>
+                           <a href="#" class="btn btn--accent table margin-auto">Läs mer</a>
+                        </div>
+                     </div>
                    </div>
                </div>
                <div class="onboarding-box">
@@ -834,6 +931,14 @@
             </div>
          </div>
          <div class="modal__overlay" aria-controls="error-modal"></div>
+      </div>
+      <div class="selected-credits-sheet selected-credits-sheet--visible">
+         <div class='selected-credits-sheet__label'>
+            Value of selected credits: <span class='padding-left-xs'> 88 777 111 (SEK) </span>
+         </div>
+         <button class="btn btn--challenger">
+            Sell slected credits (2)
+         </button>
       </div>
       <div class="bottom-sheet_wrapper js-bottomsheet" id="menu">
          <div class="bottom-sheet_overlay" aria-controls="menu"></div>
