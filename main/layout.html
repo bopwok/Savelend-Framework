@@ -1,1490 +1,1443 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="format-detection" content="telephone=no">
-      <script>
-         document.getElementsByTagName("html")[0].className += " js";
-      </script>
-      <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@200;400;600;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" />
-      <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
-      <!-- Uncomment the script below if you need to support browsers where CSS Variables have not been implemented (e.g., IE11) -->
-      <!-- <script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <script>
+        document.getElementsByTagName("html")[0].className += " js";
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" />
+    <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+    <!-- Uncomment the script below if you need to support browsers where CSS Variables have not been implemented (e.g., IE11) -->
+    <!-- <script>
          if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
          </script> -->
-      <title>Get Started | CodyFrame</title>
-   </head>
-   <body class="body-bg min-height-100vh">
-      <div class="layout-container min-height-100vh">
-         <nav class="bottom-navbar">
+    <title>Get Started | CodyFrame</title>
+</head>
+
+<body class="body-bg min-height-100vh">
+    <div class="layout-container min-height-100vh">
+        <nav class="bottom-navbar">
             <a href="#" class="bottom-navbar-item" data-state="active">
-               <svg class="icon bottom-navbar-item--icon">
-                  <use xlink:href="assets/icons/remix.svg#ri-eye-line" />
-               </svg>
-               <span class="bottom-navbar-item--text">Översikt
+                <svg class="icon bottom-navbar-item--icon">
+                    <use xlink:href="assets/icons/remix.svg#ri-eye-line" />
+                </svg>
+                <span class="bottom-navbar-item--text">Översikt
             </a>
             </a>
             <a href="#" class="bottom-navbar-item">
-               <svg class="icon bottom-navbar-item--icon">
-                  <use xlink:href="assets/icons/remix.svg#ri-hand-coin-line" />
-               </svg>
-               <span class="bottom-navbar-item--text">Innehav
+                <svg class="icon bottom-navbar-item--icon">
+                    <use xlink:href="assets/icons/remix.svg#ri-hand-coin-line" />
+                </svg>
+                <span class="bottom-navbar-item--text">Innehav
             </a>
             </a>
             <a href="#" class="bottom-navbar-item">
-               <svg class="icon bottom-navbar-item--icon">
-                  <use xlink:href="assets/icons/remix.svg#ri-funds-line" />
-               </svg>
-               <span class="bottom-navbar-item--text">Investera
+                <svg class="icon bottom-navbar-item--icon">
+                    <use xlink:href="assets/icons/remix.svg#ri-funds-line" />
+                </svg>
+                <span class="bottom-navbar-item--text">Investera
             </a>
             </a>
             <a href="#" class="bottom-navbar-item">
-               <svg class="icon bottom-navbar-item--icon">
-                  <use xlink:href="assets/icons/remix.svg#ri-arrow-left-right-line" />
-               </svg>
-               <span class="bottom-navbar-item--text">Överföringar
+                <svg class="icon bottom-navbar-item--icon">
+                    <use xlink:href="assets/icons/remix.svg#ri-arrow-left-right-line" />
+                </svg>
+                <span class="bottom-navbar-item--text">Överföringar
             </a>
             </a>
-         </nav>
-         <div class="padding-y-lg">
-            <header class="container title-bar flex-between margin-bottom-md">
-               <h1 class="title-bar-text">Översikt</h1>
-               <div class="title-bar-notification title-bar-notification--active flex-between">
-                  <button class="reset" style="--anim-menu-btn-icon-size: 24px;">
-                     <svg class="icon">
-                        <use xlink:href="assets/icons/remix.svg#ri-notification-2-line" />
-                     </svg>
-                     <div class='notification-bubble'>4</div>
-                  </button>
-               </div>
-               <div class="title-bar-actions flex-between">
-                  <button class="reset" style="--anim-menu-btn-icon-size: 24px;" aria-label="Toggle menu" aria-controls="menu">
-                     <svg class="icon">
-                        <use xlink:href="assets/icons/remix.svg#ri-user-3-fill" />
-                     </svg>
-                  </button>
-                  <div class="drop-menu js-drop-menu" id="user-profile-menu">
-                     <div class="drop-menu__inner js-drop-menu__inner">
-                        <!-- menu -->
-                        <ul class="drop-menu__list js-drop-menu__list js-drop-menu__list--main">
-                           <!--<li>
-                              <button class="reset drop-menu__btn js-drop-menu__btn--sublist-control">
-                                  <span>Depånamn 1 (SEK) Joakim Bergman</span>
-                              
-                                  <svg class="icon icon--xxs margin-left-xxs" viewBox="0 0 12 12">
-                                      <path d="M10.745,5.564l-8-4.5A.5.5,0,0,0,2,1.5v9a.5.5,0,0,0,.248.432.5.5,0,0,0,.5,0l8-4.5a.5.5,0,0,0,0-.872Z" />
-                                  </svg>
-                              </button>
-                              
-                              <ul class="drop-menu__list js-drop-menu__list">
-                                  <li>
-                                      <button class="reset drop-menu__btn js-drop-menu__btn--back">
-                                          <svg class="icon icon--xxs flip-x margin-right-xxs" viewBox="0 0 12 12">
-                                              <path d="M10.745,5.564l-8-4.5A.5.5,0,0,0,2,1.5v9a.5.5,0,0,0,.248.432.5.5,0,0,0,.5,0l8-4.5a.5.5,0,0,0,0-.872Z" />
-                                          </svg>
-                                          <span class="margin-right-auto">Back</span>
-                                      </button>
-                                  </li>
-                              
-                                  <li><a class="drop-menu__link" href="#0">Joakim Bergman</a>
-                                      <ul style="margin-left: 20px">
-                                          <li><a class="drop-menu__link" href="#0">Depot 1</a></li>
-                                          <li><a class="drop-menu__link" href="#0">Depot 2</a></li>
-                                      </ul>
-                                  </li>
-                                  <li><a class="drop-menu__link" href="#0">Super Company</a></li>
-                              </ul>
-                              </li>-->
-                           <li>
-                              <div class="flex items-stretch">
-                                 <button class="drop-menu__close-btn  js-drop-menu__close-btn padding-xs">X</button>
-                                 <button class="padding-xs flex-grow flex justify-between items-center" aria-controls="menu-item">
-                                    My depot 1 (SEK)
-                                    Joakim Bergman
-                                    <svg class="icon icon--xxs" viewBox="0 0 12 12">
-                                       <path d="M10.745,5.564l-8-4.5A.5.5,0,0,0,2,1.5v9a.5.5,0,0,0,.248.432.5.5,0,0,0,.5,0l8-4.5a.5.5,0,0,0,0-.872Z" />
-                                    </svg>
-                                 </button>
-                              </div>
-                           </li>
-                           <li><a class="drop-menu__link" href="#0" aria-controls="menu-item">KYC och villkor</a></li>
-                           <li><a class="drop-menu__link" href="#0" aria-controls="menu-item">Mina uppgifter</a></li>
-                           <li><a class="drop-menu__link" href="#0" aria-controls="menu-item">Bankkonton</a></li>
-                           <li><a class="drop-menu__link" href="#0" aria-controls="menu-item">Besked</a></li>
-                           <li><a class="drop-menu__link" href="#0" aria-controls="menu-item">Bjud in en vän</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
+        </nav>
+        <div>
+            <header class="container title-bar margin-bottom-md">
+                <div class="flex-between padding-x-md">
+                    <h1 class="title-bar-text">Översikt</h1>
+                    <div class="title-bar-notification title-bar-notification--active flex-between">
+                        <button class="reset" style="--anim-menu-btn-icon-size: 24px;">
+                            <svg class="icon">
+                                <use xlink:href="assets/icons/remix.svg#ri-notification-2-line" />
+                            </svg>
+                            <div class='notification-bubble'>4</div>
+                        </button>
+                    </div>
+                    <div class="title-bar-actions flex-between">
+                        <button class="reset" style="--anim-menu-btn-icon-size: 24px;" aria-label="Toggle menu" aria-controls="menu">
+                            <svg class="icon">
+                                <use xlink:href="assets/icons/remix.svg#ri-user-3-fill" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <nav class="tabbed-bar">
+                    <div class="tabbed-bar__nav-items">
+                        <a href="#" class="tabbed-bar__nav-item active" @click="activetab = 'kapital'" :class="{ 'active': activetab === 'kapital' }">Kapital</a>
+                        <a href="#" class="tabbed-bar__nav-item" @click="activetab = 'krediter'" :class="{ 'active': activetab === 'krediter' }">Krediter</a>
+                        <a href="#" class="tabbed-bar__nav-item" @click="activetab = 'transaktioner'" :class="{ 'active': activetab === 'transaktioner' }">Transaktioner</a>
+                    </div>
+                </nav>
             </header>
-            <nav class="tabbed-bar">
-               <div class="tabbed-bar__nav-items">
-                  <a href="#" class="tabbed-bar__nav-item active" @click="activetab = 'kapital'" :class="{ 'active': activetab === 'kapital' }">Kapital</a>
-                  <a href="#" class="tabbed-bar__nav-item" @click="activetab = 'krediter'" :class="{ 'active': activetab === 'krediter' }">Krediter</a>
-                  <a href="#" class="tabbed-bar__nav-item" @click="activetab = 'transaktioner'" :class="{ 'active': activetab === 'transaktioner' }">Transaktioner</a>
-               </div>
-            </nav>
             <div class="container">
-               <div class="actions shadow-md">
-                  <span class="actions-text">Rekommenderade handlingar</span>
-                  <div class="notification">1</div>
-               </div>
-               <div class="grid gap-md">
-                  <div class="btn-group col-12@sm col-12@md col-12@lg">
-                     <button class="btn btn--challenger" aria-controls="ok-modal">ok modal</button>
-                     <button class="btn btn--challenger" aria-controls="info-modal">
-                        <span>info modal</span>
-                        <div class='notification'>3</div>
-                     </button>
-                     <button class="btn btn--challenger" aria-controls="error-modal">error modal</button>
-                  </div>
-                  <div class="card col-12@sm col-6@md col-4@lg">
-                     <header class="card__header bg-gradient-progressive-right">
-                        <div class="card__header-inner">
-                           <h2 class="card__title">Mitt kapital</h2>
-                           <div class="card__data-display card__data-display--restless">
-                              99 999 999,99 kr
-                           </div>
-                        </div>
-                     </header>
-                     <div class="card__content">
-                        <table class="card__data-table width-100%">
-                           <tbody>
-                              <tr>
-                                 <td>Intjänad ränta</td>
-                                 <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                              </tr>
-                              <tr>
-                                 <td>Avgifter</td>
-                                 <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                              </tr>
-                              <tr>
-                                 <td>Intjänad ränta</td>
-                                 <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                              </tr>
-                              <tr>
-                                 <td>Avgifter</td>
-                                 <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </div>
-                  <div class="expandable-block col-12@sm col-6@md col-4@lg">
-                     <div class="expandable-block__item" :class="{'expandable-block__item--expanded': expanded}" x-data="{expanded: false}">
-                        <header class="expandable-block__intro" @click="expanded=!expanded">
-                           Text om hur man kan kontakta kundtjänst samt om vad.
-                           <svg class="icon expandable-block__icon" aria-hidden="true" viewBox="0 0 20 20">
-                              <g stroke-width="4" stroke="currentColor">
-                                 <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="18,6 10,14 2,6 "></polyline>
-                              </g>
-                           </svg>
+                <div class="actions shadow-md">
+                    <span class="actions-text">Rekommenderade handlingar</span>
+                    <div class="notification">1</div>
+                </div>
+                <div class="grid gap-md">
+                    <div class="btn-group col-12@sm col-12@md col-12@lg">
+                        <button class="btn btn--challenger" aria-controls="ok-modal">ok modal</button>
+                        <button class="btn btn--challenger" aria-controls="info-modal">
+                            <span>info modal</span>
+                            <div class='notification'>3</div>
+                        </button>
+                        <button class="btn btn--challenger" aria-controls="error-modal">error modal</button>
+                    </div>
+                    <div class="card col-12@sm col-6@md col-4@lg">
+                        <header class="card__header bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <h2 class="card__title">Mitt kapital</h2>
+                                <div class="card__data-display card__data-display--restless">
+                                    99 999 999,99 kr
+                                </div>
+                            </div>
                         </header>
-                        <section class="expandable-block__content">
-                           Information om öppettider, telefonnummer och och e-post etc. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-                        </section>
-                        <section class="expandable-block__content">
-                           <div class="standing-out-section">
-                              <div class="standing-out-section__row">
-                                 <strong>Bank Account:</strong><span class='text-right'>some account</span>
-                              </div>
-                              <div class="standing-out-section__row">
-                                 <strong>Reference:</strong><span class='text-right'>00000-00000-0000</span>
-                              </div>
-                           </div>
-                        </section>
-                     </div>
-                  </div>
-                  <div class="expandable-block col-12@sm col-6@md col-4@lg">
-                     <div class="expandable-block__item expandable-block__item--light" :class="{'expandable-block__item--expanded': expanded}" x-data="{expanded: false}">
-                        <header class="expandable-block__intro" @click="expanded=!expanded">
-                           Text om hur man kan kontakta kundtjänst samt om vad.
-                           <svg class="icon expandable-block__icon" aria-hidden="true" viewBox="0 0 20 20">
-                              <g stroke-width="4" stroke="currentColor">
-                                 <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="18,6 10,14 2,6 "></polyline>
-                              </g>
-                           </svg>
-                        </header>
-                        <section class="expandable-block__content">
-                           Information om öppettider, telefonnummer och och e-post etc. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-                        </section>
-                     </div>
-                     <div class="expandable-block__item expandable-block__item--light">
-                        <section class="expandable-block__content">
-                           Information om öppettider, telefonnummer och och e-post etc. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-                        </section>
-                        <section class="expandable-block__content">
-                           <div class="standing-out-section">
-                              <div class="standing-out-section__row">
-                                 <strong>Bank Account:</strong><span class='text-right'>some account</span>
-                              </div>
-                              <div class="standing-out-section__row">
-                                 <strong>Reference:</strong><span class='text-right'>00000-00000-0000</span>
-                              </div>
-                           </div>
-                        </section>
-                        <section class="expandable-block__content">
-                           <ul class='bullet-list'>
-                              <li>
-                                 <span>
-                                 Have an
-                                 <span class='cursor-pointer color-challenger'>
-                                 <strong> approved KYC</strong>
-                                 </span>
-                                 </span>
-                              </li>
-                              <li>
-                                 <div>
-                                    Approve our
-                                    <strong>
-                                    <span class='cursor-pointer color-challenger'>General terms</span>
-                                    </strong>
-                                 </div>
-                              </li>
-                              <li>
-                                 <div>
-                                    Approve our
-                                    <strong>
-                                    <span class='cursor-pointer color-challenger'>Lender terms</span>
-                                    </strong>
-                                 </div>
-                              </li>
-                              <li>
-                                 <div>
-                                    Approve our
-                                    <strong>
-                                    <span class='cursor-pointer color-challenger'>Payment terms</span>
-                                    </strong>
-                                 </div>
-                              </li>
-                           </ul>
-                        </section>
-                     </div>
-                  </div>
-                  <div class="btn-group">
-                     <button class="btn btn--accent">Sätt in pengar</button>
-                     <button class="btn btn--accent">Månadsspar</button>
-                  </div>
-                  <div class="card col-12@sm col-6@md col-4@lg" x-data="{ tab: 'kredittyper' }">
-                     <header class="card__header card__header--flush bg-gradient-progressive-right">
-                        <div class="card__header-inner">
-                           <h2 class="card__title">Kreditfördelning</h2>
+                        <div class="card__content">
+                            <table class="card__data-table width-100%">
+                                <tbody>
+                                    <tr>
+                                        <td>Intjänad ränta</td>
+                                        <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Avgifter</td>
+                                        <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Intjänad ränta</td>
+                                        <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Avgifter</td>
+                                        <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="card__tabs">
-                           <button class="reset card__tab-btn" :class="{ 'active': tab === 'kredittyper' }" @click="tab = 'kredittyper'">Kredittyper</button>
-                           <button class="reset card__tab-btn" :class="{ 'active': tab === 'originators' }" @click="tab = 'originators'">Originators</button>
-                        </div>
-                     </header>
-                     <div class="card__content card__content--tabbed">
-                        <table x-show="tab === 'kredittyper'" class="card__content-tab card__data-table width-100%">
-                           <tbody>
-                              <tr>
-                                 <td>Intjänad ränta</td>
-                                 <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                              </tr>
-                              <tr>
-                                 <td>Avgifter</td>
-                                 <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                              </tr>
-                              <tr>
-                                 <td>Intjänad ränta</td>
-                                 <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                        <table x-show="tab === 'originators'" class="card__content-tab card__data-table width-100%">
-                           <tbody>
-                              <tr>
-                                 <td>Originator 1</td>
-                                 <td class="text-right font-semibold color-progressive text-md">99 %</td>
-                              </tr>
-                              <tr>
-                                 <td>Originator 2</td>
-                                 <td class="text-right font-semibold color-progressive text-md">99 %</td>
-                              </tr>
-                              <tr>
-                                 <td>Originator 3</td>
-                                 <td class="text-right font-semibold color-progressive text-md">99 %</td>
-                              </tr>
-                              <tr>
-                                 <td>Originator 4</td>
-                                 <td class="text-right font-semibold color-progressive text-md">99 %</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </div>
-                  <div class="card col-12@sm col-6@md col-4@lg" x-data="{ tab: 'innehav', selected: [] }">
-                     <button x-show="selected.length > 0" class="btn btn--accent btn--floating btn--static@md shadow-xl" aria-controls="sale">
-                        <span>Sälj valda krediter</span>
-                        <div class="notification text-sm" x-text="selected.length">0</div>
-                     </button>
-                     <header class="card__header card__header--flush bg-gradient-progressive-right">
-                        <div class="card__header-inner">
-                           <div class="card__filters">
-                              <div class="card__reset-filters">
-                                 <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-delete-bin-5-line" />
-                                 </svg>
-                              </div>
-                              <div class="card__filter" aria-controls="filters">
-                                 <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-filter-2-fill" />
-                                 </svg>
-                                 <span class="card__filter-active-text"><span id="numFilters">Inga</span> filter aktiva</span>
-                              </div>
-                              <button class="reset card__sort">
-                                 <span class="sr-only">Sortera</span>
-                                 <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-sort-desc" />
-                                 </svg>
-                              </button>
-                           </div>
-                        </div>
-                        <div class="card__tabs">
-                           <button class="reset card__tab-btn" :class="{ 'active': tab === 'innehav' }" @click="tab = 'innehav'; selected = []">Innehav</button>
-                           <button class="reset card__tab-btn" :class="{ 'active': tab === 'sale' }" @click="tab = 'sale'; selected = []">Till försäljning</button>
-                        </div>
-                     </header>
-                     <div class="card__content card__content--tabbed">
-                        <div x-show="tab === 'innehav'" class="card__content-tab card__data-table width-100%">
-                           <div class="card__data-table__row card__data-table__row--bordered">
-                              <div class="card__data-table__item">
-                                 <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-lock-line" />
-                                 </svg>
-                                 <label for="Konsumentkredit1"></label>
-                              </div>
-                              <div class="card__data-table__row card__data-table__item card__data-table__item--disabled">
-                                 Konsumentkredit
-                                 <span class="card__data-table__item-undertext">Something</span>
-                                 <span class="text-right font-semibold color-progressive text-md">1 999 999,00 kr</span>
-                              </div>
-                           </div>
-                           <div class="card__data-table__row card__data-table__row--bordered">
-                              <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit2" class="checkbox" x-model="selected" value="2" /><label for="Konsumentkredit2"></label></div>
-                              <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
-                                 Konsumentkredit
-                                 <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
-                              </div>
-                           </div>
-                           <div class="card__data-table__row card__data-table__row--bordered">
-                              <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit3" class="checkbox" x-model="selected" value="3" /><label for="Konsumentkredit3"></label></div>
-                              <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
-                                 Konsumentkredit
-                                 <span class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</span>
-                              </div>
-                           </div>
-                           <div class="card__data-table__row card__data-table__row--bordered">
-                              <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit4" class="checkbox" x-model="selected" value="4" /><label for="Konsumentkredit4"></label></div>
-                              <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
-                                 Konsumentkredit
-                                 <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
-                              </div>
-                           </div>
-                           <div class="card__data-table__row card__data-table__row--bordered">
-                              <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit5" class="checkbox" x-model="selected" value="5" /><label for="Konsumentkredit5"></label></div>
-                              <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
-                                 Konsumentkredit
-                                 <span class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</span>
-                              </div>
-                           </div>
-                           <div class="card__data-table__row card__data-table__row--bordered">
-                              <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit6" class="checkbox" x-model="selected" value="6" /><label for="Konsumentkredit6"></label></div>
-                              <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
-                                 Konsumentkredit
-                                 <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
-                              </div>
-                           </div>
-                        </div>
-                        <div x-show="tab === 'sale'" class="card__content-tab card__html width-100%">
-                           <h4 class="text-center color-progressive margin-bottom-md">Du har inga krediter till försäljning</h4>
-                           <p class="text-center color-progressive-2 margin-bottom-lg">Så här gör du för att sälja krediter. Text text text. Text text text. Text text text. Text text text. Text text text. Text text text.</p>
-                           <a href="#" class="btn btn--accent table margin-auto">Läs mer</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="card col-12@sm col-6@md col-4@lg">
-                     <header class="card__header bg-gradient-progressive-right">
-                        <div class="card__header-inner">
-                           <h2 class="card__title card__title--large">Form elements</h2>
-                        </div>
-                     </header>
-                     <div class="card__content">
-                        <div class="card__html">
-                           <div class="form-input margin-bottom-sm">
-                              <label class="form-label" for="input-name">This is a regular text field</label>
-                              <input class="form-control width-100%" type="text" name="input-name" id="input-name" required>
-                           </div>
-                           <div class="form-input margin-bottom-sm">
-                              <label class="form-label" for="input-name">This input field is disabled</label>
-                              <input class="form-control width-100%" type="text" name="input-name" id="input-name" value="Some disabled value" required disabled>
-                           </div>
-                           <div class="form-input margin-bottom-sm">
-                              <label class="form-label" for="input-name">This input field is readonly</label>
-                              <input class="form-control width-100%" type="text" name="input-name" id="input-name" required readonly>
-                           </div>
-                           <div class="form-input margin-bottom-sm">
-                              <label class="form-label" for="input-name">This input field is a success</label>
-                              <input class="form-control form-control--success width-100%" type="text" name="input-name" id="input-name" required>
-                           </div>
-                           <div class="form-input margin-bottom-sm">
-                              <label class="form-label" for="input-name">This input field has an error</label>
-                              <input class="form-control form-control--error width-100%" type="text" name="input-name" id="input-name" required>
-                           </div>
-                           <div class="form-input margin-bottom-sm">
-                              <label class="form-label" for="input-name">This is an email field</label>
-                              <input class="form-control width-100%" type="email" name="input-name" id="input-name" required>
-                           </div>
-                           <div class="form-input margin-bottom-sm">
-                              <label class="form-label" for="input-name">This is an email field</label>
-                              <input class="form-control width-100%" type="email" name="input-name" id="input-name" required>
-                           </div>
-                           <div class="form-input margin-bottom-sm">
-                              <div class="form-label">This is dispay-only field</div>
-                              <div class="form-control width-100%">
-                                 <input class="radio" type="radio" name="radio-button" id="radio-1" checked=""> <label for="radio-1">Choice 1</label>
-                                 <input class="radio" type="radio" name="radio-button" id="radio-2" checked=""> <label for="radio-2">Choice 2</label>
-                              </div>
-                           </div>
-                           <div class="form-input margin-bottom-sm">
-                              <div class="form-label">This is dispay-only field</div>
-                              <div class="form-control width-100%">
-                                 Some data dispayed
-                                 <div class="form-control__action-icon">
-                                    <svg class="icon">
-                                       <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" />
-                                    </svg>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="form-input margin-bottom-sm">
-                              <label class="form-label" for="input-name">This is a select field</label>
-                              <div class="select">
-                                 <select class="select__input form-control" name="selectThis" id="selectThis">
-                                    <optgroup label="Group 1">
-                                       <option value="0">Select option</option>
-                                       <option value="1">Option 1</option>
-                                       <option value="2">Option 2</option>
-                                    </optgroup>
-                                    <optgroup label="Group 2">
-                                       <option value="3">Option 3</option>
-                                       <option value="4">Option 4</option>
-                                       <option value="5">Option 5</option>
-                                    </optgroup>
-                                 </select>
-                                 <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
-                                    <g stroke-width="1" stroke="currentColor">
-                                       <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+                    </div>
+                    <div class="expandable-block col-12@sm col-6@md col-4@lg">
+                        <div class="expandable-block__item" :class="{'expandable-block__item--expanded': expanded}" x-data="{expanded: false}">
+                            <header class="expandable-block__intro" @click="expanded=!expanded">
+                                Text om hur man kan kontakta kundtjänst samt om vad.
+                                <svg class="icon expandable-block__icon" aria-hidden="true" viewBox="0 0 20 20">
+                                    <g stroke-width="4" stroke="currentColor">
+                                        <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="18,6 10,14 2,6 "></polyline>
                                     </g>
-                                 </svg>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="card card-collapsible col-12@sm col-6@md col-4@lg" id='collapse-card'>
-                     <header class="card__header bg-gradient-progressive-right">
-                        <div class="card__header-inner">
-                           <div class="card__filters">
-                              <div class="card__filter" aria-controls="filters">
-                                 <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-filter-2-fill" />
-                                 </svg>
-                                 <span class="card__filter-active-text"><span id="numFilters">Inga</span> filter aktiva</span>
-                              </div>
-                              <button class="reset card__sort">
-                                 <span class="sr-only">Sortera</span>
-                                 <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-sort-desc" />
-                                 </svg>
-                              </button>
-                           </div>
-                           <h2 class="card__title">Mitt kapital</h2>
-                           <div class="card__data-display card__data-display--restless">
-                              99 999 999,99 kr
-                           </div>
-                        </div>
-                        <div class="card__header-action-icon card__header-action-icon--collapsible" aria-controls='collapse-card'>
-                           <svg class="icon">
-                              <use xlink:href="assets/icons/remix.svg#ri-arrow-drop-down-line" />
-                           </svg>
-                        </div>
-                     </header>
-                     <div class="card__content">
-                        <table class="card__data-table width-100%">
-                           <tbody>
-                              <tr>
-                                 <td>Intjänad ränta</td>
-                                 <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                              </tr>
-                              <tr>
-                                 <td>Avgifter</td>
-                                 <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                              </tr>
-                              <tr>
-                                 <td>Intjänad ränta</td>
-                                 <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                              </tr>
-                              <tr>
-                                 <td>Avgifter</td>
-                                 <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </div>
-                  <div class="card col-12@sm col-6@md col-4@lg">
-                     <header class="card__header bg-gradient-progressive-right">
-                        <div class="card__header-inner">
-                           <h2 class="card__title card__title--large">Expandable list card</h2>
-                        </div>
-                     </header>
-                     <div class="card__content">
-                        <div class="expandable-list">
-                           <div class="expandable-list__item" :class="{'expandable-list__item--expanded': expanded}" x-data="{expanded:false}">
-                              <div class="expandable-list__parent" @click="expanded = !expanded">
-                                 Has sub list
-                                 <div>
-                                    <svg class="icon ri-xl margin-right-md" :class="{ 'flip-y': expanded }">
-                                       <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" />
-                                    </svg>
-                                    <div class="switch">
-                                       <input class="switch__input switch__input--partial" type="checkbox" id="switch-checkbox-1">
-                                       <label class="switch__label" for="switch-checkbox-1" aria-hidden="true">Option label</label>
-                                       <div class="switch__marker" aria-hidden="true"></div>
+                                </svg>
+                            </header>
+                            <section class="expandable-block__content">
+                                Information om öppettider, telefonnummer och och e-post etc. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                            </section>
+                            <section class="expandable-block__content">
+                                <div class="standing-out-section">
+                                    <div class="standing-out-section__row">
+                                        <strong>Bank Account:</strong><span class='text-right'>some account</span>
                                     </div>
-                                 </div>
-                              </div>
-                              <div class="expandable-list expandable-list--sub">
-                                 <div class="expandable-list__item" :class="{'expandable-list__item--expanded': expanded}" x-data="{expanded:false}">
+                                    <div class="standing-out-section__row">
+                                        <strong>Reference:</strong><span class='text-right'>00000-00000-0000</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="expandable-block col-12@sm col-6@md col-4@lg">
+                        <div class="expandable-block__item expandable-block__item--light" :class="{'expandable-block__item--expanded': expanded}" x-data="{expanded: false}">
+                            <header class="expandable-block__intro" @click="expanded=!expanded">
+                                Text om hur man kan kontakta kundtjänst samt om vad.
+                                <svg class="icon expandable-block__icon" aria-hidden="true" viewBox="0 0 20 20">
+                                    <g stroke-width="4" stroke="currentColor">
+                                        <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="18,6 10,14 2,6 "></polyline>
+                                    </g>
+                                </svg>
+                            </header>
+                            <section class="expandable-block__content">
+                                Information om öppettider, telefonnummer och och e-post etc. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                            </section>
+                        </div>
+                        <div class="expandable-block__item expandable-block__item--light">
+                            <section class="expandable-block__content">
+                                Information om öppettider, telefonnummer och och e-post etc. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+                            </section>
+                            <section class="expandable-block__content">
+                                <div class="standing-out-section">
+                                    <div class="standing-out-section__row">
+                                        <strong>Bank Account:</strong><span class='text-right'>some account</span>
+                                    </div>
+                                    <div class="standing-out-section__row">
+                                        <strong>Reference:</strong><span class='text-right'>00000-00000-0000</span>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="expandable-block__content">
+                                <ul class='bullet-list'>
+                                    <li>
+                                        <span>
+                                            Have an
+                                            <span class='cursor-pointer color-challenger'>
+                                                <strong> approved KYC</strong>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            Approve our
+                                            <strong>
+                                                <span class='cursor-pointer color-challenger'>General terms</span>
+                                            </strong>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            Approve our
+                                            <strong>
+                                                <span class='cursor-pointer color-challenger'>Lender terms</span>
+                                            </strong>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            Approve our
+                                            <strong>
+                                                <span class='cursor-pointer color-challenger'>Payment terms</span>
+                                            </strong>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn--accent">Sätt in pengar</button>
+                        <button class="btn btn--accent">Månadsspar</button>
+                    </div>
+                    <div class="card col-12@sm col-6@md col-4@lg" x-data="{ tab: 'kredittyper' }">
+                        <header class="card__header card__header--flush bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <h2 class="card__title">Kreditfördelning</h2>
+                            </div>
+                            <div class="card__tabs">
+                                <button class="reset card__tab-btn" :class="{ 'active': tab === 'kredittyper' }" @click="tab = 'kredittyper'">Kredittyper</button>
+                                <button class="reset card__tab-btn" :class="{ 'active': tab === 'originators' }" @click="tab = 'originators'">Originators</button>
+                            </div>
+                        </header>
+                        <div class="card__content card__content--tabbed">
+                            <table x-show="tab === 'kredittyper'" class="card__content-tab card__data-table width-100%">
+                                <tbody>
+                                    <tr>
+                                        <td>Intjänad ränta</td>
+                                        <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Avgifter</td>
+                                        <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Intjänad ränta</td>
+                                        <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table x-show="tab === 'originators'" class="card__content-tab card__data-table width-100%">
+                                <tbody>
+                                    <tr>
+                                        <td>Originator 1</td>
+                                        <td class="text-right font-semibold color-progressive text-md">99 %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Originator 2</td>
+                                        <td class="text-right font-semibold color-progressive text-md">99 %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Originator 3</td>
+                                        <td class="text-right font-semibold color-progressive text-md">99 %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Originator 4</td>
+                                        <td class="text-right font-semibold color-progressive text-md">99 %</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card col-12@sm col-6@md col-4@lg" x-data="{ tab: 'innehav', selected: [] }">
+                        <button x-show="selected.length > 0" class="btn btn--accent btn--floating btn--static@md shadow-xl" aria-controls="sale">
+                            <span>Sälj valda krediter</span>
+                            <div class="notification text-sm" x-text="selected.length">0</div>
+                        </button>
+                        <header class="card__header card__header--flush bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <div class="card__filters">
+                                    <div class="card__reset-filters">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-delete-bin-5-line" />
+                                        </svg>
+                                    </div>
+                                    <div class="card__filter" aria-controls="filters">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-filter-2-fill" />
+                                        </svg>
+                                        <span class="card__filter-active-text"><span id="numFilters">Inga</span> filter aktiva</span>
+                                    </div>
+                                    <button class="reset card__sort">
+                                        <span class="sr-only">Sortera</span>
+                                        <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-sort-desc" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card__tabs">
+                                <button class="reset card__tab-btn" :class="{ 'active': tab === 'innehav' }" @click="tab = 'innehav'; selected = []">Innehav</button>
+                                <button class="reset card__tab-btn" :class="{ 'active': tab === 'sale' }" @click="tab = 'sale'; selected = []">Till försäljning</button>
+                            </div>
+                        </header>
+                        <div class="card__content card__content--tabbed">
+                            <div x-show="tab === 'innehav'" class="card__content-tab card__data-table width-100%">
+                                <div class="card__data-table__row card__data-table__row--bordered">
+                                    <div class="card__data-table__item">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-lock-line" />
+                                        </svg>
+                                        <label for="Konsumentkredit1"></label>
+                                    </div>
+                                    <div class="card__data-table__row card__data-table__item card__data-table__item--disabled">
+                                        Konsumentkredit
+                                        <span class="card__data-table__item-undertext">Something</span>
+                                        <span class="text-right font-semibold color-progressive text-md">1 999 999,00 kr</span>
+                                    </div>
+                                </div>
+                                <div class="card__data-table__row card__data-table__row--bordered">
+                                    <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit2" class="checkbox" x-model="selected" value="2" /><label for="Konsumentkredit2"></label></div>
+                                    <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
+                                        Konsumentkredit
+                                        <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
+                                    </div>
+                                </div>
+                                <div class="card__data-table__row card__data-table__row--bordered">
+                                    <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit3" class="checkbox" x-model="selected" value="3" /><label for="Konsumentkredit3"></label></div>
+                                    <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
+                                        Konsumentkredit
+                                        <span class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</span>
+                                    </div>
+                                </div>
+                                <div class="card__data-table__row card__data-table__row--bordered">
+                                    <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit4" class="checkbox" x-model="selected" value="4" /><label for="Konsumentkredit4"></label></div>
+                                    <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
+                                        Konsumentkredit
+                                        <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
+                                    </div>
+                                </div>
+                                <div class="card__data-table__row card__data-table__row--bordered">
+                                    <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit5" class="checkbox" x-model="selected" value="5" /><label for="Konsumentkredit5"></label></div>
+                                    <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
+                                        Konsumentkredit
+                                        <span class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</span>
+                                    </div>
+                                </div>
+                                <div class="card__data-table__row card__data-table__row--bordered">
+                                    <div class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit6" class="checkbox" x-model="selected" value="6" /><label for="Konsumentkredit6"></label></div>
+                                    <div class="card__data-table__row card__data-table__item card__data-table__item--clickable" aria-controls="credit">
+                                        Konsumentkredit
+                                        <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div x-show="tab === 'sale'" class="card__content-tab card__html width-100%">
+                                <h4 class="text-center color-progressive margin-bottom-md">Du har inga krediter till försäljning</h4>
+                                <p class="text-center color-progressive-2 margin-bottom-lg">Så här gör du för att sälja krediter. Text text text. Text text text. Text text text. Text text text. Text text text. Text text text.</p>
+                                <a href="#" class="btn btn--accent table margin-auto">Läs mer</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12@sm col-6@md col-4@lg">
+                        <header class="card__header bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <h2 class="card__title card__title--large">Form elements</h2>
+                            </div>
+                        </header>
+                        <div class="card__content">
+                            <div class="card__html">
+                                <div class="form-input margin-bottom-sm">
+                                    <label class="form-label" for="input-name">This is a regular text field</label>
+                                    <input class="form-control width-100%" type="text" name="input-name" id="input-name" required>
+                                </div>
+                                <div class="form-input margin-bottom-sm">
+                                    <label class="form-label" for="input-name">This input field is disabled</label>
+                                    <input class="form-control width-100%" type="text" name="input-name" id="input-name" value="Some disabled value" required disabled>
+                                </div>
+                                <div class="form-input margin-bottom-sm">
+                                    <label class="form-label" for="input-name">This input field is readonly</label>
+                                    <input class="form-control width-100%" type="text" name="input-name" id="input-name" required readonly>
+                                </div>
+                                <div class="form-input margin-bottom-sm">
+                                    <label class="form-label" for="input-name">This input field is a success</label>
+                                    <input class="form-control form-control--success width-100%" type="text" name="input-name" id="input-name" required>
+                                </div>
+                                <div class="form-input margin-bottom-sm">
+                                    <label class="form-label" for="input-name">This input field has an error</label>
+                                    <input class="form-control form-control--error width-100%" type="text" name="input-name" id="input-name" required>
+                                </div>
+                                <div class="form-input margin-bottom-sm">
+                                    <label class="form-label" for="input-name">This is an email field</label>
+                                    <input class="form-control width-100%" type="email" name="input-name" id="input-name" required>
+                                </div>
+                                <div class="form-input margin-bottom-sm">
+                                    <label class="form-label" for="input-name">This is an email field</label>
+                                    <input class="form-control width-100%" type="email" name="input-name" id="input-name" required>
+                                </div>
+                                <div class="form-input margin-bottom-sm">
+                                    <div class="form-label">This is dispay-only field</div>
+                                    <div class="form-control width-100%">
+                                        <input class="radio" type="radio" name="radio-button" id="radio-1" checked=""> <label for="radio-1">Choice 1</label>
+                                        <input class="radio" type="radio" name="radio-button" id="radio-2" checked=""> <label for="radio-2">Choice 2</label>
+                                    </div>
+                                </div>
+                                <div class="form-input margin-bottom-sm">
+                                    <div class="form-label">This is dispay-only field</div>
+                                    <div class="form-control width-100%">
+                                        Some data dispayed
+                                        <div class="form-control__action-icon">
+                                            <svg class="icon">
+                                                <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-input margin-bottom-sm">
+                                    <label class="form-label" for="input-name">This is a select field</label>
+                                    <div class="select">
+                                        <select class="select__input form-control" name="selectThis" id="selectThis">
+                                            <optgroup label="Group 1">
+                                                <option value="0">Select option</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </optgroup>
+                                            <optgroup label="Group 2">
+                                                <option value="3">Option 3</option>
+                                                <option value="4">Option 4</option>
+                                                <option value="5">Option 5</option>
+                                            </optgroup>
+                                        </select>
+                                        <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
+                                            <g stroke-width="1" stroke="currentColor">
+                                                <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-collapsible col-12@sm col-6@md col-4@lg" id='collapse-card'>
+                        <header class="card__header bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <div class="card__filters">
+                                    <div class="card__filter" aria-controls="filters">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-filter-2-fill" />
+                                        </svg>
+                                        <span class="card__filter-active-text"><span id="numFilters">Inga</span> filter aktiva</span>
+                                    </div>
+                                    <button class="reset card__sort">
+                                        <span class="sr-only">Sortera</span>
+                                        <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-sort-desc" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h2 class="card__title">Mitt kapital</h2>
+                                <div class="card__data-display card__data-display--restless">
+                                    99 999 999,99 kr
+                                </div>
+                            </div>
+                            <div class="card__header-action-icon card__header-action-icon--collapsible" aria-controls='collapse-card'>
+                                <svg class="icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-drop-down-line" />
+                                </svg>
+                            </div>
+                        </header>
+                        <div class="card__content">
+                            <table class="card__data-table width-100%">
+                                <tbody>
+                                    <tr>
+                                        <td>Intjänad ränta</td>
+                                        <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Avgifter</td>
+                                        <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Intjänad ränta</td>
+                                        <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Avgifter</td>
+                                        <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card col-12@sm col-6@md col-4@lg">
+                        <header class="card__header bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <h2 class="card__title card__title--large">Expandable list card</h2>
+                            </div>
+                        </header>
+                        <div class="card__content">
+                            <div class="expandable-list">
+                                <div class="expandable-list__item" :class="{'expandable-list__item--expanded': expanded}" x-data="{expanded:false}">
                                     <div class="expandable-list__parent" @click="expanded = !expanded">
-                                       Has sub content
-                                       <svg class="icon" :class="{ 'flip-y': expanded }">
-                                          <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" />
-                                       </svg>
-                                       <div class="switch">
-                                          <input class="switch__input" type="checkbox" id="switch-checkbox-3">
-                                          <label class="switch__label" for="switch-checkbox-3" aria-hidden="true">Option label</label>
-                                          <div class="switch__marker" aria-hidden="true"></div>
-                                       </div>
+                                        Has sub list
+                                        <div>
+                                            <svg class="icon ri-xl margin-right-md" :class="{ 'flip-y': expanded }">
+                                                <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" />
+                                            </svg>
+                                            <div class="switch">
+                                                <input class="switch__input switch__input--partial" type="checkbox" id="switch-checkbox-1">
+                                                <label class="switch__label" for="switch-checkbox-1" aria-hidden="true">Option label</label>
+                                                <div class="switch__marker" aria-hidden="true"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="expandable-list expandable-list--sub">
+                                        <div class="expandable-list__item" :class="{'expandable-list__item--expanded': expanded}" x-data="{expanded:false}">
+                                            <div class="expandable-list__parent" @click="expanded = !expanded">
+                                                Has sub content
+                                                <svg class="icon" :class="{ 'flip-y': expanded }">
+                                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" />
+                                                </svg>
+                                                <div class="switch">
+                                                    <input class="switch__input" type="checkbox" id="switch-checkbox-3">
+                                                    <label class="switch__label" for="switch-checkbox-3" aria-hidden="true">Option label</label>
+                                                    <div class="switch__marker" aria-hidden="true"></div>
+                                                </div>
+                                            </div>
+                                            <div class="expandable-list__content">
+                                                <div class="tag-list margin-bottom-md">
+                                                    <div class="tag-list__item">Kredittyp</div>
+                                                    <div class="tag-list__item">Kredittyp</div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-se" class="tag-list__item tag-list__item--flag" viewBox="0 0 512 512">
+                                                        <path fill="#066aa7" d="M0 0h512v512H0z" />
+                                                        <path fill="#fecc00" d="M0 204.8h512v102.4H0z" />
+                                                        <path fill="#fecc00" d="M134 0h102.4v512H134z" />
+                                                    </svg>
+                                                </div>
+                                                <table class="width-100%">
+                                                    <tr>
+                                                        <td class="padding-bottom-sm">Målavkastning</td>
+                                                        <td class="padding-bottom-sm font-bold text-right">9 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="padding-bottom-sm">Målavkastning</td>
+                                                        <td class="padding-bottom-sm font-bold text-right">9 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="padding-bottom-sm">Målavkastning</td>
+                                                        <td class="padding-bottom-sm font-bold text-right">9 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="padding-bottom-sm">Målavkastning</td>
+                                                        <td class="padding-bottom-sm font-bold text-right">9 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="padding-bottom-sm">Målavkastning</td>
+                                                        <td class="padding-bottom-sm font-bold text-right">9 %</td>
+                                                    </tr>
+                                                </table>
+                                                <div class="slider slider--horiz js-slider">
+                                                    <div class="slider__range">
+                                                        <label class="sr-only" for="sliderValue">Slider value</label>
+                                                        <input class="slider__input" type="range" id="sliderValue" name="sliderValue" min="0" max="100" step="1" value="0">
+                                                    </div>
+                                                    <div class="text-right" aria-hidden="true">
+                                                        <span class="slider__value"><span class="js-slider__value">0</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="expandable-list__item" :class="{'expandable-list__item--expanded': expanded}" x-data="{expanded:false}">
+                                    <div class="expandable-list__parent" @click="expanded = !expanded">
+                                        Has sub content
+                                        <svg class="icon" :class="{ 'flip-y': expanded }">
+                                            <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" />
+                                        </svg>
                                     </div>
                                     <div class="expandable-list__content">
-                                       <div class="tag-list margin-bottom-md">
-                                          <div class="tag-list__item">Kredittyp</div>
-                                          <div class="tag-list__item">Kredittyp</div>
-                                          <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-se" class="tag-list__item tag-list__item--flag" viewBox="0 0 512 512">
-                                             <path fill="#066aa7" d="M0 0h512v512H0z" />
-                                             <path fill="#fecc00" d="M0 204.8h512v102.4H0z" />
-                                             <path fill="#fecc00" d="M134 0h102.4v512H134z" />
-                                          </svg>
-                                       </div>
-                                       <table class="width-100%">
-                                          <tr>
-                                             <td class="padding-bottom-sm">Målavkastning</td>
-                                             <td class="padding-bottom-sm font-bold text-right">9 %</td>
-                                          </tr>
-                                          <tr>
-                                             <td class="padding-bottom-sm">Målavkastning</td>
-                                             <td class="padding-bottom-sm font-bold text-right">9 %</td>
-                                          </tr>
-                                          <tr>
-                                             <td class="padding-bottom-sm">Målavkastning</td>
-                                             <td class="padding-bottom-sm font-bold text-right">9 %</td>
-                                          </tr>
-                                          <tr>
-                                             <td class="padding-bottom-sm">Målavkastning</td>
-                                             <td class="padding-bottom-sm font-bold text-right">9 %</td>
-                                          </tr>
-                                          <tr>
-                                             <td class="padding-bottom-sm">Målavkastning</td>
-                                             <td class="padding-bottom-sm font-bold text-right">9 %</td>
-                                          </tr>
-                                       </table>
-                                       <div class="slider slider--horiz js-slider">
-                                          <div class="slider__range">
-                                             <label class="sr-only" for="sliderValue">Slider value</label>
-                                             <input class="slider__input" type="range" id="sliderValue" name="sliderValue" min="0" max="100" step="1" value="0">
-                                          </div>
-                                          <div class="text-right" aria-hidden="true">
-                                             <span class="slider__value"><span class="js-slider__value">0</span></span>
-                                          </div>
-                                       </div>
+                                        This is sub content
                                     </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="expandable-list__item" :class="{'expandable-list__item--expanded': expanded}" x-data="{expanded:false}">
-                              <div class="expandable-list__parent" @click="expanded = !expanded">
-                                 Has sub content
-                                 <svg class="icon" :class="{ 'flip-y': expanded }">
-                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" />
-                                 </svg>
-                              </div>
-                              <div class="expandable-list__content">
-                                 This is sub content
-                              </div>
-                           </div>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <div class="card col-12@sm col-6@md col-4@lg">
-                     <header class="card__header bg-gradient-progressive-right">
-                        <div class="card__header-inner">
-                           <h2 class="card__title card__title--large">SmartInvest</h2>
+                    </div>
+                    <div class="card col-12@sm col-6@md col-4@lg">
+                        <header class="card__header bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <h2 class="card__title card__title--large">SmartInvest</h2>
+                            </div>
+                        </header>
+                        <div class="card__content">
+                            <ul class="expandable-list">
+                                <li class="expandable-list__item">
+                                </li>
+                            </ul>
                         </div>
-                     </header>
-                     <div class="card__content">
-                        <ul class="expandable-list">
-                           <li class="expandable-list__item">
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="card card--simple col-12@sm col-6@md col-4@lg ">
-                     <header class="card__header bg-gradient-progressive-right">
-                        <div class="card__header-inner">
-                           <h2 class="card__title">SmartInvest</h2>
-                           <div class="card__data-display card__data-display--restless">
-                              Some Data
-                           </div>
+                    </div>
+                    <div class="card card--simple col-12@sm col-6@md col-4@lg ">
+                        <header class="card__header bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <h2 class="card__title">SmartInvest</h2>
+                                <div class="card__data-display card__data-display--restless">
+                                    Some Data
+                                </div>
+                            </div>
+                            <div class="card__header-action-icon card__header-action-icon--restless">
+                                <svg class="icon icon--restless">
+                                    <use xlink:href="assets/icons/remix.svg#ri-pencil-fill" />
+                                </svg>
+                            </div>
+                        </header>
+                    </div>
+                    <div class="card card--simple col-12@sm col-6@md col-4@lg ">
+                        <header class="card__header bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <h2 class="card__title">SmartInvest</h2>
+                                <div class="card__data-display card__data-display--genuine">
+                                    Some Other Color
+                                </div>
+                            </div>
+                            <div class="card__header-action-icon card__header-action-icon--genuine card__header-action-icon--inactive">
+                                <svg class="icon icon--restless">
+                                    <use xlink:href="assets/icons/remix.svg#ri-check-line" />
+                                </svg>
+                            </div>
+                        </header>
+                    </div>
+                    <div class="card card--simple col-12@sm col-6@md col-4@lg ">
+                        <header class="card__header bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <h2 class="card__title">SmartInvest</h2>
+                                <div class="card__data-display card__data-display--challenger">
+                                    Different color
+                                </div>
+                            </div>
+                            <div class="card__header-action-icon card__header-action-icon--challenger card__header-action-icon--inactive">
+                                <svg class="icon icon--restless">
+                                    <use xlink:href="assets/icons/remix.svg#ri-check-line" />
+                                </svg>
+                            </div>
+                        </header>
+                    </div>
+                    <div class="card col-12@sm col-6@md col-4@lg">
+                        <header class="card__header bg-gradient-progressive-right">
+                            <div class="card__header-inner">
+                                <div class="card__filters">
+                                    <div class="card__filter" aria-controls="filters">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-calendar-2-line" />
+                                        </svg>
+                                        <span class="card__filter-active-text">1 Jan 2021 – 31 jan 2021</span>
+                                    </div>
+                                </div>
+                                <h2 class="card__title">Mitt kapital</h2>
+                                <div class="card__data-display card__data-display--restless">
+                                    99 999 999,99 kr
+                                </div>
+                            </div>
+                        </header>
+                        <div class="card__content">
+                            <table class="card__data-table width-100%">
+                                <tbody>
+                                    <tr>
+                                        <td>Intjänad ränta</td>
+                                        <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Avgifter</td>
+                                        <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Intjänad ränta</td>
+                                        <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Avgifter</td>
+                                        <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="card__header-action-icon card__header-action-icon--restless">
-                           <svg class="icon icon--restless">
-                              <use xlink:href="assets/icons/remix.svg#ri-pencil-fill" />
-                           </svg>
+                    </div>
+                    <div class="card card--ref-a-friend col-12@sm col-6@md col-4@lg">
+                        <div class="card__content card__content--ref-a-friend">
+                            <h2 class="card__title card__title--large card__title--ref-a-friend">Friend header</h2>
+                            <div class="card__content-ref-a-friend-text">fiernd text</div>
+                            <ul class="card__list">
+                                <li>5 000 kr = <span class="color-restless">200 kr</span> something</li>
+                                <li>5 000 kr = <span class="color-restless">200 kr</span> something</li>
+                                <li>5 000 kr = <span class="color-restless">200 kr</span> something</li>
+                            </ul>
+                            <div class="card__text">fiernd text <span class="color-inclusive-3">fiernd text</span> </div>
+                            <div class="card__link-box">
+                                https://savelend.se?key=asdasdasdas
+                                <svg class="icon card__link-box__icon">
+                                    <use xlink:href="assets/icons/remix.svg#ri-file-copy-fill" />
+                                </svg>
+                            </div>
                         </div>
-                     </header>
-                  </div>
-                  <div class="card card--simple col-12@sm col-6@md col-4@lg ">
-                     <header class="card__header bg-gradient-progressive-right">
-                        <div class="card__header-inner">
-                           <h2 class="card__title">SmartInvest</h2>
-                           <div class="card__data-display card__data-display--genuine">
-                              Some Other Color
-                           </div>
+                        <div class="card__bottom">
+                            <div>some content</div>
                         </div>
-                        <div class="card__header-action-icon card__header-action-icon--genuine card__header-action-icon--inactive">
-                           <svg class="icon icon--restless">
-                              <use xlink:href="assets/icons/remix.svg#ri-check-line" />
-                           </svg>
-                        </div>
-                     </header>
-                  </div>
-                  <div class="card card--simple col-12@sm col-6@md col-4@lg ">
-                     <header class="card__header bg-gradient-progressive-right">
-                        <div class="card__header-inner">
-                           <h2 class="card__title">SmartInvest</h2>
-                           <div class="card__data-display card__data-display--challenger">
-                              Different color
-                           </div>
-                        </div>
-                        <div class="card__header-action-icon card__header-action-icon--challenger card__header-action-icon--inactive">
-                           <svg class="icon icon--restless">
-                              <use xlink:href="assets/icons/remix.svg#ri-check-line" />
-                           </svg>
-                        </div>
-                     </header>
-                  </div>
-                  <div class="card col-12@sm col-6@md col-4@lg">
-                     <header class="card__header bg-gradient-progressive-right">
-                        <div class="card__header-inner">
-                           <div class="card__filters">
-                              <div class="card__filter" aria-controls="filters">
-                                 <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-calendar-2-line" />
-                                 </svg>
-                                 <span class="card__filter-active-text">1 Jan 2021 – 31 jan 2021</span>
-                              </div>
-                           </div>
-                           <h2 class="card__title">Mitt kapital</h2>
-                           <div class="card__data-display card__data-display--restless">
-                              99 999 999,99 kr
-                           </div>
-                        </div>
-                     </header>
-                     <div class="card__content">
-                        <table class="card__data-table width-100%">
-                           <tbody>
-                              <tr>
-                                 <td>Intjänad ränta</td>
-                                 <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                              </tr>
-                              <tr>
-                                 <td>Avgifter</td>
-                                 <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                              </tr>
-                              <tr>
-                                 <td>Intjänad ränta</td>
-                                 <td class="text-right font-semibold color-progressive text-md">99 999 999,00 kr</td>
-                              </tr>
-                              <tr>
-                                 <td>Avgifter</td>
-                                 <td class="text-right font-semibold color-challenger text-md">-99 999 999,00 kr</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </div>
-                  <div class="card card--ref-a-friend col-12@sm col-6@md col-4@lg">
-                     <div class="card__content card__content--ref-a-friend">
-                        <h2 class="card__title card__title--large card__title--ref-a-friend">Friend header</h2>
-                        <div class="card__content-ref-a-friend-text">fiernd text</div>
-                        <ul class="card__list">
-                           <li>5 000 kr = <span class="color-restless">200 kr</span> something</li>
-                           <li>5 000 kr = <span class="color-restless">200 kr</span> something</li>
-                           <li>5 000 kr = <span class="color-restless">200 kr</span> something</li>
-                        </ul>
-                        <div class="card__text">fiernd text <span class="color-inclusive-3">fiernd text</span> </div>
-                        <div class="card__link-box">
-                           https://savelend.se?key=asdasdasdas
-                           <svg class="icon card__link-box__icon">
-                              <use xlink:href="assets/icons/remix.svg#ri-file-copy-fill" />
-                           </svg>
-                        </div>
-                     </div>
-                     <div class="card__bottom">
-                        <div>some content</div>
-                     </div>
-                  </div>
+                    </div>
                     <div class="col-12@sm col-12@md col-10@lg card">
-                   <header class="card__header bg-gradient-progressive-right">
-                        <div class="card__header-inner card__header-inner--desktop-wide">
-                           <div class="card__filters">
-                              <div class="card__filter" aria-controls="filters" aria-expanded="false" aria-haspopup="true">
-                                 <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-calendar-2-line"></use>
-                                 </svg>
-                                 <span class="card__filter-active-text">1 Jan 2021 – 31 jan 2021</span>
-                              </div>
-                              <button class="reset card__sort">
-                                 <span class="sr-only">Sortera</span>
-                                 <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-sort-desc"></use>
-                                 </svg>
-                              </button>
-                           </div>
-                           <div class="card__tabs">
-                              <button class="reset card__tab-btn active" :class="{ 'active': tab === 'innehav' }" @click="tab = 'innehav'; selected = []">Innehav</button>
-                              <button class="reset card__tab-btn" :class="{ 'active': tab === 'sale' }" @click="tab = 'sale'; selected = []">Till försäljning</button>
-                           </div>
-                           <div>
-                              <h2 class="card__title">My Assets</h2>
-                              <div class="card__data-display card__data-display--restless">
-                                 22 999 999,99 kr
-                              </div>
-                           </div>
+                        <header class="card__header bg-gradient-progressive-right">
+                            <div class="card__header-inner card__header-inner--desktop-wide">
+                                <div class="card__filters">
+                                    <div class="card__filter" aria-controls="filters" aria-expanded="false" aria-haspopup="true">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-calendar-2-line"></use>
+                                        </svg>
+                                        <span class="card__filter-active-text">1 Jan 2021 – 31 jan 2021</span>
+                                    </div>
+                                    <button class="reset card__sort">
+                                        <span class="sr-only">Sortera</span>
+                                        <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-sort-desc"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="card__tabs">
+                                    <button class="reset card__tab-btn active" :class="{ 'active': tab === 'innehav' }" @click="tab = 'innehav'; selected = []">Innehav</button>
+                                    <button class="reset card__tab-btn" :class="{ 'active': tab === 'sale' }" @click="tab = 'sale'; selected = []">Till försäljning</button>
+                                </div>
+                                <div>
+                                    <h2 class="card__title">My Assets</h2>
+                                    <div class="card__data-display card__data-display--restless">
+                                        22 999 999,99 kr
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="card__content card__content--tabbed">
+                            <table x-show="tab === 'innehav'" class="card__content-tab card__data-table width-100%">
+                                <tr class="card__data-table__header">
+                                    <td></td>
+                                    <td>Asset Class</td>
+                                    <td class='display@sm'>Originator</td>
+                                    <td class='display@md'>Date</td>
+                                    <td class='display@md'>Return</td>
+                                    <td class='display@md'>Term</td>
+                                    <td>Claim</td>
+                                </tr>
+                                <tr class="card__data-table__row card__data-table__row--bordered">
+                                    <td class="card__data-table__item">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/icons/remix.svg#ri-lock-line"></use>
+                                        </svg>
+                                        <label for="Konsumentkredit1"></label>
+                                    </td>
+                                    <td class="card__data-table__item card__data-table__item--disabled">
+                                        Debt collection portfolio
+                                        <span class="card__data-table__item-undertext">Something</span>
+                                    </td>
+                                    <td class="card__data-table__item display@sm">
+                                        Originator
+                                    </td>
+                                    <td class="card__data-table__item display@md">
+                                        5 jan 2021
+                                    </td>
+                                    <td class="card__data-table__item display@md">
+                                        10,00 %
+                                    </td>
+                                    <td class="card__data-table__item display@md">
+                                        5
+                                    </td>
+                                    <td class="card__data-table__item" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
+                                        <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
+                                    </td>
+                                </tr>
+                                <tr class="card__data-table__row card__data-table__row--bordered">
+                                    <td class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit2" class="checkbox" x-model="selected" value="2">
+                                        <label for="Konsumentkredit2"></label>
+                                    </td>
+                                    <td class="card__data-table__item card__data-table__item--clickable" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
+                                        Debt collection portfolio
+                                    </td>
+                                    <td class="card__data-table__item display@sm">
+                                        Partner Inkasso
+                                    </td>
+                                    <td class="card__data-table__item display@md">
+                                        5 jan 2021
+                                    </td>
+                                    <td class="card__data-table__item display@md">
+                                        10,00 %
+                                    </td>
+                                    <td class="card__data-table__item display@md">
+                                        5
+                                    </td>
+                                    <td class="card__data-table__item" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
+                                        <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
+                                    </td>
+                                </tr>
+                                <tr class="card__data-table__row card__data-table__row--bordered">
+                                    <td class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit2" class="checkbox" x-model="selected" value="2">
+                                        <label for="Konsumentkredit2"></label>
+                                    </td>
+                                    <td class="card__data-table__item card__data-table__item--clickable" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
+                                        Konsumentkredit
+                                    </td>
+                                    <td class="card__data-table__item display@sm">
+                                        Originator
+                                    </td>
+                                    <td class="card__data-table__item display@md">
+                                        5 jan 2021
+                                    </td>
+                                    <td class="card__data-table__item display@md">
+                                        10,00 %
+                                    </td>
+                                    <td class="card__data-table__item display@md">
+                                        5
+                                    </td>
+                                    <td class="card__data-table__item" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
+                                        <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div x-show="tab === 'sale'" class="card__content-tab card__html width-100%" style="display: none;">
+                                <h4 class="text-center color-progressive margin-bottom-md">Du har inga krediter till försäljning</h4>
+                                <p class="text-center color-progressive-2 margin-bottom-lg">Så här gör du för att sälja krediter. Text text text. Text text text. Text text text. Text text text. Text text text. Text text text.</p>
+                                <a href="#" class="btn btn--accent table margin-auto">Läs mer</a>
+                            </div>
                         </div>
-                     </header>
-                     <div class="card__content card__content--tabbed">
-                        <table x-show="tab === 'innehav'" class="card__content-tab card__data-table width-100%">
-                           <tr class="card__data-table__header" >
-                              <td></td>
-                              <td>Asset Class</td>
-                              <td class='display@sm'>Originator</td>
-                              <td class='display@md'>Date</td>
-                              <td class='display@md'>Return</td>
-                              <td class='display@md'>Term</td>
-                              <td>Claim</td>
-                           </tr>
-                           <tr class="card__data-table__row card__data-table__row--bordered">
-                              <td class="card__data-table__item">
-                                 <svg class="icon">
-                                    <use xlink:href="assets/icons/remix.svg#ri-lock-line"></use>
-                                 </svg>
-                                 <label for="Konsumentkredit1"></label>
-                              </td>
-                              <td class="card__data-table__item card__data-table__item--disabled">
-                                 Debt collection portfolio
-                                 <span class="card__data-table__item-undertext">Something</span>
-                              </td>
-                              <td class="card__data-table__item display@sm">
-                                 Originator
-                              </td>
-                              <td class="card__data-table__item display@md">
-                                 5 jan 2021
-                              </td>
-                              <td class="card__data-table__item display@md">
-                                 10,00 %
-                              </td>
-                              <td class="card__data-table__item display@md">
-                                 5
-                              </td>
-                              <td class="card__data-table__item" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
-                                 <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
-                              </td>
-                           </tr>
-                           <tr class="card__data-table__row card__data-table__row--bordered">
-                              <td class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit2" class="checkbox" x-model="selected" value="2">
-                                 <label for="Konsumentkredit2"></label>
-                              </td>
-                              <td class="card__data-table__item card__data-table__item--clickable" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
-                                 Debt collection portfolio
-                              </td>
-                              <td class="card__data-table__item display@sm">
-                                 Partner Inkasso
-                              </td>
-                              <td class="card__data-table__item display@md">
-                                 5 jan 2021
-                              </td>
-                              <td class="card__data-table__item display@md">
-                                 10,00 %
-                              </td>
-                              <td class="card__data-table__item display@md">
-                                 5
-                              </td>
-                              <td class="card__data-table__item" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
-                                 <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
-                              </td>
-                           </tr>
-                           <tr class="card__data-table__row card__data-table__row--bordered">
-                              <td class="card__data-table__item"><input type="checkbox" name="Konsumentkredit[]" id="Konsumentkredit2" class="checkbox" x-model="selected" value="2">
-                                 <label for="Konsumentkredit2"></label>
-                              </td>
-                              <td class="card__data-table__item card__data-table__item--clickable" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
-                                 Konsumentkredit
-                              </td>
-                              <td class="card__data-table__item display@sm">
-                                 Originator
-                              </td>
-                              <td class="card__data-table__item display@md">
-                                 5 jan 2021
-                              </td>
-                              <td class="card__data-table__item display@md">
-                                 10,00 %
-                              </td>
-                              <td class="card__data-table__item display@md">
-                                 5
-                              </td>
-                              <td class="card__data-table__item" aria-controls="credit" aria-expanded="false" aria-haspopup="true">
-                                 <span class="text-right font-semibold color-challenger text-md">- 99 999 999,00 kr</span>
-                              </td>
-                           </tr>
-                        </table>
-                        <div x-show="tab === 'sale'" class="card__content-tab card__html width-100%" style="display: none;">
-                           <h4 class="text-center color-progressive margin-bottom-md">Du har inga krediter till försäljning</h4>
-                           <p class="text-center color-progressive-2 margin-bottom-lg">Så här gör du för att sälja krediter. Text text text. Text text text. Text text text. Text text text. Text text text. Text text text.</p>
-                           <a href="#" class="btn btn--accent table margin-auto">Läs mer</a>
-                        </div>
-                     </div>
-                   </div>
-               </div>
-               <div class="onboarding-box">
-                  <header class="onboarding-box__header onboarding-box__header--complete">
+                    </div>
+                </div>
+                <div class="onboarding-box">
+                    <header class="onboarding-box__header onboarding-box__header--complete">
                         What's you phone number?
                         <svg class="icon">
-                        <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" />
+                            <use xlink:href="assets/icons/remix.svg#ri-delete-bin-line" />
                         </svg>
                     </header>
-               </div>
-               <div class="onboarding-box__content"></div>
+                </div>
+                <div class="onboarding-box__content"></div>
             </div>
-         </div>
-      </div>
-      </div>
-      </div>
-      <div class="js-modal modal-wrapper" id='ok-modal'>
-         <div class="modal">
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="js-modal modal-wrapper" id='ok-modal'>
+        <div class="modal">
             <svg class="icon modal__icon modal__icon--success" :class="{ 'flip-y': expanded }">
-               <use xlink:href="assets/icons/remix.svg#ri-check-line" />
+                <use xlink:href="assets/icons/remix.svg#ri-check-line" />
             </svg>
             <h2>Header lorem ipmusm</h2>
             <div class="modal__content">
-               <p>Some text lorem ipmusm</p>
+                <p>Some text lorem ipmusm</p>
             </div>
             <div class="modal__actions">
-               <a class="btn btn--accent table margin-auto" aria-controls="ok-modal">Ok</a>
+                <a class="btn btn--accent table margin-auto" aria-controls="ok-modal">Ok</a>
             </div>
-         </div>
-         <div class="modal__overlay" aria-controls="ok-modal"></div>
-      </div>
-      <div class="js-modal modal-wrapper" id='info-modal'>
-         <div class="modal">
+        </div>
+        <div class="modal__overlay" aria-controls="ok-modal"></div>
+    </div>
+    <div class="js-modal modal-wrapper" id='info-modal'>
+        <div class="modal">
             <svg class="icon modal__icon modal__icon--info" :class="{ 'flip-y': expanded }">
-               <use xlink:href="assets/icons/remix.svg#ri-information-line" />
+                <use xlink:href="assets/icons/remix.svg#ri-information-line" />
             </svg>
             <h2>Header lorem ipmusm</h2>
             <div class="modal__content">
-               <p>Some text lorem ipmusm</p>
+                <p>Some text lorem ipmusm</p>
             </div>
             <div class="modal__actions">
-               <a class="btn btn--accent table margin-auto" aria-controls="info-modal">Ok</a>
+                <a class="btn btn--accent table margin-auto" aria-controls="info-modal">Ok</a>
             </div>
-         </div>
-         <div class="modal__overlay" aria-controls="info-modal"></div>
-      </div>
-      <div class="js-modal modal-wrapper" id='error-modal'>
-         <div class="modal">
+        </div>
+        <div class="modal__overlay" aria-controls="info-modal"></div>
+    </div>
+    <div class="js-modal modal-wrapper" id='error-modal'>
+        <div class="modal">
             <svg class="icon modal__icon modal__icon--error" :class="{ 'flip-y': expanded }">
-               <use xlink:href="assets/icons/remix.svg#ri-close-line" />
+                <use xlink:href="assets/icons/remix.svg#ri-close-line" />
             </svg>
             <h2>Header lorem ipmusm</h2>
             <div class="modal__content">
-               <p>Some text lorem ipmusm</p>
+                <p>Some text lorem ipmusm</p>
             </div>
             <div class="modal__actions">
-               <a class="btn btn--accent table margin-auto" aria-controls="error-modal">Ok</a>
+                <a class="btn btn--accent table margin-auto" aria-controls="error-modal">Ok</a>
             </div>
-         </div>
-         <div class="modal__overlay" aria-controls="error-modal"></div>
-      </div>
-      <div class="selected-credits-sheet selected-credits-sheet--visible">
-         <div class='selected-credits-sheet__label'>
+        </div>
+        <div class="modal__overlay" aria-controls="error-modal"></div>
+    </div>
+    <div class="selected-credits-sheet selected-credits-sheet--visible">
+        <div class='selected-credits-sheet__label'>
             Value of selected credits: <span class='padding-left-xs'> 88 777 111 (SEK) </span>
-         </div>
-         <button class="btn btn--challenger">
+        </div>
+        <button class="btn btn--challenger">
             Sell slected credits (2)
-         </button>
-      </div>
-      <div class="bottom-sheet_wrapper js-bottomsheet" id="menu">
-         <div class="bottom-sheet_overlay" aria-controls="menu"></div>
-         <div class="bottom-sheet bottom-sheet--force-side">
+        </button>
+    </div>
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="menu">
+        <div class="bottom-sheet_overlay" aria-controls="menu"></div>
+        <div class="bottom-sheet bottom-sheet--force-side">
             <div class="bottom-sheet_header bottom-sheet_header--large flex items-stretch">
-               <button aria-controls="menu" class="color-challenger bg-transparent border-0 padding-none">
-                  <svg class="icon icon--md">
-                     <use xlink:href="assets/icons/remix.svg#ri-close-line" />
-                  </svg>
-               </button>
-               <div class="flex-grow flex justify-between items-center" aria-controls="menu-item--depots">
-                  <div class="bottom-sheet_header_label flex-grow">
-                     <div class="text-center font-semibold color-restless text-lg">My depot 1 (SEK)</div>
-                     <div class="text-center text-sm">Joakim Bergman</div>
-                  </div>
-                  <svg class="icon icon--sm">
-                     <use xlink:href="assets/icons/remix.svg#ri-arrow-left-right-line" />
-                  </svg>
-               </div>
+                <button aria-controls="menu" class="color-challenger bg-transparent border-0 padding-none">
+                    <svg class="icon icon--md">
+                        <use xlink:href="assets/icons/remix.svg#ri-close-line" />
+                    </svg>
+                </button>
+                <div class="flex-grow flex justify-between items-center" aria-controls="menu-item--depots">
+                    <div class="bottom-sheet_header_label flex-grow">
+                        <div class="text-center font-semibold color-restless text-lg">My depot 1 (SEK)</div>
+                        <div class="text-center text-sm">Joakim Bergman</div>
+                    </div>
+                    <svg class="icon icon--sm">
+                        <use xlink:href="assets/icons/remix.svg#ri-arrow-left-right-line" />
+                    </svg>
+                </div>
             </div>
             <div class="bottom-sheet_content">
-               <div class="bg-offwhite-1 flex flex-column justify-between flex-grow">
-                  <ul>
-                     <li>
-                        <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
-                           About Me
-                           <svg class="icon color-challenger">
-                              <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" />
-                           </svg>
-                        </button>
-                     </li>
-                     <li>
-                        <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
-                           KYC & Terms
-                           <svg class="icon color-challenger">
-                              <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" />
-                           </svg>
-                        </button>
-                     </li>
-                     <li>
-                        <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
-                           Bank Accounts
-                           <svg class="icon color-challenger">
-                              <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" />
-                           </svg>
-                        </button>
-                     </li>
-                     <li>
-                        <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
-                           Messages
-                           <svg class="icon color-challenger">
-                              <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" />
-                           </svg>
-                        </button>
-                     </li>
-                     <li>
-                        <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
-                           Refer-a-friend
-                           <svg class="icon color-challenger">
-                              <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" />
-                           </svg>
-                        </button>
-                     </li>
-                     <li>
-                        <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
-                           Support
-                           <svg class="icon color-challenger">
-                              <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" />
-                           </svg>
-                        </button>
-                     </li>
-                  </ul>
-                  <div class="flex justify-between items-center padding-md bg-offwhite-2">
-                     <a href="#logout" class="font-semibold text-lg color-progressive text-decoration-none">
-                        <svg class="icon color-progressive-4">
-                           <use xlink:href="assets/icons/remix.svg#ri-logout-box-r-line" />
-                        </svg>
-                        Log out
-                     </a>
-                     <div class="adv-select js-adv-select">
-                        <select name="adv-select" id="adv-select">
-                           <option value="1" data-option-avatar="https://hatscripts.github.io/circle-flags/flags/se.svg">SV</option>
-                           <option value="2" data-option-avatar="https://hatscripts.github.io/circle-flags/flags/gb.svg">EN</option>
-                        </select>
-                        <button class="adv-select__control is-hidden js-adv-select__control flex items-center radius-full border-0 bg-offwhite padding-x-md padding-y-xs" aria-controls="adv-select-popover-1" aria-haspopup="listbox">
-                           <span class="js-adv-select__value">
-                              <!-- dynamically updated with the .adv-select-popover__option content -->
-                           </span>
-                           <svg class="icon icon--xxs margin-left-xxs" aria-hidden="true" viewBox="0 0 12 12">
-                              <path d="M10.947,3.276A.5.5,0,0,0,10.5,3h-9a.5.5,0,0,0-.4.8l4.5,6a.5.5,0,0,0,.8,0l4.5-6A.5.5,0,0,0,10.947,3.276Z" />
-                           </svg>
-                        </button>
-                     </div>
-                     <div id="adv-select-popover-1" class="adv-select-popover popover bg-offwhite-3 padding-y-xxs radius-md shadow-md is-hidden js-popover js-adv-select-popover js-tab-focus" role="listbox">
-                        <div class="adv-select-popover__optgroup" role="group" describedby="optgroup-label">
-                           <!-- label -->
-                           <div id="optgroup-label" class="adv-select-popover__label text-sm color-contrast-medium padding-y-xs padding-x-md">{optgroup-label}</div>
-                           <!-- option -->
-                           <div class="adv-select-popover__option padding-y-xxs padding-x-md" role="option">
-                              <div class="flex items-center">
-                                 <img class="width-xs height-xs radius-50% object-cover margin-right-xs" src="{option-avatar}" alt="Language">
-                                 <div class="text-truncate">{option-label}</div>
-                                 <svg class="adv-select-popover__check icon icon--xs margin-left-auto" viewBox="0 0 16 16">
-                                    <polyline stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" points="1,9 5,13 15,3" />
-                                 </svg>
-                              </div>
-                           </div>
+                <div class="bg-offwhite-1 flex flex-column justify-between flex-grow">
+                    <ul>
+                        <li>
+                            <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
+                                About Me
+                                <svg class="icon color-challenger">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" />
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
+                                KYC & Terms
+                                <svg class="icon color-challenger">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" />
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
+                                Bank Accounts
+                                <svg class="icon color-challenger">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" />
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
+                                Messages
+                                <svg class="icon color-challenger">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" />
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
+                                Refer-a-friend
+                                <svg class="icon color-challenger">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" />
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-controls="menu-item" class="border-bottom-only border-2 border-offwhite-2 flex items-center justify-between width-100% padding-md bg-offwhite-1 font-semibold text-lg color-progressive">
+                                Support
+                                <svg class="icon color-challenger">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-right-s-line" />
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between items-center padding-md bg-offwhite-2">
+                        <a href="#logout" class="font-semibold text-lg color-progressive text-decoration-none">
+                            <svg class="icon color-progressive-4">
+                                <use xlink:href="assets/icons/remix.svg#ri-logout-box-r-line" />
+                            </svg>
+                            Log out
+                        </a>
+                        <div class="adv-select js-adv-select">
+                            <select name="adv-select" id="adv-select">
+                                <option value="1" data-option-avatar="https://hatscripts.github.io/circle-flags/flags/se.svg">SV</option>
+                                <option value="2" data-option-avatar="https://hatscripts.github.io/circle-flags/flags/gb.svg">EN</option>
+                            </select>
+                            <button class="adv-select__control is-hidden js-adv-select__control flex items-center radius-full border-0 bg-offwhite padding-x-md padding-y-xs" aria-controls="adv-select-popover-1" aria-haspopup="listbox">
+                                <span class="js-adv-select__value">
+                                    <!-- dynamically updated with the .adv-select-popover__option content -->
+                                </span>
+                                <svg class="icon icon--xxs margin-left-xxs" aria-hidden="true" viewBox="0 0 12 12">
+                                    <path d="M10.947,3.276A.5.5,0,0,0,10.5,3h-9a.5.5,0,0,0-.4.8l4.5,6a.5.5,0,0,0,.8,0l4.5-6A.5.5,0,0,0,10.947,3.276Z" />
+                                </svg>
+                            </button>
                         </div>
-                     </div>
-                  </div>
-               </div>
+                        <div id="adv-select-popover-1" class="adv-select-popover popover bg-offwhite-3 padding-y-xxs radius-md shadow-md is-hidden js-popover js-adv-select-popover js-tab-focus" role="listbox">
+                            <div class="adv-select-popover__optgroup" role="group" describedby="optgroup-label">
+                                <!-- label -->
+                                <div id="optgroup-label" class="adv-select-popover__label text-sm color-contrast-medium padding-y-xs padding-x-md">{optgroup-label}</div>
+                                <!-- option -->
+                                <div class="adv-select-popover__option padding-y-xxs padding-x-md" role="option">
+                                    <div class="flex items-center">
+                                        <img class="width-xs height-xs radius-50% object-cover margin-right-xs" src="{option-avatar}" alt="Language">
+                                        <div class="text-truncate">{option-label}</div>
+                                        <svg class="adv-select-popover__check icon icon--xs margin-left-auto" viewBox="0 0 16 16">
+                                            <polyline stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" points="1,9 5,13 15,3" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="bottom-sheet_wrapper js-bottomsheet" id="menu-item--depots">
-         <div class="bottom-sheet_overlay" aria-controls="menu-item--depots"></div>
-         <div class="bottom-sheet bottom-sheet--force-side">
+        </div>
+    </div>
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="menu-item--depots">
+        <div class="bottom-sheet_overlay" aria-controls="menu-item--depots"></div>
+        <div class="bottom-sheet bottom-sheet--force-side">
             <div class="bottom-sheet_header bottom-sheet_header--large">
-               <button aria-controls="menu-item--depots" class="color-challenger bg-transparent border-0 padding-none">
-                  <svg class="icon icon--md">
-                     <use xlink:href="assets/icons/remix.svg#ri-arrow-left-s-line" />
-                  </svg>
-               </button>
-               <div class="flex-grow flex justify-between items-center" aria-controls="menu-item--depots">
-                  <div class="bottom-sheet_header_label flex-grow">
-                     <div class="text-center font-semibold color-restless text-lg">My depots</div>
-                  </div>
-               </div>
+                <button aria-controls="menu-item--depots" class="color-challenger bg-transparent border-0 padding-none">
+                    <svg class="icon icon--md">
+                        <use xlink:href="assets/icons/remix.svg#ri-arrow-left-s-line" />
+                    </svg>
+                </button>
+                <div class="flex-grow flex justify-between items-center" aria-controls="menu-item--depots">
+                    <div class="bottom-sheet_header_label flex-grow">
+                        <div class="text-center font-semibold color-restless text-lg">My depots</div>
+                    </div>
+                </div>
             </div>
             <div class="bottom-sheet_content bg-offwhite-2">
-               <div class="account-selector">
-                  <div class="account-selector_header account-selector_header--selected">
-                     <svg class="icon icon--sm">
-                        <use xlink:href="assets/icons/remix.svg#ri-user-fill" />
-                     </svg>
-                     <div class="account-selector_header-title">Joakim Bergman</div>
-                     <svg class="icon icon--sm">
-                        <use xlink:href="assets/icons/remix.svg#ri-add-fill" />
-                     </svg>
-                  </div>
-                  <div class="account-selector_content">
-                     <div class="account-selector_content-row">
-                        <svg class="icon icon--md">
-                           <use xlink:href="assets/icons/remix.svg#ri-checkbox-circle-line" />
+                <div class="account-selector">
+                    <div class="account-selector_header account-selector_header--selected">
+                        <svg class="icon icon--sm">
+                            <use xlink:href="assets/icons/remix.svg#ri-user-fill" />
                         </svg>
-                        <div class="account-selector_content-title">
-                           <div class="text-lg font-semibold">My depot 1</div>
-                           <div>1 000 000,00 SEK</div>
+                        <div class="account-selector_header-title">Joakim Bergman</div>
+                        <svg class="icon icon--sm">
+                            <use xlink:href="assets/icons/remix.svg#ri-add-fill" />
+                        </svg>
+                    </div>
+                    <div class="account-selector_content">
+                        <div class="account-selector_content-row">
+                            <svg class="icon icon--md">
+                                <use xlink:href="assets/icons/remix.svg#ri-checkbox-circle-line" />
+                            </svg>
+                            <div class="account-selector_content-title">
+                                <div class="text-lg font-semibold">My depot 1</div>
+                                <div>1 000 000,00 SEK</div>
+                            </div>
+                            <svg class="icon icon--sm color-challenger" aria-controls="menu-example">
+                                <use xlink:href="assets/icons/remix.svg#ri-more-2-fill" />
+                            </svg>
                         </div>
-                        <svg class="icon icon--sm color-challenger" aria-controls="menu-example">
-                           <use xlink:href="assets/icons/remix.svg#ri-more-2-fill" />
-                        </svg>
-                     </div>
-                     <div class="account-selector_content-row">
-                        <svg class="icon icon--md">
-                           <use xlink:href="assets/icons/remix.svg#ri-checkbox-blank-circle-line" />
-                        </svg>
-                        <div class="account-selector_content-title">
-                           <div class="text-lg font-semibold">My depot 2</div>
-                           <div>1 000 000,00 SEK</div>
+                        <div class="account-selector_content-row">
+                            <svg class="icon icon--md">
+                                <use xlink:href="assets/icons/remix.svg#ri-checkbox-blank-circle-line" />
+                            </svg>
+                            <div class="account-selector_content-title">
+                                <div class="text-lg font-semibold">My depot 2</div>
+                                <div>1 000 000,00 SEK</div>
+                            </div>
+                            <svg class="icon icon--sm color-challenger" aria-controls="menu-example">
+                                <use xlink:href="assets/icons/remix.svg#ri-more-2-fill" />
+                            </svg>
                         </div>
-                        <svg class="icon icon--sm color-challenger" aria-controls="menu-example">
-                           <use xlink:href="assets/icons/remix.svg#ri-more-2-fill" />
+                    </div>
+                    <div class="account-selector_header">
+                        <svg class="icon icon--sm">
+                            <use xlink:href="assets/icons/remix.svg#ri-briefcase-line" />
                         </svg>
-                     </div>
-                  </div>
-                  <div class="account-selector_header">
-                     <svg class="icon icon--sm">
-                        <use xlink:href="assets/icons/remix.svg#ri-briefcase-line" />
-                     </svg>
-                     <div class="account-selector_header-title">Super Company</div>
-                     <svg class="icon icon--sm color-challenger">
-                        <use xlink:href="assets/icons/remix.svg#ri-arrow-left-right-line" />
-                     </svg>
-                  </div>
-               </div>
-               <menu id="menu-example" class="menu js-menu">
-                  <li role="menuitem">
-                     <span class="menu__content js-menu__content">
-                        <svg class="icon menu__icon" aria-hidden="true" viewBox="0 0 12 12">
-                           <path d="M10.121.293a1,1,0,0,0-1.414,0L1,8,0,12l4-1,7.707-7.707a1,1,0,0,0,0-1.414Z"></path>
+                        <div class="account-selector_header-title">Super Company</div>
+                        <svg class="icon icon--sm color-challenger">
+                            <use xlink:href="assets/icons/remix.svg#ri-arrow-left-right-line" />
                         </svg>
-                        <span>Rename</span>
-                     </span>
-                  </li>
-                  <li role="menuitem">
-                     <span class="menu__content js-menu__content">
-                        <svg class="icon menu__icon" aria-hidden="true" viewBox="0 0 16 16">
-                           <path d="M15,4H1C0.4,4,0,4.4,0,5v10c0,0.6,0.4,1,1,1h14c0.6,0,1-0.4,1-1V5C16,4.4,15.6,4,15,4z M14,14H2V6h12V14z"></path>
-                           <rect x="2" width="12" height="2"></rect>
-                        </svg>
-                        <span>Transfer money</span>
-                     </span>
-                  </li>
-                  <li role="menuitem">
-                     <span class="menu__content js-menu__content">
-                        <svg class="icon menu__icon" aria-hidden="true" viewBox="0 0 12 12">
-                           <path d="M8.354,3.646a.5.5,0,0,0-.708,0L6,5.293,4.354,3.646a.5.5,0,0,0-.708.708L5.293,6,3.646,7.646a.5.5,0,0,0,.708.708L6,6.707,7.646,8.354a.5.5,0,1,0,.708-.708L6.707,6,8.354,4.354A.5.5,0,0,0,8.354,3.646Z"></path>
-                           <path d="M6,0a6,6,0,1,0,6,6A6.006,6.006,0,0,0,6,0ZM6,10a4,4,0,1,1,4-4A4,4,0,0,1,6,10Z"></path>
-                        </svg>
-                        <span>Delete</span>
-                     </span>
-                  </li>
-               </menu>
+                    </div>
+                </div>
+                <menu id="menu-example" class="menu js-menu">
+                    <li role="menuitem">
+                        <span class="menu__content js-menu__content">
+                            <svg class="icon menu__icon" aria-hidden="true" viewBox="0 0 12 12">
+                                <path d="M10.121.293a1,1,0,0,0-1.414,0L1,8,0,12l4-1,7.707-7.707a1,1,0,0,0,0-1.414Z"></path>
+                            </svg>
+                            <span>Rename</span>
+                        </span>
+                    </li>
+                    <li role="menuitem">
+                        <span class="menu__content js-menu__content">
+                            <svg class="icon menu__icon" aria-hidden="true" viewBox="0 0 16 16">
+                                <path d="M15,4H1C0.4,4,0,4.4,0,5v10c0,0.6,0.4,1,1,1h14c0.6,0,1-0.4,1-1V5C16,4.4,15.6,4,15,4z M14,14H2V6h12V14z"></path>
+                                <rect x="2" width="12" height="2"></rect>
+                            </svg>
+                            <span>Transfer money</span>
+                        </span>
+                    </li>
+                    <li role="menuitem">
+                        <span class="menu__content js-menu__content">
+                            <svg class="icon menu__icon" aria-hidden="true" viewBox="0 0 12 12">
+                                <path d="M8.354,3.646a.5.5,0,0,0-.708,0L6,5.293,4.354,3.646a.5.5,0,0,0-.708.708L5.293,6,3.646,7.646a.5.5,0,0,0,.708.708L6,6.707,7.646,8.354a.5.5,0,1,0,.708-.708L6.707,6,8.354,4.354A.5.5,0,0,0,8.354,3.646Z"></path>
+                                <path d="M6,0a6,6,0,1,0,6,6A6.006,6.006,0,0,0,6,0ZM6,10a4,4,0,1,1,4-4A4,4,0,0,1,6,10Z"></path>
+                            </svg>
+                            <span>Delete</span>
+                        </span>
+                    </li>
+                </menu>
             </div>
-         </div>
-      </div>
-      <div class="bottom-sheet_wrapper js-bottomsheet" id="filters">
-         <div class="bottom-sheet_overlay" aria-controls="filters"></div>
-         <div class="bottom-sheet">
+        </div>
+    </div>
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="filters">
+        <div class="bottom-sheet_overlay" aria-controls="filters"></div>
+        <div class="bottom-sheet">
             <div class="bottom-sheet_header" aria-controls="filters">
-               <h3 class="bottom-sheet_header_label">
-                  Hantera filter
-               </h3>
-               <svg class="icon">
-                  <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" />
-               </svg>
+                <h3 class="bottom-sheet_header_label">
+                    Hantera filter
+                </h3>
+                <svg class="icon">
+                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" />
+                </svg>
             </div>
             <div class="bottom-sheet_content">
-               <ul class="bottom-sheet_filters-list">
-                  <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, selected: 'Filtervärde 1'}">
-                     <div class="bottom-sheet_filters-list_item_filter">
-                        <input type="checkbox" name="listitem1" id="listitem1" class="checkbox bottom-sheet_filters-list_check" />
-                        <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
-                        <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
-                           <span x-text="selected">Filtervärde 1</span>
-                           <svg class="icon" :class="{ 'flip-y': expanded }">
-                              <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" />
-                           </svg>
+                <ul class="bottom-sheet_filters-list">
+                    <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, selected: 'Filtervärde 1'}">
+                        <div class="bottom-sheet_filters-list_item_filter">
+                            <input type="checkbox" name="listitem1" id="listitem1" class="checkbox bottom-sheet_filters-list_check" />
+                            <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
+                            <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
+                                <span x-text="selected">Filtervärde 1</span>
+                                <svg class="icon" :class="{ 'flip-y': expanded }">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" />
+                                </svg>
+                            </div>
                         </div>
-                     </div>
-                     <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
-                        <li>
-                           <div class="bottom-sheet_filters-list_item_filter">
-                              <input type="radio" name="listitem1" id="listitem1-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
-                              <label for="listitem1-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="bottom-sheet_filters-list_item_filter">
-                              <input type="radio" name="listitem1" id="listitem1-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
-                              <label for="listitem1-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
-                           </div>
-                        </li>
-                        <li class='bottom-sheet_filters-sub-list-with-another-sub-list'>
-                           <ul class="bottom-sheet_filters-sub-list expanded">
-                              <li>
-                                 <div class="bottom-sheet_filters-list_item_filter">
+                        <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
+                            <li>
+                                <div class="bottom-sheet_filters-list_item_filter">
                                     <input type="radio" name="listitem1" id="listitem1-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
                                     <label for="listitem1-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
-                                 </div>
-                              </li>
-                              <li>
-                                 <div class="bottom-sheet_filters-list_item_filter">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bottom-sheet_filters-list_item_filter">
                                     <input type="radio" name="listitem1" id="listitem1-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
                                     <label for="listitem1-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
-                                 </div>
-                              </li>
-                           </ul>
-                        </li>
-                     </ul>
-                  </li>
-                  <li>
-                     <div class="bottom-sheet_filters-list_item_filter">
-                        <input type="checkbox" name="listitem2" id="listitem2" class="checkbox bottom-sheet_filters-list_check" />
-                        <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
-                     </div>
-                  </li>
-                  <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, 'selected': 'Filtervärde 1'}">
-                     <div class="bottom-sheet_filters-list_item_filter">
-                        <input type="checkbox" name="listitem1" id="listitem1" class="checkbox bottom-sheet_filters-list_check" />
-                        <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
-                        <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
-                           <span x-text="selected">Filtervärde 1</span>
-                           <svg class="icon" :class="{ 'flip-y': expanded }">
-                              <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" />
-                           </svg>
+                                </div>
+                            </li>
+                            <li class='bottom-sheet_filters-sub-list-with-another-sub-list'>
+                                <ul class="bottom-sheet_filters-sub-list expanded">
+                                    <li>
+                                        <div class="bottom-sheet_filters-list_item_filter">
+                                            <input type="radio" name="listitem1" id="listitem1-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
+                                            <label for="listitem1-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bottom-sheet_filters-list_item_filter">
+                                            <input type="radio" name="listitem1" id="listitem1-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
+                                            <label for="listitem1-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="bottom-sheet_filters-list_item_filter">
+                            <input type="checkbox" name="listitem2" id="listitem2" class="checkbox bottom-sheet_filters-list_check" />
+                            <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
                         </div>
-                     </div>
-                     <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
-                        <li>
-                           <div class="bottom-sheet_filters-list_item_filter">
-                              <input type="radio" name="listitem2" id="listitem2-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
-                              <label for="listitem2-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="bottom-sheet_filters-list_item_filter">
-                              <input type="radio" name="listitem2" id="listitem2-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
-                              <label for="listitem2-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
-                           </div>
-                        </li>
-                     </ul>
-                  </li>
-                  <li x-data="{editable: false}">
-                     <div class="bottom-sheet_filters-list_item_filter">
-                        <input type="checkbox" name="listitem2" id="listitem2" class="checkbox bottom-sheet_filters-list_check" />
-                        <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
-                        <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--editable" @click="editable = true; $refs.input.focus()">
-                           <input type="tel" value="99999" x-bind:disabled="editable == false" x-on:change="editable = false" x-ref="input" /> kr
-                           <svg class="icon" @click="editable = !editable; $refs.input.focus()">
-                              <use xlink:href="assets/icons/remix.svg#ri-edit-line" />
-                           </svg>
+                    </li>
+                    <li class="bottom-sheet_filters-list_item" x-data="{expanded: false, 'selected': 'Filtervärde 1'}">
+                        <div class="bottom-sheet_filters-list_item_filter">
+                            <input type="checkbox" name="listitem1" id="listitem1" class="checkbox bottom-sheet_filters-list_check" />
+                            <label for="listitem1" class="bottom-sheet_filters-list_name">Filternamn 1</label>
+                            <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--expandable" @click="expanded = !expanded">
+                                <span x-text="selected">Filtervärde 1</span>
+                                <svg class="icon" :class="{ 'flip-y': expanded }">
+                                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-s-fill" />
+                                </svg>
+                            </div>
                         </div>
-                     </div>
-                  </li>
-               </ul>
+                        <ul class="bottom-sheet_filters-sub-list" :class="{ 'expanded': expanded }">
+                            <li>
+                                <div class="bottom-sheet_filters-list_item_filter">
+                                    <input type="radio" name="listitem2" id="listitem2-1" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 1" checked />
+                                    <label for="listitem2-1" class="bottom-sheet_filters-list_name">Filtervärde 1</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bottom-sheet_filters-list_item_filter">
+                                    <input type="radio" name="listitem2" id="listitem2-2" class="radio bottom-sheet_filters-list_check" x-model="selected" value="Filtervärde 2" />
+                                    <label for="listitem2-2" class="bottom-sheet_filters-list_name">Filtervärde 2</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li x-data="{editable: false}">
+                        <div class="bottom-sheet_filters-list_item_filter">
+                            <input type="checkbox" name="listitem2" id="listitem2" class="checkbox bottom-sheet_filters-list_check" />
+                            <label for="listitem2" class="bottom-sheet_filters-list_name">Filternamn 2</label>
+                            <div class="bottom-sheet_filters-list_value bottom-sheet_filters-list_value--editable" @click="editable = true; $refs.input.focus()">
+                                <input type="tel" value="99999" x-bind:disabled="editable == false" x-on:change="editable = false" x-ref="input" /> kr
+                                <svg class="icon" @click="editable = !editable; $refs.input.focus()">
+                                    <use xlink:href="assets/icons/remix.svg#ri-edit-line" />
+                                </svg>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-         </div>
-      </div>
-      <div class="bottom-sheet_wrapper js-bottomsheet" id="credit">
-         <div class="bottom-sheet_overlay" aria-controls="credit"></div>
-         <div class="bottom-sheet">
+        </div>
+    </div>
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="credit">
+        <div class="bottom-sheet_overlay" aria-controls="credit"></div>
+        <div class="bottom-sheet">
             <div class="bottom-sheet_header" aria-controls="credit">
-               <h3 class="bottom-sheet_header_label">
-                  Konsumentkredit
-               </h3>
-               <svg class="icon">
-                  <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" />
-               </svg>
+                <h3 class="bottom-sheet_header_label">
+                    Konsumentkredit
+                </h3>
+                <svg class="icon">
+                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" />
+                </svg>
             </div>
             <div class="bottom-sheet_content">
-               <table class="bottom-sheet_table">
-                  <tr>
-                     <td>Kredittyp:</td>
-                     <td>Konsumentkredit</td>
-                  </tr>
-                  <tr>
-                     <td>Originator:</td>
-                     <td>SBL Finans</td>
-                  </tr>
-                  <tr>
-                     <td>Kredit-ID:</td>
-                     <td>abc123-abc123-abc123</td>
-                  </tr>
-                  <tr>
-                     <td>BRA:</td>
-                     <td>1,23 %</td>
-                  </tr>
-                  <tr>
-                     <td>Investeringsdatum:</td>
-                     <td>1 Jan 2021</td>
-                  </tr>
-                  <tr>
-                     <td>Etc…</td>
-                  </tr>
-               </table>
-               <table class="bottom-sheet_table bottom-sheet_table--dark">
-                  <tr class="position-sticky top-0">
-                     <th class="color-progressive text-left">Datum</th>
-                     <th class="color-progressive text-right">Belopp</th>
-                     <th class="color-progressive text-right">Varav ränta</th>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>25 jan 2021</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-               </table>
+                <table class="bottom-sheet_table">
+                    <tr>
+                        <td>Kredittyp:</td>
+                        <td>Konsumentkredit</td>
+                    </tr>
+                    <tr>
+                        <td>Originator:</td>
+                        <td>SBL Finans</td>
+                    </tr>
+                    <tr>
+                        <td>Kredit-ID:</td>
+                        <td>abc123-abc123-abc123</td>
+                    </tr>
+                    <tr>
+                        <td>BRA:</td>
+                        <td>1,23 %</td>
+                    </tr>
+                    <tr>
+                        <td>Investeringsdatum:</td>
+                        <td>1 Jan 2021</td>
+                    </tr>
+                    <tr>
+                        <td>Etc…</td>
+                    </tr>
+                </table>
+                <table class="bottom-sheet_table bottom-sheet_table--dark">
+                    <tr class="position-sticky top-0">
+                        <th class="color-progressive text-left">Datum</th>
+                        <th class="color-progressive text-right">Belopp</th>
+                        <th class="color-progressive text-right">Varav ränta</th>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>25 jan 2021</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                </table>
             </div>
-         </div>
-      </div>
-      <div class="bottom-sheet_wrapper js-bottomsheet" id="sale">
-         <div class="bottom-sheet_overlay" aria-controls="sale"></div>
-         <div class="bottom-sheet">
+        </div>
+    </div>
+    <div class="bottom-sheet_wrapper js-bottomsheet" id="sale">
+        <div class="bottom-sheet_overlay" aria-controls="sale"></div>
+        <div class="bottom-sheet">
             <div class="bottom-sheet_header" aria-controls="sale">
-               <h3 class="bottom-sheet_header_label">
-                  Sälj valda krediter (2)
-               </h3>
-               <svg class="icon">
-                  <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" />
-               </svg>
+                <h3 class="bottom-sheet_header_label">
+                    Sälj valda krediter (2)
+                </h3>
+                <svg class="icon">
+                    <use xlink:href="assets/icons/remix.svg#ri-arrow-down-line" />
+                </svg>
             </div>
             <div class="bottom-sheet_content padding-bottom-xxl">
-               <p class="padding-md">Genom att klicka på “Lägg ut till försäljning” kommer dina valda krediter att läggas ut till andrahandsmarknaden.</p>
-               <table class="bottom-sheet_table">
-                  <tr>
-                     <td>Krediter som ska säljas:</td>
-                     <td>2</td>
-                  </tr>
-                  <tr>
-                     <td>Krediternas värde:</td>
-                     <td>18 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Avgifter (5 %):</td>
-                     <td>0,9 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Till dig vid försäljning:</td>
-                     <td>17,1 kr</td>
-                  </tr>
-               </table>
-               <table class="bottom-sheet_table bottom-sheet_table--dark">
-                  <tr class="position-sticky top-0">
-                     <th class="color-progressive text-left">Kredittyp</th>
-                     <th class="color-progressive text-right">Värde</th>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-                  <tr>
-                     <td>Konsumentkredit</td>
-                     <td class="text-right">99 999 999,99 kr</td>
-                  </tr>
-               </table>
-               <button class="btn btn--accent btn--floating shadow-xl" aria-controls="sale"><span>Lägg ut till försäljning</span></button>
+                <p class="padding-md">Genom att klicka på “Lägg ut till försäljning” kommer dina valda krediter att läggas ut till andrahandsmarknaden.</p>
+                <table class="bottom-sheet_table">
+                    <tr>
+                        <td>Krediter som ska säljas:</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Krediternas värde:</td>
+                        <td>18 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Avgifter (5 %):</td>
+                        <td>0,9 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Till dig vid försäljning:</td>
+                        <td>17,1 kr</td>
+                    </tr>
+                </table>
+                <table class="bottom-sheet_table bottom-sheet_table--dark">
+                    <tr class="position-sticky top-0">
+                        <th class="color-progressive text-left">Kredittyp</th>
+                        <th class="color-progressive text-right">Värde</th>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Konsumentkredit</td>
+                        <td class="text-right">99 999 999,99 kr</td>
+                    </tr>
+                </table>
+                <button class="btn btn--accent btn--floating shadow-xl" aria-controls="sale"><span>Lägg ut till försäljning</span></button>
             </div>
-         </div>
-      </div>
-      <script src="assets/js/scripts.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js" integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A==" crossorigin="anonymous"></script>
-   </body>
+        </div>
+    </div>
+    <script src="assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js" integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A==" crossorigin="anonymous"></script>
+</body>
+
 </html>

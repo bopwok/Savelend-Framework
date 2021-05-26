@@ -7,8 +7,19 @@ Descr: Contains page title and holds notifications and user profile
 -------------------------------- */
 
 .title-bar {
+    position: sticky;
+    top: 0;
+    z-index: var(--zindex-header);
+    background: var(--color-offwhite-1);
+    width: 100%;
+    padding-top: var(--space-md);
+
     button {
         cursor: pointer;
+    }
+
+    @include breakpoint(md) {
+        position: static;
     }
 }
 
