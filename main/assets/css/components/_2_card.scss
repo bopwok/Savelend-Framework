@@ -420,6 +420,11 @@ Descr: Used to display data
 			@include breakpoint(sm) { 
 				display: table-row;
 			}
+
+			td:last-child{
+				text-align: right;
+				padding-right: var(--space-md);
+			}
 		}
 
 		.card__data-table__row--bordered {
@@ -475,6 +480,11 @@ Descr: Used to display data
 			font-size: var(--text-xs);
 			top: calc(2 * var(--space-md));
 			left: var(--space-sm);
+		}
+
+		&.width-100\% {
+			// fix for fractional pixel's being floored in table
+			width: calc(100% + 1px);
 		}
 
 		tr {
