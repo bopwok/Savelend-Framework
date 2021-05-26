@@ -1,0 +1,67 @@
+/* -------------------------------- 
+
+File#: _2_smartinvest
+Title: Smartinvest
+Descr: Smartinvest
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+
+.smartinvest-infobox {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: space-between;
+
+	@include breakpoint(md) {
+		flex-direction: row;
+	}
+
+	.smartinvest-infobox__info {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		@include breakpoint(md) {
+			flex-direction: row;
+			flex-basis: 40%;
+			justify-content: space-between;
+
+			&::after {
+				content: ' ';
+				position: absolute;
+				height: 80%;
+				width: 2px;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				background-color: var(--color-offwhite-1);
+				border-radius: 2px;
+				right: 0;
+			}
+		}
+	}
+
+	.smartinvest-infobox__slider {
+		padding: var(--space-md) 0;
+		
+		@include breakpoint(md) {
+			flex-basis: 60%;
+			padding: 0 0 0 var(--space-xl);
+		}
+	}
+}
+
+.smartinvest-info {
+	.smartinvest-info__row {
+		
+		display: flex;
+		justify-content: space-between;	
+
+		@include breakpoint(md) {
+			padding: 0 var(--space-md) var(--space-xxs) 0;
+			flex-direction: column;
+		}
+	}
+}

@@ -54,7 +54,7 @@ Descr: Used to display data
 
 				.card__tabs {
 					order: 99;
-    				margin: calc(-1 * var(--space-sm)) calc(-1 * var(--space-md));
+					margin: calc(-1 * var(--space-sm)) calc(-1 * var(--space-md));
 					margin-top: var(--space-sm);
 				}
 
@@ -99,7 +99,7 @@ Descr: Used to display data
 							border-radius: var(--space-lg);
 							margin: 0 var(--space-sm);
 							transition: color .5s, background-color .5s;
-                            white-space: nowrap;
+							white-space: nowrap;
 
 							&.active {
 								font-weight: normal;
@@ -323,6 +323,24 @@ Descr: Used to display data
 				margin-left: var(--space-sm);
 			}
 
+			.card__filter--min-width-set {
+				@include breakpoint(md) {
+					min-width: 400px;
+				}
+
+				@include breakpoint(lg) {
+					min-width: 500px;
+				}
+
+				@include breakpoint(xl) {
+					min-width: 600px;
+				}
+
+				@include breakpoint(xxl) {
+					min-width: 700px;
+				}
+			}
+
 			&.control--active {
 				color: var(--color-restless);
 			}
@@ -417,11 +435,11 @@ Descr: Used to display data
 			color: var(--color-offwhite);
 			background-color: var(--color-progressive);
 			display: none;
-			@include breakpoint(sm) { 
+			@include breakpoint(sm) {
 				display: table-row;
 			}
 
-			td:last-child{
+			td:last-child {
 				text-align: right;
 				padding-right: var(--space-md);
 			}

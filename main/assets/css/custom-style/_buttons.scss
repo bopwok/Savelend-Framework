@@ -147,6 +147,7 @@
   bottom: calc(65px + var(--space-sm));
   margin: auto;
   z-index: var(--zindex-overlay);
+  min-width: var(--max-width-xxxxs);
 
   &:before {
     z-index: -1;

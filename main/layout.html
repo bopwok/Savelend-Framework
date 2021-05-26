@@ -29,27 +29,31 @@
                 </svg>
                 <span class="bottom-navbar-item--text">Översikt
             </a>
-            </a>
             <a href="#" class="bottom-navbar-item">
                 <svg class="icon bottom-navbar-item--icon">
                     <use xlink:href="assets/icons/remix.svg#ri-hand-coin-line" />
                 </svg>
                 <span class="bottom-navbar-item--text">Innehav
             </a>
-            </a>
+            <div class='bottom-navbar-item__subitems'>
+                <a href="#" class="bottom-navbar-item__subitem">
+                    Submenu 1
+                </a>
+                <a href="#" class="bottom-navbar-item__subitem">
+                    submenu 2
+                </a>
+            </div>
             <a href="#" class="bottom-navbar-item">
                 <svg class="icon bottom-navbar-item--icon">
                     <use xlink:href="assets/icons/remix.svg#ri-funds-line" />
                 </svg>
                 <span class="bottom-navbar-item--text">Investera
             </a>
-            </a>
             <a href="#" class="bottom-navbar-item">
                 <svg class="icon bottom-navbar-item--icon">
                     <use xlink:href="assets/icons/remix.svg#ri-arrow-left-right-line" />
                 </svg>
                 <span class="bottom-navbar-item--text">Överföringar
-            </a>
             </a>
         </nav>
         <div>
@@ -495,7 +499,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="card col-12@sm col-6@md col-4@lg">
+                    <div class="card col-12@sm col-12@md col-10@lg">
                         <header class="card__header bg-gradient-progressive-right">
                             <div class="card__header-inner">
                                 <h2 class="card__title card__title--large">Expandable list card</h2>
@@ -540,6 +544,29 @@
                                                         <path fill="#fecc00" d="M134 0h102.4v512H134z" />
                                                     </svg>
                                                 </div>
+                                                <div class="smartinvest-infobox">
+                                                    <div class="smartinvest-infobox__info">
+                                                        <div class="smartinvest-info">
+                                                            <div class="smartinvest-info__row">Målavkastning <strong>9 %</strong></div>
+                                                            <div class="smartinvest-info__row">Målavkastning <strong>9 %</strong></div>
+                                                        </div>
+                                                        <div class="smartinvest-info">
+                                                            <div class="smartinvest-info__row">Målavkastning <strong>9 %</strong></div>
+                                                            <div class="smartinvest-info__row">Målavkastning <strong>9 %</strong></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="smartinvest-infobox__slider">
+                                                        <div class="slider slider--horiz js-slider">
+                                                            <div class="slider__range">
+                                                                <label class="sr-only" for="sliderValue">Slider value</label>
+                                                                <input class="slider__input" type="range" id="sliderValue" name="sliderValue" min="0" max="100" step="1" value="0">
+                                                            </div>
+                                                            <div class="text-right" aria-hidden="true">
+                                                                <span class="slider__value"><span class="js-slider__value">0</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <table class="width-100%">
                                                     <tr>
                                                         <td class="padding-bottom-sm">Målavkastning</td>
@@ -562,15 +589,6 @@
                                                         <td class="padding-bottom-sm font-bold text-right">9 %</td>
                                                     </tr>
                                                 </table>
-                                                <div class="slider slider--horiz js-slider">
-                                                    <div class="slider__range">
-                                                        <label class="sr-only" for="sliderValue">Slider value</label>
-                                                        <input class="slider__input" type="range" id="sliderValue" name="sliderValue" min="0" max="100" step="1" value="0">
-                                                    </div>
-                                                    <div class="text-right" aria-hidden="true">
-                                                        <span class="slider__value"><span class="js-slider__value">0</span></span>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
