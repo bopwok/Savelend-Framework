@@ -142,10 +142,15 @@
                             <section class="expandable-block__content">
                                 <div class="standing-out-section">
                                     <div class="standing-out-section__row">
-                                        <strong>Bank Account:</strong><span class='text-right'>some account</span>
+                                        <strong>Bank Account:</strong><span class='text-right copytoclipboard' data-copy="some account">some account</span>
+                                        <div class="copytoclipboard" data-copy="some account"><svg class="icon copytoclipboard" data-copy="some account">
+                                                <use xlink:href="assets/icons/remix.svg#ri-clipboard-line" />
+                                            </svg></div>
                                     </div>
                                     <div class="standing-out-section__row">
-                                        <strong>Reference:</strong><span class='text-right'>00000-00000-0000</span>
+                                        <strong>Reference:</strong><span class='text-right copytoclipboard' data-copy="00000-00000-0000">00000-00000-0000</span> <svg class="icon copytoclipboard" data-copy="00000-00000-0000">
+                                            <use xlink:href="assets/icons/remix.svg#ri-clipboard-line" />
+                                        </svg>
                                     </div>
                                 </div>
                             </section>
@@ -1435,6 +1440,22 @@
             </div>
         </div>
     </div>
+
+
+
+    <div class="flash-message js-flash-message" role="status" id="copyMessage" data-duration="5000">
+        <span class="inline-flex items-center">
+            <svg aria-hidden="true" class="icon margin-right-xxxs" viewBox="0 0 16 16">
+                <g>
+                    <path d="M8,0C3.6,0,0,3.6,0,8s3.6,8,8,8s8-3.6,8-8S12.4,0,8,0z M9,12H7V7h2V12z M8,6C7.4,6,7,5.6,7,5s0.4-1,1-1 s1,0.4,1,1S8.6,6,8,6z"></path>
+                </g>
+            </svg>
+            <p>Copied to clipboard</p>
+        </span>
+    </div>
+
+
+
     <script src="assets/js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js" integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A==" crossorigin="anonymous"></script>
