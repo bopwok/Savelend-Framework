@@ -80,5 +80,9 @@ Descr: Displays some data in a modal popup
 	.modal__content,
 	.modal__actions {
 		padding: var(--space-md) 0;
+
+		.btn {
+			width: 80%;
+		}
 	}
 }

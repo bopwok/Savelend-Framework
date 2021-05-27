@@ -7,20 +7,20 @@ Descr: Contains page title and holds notifications and user profile
 -------------------------------- */
 
 .title-bar {
-    position: sticky;
-    top: 0;
-    z-index: var(--zindex-header);
-    background: var(--color-offwhite-1);
-    width: 100%;
-    padding-top: var(--space-md);
+	position: sticky;
+	top: 0;
+	z-index: var(--zindex-header);
+	background: var(--color-offwhite-1);
+	width: 100%;
+	padding-top: var(--space-md);
 
-    button {
-        cursor: pointer;
-    }
+	button {
+		cursor: pointer;
+	}
 
-    @include breakpoint(md) {
-        position: static;
-    }
+	@include breakpoint(md) {
+		position: static;
+	}
 }
 
 .title-bar-text {
@@ -54,25 +54,40 @@ Descr: Contains page title and holds notifications and user profile
 	margin-left: auto;
 	margin-right: var(--space-md);
 	position: relative;
-    
+	@include breakpoint(md) {
+		margin-left: var(--space-md);
+	}
 
-    &.title-bar-notification--active {
-        cursor: pointer;
-        color: var(--color-challenger);
-    }
+	&.title-bar-notification--active {
+		cursor: pointer;
+		color: var(--color-challenger);
+	}
+}
+
+.title-bar-desktop-depot-switch {
+	display: none;
+	@include breakpoint(md) {
+        display: block;
+		margin-left: auto;
+        font-size: var(--text-sm);
+        background-color: var(--color-challenger);
+        padding: var(--space-xxs) var(--space-xs);
+        color: var(--color-offwhite);
+        border-radius: var(--space-lg);
+	}
 }
 
 .notification-bubble {
-    position: absolute;
-    background-color: var(--color-challenger);
-    color: var(--color-offwhite);
-    top:0;
-    right: calc( -.5 * var(--text-sm));
-    border-radius: 100%;
-    height: calc( 1.3 * var(--text-sm));
-    width: calc( 1.3 * var(--text-sm));
-    font-size: var(--text-sm);
-    line-height: calc( 1.3 * var(--text-sm));
+	position: absolute;
+	background-color: var(--color-challenger);
+	color: var(--color-offwhite);
+	top: 0;
+	right: calc(-.5 * var(--text-sm));
+	border-radius: 100%;
+	height: calc(1.3 * var(--text-sm));
+	width: calc(1.3 * var(--text-sm));
+	font-size: var(--text-sm);
+	line-height: calc(1.3 * var(--text-sm));
 }
 
 /*@media (prefers-color-scheme: dark) {
