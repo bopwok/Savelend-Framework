@@ -26,6 +26,7 @@ Usage: codyhouse.co/license
 
 	&.selected-credits-sheet--visible {
 		transform:  translate(-50%, 0);
+		z-index: var(--zindex-fixed-element);
 	}
 
 	.btn {

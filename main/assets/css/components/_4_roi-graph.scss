@@ -1,0 +1,39 @@
+.roi-legend {
+    border-bottom: 1px solid var(--color-offwhite);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .roi-legend__item {
+        flex: 1;
+        text-align: center;
+        padding: var(--space-md);
+
+        &:first-child {
+            border-right: 1px solid var(--color-offwhite);
+        }
+    }
+
+    .roi-legend__percentage {
+        font-size: xx-large;
+        font-weight: bolder;
+        margin: var(--space-sm) 0;
+    }
+
+    .roi-legend__annual {
+        font-size: small;
+    }
+
+    .roi-legend__label {
+        position: relative;
+
+        &::after {
+            content: ' ';
+            position: absolute;
+        }
+    }
+}
+
+.overview-graph {
+    border-left: 1px solid var(--color-offwhite);
+}

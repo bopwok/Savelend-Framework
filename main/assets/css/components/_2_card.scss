@@ -116,6 +116,10 @@ Descr: Used to display data
 			}
 		}
 
+		.card__header-title-wrap {
+			padding-right: var(--space-md);
+		}
+
 		.card__header-action-icon {
 			position: absolute;
 			right: 0;
@@ -299,6 +303,7 @@ Descr: Used to display data
 		display: flex;
 		justify-content: space-between;
 		margin-top: var(--space-xs);
+		min-width: 40%;
 
 		.card__filter {
 			padding: var(--space-sm) var(--space-md);
@@ -349,7 +354,7 @@ Descr: Used to display data
 			margin-left: var(--space-sm);
 			padding: var(--space-sm);
 			background: var(--color-progressive-2);
-			color: var(--color-offwhite);
+			color: var(--color-restless);
 			border-radius: var(--radius-full);
 			width: 44px; //Find a more dynamic way!
 			cursor: pointer;
@@ -359,7 +364,7 @@ Descr: Used to display data
 		.card__reset-filters {
 			padding: var(--space-sm) var(--space-md);
 			background: var(--color-progressive-2);
-			color: var(--color-offwhite);
+			color: var(--color-restless);
 			border-top-right-radius: var(--radius-full);
 			border-bottom-right-radius: var(--radius-full);
 			cursor: pointer;
@@ -454,7 +459,7 @@ Descr: Used to display data
 		}
 
 		.card__data-table__item {
-			padding: var(--space-md) var(--space-sm);
+			padding: var(--space-md) var(--space-md);
 			position: relative;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -481,6 +486,7 @@ Descr: Used to display data
 			&:first-child {
 				padding-left: var(--space-md);
 			}
+
 		}
 
 		.card__data-table__item--clickable {
@@ -513,7 +519,11 @@ Descr: Used to display data
 			}
 		}
 		td {
-			padding: var(--space-md) var(--space-sm);
+			padding: var(--space-md) var(--space-md);
+
+			&:not(:last-child) {
+				padding-right: 0;
+			}
 		}
 	}
 }
