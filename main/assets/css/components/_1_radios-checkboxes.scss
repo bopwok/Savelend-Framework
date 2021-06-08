@@ -28,7 +28,7 @@ Usage: codyhouse.co/license
     position: absolute;
     padding: 0;
     margin: 0;
-    margin-top: calc((1em * var(--checkbox-radio-line-height) - var(--checkbox-radio-size)) / 2);
+    margin-top: calc((1em * var(--checkbox-radio-line-height) - var(--checkbox-radio-size)) / 3);
     opacity: 0;
     height: var(--checkbox-radio-size);
     width: var(--checkbox-radio-size);
@@ -52,7 +52,7 @@ Usage: codyhouse.co/license
     box-sizing: border-box;
     display: inline-block;
     position: relative;
-    top: calc((1em * var(--checkbox-radio-line-height) - var(--checkbox-radio-size)) / 2);
+    top: calc((1em * var(--checkbox-radio-line-height) - var(--checkbox-radio-size)) / 3);
     flex-shrink: 0;
     width: var(--checkbox-radio-size);
     height: var(--checkbox-radio-size);

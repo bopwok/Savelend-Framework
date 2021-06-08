@@ -126,6 +126,7 @@ Descr: Mobile navigation bottom bar
                 padding: var(--space-sm) var(--space-lg);
                 color: var(--color-offwhite);
                 text-decoration: none;
+                font-size: var(--text-sm);
 
                 &.active {
                     color: var(--color-restless);

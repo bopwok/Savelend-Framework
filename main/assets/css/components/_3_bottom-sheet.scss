@@ -17,8 +17,7 @@
 		.bottom-sheet {
 			//padding-bottom: 2rem;
 			//transform: translateY(0);
-			padding-bottom: 2rem;
-			transform: translateY(4rem);
+			transform: translateY(0rem);
 
 			box-shadow: 0 -1.2px 1.9px -1px rgba(0, 0, 0, 0.014), 0 -3.3px 5.3px -1px rgba(0, 0, 0, 0.038), 0 -8.5px 12.7px -1px rgba(0, 0, 0, 0.085),
 				0 -30px 42px -1px rgba(0, 0, 0, 0.15);
@@ -143,6 +142,14 @@
 	&.bottom-sheet_header--large {
 		padding: var(--space-lg) var(--space-md);
 	}
+
+	.with-dummy-icon-space-right {
+		padding-right: 28px;
+	}
+
+	.with-dummy-icon-space-left {
+		padding-left: 28px;
+	}
 }
 
 .bottom-sheet_header_label {
@@ -155,7 +162,6 @@
 	overflow: auto;
 	height: min-content;
 	max-height: 70vh;
-	margin-bottom: 2rem;
 	color: var(--color-progressive);
 
 	@include breakpoint(md) {

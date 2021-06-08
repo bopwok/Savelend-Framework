@@ -17,10 +17,6 @@ Descr: Contains page title and holds notifications and user profile
 	button {
 		cursor: pointer;
 	}
-
-	@include breakpoint(md) {
-		position: static;
-	}
 }
 
 .title-bar-text {

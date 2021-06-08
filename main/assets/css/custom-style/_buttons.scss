@@ -144,21 +144,16 @@
   position: fixed;
   left: var(--space-lg);
   right: var(--space-lg);
-  bottom: calc(65px + var(--space-sm));
-  margin: auto;
+  bottom: 78px;
+  margin-right: auto;
+  margin-left: auto;
   z-index: var(--zindex-overlay);
   min-width: var(--max-width-xxxxs);
+}
 
-  &:before {
-    z-index: -1;
-    //content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: calc(65px);
-    height: 45px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.3);
+.bottom-sheet_content {
+  .btn--floating {
+    bottom: 20px;
   }
 }
 

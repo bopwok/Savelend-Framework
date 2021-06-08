@@ -196,7 +196,9 @@
     margin-right: 25%;
 }
 
-
+.no-transition {
+    transition: none;
+}
 
 .width-min {
     width: min-content;

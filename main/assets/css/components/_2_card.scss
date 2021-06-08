@@ -465,8 +465,8 @@ Descr: Used to display data
 			text-overflow: ellipsis;
 			white-space: nowrap;
 
-			&:first-child {
-				padding-right: 0;
+			&:first-child:not(.card__data-table__item--force-not-first) {
+				padding-right:0;
 				width: 16px;
 			}
 
@@ -487,6 +487,14 @@ Descr: Used to display data
 				padding-left: var(--space-md);
 			}
 
+			&.card__data-table__item--force-last {
+				padding-right: var(--space-md);
+			}
+
+			.card__data-table__item__transaction {
+				margin-top: -12px;
+			}
+
 		}
 
 		.card__data-table__item--clickable {
@@ -502,8 +510,12 @@ Descr: Used to display data
 		.card__data-table__item-undertext {
 			position: absolute;
 			font-size: var(--text-xs);
-			top: calc(2 * var(--space-md));
+			margin-top: var(--space-xxxxs);
 			left: var(--space-sm);
+
+			&.card__data-table__item-undertext--transaction  {
+				font-size: var(--text-sm);
+			}
 		}
 
 		&.width-100\% {
