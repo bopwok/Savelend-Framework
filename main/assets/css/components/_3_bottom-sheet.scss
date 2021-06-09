@@ -166,7 +166,7 @@
 
 	@include breakpoint(md) {
 		height: auto;
-		max-height: 100%;
+		max-height: calc(100% - (2.7 * var(--space-lg)));
 		flex: 1;
 	}
 }
