@@ -184,6 +184,19 @@ mark {
 	}
 }
 
+.big-bullet {
+	height: var(--space-lg);
+    width: var(--space-lg);
+    text-align: center;
+    color: var(--color-charcoal);
+    background: var(--color-restless);
+    border-radius: 50%;
+    font-weight: bold;
+    float: left;
+	line-height: calc(var(--space-lg) * 0.95);
+    margin: 0 var(--space-md) var(--space-xs) 0;
+}
+
 .bullet-list {
 	margin: var(--space-sm) var(--space-lg);
     margin-right: 0;

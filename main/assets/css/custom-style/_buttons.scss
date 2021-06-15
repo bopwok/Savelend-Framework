@@ -82,6 +82,19 @@
   }
 }
 
+.btn--restless {
+  background-color: var(--color-restless);
+  color: var(--color-progressive);
+
+  &:hover {
+    background-color: var(--color-restless-1);
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px alpha(var(--color-restless), 0.2);
+  }
+}
+
 // feedback
 .btn--disabled,
 .btn[disabled],

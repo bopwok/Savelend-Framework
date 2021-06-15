@@ -1,0 +1,45 @@
+.investor-level-display {
+	display: flex;
+	justify-content: space-between;
+	padding: var(--space-md);
+	font-weight: 600;
+	background-color: var(--color-challenger);
+	color: var(--color-offwhite);
+	border-color: var(--color-offwhite-2);
+	cursor: pointer;
+}
+
+.investor-level-next-level-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: var(--space-md);
+	background-color: var(--color-offwhite-1);
+	color: var(--color-progressive);
+	&:not(:last-child) {
+		padding-bottom: 0;
+	}
+
+	.investor-level-next-level-info__header {
+		margin-bottom: var(--space-xs);
+		font-weight: 600;
+	}
+
+	.investor-level-next-level-info__info {
+	}
+}
+
+.bronze-icon {
+	color: #b87333;
+	fill: #b87333;
+}
+
+.silver-icon {
+	color: #b87333;
+	fill: #b87333;
+}
+
+.vip-icon {
+	color: var(--color-genuine);
+	fill: var(--color-genuine);;
+}

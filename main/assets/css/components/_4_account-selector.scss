@@ -23,10 +23,11 @@
 
 .account-selector_content-row {
     padding: var(--space-md);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: var(--space-lg);
+    border-bottom: solid 1px var(--color-offwhite-2);
 }
 .account-selector_header-title,
 .account-selector_content-title {
