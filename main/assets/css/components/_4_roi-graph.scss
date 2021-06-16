@@ -28,13 +28,15 @@
     .roi-legend__label {
         position: relative;
         display: inline-block;
+        padding-left: var(--text-lg);
 
         &::after {
             content: ' ';
             position: absolute;
             width: var(--text-md);
             height: var(--text-md);
-            left: calc(-1 * var(--text-lg));
+            left: 0;
+            top: 0;
             border: solid 3px var(--color-offwhite-3);
         }
 
@@ -45,6 +47,12 @@
         &.roi-legend__label--on-invested::after {
             background-color: var(--color-challenger);
         }
+    }
+
+    .roi-legend__icon-mobile {
+        position: absolute;
+        top: 5px;
+        right: 5px;
     }
 }
 

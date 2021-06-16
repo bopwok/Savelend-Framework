@@ -56,8 +56,11 @@ Usage: codyhouse.co/license
 	align-items: center;
 
 	.slider__range {
-		width: 80%;
-	}
+		width: calc(100% - 120px);
+		@include breakpoint(lg) {
+			width: calc(100% - 200px);
+		}
+	}	
 
 	.slider__value {
 		background: var(--color-inclusive);
@@ -74,6 +77,8 @@ Usage: codyhouse.co/license
 	// these css variables are updated using JS - change the background color of the slider
 	--slider-fill-value: 0%;
 	--slider-empty-value: 100%;
+	z-index: 1;
+	position: relative;
 
 	&.slider__range--with-lock {
 	}
@@ -187,24 +192,42 @@ html:not(.js) .slider__value {
 }
 
 .slider-lock {
-	position: relative;
-	width: 70px;
-	margin-left: -9px;
+	position: absolute;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	right: 0;
+    top: -1px;
+    transform: translate(100%, 7px);
+	width: 20px;
+
+	@include breakpoint(lg) {
+		width: 60px;
+		top: 0px;
+		transform: translate(100%, -11px);
+	}
 
 	.slider-lock__border {
-		margin-top: 7px;
+		margin-top: 6px;
 		height: 30px;
-		border-left: solid 1px var(--color-smart-3);
+		border-left: solid 2px var(--color-smart-5);
+		display: none;
+
+		@include breakpoint(lg) {
+			display: block;
+		}
 	}
 
 	.slider-lock__overflow {
-		width: 80px;
 		height: 8px;
 		background: var(--color-smart-5);
 		margin-bottom: -6px;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;	
+
+		@include breakpoint(lg) {
+			width: 60px;
+		}
 	}
 
 	.slider-lock__lock {
@@ -214,5 +237,14 @@ html:not(.js) .slider__value {
 		background-color: var(--color-challenger-4);
 		margin-top: 7px;
 		border-radius: 100%;
+		text-align: center;
+		font-size: 12px;
+		line-height: 19px;
+		color: var(--color-offwhite);
+		cursor: pointer;
+
+		@include breakpoint(lg) {
+			left: auto;
+		}
 	}
 }
