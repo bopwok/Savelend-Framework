@@ -1,61 +1,65 @@
 .roi-legend {
-    border-bottom: 1px solid var(--color-offwhite);
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+	border-bottom: 1px solid var(--color-offwhite);
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 
-    .roi-legend__item {
-        flex: 1;
-        text-align: center;
-        padding: var(--space-md);
-        position: relative;
+	.roi-legend__item {
+		flex: 1;
+		text-align: center;
+		padding: var(--space-md);
+		position: relative;
+		display: flex;
+		flex-direction: column;
 
-        &:first-child {
-            border-right: 1px solid var(--color-offwhite);
-        }
-    }
+		&:first-child {
+			border-right: 1px solid var(--color-offwhite);
+		}
+	}
 
-    .roi-legend__percentage {
-        font-size: xx-large;
-        font-weight: bolder;
-        margin: var(--space-sm) 0;
-    }
+	.roi-legend__percentage {
+		font-size: xx-large;
+		font-weight: bolder;
+		margin-bottom: var(--space-sm);
+		padding-top: var(--space-sm);
+		margin-top: auto;
+	}
 
-    .roi-legend__annual {
-        font-size: small;
-    }
+	.roi-legend__annual {
+		font-size: small;
+	}
 
-    .roi-legend__label {
-        position: relative;
-        display: inline-block;
-        padding-left: var(--text-lg);
+	.roi-legend__label {
+		position: relative;
+		display: inline-block;
+		padding-left: var(--text-lg);
 
-        &::after {
-            content: ' ';
-            position: absolute;
-            width: var(--text-md);
-            height: var(--text-md);
-            left: 0;
-            top: 0;
-            border: solid 3px var(--color-offwhite-3);
-        }
+		&::after {
+			content: ' ';
+			position: absolute;
+			width: var(--text-md);
+			height: var(--text-md);
+			left: 0;
+			top: 0;
+			border: solid 3px var(--color-offwhite-3);
+		}
 
-        &.roi-legend__label--on-total::after {
-            background-color: var(--color-progressive);
-        }
+		&.roi-legend__label--on-total::after {
+			background-color: var(--color-progressive);
+		}
 
-        &.roi-legend__label--on-invested::after {
-            background-color: var(--color-challenger);
-        }
-    }
+		&.roi-legend__label--on-invested::after {
+			background-color: var(--color-challenger);
+		}
+	}
 
-    .roi-legend__icon-mobile {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-    }
+	.roi-legend__icon-mobile {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
 }
 
 .overview-graph {
-    border-left: 1px solid var(--color-offwhite);
+	border-left: 1px solid var(--color-offwhite);
 }

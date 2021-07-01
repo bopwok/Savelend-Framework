@@ -158,6 +158,13 @@
 	color: var(--color-offwhite);
 }
 
+.sheet_header_under-label {
+    width: var(--space-xxl);
+    transform: translateX(calc(-50%));
+    position: absolute;
+    left: 50%;
+}
+
 .bottom-sheet_content {
 	overflow: auto;
 	height: min-content;

@@ -103,6 +103,19 @@ Usage: codyhouse.co/license
   .checkbox.bg-restless:not(:checked):not(:focus) + label:hover::before {
     border-color: lightness(var(--color-restless), 0.7);
   }
+
+  .radio.bg-challenger:checked + label::before,
+  .checkbox.bg-challenger:checked + label::before {
+    background-color: var(--color-challenger);
+    box-shadow: none;
+    border-color: var(--color-challenger);
+    transition: transform .2s;
+  }
+
+  .radio.bg-challenger:not(:checked):not(:focus) + label:hover::before,
+  .checkbox.bg-challenger:not(:checked):not(:focus) + label:hover::before {
+    border-color: lightness(var(--color-challenger), 0.7);
+  }
   
   // :active
   .radio:active + label::before,

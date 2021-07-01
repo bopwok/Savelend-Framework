@@ -5,7 +5,6 @@
 .account-selector_header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     font-size: var(--text-lg);
     font-weight: 600;
@@ -33,4 +32,13 @@
 .account-selector_content-title {
     flex-grow: 1;
     padding: 0 var(--space-sm);
+}
+
+.account-selector_header-subtext {
+    text-align: left;
+    font-weight: 400;
+    font-size: var(--text-sm);
+    justify-content: space-evenly;
+    padding-left: var(--space-lg);
+    margin-left: var(--space-xxxs);
 }
