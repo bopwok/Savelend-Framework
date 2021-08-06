@@ -13,12 +13,22 @@ Descr: Displays some data in a modal popup
 			background: rgba(0, 0, 0, 0.3);
 		}
 
+		&.modal--fill-all {
+			.modal__overlay {
+				background: var(--color-progressive);
+			}
+		}
+
 		.modal {
 			box-shadow: var(--shadow-xs);
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%);
 		}
+	}
+
+	&.under {
+		z-index: var(--zindex-popover);
 	}
 }
 
@@ -41,8 +51,8 @@ Descr: Displays some data in a modal popup
 	position: fixed;
 	min-height: var(--max-width-xxxs);
 	max-height: 100%;
-    max-width: var(--max-width-xs);
-    width: 100%;
+	max-width: var(--max-width-xs);
+	width: 100%;
 	bottom: 0;
 	left: 50%;
 	top: 50%;
@@ -52,18 +62,18 @@ Descr: Displays some data in a modal popup
 	transform: translateX(100%);
 	transition: transform var(--ease-out) 0.3s;
 	padding: var(--space-xl);
-    transform: translate(-50%, -300%);
+	transform: translate(-50%, -300%);
 
 	border-radius: var(--radius-lg);
 
-    @media (max-width: --max-width-xs) {
-        min-width: 100%;
-    }
+	@media (max-width: --max-width-xs) {
+		min-width: 100%;
+	}
 
 	.modal__icon {
-        width: var(--space-xxxl);
-        height: var(--space-xxxl);
-		
+		width: var(--space-xxxl);
+		height: var(--space-xxxl);
+
 		&.modal__icon--success {
 			color: var(--color-success);
 		}
@@ -83,6 +93,54 @@ Descr: Displays some data in a modal popup
 
 		.btn {
 			width: 80%;
+		}
+	}
+
+	&.onboarding-popup {
+		padding: 0;
+		max-width: var(--max-width-sm);
+		z-index: calc(var(--zindex-fixed-element) + 1);
+
+		.onboarding-popup__nav {
+			background: var(--color-progressive);
+			display: flex;
+			flex-direction: column;
+			color: var(--color-offwhite-3);
+
+			.onboarding-popup__nav__item {
+				position: relative;
+				cursor: pointer;
+				flex: 1;
+				align-items: center;
+				justify-content: center;
+				color: var(--color-progressive-4);
+				text-decoration: none;
+				transition: color ease 0.2s, background ease 0.2s;
+				text-align: left;
+				padding: var(--space-xs) var(--space-md);
+
+				&:hover {
+					background: var(--color-progressive-1);
+				}
+
+				&.active {
+					color: var(--color-offwhite);
+					border-left: 5px solid var(--color-restless);
+					background-image: linear-gradient(45deg, var(--gradient-progressive-stop-2), var(--gradient-progressive-stop-1));
+
+					.bottom-navbar-item--icon {
+						fill: var(--color-restless);
+					}
+				}
+
+				&:hover:not(.active) {
+					border-color: var(--color-progressive-1);
+				}
+			}
+		}
+
+		.onboarding-popup__content {
+			padding: var(--space-md);
 		}
 	}
 }

@@ -7,135 +7,133 @@ Descr: Mobile navigation bottom bar
 -------------------------------- */
 
 .bottom-navbar {
-    width: 100%;
-    background: var(--color-progressive);
+	width: 100%;
+	background: var(--color-progressive);
 
-    display: flex;
+	display: flex;
 
-    box-shadow: 0 -1.2px 1.9px -1px rgba(0, 0, 0, 0.014),
-    0 -3.3px 5.3px -1px rgba(0, 0, 0, 0.038),
-    0 -8.5px 12.7px -1px rgba(0, 0, 0, 0.085),
-    0 -30px 42px -1px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 -1.2px 1.9px -1px rgba(0, 0, 0, 0.014), 0 -3.3px 5.3px -1px rgba(0, 0, 0, 0.038), 0 -8.5px 12.7px -1px rgba(0, 0, 0, 0.085), 0 -30px 42px -1px rgba(0, 0, 0, 0.15);
 
-    position: fixed;
-    z-index: var(--zindex-fixed-element);
-    bottom: 0;
-    left: 0;
+	position: fixed;
+	z-index: var(--zindex-fixed-element);
+	bottom: 0;
+	left: 0;
 
-    @media screen and (min-width: 1024px) {
-        position: relative;
+	@media screen and (min-width: 1024px) {
+		position: relative;
 
-        flex-direction: column;
-        justify-content: flex-start;
+		flex-direction: column;
+		justify-content: flex-start;
 
-        box-shadow: none;
-    }
+		box-shadow: none;
+	}
 
-    @include breakpoint(md) {
-        width: 200px;
-    }
+	@include breakpoint(md) {
+		width: 200px;
+	}
 }
 
 .bottom-navbar-item {
-    position: relative;
+	position: relative;
 
-    flex: 1;
+	flex: 1;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
-    padding: var(--space-xs) 0;
+	padding: var(--space-xs) 0;
 
-    color: var(--color-progressive-4);
-    text-decoration: none;
+	color: var(--color-progressive-4);
+	text-decoration: none;
 
-    transition: color ease 0.2s, background ease 0.2s;
+	transition: color ease 0.2s, background ease 0.2s;
 
-    &:hover {
-        background: var(--color-progressive-1);
-    }
+	&:hover {
+		background: var(--color-progressive-1);
+	}
 
-    &[data-state=active],
-    &.active {
-        color: var(--color-restless);
-        //background: var(--color-restless);
+	&[data-state=active],
+	&.active {
+		color: var(--color-restless);
+		//background: var(--color-restless);
 
-        .bottom-navbar-item--icon {
-            fill: var(--color-restless);
-        }
-    }
+		.bottom-navbar-item--icon {
+			fill: var(--color-restless);
+		}
+	}
 
-    .bottom-navbar-item--icon {
-        width: 1.825em;
-        height: 1.825em;
+	.bottom-navbar-item--icon {
+		width: 1.825em;
+		height: 1.825em;
 
-        margin-bottom: var(--space-xxxxs);
+		margin-bottom: var(--space-xxxxs);
 
-        @media screen and (min-width: 1024px) {
-            width: 1.25em;
-            height: 1.25em;
-            margin-bottom: 0;
-        }
-    }
+		@media screen and (min-width: 1024px) {
+			width: 1.25em;
+			height: 1.25em;
+			margin-bottom: 0;
+		}
+	}
 
-    .bottom-navbar-item--text {
-        font-size: var(--text-sm);
-        letter-spacing: var(--text-spacing);
+	.bottom-navbar-item--text {
+		font-size: var(--text-sm);
+		letter-spacing: var(--text-spacing);
 
-        @media screen and (min-width: 1024px) {
-            margin-left: var(--space-sm);
-            font-size: var(--text-md);
-        }
-    }
+		@media screen and (min-width: 1024px) {
+			margin-left: var(--space-sm);
+			font-size: var(--text-md);
+		}
+	}
 
-    @media screen and (min-width: 1024px) {
-        flex-direction: row;
-        flex: 0;
-        padding: var(--space-md) var(--space-lg);
-        justify-content: flex-start;
-    }
+	@media screen and (min-width: 1024px) {
+		flex-direction: row;
+		flex: 0;
+		padding: var(--space-md) var(--space-lg);
+		justify-content: flex-start;
+	}
 
-    @include breakpoint(md) {
-        transition: border .2s, color .2s;
-        border-left: 5px solid var(--color-progressive);
-        padding: var( --space-sm) var(--space-lg);
+	@include breakpoint(md) {
+		transition: border .2s, color .2s;
+		border-left: 5px solid var(--color-progressive);
+		padding: var(--space-sm) var(--space-lg);
 
-        &.active {
-            color: var( --color-offwhite);
-            border-left: 5px solid var(--color-restless);
-            background-image: linear-gradient(45deg, var(--gradient-progressive-stop-2), var(--gradient-progressive-stop-1));
-        }
+		&.active {
+			color: var(--color-offwhite);
+			border-left: 5px solid var(--color-restless);
+			background-image: linear-gradient(45deg, var(--gradient-progressive-stop-2), var(--gradient-progressive-stop-1));
+		}
 
-        &:hover:not(.active) {
-            border-color: var(--color-progressive-1);
-        }
-    }
+		&:hover:not(.active) {
+			border-color: var(--color-progressive-1);
+		}
+	}
 
-    &.active, &[data-state=active] {
-        + .bottom-navbar-item__subitems {
-            display: flex;
-            position: relative;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            border-bottom: 1px solid var(--color-progressive-1);
+	&.active,
+	&[data-state=active] {
+		+ .bottom-navbar-item__subitems {
+			display: flex;
+			position: relative;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			border-bottom: 1px solid var(--color-progressive-1);
 
-            .bottom-navbar-item__subitem {
-                padding: var(--space-sm) var(--space-lg);
-                color: var(--color-offwhite);
-                text-decoration: none;
-                font-size: var(--text-sm);
+			.bottom-navbar-item__subitem {
+				padding: var(--space-sm) var(--space-lg);
+				color: var(--color-offwhite);
+				text-decoration: none;
+				font-size: var(--text-sm);
 
-                &.active {
-                    color: var(--color-restless);
-                }
-            }
-        }
-    }
+				&.active {
+					color: var(--color-restless);
+				}
+			}
+		}
+	}
 }
 
 .bottom-navbar-item__subitems {
-    display: none;
+	display: none;
 }

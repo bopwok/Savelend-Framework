@@ -60,7 +60,7 @@ Usage: codyhouse.co/license
 		@include breakpoint(lg) {
 			width: calc(100% - 200px);
 		}
-	}	
+	}
 
 	.slider__value {
 		background: var(--color-inclusive);
@@ -79,9 +79,6 @@ Usage: codyhouse.co/license
 	--slider-empty-value: 100%;
 	z-index: 1;
 	position: relative;
-
-	&.slider__range--with-lock {
-	}
 }
 
 .slider__input {
@@ -90,6 +87,12 @@ Usage: codyhouse.co/license
 	-webkit-appearance: none;
 	width: 100%;
 	background: transparent;
+}
+
+@-moz-document url-prefix() {
+	.slider__input {
+		height: var(--slide-thumb-size);
+	}
 }
 
 .slider__input:focus {
@@ -141,6 +144,21 @@ Usage: codyhouse.co/license
 .slider__input::-moz-focus-outer {
 	// fix bug on Firefox - remove dotted outline when input is in focus
 	border: 0;
+}
+
+.slider__input.slider__input--lock::-webkit-slider-runnable-track {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.slider__input.slider__input--lock::-moz-range-track {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.slider__input.slider__input--lock::-moz-focus-outer {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 .js .slider__input::-ms-tooltip {
@@ -197,8 +215,8 @@ html:not(.js) .slider__value {
 	justify-content: center;
 	align-items: center;
 	right: 0;
-    top: -1px;
-    transform: translate(100%, 7px);
+	top: -1px;
+	transform: translate(100%, 7px);
 	width: 20px;
 
 	@include breakpoint(lg) {
@@ -223,7 +241,7 @@ html:not(.js) .slider__value {
 		background: var(--color-smart-5);
 		margin-bottom: -6px;
 		border-top-right-radius: 4px;
-		border-bottom-right-radius: 4px;	
+		border-bottom-right-radius: 4px;
 
 		@include breakpoint(lg) {
 			width: 60px;

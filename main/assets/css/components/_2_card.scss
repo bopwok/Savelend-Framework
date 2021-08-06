@@ -58,21 +58,46 @@ Descr: Used to display data
 					margin-top: var(--space-sm);
 				}
 
+				.card__filter-boxes {
+					order: 3;
+					align-items: center;
+					flex-wrap: wrap;
+					display: flex;
+				}
+
 				@include breakpoint(md) {
 					width: 100%;
 					flex-direction: row;
 
 					.card__filters {
 						order: 3;
-						margin-left: auto;
+						margin: auto 0 auto auto;
 						margin-top: var(--space-sm);
+					}
+
+					.card__filter-boxes {
+						position: relative;
+						margin-left: var(--space-sm);
+						padding-left: var(--space-sm);
+
+						&::after {
+							content: ' ';
+							position: absolute;
+							height: 80%;
+							width: 4px;
+							top: 50%;
+							transform: translateY(-50%);
+							background-color: var(--color-progressive);
+							border-radius: 2px;
+							left: 0;
+						}
 					}
 
 					.card__tabs {
 						order: 2;
 						margin: 0;
-						margin-left: var(--space-md);
-						padding-left: var(--space-md);
+						margin-left: var(--space-sm);
+						padding-left: var(--space-sm);
 						display: flex;
 						justify-content: center;
 						align-items: center;
@@ -186,6 +211,12 @@ Descr: Used to display data
 			color: var(--color-offwhite);
 			margin-bottom: var(--space-sm);
 		}
+	}
+
+	.card__top-right-action {
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 
 	.card__list {
@@ -303,7 +334,6 @@ Descr: Used to display data
 		display: flex;
 		justify-content: space-between;
 		margin-top: var(--space-xs);
-		min-width: 40%;
 
 		.card__filter {
 			padding: var(--space-sm) var(--space-md);
@@ -466,7 +496,7 @@ Descr: Used to display data
 			white-space: nowrap;
 
 			&:first-child:not(.card__data-table__item--force-not-first) {
-				padding-right:0;
+				padding-right: 0;
 				width: 16px;
 			}
 
@@ -494,7 +524,6 @@ Descr: Used to display data
 			.card__data-table__item__transaction {
 				margin-top: -12px;
 			}
-
 		}
 
 		.card__data-table__item--clickable {
@@ -513,7 +542,7 @@ Descr: Used to display data
 			margin-top: var(--space-xxxxs);
 			left: var(--space-sm);
 
-			&.card__data-table__item-undertext--transaction  {
+			&.card__data-table__item-undertext--transaction {
 				font-size: var(--text-sm);
 			}
 		}
