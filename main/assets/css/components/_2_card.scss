@@ -79,18 +79,6 @@ Descr: Used to display data
 						position: relative;
 						margin-left: var(--space-sm);
 						padding-left: var(--space-sm);
-
-						&::after {
-							content: ' ';
-							position: absolute;
-							height: 80%;
-							width: 4px;
-							top: 50%;
-							transform: translateY(-50%);
-							background-color: var(--color-progressive);
-							border-radius: 2px;
-							left: 0;
-						}
 					}
 
 					.card__tabs {
@@ -104,7 +92,7 @@ Descr: Used to display data
 
 						position: relative;
 
-						&::after {
+						&::before {
 							content: ' ';
 							position: absolute;
 							height: 80%;
@@ -114,6 +102,18 @@ Descr: Used to display data
 							background-color: var(--color-progressive);
 							border-radius: 2px;
 							left: 0;
+						}
+
+						&::after {
+							content: ' ';
+							position: absolute;
+							height: 80%;
+							width: 4px;
+							top: 50%;
+							transform: translateY(-50%);
+							background-color: var(--color-progressive);
+							border-radius: 2px;
+							right: 0;
 						}
 
 						.card__tab-btn {
@@ -155,6 +155,18 @@ Descr: Used to display data
 			&.card__header-action-icon--top {
 				top: var(--space-xxs);
 				bottom: auto;
+				position: relative;
+
+				.card__reset-filters {
+					width: 45%;
+				}
+
+				@include breakpoint(sm) {
+					position: absolute;
+					.card__reset-filters {
+						width: auto;
+					}
+				}
 			}
 
 			&.card__header-action-icon--restless {
@@ -336,7 +348,7 @@ Descr: Used to display data
 		margin-top: var(--space-xs);
 
 		.card__filter {
-			padding: var(--space-sm) var(--space-md);
+			padding: var(--space-sm);
 			background: var(--color-progressive-2);
 			color: var(--color-offwhite);
 			flex-grow: 1;
@@ -355,7 +367,6 @@ Descr: Used to display data
 				overflow: hidden;
 				text-overflow: ellipsis;
 				display: block;
-				margin-left: var(--space-sm);
 			}
 
 			.card__filter--min-width-set {
@@ -386,17 +397,21 @@ Descr: Used to display data
 			background: var(--color-progressive-2);
 			color: var(--color-restless);
 			border-radius: var(--radius-full);
-			width: 44px; //Find a more dynamic way!
+			width: 49px; //Find a more dynamic way!
+			height: 49px; //Find a more dynamic way!
 			cursor: pointer;
 			order: 3;
+			text-align: center;
 		}
 
 		.card__reset-filters {
-			padding: var(--space-sm) var(--space-md);
+			padding: var(--space-sm);
+			padding-left: calc(var(--space-sm) - 2px);
 			background: var(--color-progressive-2);
 			color: var(--color-restless);
 			border-top-right-radius: var(--radius-full);
 			border-bottom-right-radius: var(--radius-full);
+			border-left: solid 1px var(--color-progressive-1);
 			cursor: pointer;
 			order: 2;
 			align-items: center;
@@ -405,6 +420,10 @@ Descr: Used to display data
 			+ .card__filter {
 				border-top-right-radius: 0;
 				border-bottom-right-radius: 0;
+			}
+
+			.fix-top {
+				top: 1px;
 			}
 		}
 	}

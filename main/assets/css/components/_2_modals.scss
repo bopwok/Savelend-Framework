@@ -103,6 +103,7 @@ Descr: Displays some data in a modal popup
 		bottom: auto;
 
 		.onboarding-popup__nav {
+			min-width: 300px;
 			background: var(--color-progressive);
 			display: flex;
 			flex-direction: column;
@@ -118,7 +119,7 @@ Descr: Displays some data in a modal popup
 				text-decoration: none;
 				transition: color ease 0.2s, background ease 0.2s;
 				text-align: left;
-				padding: var(--space-xs) var(--space-md);
+				padding: var(--space-xs) var(--space-xl) var(--space-xs) var(--space-md);
 
 				&:hover {
 					background: var(--color-progressive-1);

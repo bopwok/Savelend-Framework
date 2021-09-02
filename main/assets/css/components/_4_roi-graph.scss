@@ -22,7 +22,7 @@
 		font-weight: bolder;
 		margin-bottom: var(--space-sm);
 		padding-top: var(--space-sm);
-		margin-top: auto;
+		margin-bottom: auto;
 	}
 
 	.roi-legend__annual {
@@ -33,15 +33,34 @@
 		position: relative;
 		display: inline-block;
 		padding-left: var(--text-lg);
+		display: flex;
+		justify-content: center;
 
-		&::after {
-			content: ' ';
-			position: absolute;
-			width: var(--text-md);
-			height: var(--text-md);
-			left: 0;
-			top: 0;
-			border: solid 3px var(--color-offwhite-3);
+		.roi-legend__label-content {
+			position: relative;
+			padding-left: calc(3 * var(--text-md));
+
+			&::after {
+				content: ' ';
+				position: absolute;
+				width: calc(var(--text-md) * 2.6);
+				height: 16px;
+				left: 0;
+				top: 4px;
+				border: solid 2px var(--color-offwhite-3);
+			}
+
+			&.roi-legend__label-content--progressive::after {
+				background-color: var(--color-progressive);
+			}
+
+			&.roi-legend__label-content--challenger::after {
+				background-color: var(--color-challenger);
+			}
+
+			&.roi-legend__label-content--restless::after {
+				background-color: var(--color-restless);
+			}
 		}
 
 		&.roi-legend__label--on-total::after {
