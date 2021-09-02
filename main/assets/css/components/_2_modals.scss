@@ -145,4 +145,8 @@ Descr: Displays some data in a modal popup
 			padding: var(--space-md);
 		}
 	}
+
+	&.modal--boxed {
+		border-radius: 0;
+	}
 }
