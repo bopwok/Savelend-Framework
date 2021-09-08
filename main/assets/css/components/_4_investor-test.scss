@@ -35,11 +35,33 @@
 }
 
 .silver-icon {
-	color: var(--color-smart-7);
-	fill: var(--color-smart-7);
+	color: var(--color-smart-1);
+	fill: var(--color-smart-1);
+}
+
+.gold-icon {
+	color: var(--color-restless-2);
+	fill: var(--color-restless-2);
+}
+
+.platinum-icon {
+	color: var(--color-smart-3);
+	fill: var(--color-smart-3);
 }
 
 .vip-icon {
 	color: var(--color-restless-2);
 	fill: var(--color-restless-2);
+}
+
+.investor-level-icon-box {
+	padding: 4px;
+	margin-top: -4px;
+	border-radius: 50%;
+	background: #ebe9e0;
+	margin-right: 10px;
+	width: var(--space-lg);
+	text-align: center;
+	height: var(--space-lg);
+	border: solid 1px var(--color-restless);
 }
