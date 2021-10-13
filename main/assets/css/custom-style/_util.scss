@@ -5,12 +5,12 @@
 // --------------------------------
 
 // 👇 your custom utility class
-// .my-util-class { 
+// .my-util-class {
 //   property: value;
 // }
 
 // 👇 (optional) create responsive variations - edit only [my-util-class, property, value]
-// @each $breakpoint, $value in $breakpoints { 
+// @each $breakpoint, $value in $breakpoints {
 //   @include breakpoint(#{$breakpoint}) {
 //     .my-util-class\@#{$breakpoint} {
 //       property: value;
@@ -18,256 +18,303 @@
 //   }
 // }
 .border-0 {
-    border: 0;
+	border: 0;
 }
 
 .border-bottom-only {
-    border-bottom: 1px solid;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+	border-bottom: 1px solid;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
 }
 
-
-.table { display: table; }
+.table {
+	display: table;
+}
 
 .bg-progressive {
-    background-color: var(--color-progressive);
+	background-color: var(--color-progressive);
+}
+
+.bg-progressive-1 {
+	background-color: var(--color-progressive-1);
 }
 
 .bg-challenger {
-    background-color: var(--color-challenger);
+	background-color: var(--color-challenger);
 }
 
 .bg-genuine {
-    background-color: var(--color-genuine);
+	background-color: var(--color-genuine);
 }
 
 .bg-restless {
-    background-color: var(--color-restless);
+	background-color: var(--color-restless);
 }
 
 .bg-inclusive {
-    background-color: var(--color-inclusive);
+	background-color: var(--color-inclusive);
 }
 
 .bg-smart {
-    background-color: var(--color-smart);
+	background-color: var(--color-smart);
 }
 
 .bg-charcoal {
-    background-color: var(--color-charcoal);
+	background-color: var(--color-charcoal);
 }
 
 .bg-offwhite {
-    background-color: var(--color-offwhite);
+	background-color: var(--color-offwhite);
 }
 
 .bg-offwhite-1 {
-    background-color: var(--color-offwhite-1);
+	background-color: var(--color-offwhite-1);
 }
 
 .bg-offwhite-2 {
-    background-color: var(--color-offwhite-2);
+	background-color: var(--color-offwhite-2);
 }
 
 .bg-offwhite-3 {
-    background-color: var(--color-offwhite-3);
+	background-color: var(--color-offwhite-3);
 }
 
 .border-progressive {
-    border-color: var(--color-progressive);
+	border-color: var(--color-progressive);
 }
 
 .border-challenger {
-    border-color: var(--color-challenger);
+	border-color: var(--color-challenger);
 }
 
 .border-genuine {
-    border-color: var(--color-genuine);
+	border-color: var(--color-genuine);
 }
 
 .border-restless {
-    border-color: var(--color-restless);
+	border-color: var(--color-restless);
 }
 
 .border-inclusive {
-    border-color: var(--color-inclusive);
+	border-color: var(--color-inclusive);
 }
 
 .border-smart {
-    border-color: var(--color-smart);
+	border-color: var(--color-smart);
 }
 
 .border-charcoal {
-    border-color: var(--color-charcoal);
+	border-color: var(--color-charcoal);
 }
 
 .border-offwhite {
-    border-color: var(--color-offwhite);
+	border-color: var(--color-offwhite);
 }
 
 .border-offwhite-1 {
-    border-color: var(--color-offwhite-1);
+	border-color: var(--color-offwhite-1);
 }
 
 .border-offwhite-2 {
-    border-color: var(--color-offwhite-2);
+	border-color: var(--color-offwhite-2);
 }
 
 .border-offwhite-3 {
-    border-color: var(--color-offwhite-3);
+	border-color: var(--color-offwhite-3);
 }
 
 .color-progressive {
-    color: alpha(var(--color-progressive), var(--color-o, 1));
+	color: alpha(var(--color-progressive), var(--color-o, 1));
 }
 
 .color-progressive-1 {
-    color: alpha(var(--color-progressive-1), var(--color-o, 1));
+	color: alpha(var(--color-progressive-1), var(--color-o, 1));
 }
 
 .color-progressive-2 {
-    color: alpha(var(--color-progressive-2), var(--color-o, 1));
+	color: alpha(var(--color-progressive-2), var(--color-o, 1));
 }
 
 .color-progressive-3 {
-    color: alpha(var(--color-progressive-3), var(--color-o, 1));
+	color: alpha(var(--color-progressive-3), var(--color-o, 1));
 }
 
 .color-progressive-4 {
-    color: alpha(var(--color-progressive-4), var(--color-o, 1));
+	color: alpha(var(--color-progressive-4), var(--color-o, 1));
 }
 
 .color-challenger {
-    color: alpha(var(--color-challenger), var(--color-o, 1));
+	color: alpha(var(--color-challenger), var(--color-o, 1));
 }
 
 .color-charcoal {
-    color: var(--color-charcoal);
+	color: var(--color-charcoal);
 }
 
 .color-offwhite {
-    color: alpha(var(--color-offwhite), var(--color-o, 1));
+	color: alpha(var(--color-offwhite), var(--color-o, 1));
 }
 
 .color-restless {
-    color: alpha(var(--color-restless), var(--color-o, 1));
+	color: alpha(var(--color-restless), var(--color-o, 1));
 }
 
 .color-inclusive {
-    color: var(--color-inclusive);
+	color: var(--color-inclusive);
 }
 
 .color-inclusive-1 {
-    color: var(--color-inclusive-1);
+	color: var(--color-inclusive-1);
 }
 
 .color-inclusive-2 {
-    color: var(--color-inclusive-2);
+	color: var(--color-inclusive-2);
 }
 
 .color-inclusive-3 {
-    color: var(--color-inclusive-3);
+	color: var(--color-inclusive-3);
+}
+
+.color-smart {
+	color: var(--color-smart);
+}
+
+.color-smart-1 {
+	color: var(--color-smart-1);
+}
+
+.color-smart-2 {
+	color: var(--color-smart-2);
+}
+
+.color-smart-3 {
+	color: var(--color-smart-3);
+}
+
+.color-smart-4 {
+	color: var(--color-smart-1);
+}
+
+.color-smart-5 {
+	color: var(--color-smart-2);
+}
+
+.color-smart-6 {
+	color: var(--color-smart-3);
 }
 
 .color-genuine {
-    color: var(--color-genuine);
+	color: var(--color-genuine);
 }
 
 .color-genuine-1 {
-    color: var(--color-genuine-1);
+	color: var(--color-genuine-1);
 }
 
-.fill-progressive { fill: var(--color-progressive); }
-.fill-challenger { fill: var(--color-challenger); }
-.fill-smart { fill: var(--color-smart); }
-.fill-offwhite { fill: var(--color-offwhite); }
+.fill-progressive {
+	fill: var(--color-progressive);
+}
+.fill-challenger {
+	fill: var(--color-challenger);
+}
+.fill-smart {
+	fill: var(--color-smart);
+}
+.fill-offwhite {
+	fill: var(--color-offwhite);
+}
 
 .logo-neg {
-    .fill-progressive { fill: var(--color-offwhite); }
-    .fill-challenger { fill: var(--color-challenger); }
-    .fill-smart { fill: var(--color-offwhite); }
-    .fill-offwhite { fill: var(--color-offwhite); }
+	.fill-progressive {
+		fill: var(--color-offwhite);
+	}
+	.fill-challenger {
+		fill: var(--color-challenger);
+	}
+	.fill-smart {
+		fill: var(--color-offwhite);
+	}
+	.fill-offwhite {
+		fill: var(--color-offwhite);
+	}
 }
 
-
 .margin-right-25\% {
-    margin-right: 25%;
+	margin-right: 25%;
 }
 
 .no-transition {
-    transition: none;
+	transition: none;
 }
 
 .width-min {
-    width: min-content;
+	width: min-content;
 }
 
 .body-bg {
-    //background: linear-gradient(180deg, var(--color-offwhite-2) 0%, var(--color-offwhite-1) 69.79%);
-    background: var(--color-offwhite-1);
-    background-attachment: fixed;
+	//background: linear-gradient(180deg, var(--color-offwhite-2) 0%, var(--color-offwhite-1) 69.79%);
+	background: var(--color-offwhite-1);
+	background-attachment: fixed;
 }
 
 .flex-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .no-scroll {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .fixed {
-    position: fixed;
+	position: fixed;
 
-    &.fixed--bottom {
-        bottom: 0;
-        left: 0;
-    }
+	&.fixed--bottom {
+		bottom: 0;
+		left: 0;
+	}
 
-    &.fixed--top {
-        top: 0;
-        left: 0;
-    }
+	&.fixed--top {
+		top: 0;
+		left: 0;
+	}
 }
 
 .position-relative {
-    position: relative;
+	position: relative;
 }
 
 .previewbox {
-    position: relative;
-    min-height: 250px;
-    overflow: scroll;
+	position: relative;
+	min-height: 250px;
+	overflow: scroll;
 
-    border: 1px solid #383841;
+	border: 1px solid #383841;
 
-    &.preview-mobile {
-        width: 375px;
-        height: 812px;
-        margin: 0 auto;
+	&.preview-mobile {
+		width: 375px;
+		height: 812px;
+		margin: 0 auto;
 
-        //padding: var(--space-md);
-    }
+		//padding: var(--space-md);
+	}
 }
 
 .previewbox .fixed {
-    position: absolute;
+	position: absolute;
 }
 
 .layout-container {
-    @media screen and (min-width: 1024px) {
-        display: grid;
-        gap: 0;
-        grid-template-columns: min-content 1fr;
-        grid-template-rows: 1fr;
-    }
+	@media screen and (min-width: 1024px) {
+		display: grid;
+		gap: 0;
+		grid-template-columns: min-content 1fr;
+		grid-template-rows: 1fr;
+	}
 }
 
 .self-end {
-    margin-top: auto;
+	margin-top: auto;
 }
-

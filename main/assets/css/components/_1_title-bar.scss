@@ -50,9 +50,6 @@ Descr: Contains page title and holds notifications and user profile
 	margin-left: auto;
 	margin-right: var(--space-md);
 	position: relative;
-	@include breakpoint(md) {
-		margin-left: var(--space-md);
-	}
 
 	&.title-bar-notification--active {
 		cursor: pointer;
@@ -61,29 +58,15 @@ Descr: Contains page title and holds notifications and user profile
 }
 
 .title-bar-desktop-depot-switch {
-	display: none;
-	@include breakpoint(md) {
-		display: flex;
-		margin-left: auto;
-		padding-left: 6px;
-		background-color: var(--color-restless);
-		color: var(--color-progressive);
-		border-radius: var(--space-lg);
-	}
-
-	.title-bar-desktop-depot-switch__label {
-		display: block;
-		padding: var(--space-xxs) var(--space-xs);
-		font-size: var(--text-sm);
-	}
+	display: flex;
 
 	.title-bar-desktop-depot-switch__depot {
 		display: block;
 		margin-left: auto;
 		font-size: var(--text-sm);
-		background-color: var(--color-challenger);
-		padding: var(--space-xxs) var(--space-xs);
-		color: var(--color-offwhite);
+		background-color: var(--color-offwhite);
+		padding: var(--space-xxxs) var(--space-sm);
+		color: var(--color-progressive);
 		border-radius: var(--space-lg);
 	}
 }

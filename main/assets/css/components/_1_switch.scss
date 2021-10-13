@@ -8,97 +8,137 @@ Usage: codyhouse.co/license
 -------------------------------- */
 
 :root {
-    // style
-    --switch-width: 2.5em;
-    --switch-height: 1.5em;
-    --switch-padding: 3px;
-  
-    // animation
-    --switch-animation-duration: 0.2s;
-  }
-  
-  .switch {
-    position: relative;
-    display: inline-flex;
-    flex-shrink: 0;
-    align-items: center;
-    width: var(--switch-width);
-    height: var(--switch-height);
-    border-radius: 50em;
-    padding: var(--switch-padding) 0;
-    cursor: pointer;
-    // overflow: hidden;
-  }
-  
-  .switch__input, .switch__label {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  
-  .switch__input {
-    margin: 0;
-    padding: 0;
-    opacity: 0;
-    height: 0;
-    width: 0;
-    pointer-events: none;
-  
-    &:checked + .switch__label {
-      box-shadow: 0 0 0 0px transparent;
-      background-color: var(--color-challenger); //restless
-    }
+	// style
+	--switch-width: 2em;
+	--switch-height: 1.25em;
+	--switch-padding: 2px;
 
-    &.switch__input--partial:checked + .switch__label {
-      background-color: transparent;
-      box-shadow: 0 0 0 2px var(--color-challenger); //restless
-    }
-  
-    &:checked + .switch__label + .switch__marker {
-      background-color: var(--color-offwhite);
-      left: calc(100% - var(--switch-height) + var(--switch-padding));
-    }
+	// animation
+	--switch-animation-duration: 0.2s;
+}
 
-    &.switch__input--partial:checked + .switch__label + .switch__marker {
-      background-color: var(--color-challenger); //restless
-    }
-    
-  
-    &:focus + .switch__label,
-    &:active + .switch__label {
-      box-shadow: 0 0 0 2px alpha(var(--color-charcoal), 0.08);
-    }
-  
-    &:checked:focus + .switch__label,
-    &:checked:active + .switch__label {
-      box-shadow: 0 0 0 2px alpha(var(--color-challenger), 0.2); //restless
-    }
-  }
-  
-  .switch__label {
-    width: 100%;
-    height: 100%;
-    color: transparent;
-    user-select: none;
-    box-shadow: 0 0 0 2px var(--color-smart-2); //challenger
-    background-color: transparent;
-    //background-color: var(--color-challenger);
-    border-radius: inherit;
-    z-index: 1;
-    transition: var(--switch-animation-duration);
-    overflow: hidden;
-  }
-  
-  .switch__marker {
-    position: relative;
-    background-color: var(--color-smart-2); //challenger
-    width: calc(var(--switch-height) - var(--switch-padding) * 2);
-    height: calc(var(--switch-height) - var(--switch-padding) * 2);
-    border-radius: 50%;
-    z-index: 2;
-    pointer-events: none;
-    box-shadow: var(--shadow-xs);
-    left: var(--switch-padding);
-    transition: left var(--switch-animation-duration);
-    will-change: left;
-  }
+.switch {
+	position: relative;
+	display: inline-flex;
+	flex-shrink: 0;
+	align-items: center;
+	width: var(--switch-width);
+	height: var(--switch-height);
+	border-radius: 50em;
+	padding: 0; //var(--switch-padding) 0;
+	cursor: pointer;
+	// overflow: hidden;
+
+	&.semi {
+		padding: var(--switch-padding) 0;
+
+		.switch__label {
+			border: solid 2px var(--color-challenger);
+		}
+
+		.switch__marker {
+			border: solid 2px var(--color-challenger);
+			width: calc(var(--switch-height) - var(--switch-padding) * 2);
+			height: calc(var(--switch-height) - var(--switch-padding) * 2);
+			left: var(--switch-padding);
+		}
+
+		.switch__input {
+			&:checked + .switch__label {
+				box-shadow: 0 0 0 0px transparent;
+				background-color: transparent; //restless
+			}
+
+			&.switch__input--partial:checked + .switch__label {
+				background-color: var(--color-offwhite-3);
+				border: solid 2px var(--color-restless);
+			}
+
+			&:checked + .switch__label + .switch__marker {
+				background-color: var(--color-restless);
+				left: calc(100% - var(--switch-height));
+			}
+
+			&.switch__input--partial:checked + .switch__label + .switch__marker {
+				background-color: var(--color-restless); //restless
+				border-color: var(--color-offwhite-3); //restless
+			}
+		}
+	}
+}
+
+.switch__input,
+.switch__label {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.switch__input {
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	height: 0;
+	width: 0;
+	pointer-events: none;
+
+	&:checked + .switch__label {
+		box-shadow: 0 0 0 0px transparent;
+		background-color: var(--color-restless); //restless
+	}
+
+	&.switch__input--partial:checked + .switch__label {
+		background-color: var(--color-restless);
+		border: solid 4px var(--color-restless);
+	}
+
+	&:checked + .switch__label + .switch__marker {
+		background-color: var(--color-offwhite);
+		left: calc(100% - var(--switch-height));
+	}
+
+	&.switch__input--partial:checked + .switch__label + .switch__marker {
+		background-color: var(--color-offwhite-3); //restless
+		border-color: var(--color-restless); //restless
+	}
+
+	&:focus + .switch__label,
+	&:active + .switch__label {
+		box-shadow: 0 0 0 2px alpha(var(--color-charcoal), 0.08);
+	}
+
+	&:checked:focus + .switch__label,
+	&:checked:active + .switch__label {
+		box-shadow: 0 0 0 2px alpha(var(--color-challenger), 0.2); //restless
+	}
+}
+
+.switch__label {
+	width: 100%;
+	height: 100%;
+	color: transparent;
+	user-select: none;
+	//box-shadow: 0 0 0 2px var(--color-smart-2); //challenger
+	background-color: transparent;
+	//background-color: var(--color-challenger);
+	border-radius: inherit;
+	z-index: 1;
+	transition: var(--switch-animation-duration);
+	overflow: hidden;
+	border: solid 4px var(--color-challenger);
+}
+
+.switch__marker {
+	position: relative;
+	background-color: transparent; //challenger
+	width: calc(var(--switch-height));
+	height: calc(var(--switch-height));
+	border-radius: 50%;
+	z-index: 2;
+	pointer-events: none;
+	box-shadow: var(--shadow-xs);
+	left: 0; //var(--switch-padding);
+	transition: left var(--switch-animation-duration);
+	will-change: left;
+	border: solid 4px var(--color-challenger);
+}

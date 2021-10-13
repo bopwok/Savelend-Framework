@@ -149,13 +149,13 @@ Descr: Used to display data
 			position: absolute;
 			right: 0;
 			bottom: 0;
-			padding: var(--space-xs);
+			padding: 0 var(--space-xs);
 			cursor: pointer;
 
 			&.card__header-action-icon--top {
-				top: var(--space-xxs);
 				bottom: auto;
 				position: relative;
+				top: var(--space-sm);
 
 				.card__reset-filters {
 					width: 45%;
@@ -186,8 +186,8 @@ Descr: Used to display data
 			}
 
 			.icon {
-				height: var(--text-lg);
-				width: var(--text-lg);
+				height: var(--text-md);
+				width: var(--text-md);
 			}
 
 			&.card__header-action-icon--collapsible {
@@ -341,16 +341,22 @@ Descr: Used to display data
 	}
 
 	.card__filters {
-		margin-bottom: var(--space-md);
-		align-items: stretch;
+		align-items: center;
 		display: flex;
-		justify-content: space-between;
-		margin-top: var(--space-xs);
+		justify-content: flex-end;
+		padding-bottom: var(--space-sm);
+
+		.icon {
+			top: 0;
+		}
+
+		@include breakpoint(md) {
+			justify-content: space-between;
+		}
 
 		.card__filter {
-			padding: var(--space-sm);
-			background: var(--color-progressive-2);
-			color: var(--color-offwhite);
+			padding: var(--space-xxs) var(--space-sm);
+			margin: 0 var(--space-xxs);
 			flex-grow: 1;
 			border-radius: var(--radius-full);
 			order: 0;
@@ -386,36 +392,40 @@ Descr: Used to display data
 					min-width: 700px;
 				}
 			}
-
-			&.control--active {
-				color: var(--color-restless);
-			}
 		}
 		.card__sort {
 			margin-left: var(--space-sm);
-			padding: var(--space-sm);
-			background: var(--color-progressive-2);
-			color: var(--color-restless);
+			padding: var(--space-xs);
 			border-radius: var(--radius-full);
-			width: 49px; //Find a more dynamic way!
-			height: 49px; //Find a more dynamic way!
 			cursor: pointer;
 			order: 3;
 			text-align: center;
 		}
 
 		.card__reset-filters {
-			padding: var(--space-sm);
+			padding: var(--space-xxs) var(--space-md);
 			padding-left: calc(var(--space-sm) - 2px);
-			background: var(--color-progressive-2);
-			color: var(--color-restless);
 			border-top-right-radius: var(--radius-full);
 			border-bottom-right-radius: var(--radius-full);
-			border-left: solid 1px var(--color-progressive-1);
+			border: solid 2px var(--color-challenger);
+			border-left: 0;
 			cursor: pointer;
 			order: 2;
 			align-items: center;
+			margin-left: calc(-1 * var(--space-xxs));
 			display: flex;
+			background: transparent;
+			color: var(--color-challenger);
+			transition: background .3s, color .3s;
+			font-size: var(--text-sm);
+			height: var(--space-lg);
+
+			&:hover,
+			&.active {
+				background-color: var(--color-challenger);
+				color: var(--color-offwhite);
+				border-left: solid 1px var(--color-challenger-1);
+			}
 
 			+ .card__filter {
 				border-top-right-radius: 0;
@@ -588,7 +598,47 @@ Descr: Used to display data
 	}
 }
 
+.big-header {
+	.card__filter,
+	.card__reset-filters {
+		height: var(--space-xl) !important;
+		font-size: var(--text-md) !important;
+	}
+
+	.card__sort {
+		padding: 0 !important;
+		width: var(--space-xl) !important;
+		justify-content: center;
+		flex-grow: 0 !important;
+	}
+}
+
 .loader-wrapper {
 	text-align: center;
 	padding: var(--space-xl);
+}
+
+.card__filter {
+	height: var(--space-lg);
+	background: transparent;
+	color: var(--color-challenger);
+	border: solid 2px var(--color-challenger);
+	transition: background .3s, color .3s;
+	font-size: var(--text-sm);
+
+	&:hover,
+	&.active,
+	&.control--active {
+		background-color: var(--color-challenger);
+		color: var(--color-offwhite);
+	}
+
+	&.tiny-filter {
+		height: var(--space-lg) !important;
+		font-size: var(--text-sm) !important;
+	}
+}
+
+.pull-filters-right {
+	margin-right: calc(-1 * var(--space-md));
 }
