@@ -125,7 +125,7 @@ a,
 }
 
 strong {
-	font-weight: 600;
+	font-weight: 800;
 }
 
 mark {
@@ -186,20 +186,20 @@ mark {
 
 .big-bullet {
 	height: var(--space-lg);
-    width: var(--space-lg);
-    text-align: center;
-    color: var(--color-charcoal);
-    background: var(--color-restless);
-    border-radius: 50%;
-    font-weight: bold;
-    float: left;
+	width: var(--space-lg);
+	text-align: center;
+	color: var(--color-charcoal);
+	background: var(--color-restless);
+	border-radius: 50%;
+	font-weight: bold;
+	float: left;
 	line-height: calc(var(--space-lg) * 0.95);
-    margin: 0 var(--space-md) var(--space-xs) 0;
+	margin: 0 var(--space-md) var(--space-xs) 0;
 }
 
 .bullet-list {
 	margin: var(--space-sm) var(--space-lg);
-    margin-right: 0;
+	margin-right: 0;
 	line-height: 1.4;
 
 	li {
@@ -212,9 +212,9 @@ mark {
 			height: 7px;
 			width: 7px;
 			border-radius: 100%;
-            background-color: var(--color-progressive);
-            left: calc(-1 * var(--text-md));
-            top: calc(.5 * var(--text-md));
+			background-color: var(--color-progressive);
+			left: calc(-1 * var(--text-md));
+			top: calc(.5 * var(--text-md));
 		}
 	}
 }

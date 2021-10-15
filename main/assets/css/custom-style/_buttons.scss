@@ -8,7 +8,7 @@
 	--btn-padding-y: var(--space-md); // padding top/bottom
 	--btn-padding-x: var(--space-md); // padding left/right
 	--btn-radius: var(--radius-lg); // border radius
-	--btn-font-size: 1em; // font size
+	--btn-font-size: var(--text-lg); // font size
 }
 
 .btn {
