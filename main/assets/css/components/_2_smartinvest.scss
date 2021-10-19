@@ -74,3 +74,9 @@ Usage: codyhouse.co/license
 		left: 0;
 	}
 }
+
+.left-side-xxxs-max-width\@lg {
+	@include breakpoint(lg) {
+		max-width: var(--max-width-xxxs);
+	}
+}
