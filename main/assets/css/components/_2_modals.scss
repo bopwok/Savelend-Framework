@@ -24,6 +24,8 @@ Descr: Displays some data in a modal popup
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%);
+			height: fit-content;
+			overflow: auto;
 		}
 	}
 
