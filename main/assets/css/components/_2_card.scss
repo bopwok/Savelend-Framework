@@ -49,6 +49,11 @@ Descr: Used to display data
 				margin-top: var(--space-xxxs);
 			}
 			&.card__header-inner--desktop-wide {
+				&.simple__header {
+					flex-direction: row;
+					justify-content: space-between;
+				}
+				
 				display: flex;
 				flex-direction: column;
 
@@ -337,6 +342,12 @@ Descr: Used to display data
 					height: var(--space-xxxs);
 				}
 			}
+		}
+	}
+	
+	.simple__header {
+		.card__filters {
+			order: 3
 		}
 	}
 
