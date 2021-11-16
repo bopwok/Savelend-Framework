@@ -125,9 +125,22 @@ Descr: Mobile navigation bottom bar
 				color: var(--color-offwhite);
 				text-decoration: none;
 				font-size: var(--text-sm);
-
+				position: relative;
+				
 				&.active {
 					color: var(--color-restless);
+
+					&:before {
+						content: "";
+						position: absolute;
+						bottom: -5 px;
+						-webkit-transform: translateX(-25%) rotate(90deg);
+						background: var(--color-challenger);
+						width: 1.5rem;
+						height: 0.1875rem;
+						top: var(--space-md);
+						left: var(--space-xs);
+					}
 				}
 			}
 		}
