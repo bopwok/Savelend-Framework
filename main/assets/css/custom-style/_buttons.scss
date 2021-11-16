@@ -95,6 +95,11 @@
 	}
 }
 
+.btn--no-bg {
+	color: var(--color-challenger);
+	border: solid 1px var(--color-challenger);
+}
+
 // feedback
 .btn--disabled,
 .btn[disabled],

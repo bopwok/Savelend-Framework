@@ -218,3 +218,9 @@ mark {
 		}
 	}
 }
+
+.border-no-bg {
+	padding: var(--space-sm);
+	border-radius: var(--radius-md);
+	border: var(--color-offwhite) solid 1px;
+}
