@@ -224,3 +224,8 @@ mark {
 	border-radius: var(--radius-md);
 	border: var(--color-offwhite) solid 1px;
 }
+
+.move-down-element {
+	position: relative;
+	top: .7rem;
+}
