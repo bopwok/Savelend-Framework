@@ -16,13 +16,13 @@ Usage: codyhouse.co/license
   @include textUnit(1rem);
 
   &.popover { // popover component - dependency
-    --popover-width: 250px;
+    --popover-width: 75px;
     --popover-control-gap: 4px; // ⚠️ use px units - vertical gap between the popover and its control
     --popover-viewport-gap: 20px; // ⚠️ use px units - vertical gap between the popover and the viewport - visible if popover height > viewport height
     --popover-transition-duration: 0.2s;
 
     @include breakpoint(md) {
-      --popover-width: 320px;
+      --popover-width: 75px;
     }
   }
 }
