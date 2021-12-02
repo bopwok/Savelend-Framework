@@ -271,6 +271,10 @@
 .fixed {
 	position: fixed;
 
+	&.force-width {
+		width: 200px;
+	}
+	
 	&.fixed--bottom {
 		bottom: 0;
 		left: 0;
